@@ -1,0 +1,59 @@
+{% comment %}Custom Mobile Sticky Catgories{% endcomment %}
+{% comment %}
+{%- render 'custom-mobile-category-snippet', sticky_mobile_menu: section.settings.sticky_mobile_menu -%}
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<div class="sticky-mobile-menu-section page-width large-hide">
+  <slider-component class="slider-mobile-gutter sticky-mobile-menu">
+    <ul class="slider slider--mobile linklist">
+      {% for link in sticky_mobile_menu.links %}
+        <li class="slider__slide linklist-item">
+          <a href="{{ link.url }}" class="linklist-link">{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </slider-component>  
+</div>
+
+<style>
+  @media screen and (max-width: 749px) {
+    .sticky-mobile-menu {
+      padding-top: 0;
+      padding-bottom: 10px;
+    }
+    .sticky-mobile-menu .linklist {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sticky-mobile-menu .linklist .linklist-item {
+      background-color: #f2f2f2;
+      border-radius: 3px;
+    }
+    .sticky-mobile-menu .linklist .linklist-item .linklist-link {
+      text-decoration: none;
+      text-align: center;
+      color: #000000;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 6px;
+      font-size: 13px;
+    }
+    .sticky-mobile-menu .linklist .linklist-item:first-child .linklist-link {
+      color: #EA803D;
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .sticky-mobile-menu .linklist::-webkit-scrollbar {
+      display: none !important;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .sticky-mobile-menu .linklist {
+      -ms-overflow-style: none !important;  /* IE and Edge */
+      scrollbar-width: none !important;  /* Firefox */
+    }
+  }
+</style>

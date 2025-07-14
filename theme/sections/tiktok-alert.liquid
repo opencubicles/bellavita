@@ -1,0 +1,110 @@
+{% if product.tags contains 'tiktok-best' %}
+ <div class="loader">
+    <p class=loader-text><img class=tik-image src="https://cdn.shopify.com/s/files/1/0650/5539/1970/files/3d-icon-logo-tiktok-free-png.png?v=1732569194"</img>Tik Tok</p>
+    <div class="words">
+      <span class="word">Bestseller</span>
+      <span class="word">Viral</span>
+    </div>
+  </div>
+<style>
+  @media only screen and (min-width: 600px) {
+    .loader{
+      display:none !important;
+    }
+  }
+  img.tik-image {
+    width: 24px;
+    margin-bottom: -5px;
+}
+.card {
+  /* color used to softly clip top and bottom of the .words container */
+  --bg-color: #212121;
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
+.loader {
+    color: black;
+    font-family: "Twentieth Century", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    box-sizing: content-box;
+    height: 25px;
+    padding: 3px 10px;
+    display: flex;
+    border-radius: 8px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    padding-left: 1.5rem;
+    padding-top: 0px;
+}
+
+
+
+  p.loader-text {
+    margin-top: -16px;
+}
+.words {
+    overflow: hidden;
+    position: relative;
+    height: 41px;
+    margin-bottom: -4rem;
+}
+
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #d1225e;;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+ 
+  18% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+}
+</style>
+  
+{% else %}
+  <style>
+    .loader{
+      display:none;
+    }
+  </style>
+{% endif %}
+  
+ 
+
+ {% schema %}
+{
+  "name": "Tiktok Alert",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Tiktok Alert"
+    }
+  ]
+}
+{% endschema %}

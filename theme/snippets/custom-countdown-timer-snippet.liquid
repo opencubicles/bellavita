@@ -1,0 +1,25 @@
+{% comment %}Custom Countdown Timer Snippet{% endcomment %}
+{% comment %}
+{% render 'custom-countdown-timer-snippet', countdown_text: block.settings.text, end_date: block.settings.date %}
+or
+{% render 'custom-countdown-timer-snippet', countdown_text: '⚡Hurry! Sale Ends In:', end_date: '2023-10-07 23:59:00' %}
+{% endcomment %}
+
+<div id="announcement-bar-timer">
+  <span class="announcement-text">{{ countdown_text }}</span>
+  <custom-countdown-timer id="countdown-timer" class="announcement-text" data-date="{{ end_date | escape }}"></custom-countdown-timer>
+</div>
+
+<script src="{{ 'custom-countdown-timer.js' | asset_url }}" defer="defer"></script>
+
+<style>
+  #announcement-bar-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  #countdown-timer {
+    color: red;
+  }
+</style>

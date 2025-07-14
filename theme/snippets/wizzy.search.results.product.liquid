@@ -1,0 +1,153 @@
+<li class="grid__item wizzy-result-product wizzy-product-[[id]]
+[[#groupId]]has-variations wizzy-group-product-[[groupId]][[/groupId]]"
+    title="[[& name ]]" data-id="[[id]]" data-groupId="[[#groupId]][[groupId]][[/groupId]][[#singleVarientGroupId]][[singleVarientGroupId]][[/singleVarientGroupId]]" >
+   <link href="//bellavitaorganic.com/cdn/shop/t/635/assets/component-rating.css?v=145347743245097069991718016604" rel="stylesheet" type="text/css" media="all">
+   <div class="card-wrapper">
+      <a href="[[url]]" class="full-unstyled-link" data-product-handle="luxury-oud-experience-set" data-gtm-vis-recent-on-screen66394104_808="576" data-gtm-vis-first-on-screen66394104_808="576" data-gtm-vis-total-visible-time66394104_808="100" data-gtm-vis-has-fired66394104_808="1">
+      <span class="visually-hidden">[[name]]</span>
+      </a>
+      <use-animate data-animate="zoom-fade-small" class="card card--product" tabindex="-1" animate="">
+         <a href="[[url]]" class="card__media media-wrapper" tabindex="-1">
+            <div class="image-animate media media--portrait media--hover-effect media--image-contain">
+              <img src="[[mainImage]]?v=1703835295&amp;width=500" 
+                alt="[[name]]" 
+                srcset="[[mainImage]]?v=1703835295&amp;width=150 150w, 
+                [[mainImage]]?v=1703835295&amp;width=200 200w, 
+                [[mainImage]]?v=1703835295&amp;width=250 250w, 
+                [[mainImage]]?v=1703835295&amp;width=300 300w, 
+                [[mainImage]]?v=1703835295&amp;width=400 400w, 
+                [[mainImage]]?v=1703835295&amp;width=500 500w" 
+                width="500" height="500" loading="lazy" fetchpriority="low" class="motion-reduce" 
+                sizes="(min-width: 1200px) 267px, (min-width: 990px) calc((100vw - 10rem) / 4), (min-width: 750px) calc((100vw - 10rem) / 3), calc(100vw - 3rem)" 
+                is="lazy-image">
+            </div>
+         </a>
+         <div class="card__badge">
+            <!-- custom code for sale badges --><!-- custom code for sale badges ends here -->
+
+           [[#labelAvailable]]
+           <span class="badge" style="--color-badge-background: [[backgroundColor]] ; --color-badge-border: var(--color-badge-background); --color-badge-foreground: #ffffff;">
+            [[label]]
+            </span>
+           [[/labelAvailable]]
+           
+           {% comment %}
+           [[#bestSeller]]
+           <span class="badge" style="--color-badge-background: #d8a274; --color-badge-border: var(--color-badge-background); --color-badge-foreground: #ffffff;">
+            Bestseller
+            </span>
+           [[/bestSeller]]
+           [[#newIn]]
+           <span class="badge" style="--color-badge-background: #7c7559; --color-badge-border: var(--color-badge-background); --color-badge-foreground: #ffffff;">
+            New
+          </span>
+           [[/newIn]]
+           {% endcomment %}
+         </div>
+        [[#discountPercentage]]
+         <div class="card__badge--onsale"><span class="badge badge--onsale" aria-hidden="true">[[discountPercentage]]% OFF</span></div>
+        [[/discountPercentage]]
+      </use-animate>
+      <div class="card-information">
+         <div class="card-information__wrapper">
+            <div class="card-information__top"></div>
+            <!-- custom code for secondary title metafield -->
+            <div class="card-information__top">
+               <div class="card-article-info caption-with-letter-spacing">
+                  [[secondTitle]]
+               </div>
+            </div>
+            <!-- custom code for secondary title metafield ends here --><a href="[[url]]" class="card-information__text h4 text-semi-bold" tabindex="-1">
+            [[name]]
+            </a>
+            <span class="caption-large light"></span>
+           [[#totalReviews]]
+            <div class="rating" role="img" aria-label="4.9 out of 5.0 stars">
+               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-star" viewBox="0 0 24 24" width="14" height="14">
+                  <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z" fill="#FFB503"></path>
+               </svg>
+               <span aria-hidden="true">
+               [[avgRatings]]
+               </span>
+               <span aria-hidden="true"> | </span>
+               <svg viewBox="0 0 18 18" class="icon icon-whatsapp-verified" height="14" width="14" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px" enable-background="new 0 0 18 18" xml:space="preserve">
+                  <polygon id="Star-2" fill="#005eff" points="9,16 7.1,16.9 5.8,15.2 3.7,15.1 3.4,13 1.5,12 2.2,9.9 1.1,8.2 2.6,6.7 2.4,4.6 4.5,4 5.3,2 7.4,2.4 9,1.1 10.7,2.4 12.7,2 13.6,4 15.6,4.6 15.5,6.7 17,8.2 15.9,9.9 16.5,12 14.7,13 14.3,15.1 12.2,15.2 10.9,16.9 "></polygon>
+                  <polygon id="Check-Icon" fill="#FFFFFF" points="13.1,7.3 12.2,6.5 8.1,10.6 5.9,8.5 5,9.4 8,12.4 "></polygon>
+               </svg>
+               <span aria-hidden="true">([[totalReviews]]
+               Reviews)</span>
+            </div>
+           [[/totalReviews]]
+           [[^totalReviews]]
+           <p class="rating">
+            <span aria-hidden="true">No Reviews</span>
+          </p>
+           [[/totalReviews]]
+            <div class="
+                price[[#discountPercentage]] price--on-sale [[/discountPercentage]]">
+              <dl><div class="price__regular">
+                  <dt>
+                    <span class="visually-hidden visually-hidden--inline">Regular price</span>
+                  </dt>
+                  <dd>
+                    <span class="price-item price-item--regular">
+                      <price-money><bdi><span class="money">[[#priceWithCurrency]][[sellingPrice]][[/priceWithCurrency]]</span></bdi></price-money>
+                    </span>
+                  </dd>
+                </div>
+                <div class="price__sale">
+                  <dt>
+                    <span class="visually-hidden visually-hidden--inline">Sale price</span>
+                  </dt>
+                  <dd>
+                    <span class="price-item price-item--sale">
+                      <price-money><bdi><span class="money">[[#priceWithCurrency]][[sellingPrice]][[/priceWithCurrency]]</span></bdi></price-money>
+                    </span>
+                  </dd><dt class="price__compare">
+                      <span class="visually-hidden visually-hidden--inline">Regular price</span>
+                    </dt>
+                  [[#discountPercentage]]
+                    <dd class="price__compare">
+                      <s class="price-item price-item--regular">
+                        <price-money><bdi><span class="money">[[#priceWithCurrency]][[price]][[/priceWithCurrency]]</span></bdi></price-money>
+                      </s>
+                    </dd>
+                  [[/discountPercentage]]
+                </div>
+              </dl>
+            </div>
+         </div>
+         <div class="card-information__button">
+            <!-- custom code for app exclusive button --><!-- custom code for app exclusive button ends here -->
+           [[#inStock]]
+            <add-to-cart class="button button--small" data-variant-id="[[id]]">
+               Add to cart
+               <svg class="icon icon-cart" aria-hidden="true" focusable="false">
+                  <use href="#icon-cart"></use>
+               </svg>
+            </add-to-cart>
+           [[/inStock]]
+           [[^inStock]]
+           <button class="button button--small button--soldout" type="button" disabled="disabled">
+              Sold out
+            </button>
+           [[/inStock]]
+            <!-- custom code for app exclusive button --><!-- custom code for app exclusive button ends here -->
+         </div>
+      </div>
+      <quick-view-drawer>
+         <details>
+            <summary class="quick-view__summary" tabindex="-1">
+               <span class="visually-hidden">Quick view</span>
+               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-search" fill="none" viewBox="0 0 15 17">
+                  <circle cx="7.11113" cy="7.11113" r="6.56113" stroke="currentColor" stroke-width="1.1" fill="none"></circle>
+                  <path d="M11.078 12.3282L13.8878 16.0009" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" fill="none"></path>
+               </svg>
+            </summary>
+            <quick-view class="quick-view" data-product-url="[[url]]">
+               <div role="dialog" aria-label="Choose options for [[name]]" aria-modal="true" class="quick-view__content" tabindex="-1"></div>
+            </quick-view>
+         </details>
+      </quick-view-drawer>
+   </div>
+</li>

@@ -1,0 +1,141 @@
+
+{% if product.metafields.custom.product_ingredients.value != blank %}
+  <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<div class="Notes-Heading center">
+  <h2>Fragrance Notes</h2>
+</div>
+  <div class="product-ingredients-notes page-width">
+    <slider-component class="slider-mobile-gutter">
+      <ul
+        id="Slider-{{ section.id }}"
+        class="grid grid--2-col grid--4-col-desktop slider slider--tablet"
+        role="list"
+      >
+        {% for metaobject in product.metafields.custom.product_ingredients.value limit: 4 %}
+          <li class="product-ingredients-item-notes grid__item slider__slide center-notes">
+            {% if metaobject.perfume_notes.value != blank %}
+              <p class="perfume-notes">
+                <strong>{{ metaobject.perfume_notes.value | upcase }}</strong>
+              </p>
+            {% endif %}
+            {% if metaobject.ingredient_image != blank %}
+            {%- style -%}
+              .pdp-ingredient-img {
+                --image-ratio-percent: {{ 1 | divided_by: metaobject.ingredient_image.value.aspect_ratio | times: 100 }}%;
+              }
+            {%- endstyle -%}
+            <div class="ingredient-img-wrapper-notes">  
+              <div class="media media--adapt pdp-ingredient-img">
+                {{ metaobject.ingredient_image | image_url: width: 300 | image_tag: 
+                  loading: 'lazy',
+                  fetchpriority: 'low',
+                  widths: '50, 100, 200, 300',
+                  is: 'lazy-image'
+                }}
+              </div>
+            </div>  
+            {% endif %}
+            {% if metaobject.ingredient_title.value != blank %}
+              <p>
+                <strong>{{ metaobject.ingredient_title.value | upcase }}</strong>
+              </p>
+            {% endif %}
+            {% if metaobject.ingredient_description.value != blank %}
+              <span>{{ metaobject.ingredient_description.value }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </slider-component>
+  </div>
+
+  <style>
+    .Notes-Heading.center{
+      margin-top: 6rem;
+    }
+    .Notes-Heading h2 {
+    font-weight: 100;
+    }
+    .product-ingredients-notes{
+      padding: 0px 13rem;
+    }
+    .product-ingredients-notes ul {
+      padding-inline-start: 0 !important;
+          --grid-horizontal-spacing: 9rem;
+    }
+    .product-ingredients-item-notes p {
+      margin: 0.5rem 0;
+   
+          font-size: 16px;
+    margin-top: 13px;
+    }
+    .product-ingredients-item-notes p.perfume-notes {
+      color: #EA803D;
+    }
+    .ingredient-img-wrapper-notes{
+    width: 39%;
+    margin: auto;
+    }
+    .center-notes{
+      text-align: center;
+    line-height: 22px;
+    font-size: 14px;
+    }
+
+    @media screen and (min-width: 750px) {
+   .product-ingredients-notes{
+      padding: 0px 1rem !important;
+    }
+      .product-details .product-ingredients-notes .product-ingredients-item-notes {
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+      /* .product-ingredients-notes ul {
+        justify-content: center;
+        --grid-horizontal-spacing: 5rem !important;
+      } */
+      /* .product-ingredients-item-notes p{
+        font-size:13px;
+        margin-top: 9px;
+      } */
+       /* .center-notes{
+    
+    line-height: 20px;
+    font-size: 13px;
+    } */
+    }
+    @media screen and (max-width: 749px) {
+      .product-details .product-ingredients-notes .product-ingredients-item-notes {
+        flex: 0 0 42%;
+        max-width: 100%;
+      }
+      .product-ingredients-notes ul {
+         --grid-horizontal-spacing: 5rem !important;
+      }
+      .product-ingredients-notes{
+      padding: 0px 1rem !important;
+    }
+      .product-ingredients-item-notes p{
+        font-size:13px;
+        margin-top: 9px;
+      }
+      .center-notes{
+    
+    line-height: 20px;
+    font-size: 13px;
+    }
+    }
+  </style>
+{% endif %}
+
+ {% schema %}
+{
+  "name": "Ingredients",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Ingredients"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,21 @@
+ <section>
+    <div class="faq-schema">
+     {% if product.metafields.my_fields.faq_scheman != blank %}
+        <div class="collection-faq-section">
+      <script type="application/ld+json">
+         {{ product.metafields.my_fields.faq_scheman }}    
+      </script>
+    </div>              
+    {% endif %}
+    </div>
+  </section>
+
+  <section>
+    <div class="faq-schema product-meta">
+     {% if product.metafields.my_fields.product_meta_keywords != blank %}
+    <div class="collection-faq-section product-metas">
+     {{ product.metafields.my_fields.product_meta_keywords }}    
+    </div>              
+    {% endif %}
+    </div>
+  </section>

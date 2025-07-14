@@ -1,0 +1,36 @@
+<div class="slideshow__image-wrapper media-wrapper">
+  {%- if block.settings.image != blank -%}
+    <div class="slideshow__image media media--{{ section.settings.image_ratio }} media-mobile--{{ section.settings.mobile_image_ratio }}{% if image_behavior != 'none' %} animate--{{ image_behavior }}{% endif %}"
+      style="--image-position: {{ block.settings.image_position }}"
+    >
+      {%- if image_behavior == 'ambient' -%}
+        {%- assign widths = '450, 600, 900, 960, 1200, 1680, 1920, 2304' -%}
+        {%- capture sizes -%}calc(100vw / 1.667){%- endcapture -%}
+      {%- else -%}
+        {%- assign widths = '375, 500, 750, 800, 1000, 1400, 1600, 1920' -%}
+        {%- capture sizes -%}100vw{%- endcapture -%}
+      {%- endif -%}
+      <!-- custom code for image optimization -->
+      {% comment %}position: forloop.index{% endcomment %}
+      {%- capture loading_strategy -%}{% if position == 1 %}eager{% else %}lazy{% endif %}{%- endcapture -%} 
+      {%- capture fetch_priority -%}{% if position == 1 %}high{% else %}low{% endif %}{%- endcapture -%}
+      <!-- custom code for image optimization ends here -->
+      {%- liquid
+        if block.settings.image_mobile == blank
+          echo block.settings.image | image_url: width: 1920 | image_tag: loading: loading_strategy, fetchpriority: fetch_priority, sizes: sizes, widths: widths
+        else
+          echo block.settings.image_mobile | image_url: width: 800 | image_tag: loading: loading_strategy, fetchpriority: fetch_priority, class: 'medium-hide large-up-hide', sizes: sizes, widths: widths
+          echo block.settings.image | image_url: width: 1920 | image_tag: loading: loading_strategy, fetchpriority: fetch_priority, class: 'small-hide', sizes: sizes, widths: widths
+        endif
+      -%}
+      </div>
+  {%- else -%}
+    <div class="slideshow__image slideshow__image--placeholder media media--{{ section.settings.image_ratio }} media-mobile--{{ section.settings.mobile_image_ratio }}">
+      {%- assign current = position | modulo: 2 | plus: 1 -%}
+      {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder' }}
+    </div>
+  {%- endif -%}
+  {%- if block.settings.button_link != blank -%}
+    <a href="{{ block.settings.button_link }}" class="full-unstyled-link">&nbsp;</a>
+  {%- endif -%}
+</div>

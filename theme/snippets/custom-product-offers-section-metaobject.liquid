@@ -1,0 +1,237 @@
+{% if product.metafields.custom.offers_section != blank %}
+  <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+
+  <div class="offers-section-container">
+    {% if product.metafields.custom.offers_section.value.heading != blank %}
+      <div class="offer-section-heading">
+        {% if product.metafields.custom.offers_section.value.heading_icon != blank %}
+          {{ product.metafields.custom.offers_section.value.heading_icon | image_url: width: 22, height: 22 | image_tag: 
+            loading: 'lazy',
+            fetchpriority: 'low',
+            srcset: nil,
+            is: 'lazy-image'
+          }}
+        {% endif %}
+        <p class="text-bold uppercase no-margin">
+          {{ product.metafields.custom.offers_section.value.heading }}
+        </p>
+      </div>
+    {% endif %}
+
+    <slider-component class="slider-mobile-gutter">
+      <ul
+        id="Slider-{{ section.id }}"
+        class="grid grid--2-col grid--3-col-desktop slider slider--tablet"
+        role="list"
+      >
+        {% if product.metafields.custom.offers_section.value.first_offer_title != blank %}
+          <li class="offer-wrapper grid__item slider__slide">
+            <div class="offer-wrapper-top">
+              <div class="offer-grid">
+                {{ product.metafields.custom.offers_section.value.first_offer_icon | image_url: width: 18, height: 18 | image_tag: 
+                  loading: 'lazy',
+                  fetchpriority: 'low',
+                  srcset: nil,
+                  is: 'lazy-image'
+                }}
+                <p class="text-bold uppercase">
+                  {{ product.metafields.custom.offers_section.value.first_offer_title }}
+                </p>
+              </div>
+              <p class="offer-description">
+                {{ product.metafields.custom.offers_section.value.first_offer_description }}
+              </p>
+            </div>
+            <div class="offer-wrapper-bottom rte">
+              <p>
+                {% if product.metafields.custom.offers_section.value.first_offer_link != blank %}
+                  <a class="unstyled-link" href="{{ product.metafields.custom.offers_section.value.first_offer_link }}">
+                {% endif %}
+                {{ product.metafields.custom.offers_section.value.first_offer_code }}
+                {% if product.metafields.custom.offers_section.value.first_offer_link != blank %}
+                  </a>
+                {% endif %}
+              </p>
+            </div>
+          </li>
+        {% endif %}
+        {% if product.metafields.custom.offers_section.value.second_offer_title != blank %}
+          <li class="offer-wrapper grid__item slider__slide">
+            <div class="offer-wrapper-top">
+              <div class="offer-grid">
+                {{ product.metafields.custom.offers_section.value.second_offer_icon | image_url: width: 18, height: 18 | image_tag: 
+                  loading: 'lazy',
+                  fetchpriority: 'low',
+                  srcset: nil,
+                  is: 'lazy-image'
+                }}
+                <p class="text-bold uppercase">
+                  {{ product.metafields.custom.offers_section.value.second_offer_title }}
+                </p>
+              </div>
+              <p class="offer-description">
+                {{ product.metafields.custom.offers_section.value.second_offer_description }}
+              </p>
+            </div>
+            <div class="offer-wrapper-bottom rte">
+              <p>
+                {% if product.metafields.custom.offers_section.value.second_offer_link != blank %}
+                  <a class="unstyled-link" href="{{ product.metafields.custom.offers_section.value.second_offer_link }}">
+                {% endif %}
+                {{ product.metafields.custom.offers_section.value.second_offer_code }}
+                {% if product.metafields.custom.offers_section.value.second_offer_link != blank %}
+                  </a>
+                {% endif %}
+              </p>
+            </div>
+          </li>
+        {% endif %}
+        {% if product.metafields.custom.offers_section.value.third_offer_title != blank %}
+          <li class="offer-wrapper grid__item slider__slide">
+            <div class="offer-wrapper-top">
+              <div class="offer-grid">
+                {{ product.metafields.custom.offers_section.value.third_offer_icon | image_url: width: 18, height: 18 | image_tag: 
+                  loading: 'lazy',
+                  fetchpriority: 'low',
+                  srcset: nil,
+                  is: 'lazy-image'
+                }}
+                <p class="text-bold uppercase">
+                  {{ product.metafields.custom.offers_section.value.third_offer_title }}
+                </p>
+              </div>
+              <p class="offer-description">
+                {{ product.metafields.custom.offers_section.value.third_offer_description }}
+              </p>
+            </div>
+            <div class="offer-wrapper-bottom rte">
+              <p>
+                {% if product.metafields.custom.offers_section.value.third_offer_link != blank %}
+                  <a class="unstyled-link" href="{{ product.metafields.custom.offers_section.value.third_offer_link }}">
+                {% endif %}
+                {{ product.metafields.custom.offers_section.value.third_offer_code }}
+                {% if product.metafields.custom.offers_section.value.third_offer_link != blank %}
+                  </a>
+                {% endif %}
+              </p>
+            </div>
+          </li>
+        {% endif %}
+      </ul>
+    </slider-component>
+  </div>
+
+  <script>
+    function copy(code){
+      const initialText = code.textContent;
+      let input = document.createElement('input');
+      document.body.appendChild(input);
+      input.value = code.textContent;
+      input.select();
+      document.execCommand('copy', false);
+      code.textContent = "Copied!";
+      input.remove();
+    }
+  </script>  
+
+  <style>
+    .offers-section-container {
+      margin-top: 3rem !important;
+    }
+    .offer-section-heading {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .offers-section-container ul.grid {
+      padding-inline-start: 0 !important;
+      column-gap: var(--grid-horizontal-spacing);
+      --grid-horizontal-spacing: 1rem !important;
+    }
+    .offers-section-container .offer-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+    .offers-section-container .offer-wrapper p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      color: #262020;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .offer-wrapper-top {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-bottom: 2px dashed #000;
+      border-image-source: url("https://i.stack.imgur.com/wLdVc.png");
+      border-image-slice: 3;
+      border-image-repeat: round;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      padding: 8px 10px 5px;
+      background: #f2f2f2;
+    }
+    .offer-wrapper-bottom {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      padding: 5px 10px 5px;
+      background: #f2f2f2;
+      position: relative;
+    }
+    .offer-wrapper-bottom:before {
+      content: '';
+      background-image: url(https://cdn.shopify.com/s/files/1/0561/9256/5292/files/New_Project.svg);
+      background-size: 100%;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: -9px;
+      left: -9px;
+      background-repeat: no-repeat;
+    }
+    .offer-wrapper-bottom:after {
+      content: '';
+      background-image: url(https://cdn.shopify.com/s/files/1/0561/9256/5292/files/New_Project.svg);
+      background-size: 100%;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: -9px;
+      right: -9px;
+      background-repeat: no-repeat;
+    }
+    .offer-grid {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 8px;
+    }
+    .offer-wrapper .offer-wrapper-bottom.rte>p:first-child {
+      margin-top: 5px;
+    }
+    .offer-wrapper .offer-wrapper-bottom.rte>p:last-child {
+      margin-bottom: 5px;
+    }
+    @media only screen and (max-width: 749px) {
+      .offers-section-container .offer-wrapper {
+        flex: 0 0 42%;
+        max-width: 100%;
+      }
+      .offers-section-container {
+        margin-top: 2.5rem !important;
+      }
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .offers-section-container .slider::-webkit-scrollbar {
+      display: none !important;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .offers-section-container .slider {
+      -ms-overflow-style: none !important;  /* IE and Edge */
+      scrollbar-width: none !important;  /* Firefox */
+    }
+  </style>
+{% endif %}

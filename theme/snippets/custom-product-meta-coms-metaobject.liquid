@@ -1,0 +1,105 @@
+{% if product.metafields.custom.meta_coms.value != blank %}
+  <div class="meta-coms-container">
+    {% if product.metafields.custom.meta_coms.value.first_meta_com_icon != blank %}
+      <div class="meta-coms-img-container">
+        {{ product.metafields.custom.meta_coms.value.first_meta_com_icon | image_url: width: 40, height: 40 | image_tag: 
+          loading: 'eager',
+          fetchpriority: 'high',
+          srcset: nil,
+          is: 'lazy-image'
+        }}
+        <p>{{ product.metafields.custom.meta_coms.value.first_meta_com_title }}</p>
+      </div>
+    {% endif %}
+    {% if product.metafields.custom.meta_coms.value.second_meta_com_icon != blank %}
+      <div class="meta-coms-img-container">
+        {{ product.metafields.custom.meta_coms.value.second_meta_com_icon | image_url: width: 40, height: 40 | image_tag: 
+          loading: 'eager',
+          fetchpriority: 'high',
+          srcset: nil,
+          is: 'lazy-image'
+        }}
+        <p>{{ product.metafields.custom.meta_coms.value.second_meta_com_title }}</p>
+      </div>
+    {% endif %}
+    {% if product.metafields.custom.meta_coms.value.third_meta_com_icon != blank %}
+      <div class="meta-coms-img-container">
+        {{ product.metafields.custom.meta_coms.value.third_meta_com_icon | image_url: width: 40, height: 40 | image_tag: 
+          loading: 'eager',
+          fetchpriority: 'high',
+          srcset: nil,
+          is: 'lazy-image'
+        }}
+        <p>{{ product.metafields.custom.meta_coms.value.third_meta_com_title }}</p>
+      </div>
+    {% endif %}
+    {% if product.metafields.custom.meta_coms.value.fourth_meta_com_icon != blank %}
+      <div class="meta-coms-img-container">
+        {{ product.metafields.custom.meta_coms.value.fourth_meta_com_icon | image_url: width: 40, height: 40 | image_tag: 
+          loading: 'eager',
+          fetchpriority: 'high',
+          srcset: nil,
+          is: 'lazy-image'
+        }}
+        <p>{{ product.metafields.custom.meta_coms.value.fourth_meta_com_title }}</p>
+      </div>
+    {% endif %}
+  </div>
+
+  <style>
+
+    
+    .meta-coms-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 3rem !important;
+    }
+    .meta-coms-img-container {
+      flex-basis: calc(25% - 10px);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      background: #f2f2f2;
+      padding: 18px 5px;
+      border-radius:3px;
+    }
+    .meta-coms-img-container img {
+      display: block;
+      margin: auto;
+    }
+    .meta-coms-img-container p {
+      margin-top: 10px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: #262020;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 749px) {
+      .meta-coms-img-container {
+        /* flex-grow: 1; */
+        /* min-width: calc(50% - 10px);
+        padding: 15px;
+        background: none; */
+        width: 23%;
+        background: #F2F2F2;
+        padding: 7px;
+        border-radius:5px;
+      }
+      .meta-coms-container {
+        /* gap: 20px; */
+        margin-top: 2.5rem !important;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .meta-coms-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+    }
+  </style>
+{% endif %}

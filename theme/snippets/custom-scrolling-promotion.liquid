@@ -1,0 +1,98 @@
+{% if block.settings.marquee_slide_url_1 != blank
+  or block.settings.marquee_slide_url_2 != blank
+  or block.settings.marquee_slide_url_3 != blank
+%}
+  <div class="marquee{% if block.settings.marquee_hide_on_desktop %} large-hide{% endif %}{% if block.settings.marquee_hide_on_mobile %} small-hide{% endif %}{% if block.settings.marquee_full_width_on_mobile %} marquee-full-width-mobile{% endif %}">
+    <span class="marquee-content">
+      {% if block.settings.marquee_slide_url_1 != blank %}
+        <a href="{{ block.settings.marquee_slide_url_1 }}" class="marquee-slide-text">
+          {{ block.settings.marquee_slide_text_1 }}
+        </a>
+      {% endif %}
+      {% if block.settings.marquee_slide_url_2 != blank %}
+        <a href="{{ block.settings.marquee_slide_url_2 }}" class="marquee-slide-text">
+          {{ block.settings.marquee_slide_text_2 }}
+        </a>
+      {% endif %}
+      {% if block.settings.marquee_slide_url_3 != blank %}
+        <a href="{{ block.settings.marquee_slide_url_3 }}" class="marquee-slide-text">
+          {{ block.settings.marquee_slide_text_3 }}
+        </a>
+      {% endif %}
+    </span>
+    <!-- Mirrors the content above -->
+    <span class="marquee-content" aria-hidden="true">
+      {% if block.settings.marquee_slide_url_1 != blank %}
+        <a href="{{ block.settings.marquee_slide_url_1 }}" class="marquee-slide-text">
+          {{ block.settings.marquee_slide_text_1 }}
+        </a>
+      {% endif %}
+      {% if block.settings.marquee_slide_url_2 != blank %}
+        <a href="{{ block.settings.marquee_slide_url_2 }}" class="marquee-slide-text">
+          {{ block.settings.marquee_slide_text_2 }}
+        </a>
+      {% endif %}
+      {% if block.settings.marquee_slide_url_3 != blank %}
+        <a href="{{ block.settings.marquee_slide_url_3 }}" class="marquee-slide-text">
+          {{ block.settings.marquee_slide_text_3 }}
+        </a>
+      {% endif %}
+    </span>
+  </div>
+
+  <style>
+    .marquee {
+      --gap: 5rem;
+      display: flex;
+      overflow: hidden;
+      user-select: none;
+      gap: var(--gap);
+      background: #fff579;
+      padding: 1.2rem 0;
+    }
+
+    .marquee-content {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-around;
+      min-width: 100%;
+      gap: var(--gap);
+    }
+
+    .marquee-slide-text {
+      text-decoration: none;
+      color: #212326;
+      font-size: 15px;
+    }
+
+    /* Enable animation */
+    .marquee-content {
+      animation: scroll 9s linear infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(calc(-100% - var(--gap)));
+      }
+    }
+
+    /* Pause on hover */
+    .marquee:hover .marquee-content {
+      animation-play-state: paused;
+    }
+
+    @media screen and (max-width: 749px) {
+      .marquee-slide-text {
+        font-size: 14px;
+      }
+      .marquee-full-width-mobile {
+        width: calc(100% + 3rem);
+        margin-left: 50% !important;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+{% endif %}
