@@ -131,7 +131,7 @@
         {%- if template == 'article' and handle_decoded contains '/blogs/' -%}
           {%- assign url_parts = request_path | split: '/' -%}
           {%- assign template_parts = handle_decoded | split: '/' -%}
-          {%- if template_parts.last == url_parts.last -%}
+          {%- if template_parts[3] == url_parts.last -%}
             {%- assign tptmetamatched = true -%}
           {%- endif -%}
         {%- endif -%}
