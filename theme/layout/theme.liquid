@@ -114,11 +114,18 @@
     <script src="{{ 'jquery.js' | asset_url }}" defer="defer"></script>
     <!-- Custom jQuery CDN Link ends here -->
     <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({‘gtm.start’:
-        new Date().getTime(),event:‘gtm.js’});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!=‘dataLayer’?‘&l=‘+l:‘’;j.async=true;j.src=
-        ’https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,‘script’,‘dataLayer’,‘GTM-KRQGWRFH’);</script>
+       <script>
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];
+    w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),
+        dl=l!='dataLayer' ? '&l=' + l : '';
+    j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KRQGWRFH');
+</script>
       <!-- End Google Tag Manager -->
     
      <!-- Google tag Starts here(gtag.js) -->
@@ -300,6 +307,30 @@
 {% endif %}
 
           <!-- Cart custom hide  -->
+{% if request.path contains '/products' %}
+  {% assign hide_first = false %}
+  {% assign hide_second = false %}
+
+  {% if product.metafields.custom.hide_description == true %}
+    {% assign hide_second = true %}
+  {% else %}
+    {% assign hide_first = true %}
+  {% endif %}
+
+{% if hide_first or hide_second %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const recommendations = document.querySelectorAll('.you-may-like');
+
+      {% if hide_first %}
+        if (recommendations.length > 1) recommendations[0].style.display = "none";
+      {% elsif hide_second %}
+        if (recommendations.length > 1) recommendations[1].style.display = "none";
+      {% endif %}
+    });
+  </script>
+{% endif %}  
+{% endif %}
 </body>
 </html>
 {% if template contains "product" %}

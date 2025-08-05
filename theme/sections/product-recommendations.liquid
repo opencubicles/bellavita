@@ -28,7 +28,7 @@
 {%- endfor -%}
 <!-- custom code to hide upsell products ends here -->
 
-<product-recommendations class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}">
+<product-recommendations class="product-recommendations you-may-like" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}">
   {%- if recommendations.performed and recommendations.products_count > 0 -%}
     <div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
       <div class="page-width">

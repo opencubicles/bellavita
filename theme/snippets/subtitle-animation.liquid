@@ -1,0 +1,99 @@
+<div class="subtitle-main-container
+  {% if block.settings.hide_on_mobile %} small-hide{% endif %}
+  {% if block.settings.text_transform == 'uppercase' %} uppercase
+  {% elsif block.settings.text_transform == 'lowercase' %} lowercase
+  {% endif %}
+  {% unless block.settings.text_two != blank %} no-animation{% endunless %}
+">
+  <div class="text-wrapper">
+    <p class="text text-one">{{ block.settings.text_one }}</p>
+    {% unless block.settings.text_two == blank %}
+      <p class="text text-two">{{ block.settings.text_two }}</p>
+    {% endunless %}
+  </div>
+</div>
+
+
+<style>
+
+@media(min-width:750px){
+  .text {
+    font-size: 15px;
+  }
+}
+
+.subtitle-main-container {
+  width: 100%;
+  max-width: 600px;
+  height: 20.79px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 !important;
+  background-color: #fff; 
+}
+
+.text-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  line-height: 20.79px;
+  margin: 0;
+  opacity: 0;
+  color: #595a5cf5;
+  letter-spacing: 1px;
+  text-align: left;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* First line animation */
+.text-one {
+  animation: textOneAnim 3s ease-in-out infinite;
+  z-index: 2;
+}
+
+/* Second line animation */
+.text-two {
+  animation: textTwoAnim 3s ease-in-out infinite;
+  color: #ea8e53;
+  z-index: 1;
+}
+
+.subtitle-main-container.no-animation .text-one {
+  position: static;
+  opacity: 1;
+  animation: none;
+}
+
+.subtitle-main-container.no-animation .text-two {
+  display: none;
+}
+
+@media(max-width:750px){
+  .text {
+    font-size: 12px;
+  }
+}
+
+@keyframes textOneAnim {
+  0%   { transform: translateY(0);     opacity: 1; }
+  40%  { transform: translateY(0);     opacity: 1; }
+  49%  { transform: translateY(0);     opacity: 1; }
+  50%  { transform: translateY(100%);  opacity: 0; }
+  100% { transform: translateY(100%);  opacity: 0; }
+}
+
+@keyframes textTwoAnim {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  49%  { transform: translateY(-100%); opacity: 0; }
+  50%  { transform: translateY(0);     opacity: 1; }
+  90%  { transform: translateY(0);     opacity: 1; }
+  100% { transform: translateY(100%);  opacity: 0; }
+}
+</style>

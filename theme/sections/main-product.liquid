@@ -713,12 +713,14 @@
                 </div>
               {%- endif -%}
             {%- when 'description' -%}
+              {% if product.metafields.custom.hide_description != true %}
               <div class="product__description rte" {{ block.shopify_attributes }}>
                 <!-- custom code for product description read more -->
                 {{ product.description }}
                 <a class="read-more" href="javascript:void(0);">Read more</a>
                 <!-- custom code for product description read more ends here -->
               </div>
+             {% endif %} 
               <!-- custom code for product meta coms -->
             {%- when 'meta_coms' -%}
               {% render 'custom-product-meta-coms-metaobject' %}
@@ -731,6 +733,11 @@
             {%- when 'offer_badges' -%}
               {% render 'custom-product-offer-badges' %}
               <!-- custom code for product offer badges ends here -->
+             <!-- custom code for subtitle toggle -->
+            {%- when 'subtitle' -%}
+               {% render 'subtitle-animation', block: block %}
+            <!-- custom code for subtitle toggle ends here -->
+
               <!-- custom code for scrolling promotion -->
             {%- when 'scrolling_promotion' -%}
               {% render 'custom-scrolling-promotion', block: block %}
@@ -1339,7 +1346,7 @@
     <div class="atc-strip-content">
         <p class="atc-strip-content-text">
             <!-- <img class= "gif-truck" src="https://cdn.shopify.com/s/files/1/0650/5539/1970/files/cargo-truck.png?v=1732554574" alt="Loading GIF" style="vertical-align: middle; margin-right: 8px;"> -->
-            Buy any 2 perfumes & get EXTRA 20% Off*
+            Buy Any 2 or More & Get Extra 20% Off*
         </p>
     </div>
 </div>
@@ -1933,6 +1940,76 @@
       "name": "Offer badges",
       "limit": 1,
       "settings": []
+    },
+
+
+
+    {
+
+      "type": "subtitle",
+
+      "name": "Subtitle",
+
+      "settings": [
+
+        {
+
+          "type": "text",
+
+          "id": "text_one",
+
+          "label": "First Text",
+
+          "default": "Text 1"
+
+        },
+
+        {
+
+          "type": "text",
+
+          "id": "text_two",
+
+          "label": "Second Text",
+
+          "default": "Text 2"
+
+        },
+
+        {
+
+          "type": "checkbox",
+
+          "id": "hide_on_mobile",
+
+          "label": "Hide on mobile"
+
+        },
+
+        {
+
+          "type": "select",
+
+          "id": "text_transform",
+
+          "label": "Text Case",
+
+          "options": [
+
+            { "label": "None", "value": "none" },
+
+            { "label": "UPPERCASE", "value": "uppercase" },
+
+            { "label": "lowercase", "value": "lowercase" }
+
+          ],
+
+          "default": "none"
+
+        }
+
+      ]
+
     },
     {
       "type": "scrolling_promotion",

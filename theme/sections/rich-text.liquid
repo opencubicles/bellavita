@@ -86,6 +86,11 @@
             >
               {{ block.settings.text }}
             </div>
+             <!-- adding custom subtitle code here -->
+
+            {%- when 'subtitle' -%}
+
+               {% render 'subtitle-animation', block: block %}
           {%- when 'custom_liquid' -%}
             <div class="rich-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
   <div class="review_div_container">
@@ -657,7 +662,41 @@
           "label": "Show share button"
         }
       ]
+    },
+    {
+  "type": "subtitle",
+  "name": "Subtitle",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_one",
+      "label": "First Text",
+      "default": "Text 1"
+    },
+    {
+      "type": "text",
+      "id": "text_two",
+      "label": "Second Text",
+      "default": "Text 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_mobile",
+      "label": "Hide on mobile"
+    },
+    {
+      "type": "select",
+      "id": "text_transform",
+      "label": "Text Case",
+      "options": [
+        { "label": "None", "value": "none" },
+        { "label": "UPPERCASE", "value": "uppercase" },
+        { "label": "lowercase", "value": "lowercase" }
+      ],
+      "default": "none"
     }
+  ]
+}
   ],
   "presets": [
     {
