@@ -153,6 +153,7 @@
         },
         "text": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>{{ product.metafields.my_fields.product_meta_secondary_text.value }}</p>",
             "text_size": "typeset2",
@@ -160,6 +161,15 @@
             "secondary_color": true,
             "text_bold": false,
             "text_uppercase": false
+          }
+        },
+        "subtitle_BgtEBx": {
+          "type": "subtitle",
+          "settings": {
+            "text_one": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_two": "{{ product.metafields.custom.perfume_notes_secondary_title.value }}",
+            "hide_on_mobile": false,
+            "text_transform": "uppercase"
           }
         },
         "rating_kKidtU": {
@@ -180,6 +190,7 @@
       "block_order": [
         "heading",
         "text",
+        "subtitle_BgtEBx",
         "rating_kKidtU",
         "image_NAt34J"
       ],
@@ -225,16 +236,13 @@
             "price_size": "medium"
           }
         },
-        "text_pb8jUB": {
-          "type": "text",
+        "subtitle_3EYiG7": {
+          "type": "subtitle",
           "settings": {
-            "icon": "none",
-            "text": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
-            "text_style": "body",
-            "text_hide_on_desktop": false,
-            "text_hide_on_mobile": true,
-            "text_bold": false,
-            "text_uppercase": false
+            "text_one": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_two": "{{ product.metafields.custom.perfume_notes_secondary_title.value }}",
+            "hide_on_mobile": true,
+            "text_transform": "uppercase"
           }
         },
         "judge_me_reviews_preview_badge_4da7RT": {
@@ -315,7 +323,7 @@
         "custom_liquid_kjYyfP": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"pdp-banner\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/PDP_copy_3019080a-a8e7-4a93-831e-45ee24891cf2.jpg?v=1752749642\">\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>"
+            "custom_liquid": "<div class=\"pdp-banner\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/PDP.webp?v=1753939721\">\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>"
           }
         },
         "offers_section_whdpGY": {
@@ -325,7 +333,7 @@
       },
       "block_order": [
         "title",
-        "text_pb8jUB",
+        "subtitle_3EYiG7",
         "judge_me_reviews_preview_badge_4da7RT",
         "rating",
         "image_Ad9UNn",
@@ -387,6 +395,31 @@
         "@media only screen and (max-width: 600px) {.Notes-Heading {margin-top: 18px; } .ingredient-img-wrapper-notes {width: 55%; margin: auto; } .product-ingredients-item-notes p {margin: 0.3rem 0; } .center-notes {text-align: left; line-height: 17px; } .ingredient-img-wrapper-notes {margin: 0px !important; } .product-ingredients-notes {padding: 0px 2rem !important; }}"
       ],
       "settings": {}
+    },
+    "cart_recommendations_xK9TnG": {
+      "type": "cart-recommendations",
+      "name": "t:sections.cart-recommendations.presets.name",
+      "settings": {
+        "show_divider": false,
+        "heading": "You may also like",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": false,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "image_with_text_HN9pWz": {
       "type": "image-with-text",
@@ -721,6 +754,7 @@
     "main",
     "17107557374313e09a",
     "ingredients_d3QziV",
+    "cart_recommendations_xK9TnG",
     "image_with_text_HN9pWz",
     "collapsible-content",
     "video_with_text_emJiUe",

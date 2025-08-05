@@ -35,6 +35,28 @@
             "button_style_secondary": false
           }
         },
+        "image_UTGxj7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Main-Banner-Desktop.webp",
+            "image_mobile": "shopify://shop_images/Main-Banner-Mobile.webp",
+            "image_position": "center center",
+            "text_box_position": "bottom-left",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/buy-more-save-more",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
         "image_4kaVAz": {
           "type": "image",
           "settings": {
@@ -51,28 +73,6 @@
             "text_size": "typeset",
             "button_label": "",
             "button_link": "shopify://collections/gourmet-collection",
-            "button_secondary_label": "",
-            "button_secondary_link": "",
-            "button_size": "medium",
-            "button_style_secondary": false
-          }
-        },
-        "image_UTGxj7": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1.webp",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1.webp",
-            "image_position": "center center",
-            "text_box_position": "bottom-left",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h1",
-            "heading_tag": "h2",
-            "text": "",
-            "text_size": "typeset",
-            "button_label": "",
-            "button_link": "shopify://collections/buy-more-save-more",
             "button_secondary_label": "",
             "button_secondary_link": "",
             "button_size": "medium",
@@ -104,8 +104,8 @@
       },
       "block_order": [
         "image_D9A8zA",
-        "image_4kaVAz",
         "image_UTGxj7",
+        "image_4kaVAz",
         "image_tiQb3A"
       ],
       "custom_css": [
