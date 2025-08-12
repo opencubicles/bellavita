@@ -99,7 +99,7 @@
           "type": "contact",
           "settings": {
             "heading": "Contact Number",
-            "text": "<p><a href=\"tel:+91 9311732440\" title=\"tel:+91 9311732440\">+1 302 600-5480</a><br/></p>",
+            "text": "<p>+1 302 600-5480<br/></p>",
             "link": ""
           }
         }

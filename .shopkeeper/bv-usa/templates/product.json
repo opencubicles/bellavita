@@ -323,7 +323,7 @@
         "custom_liquid_kjYyfP": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"pdp-banner\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/PDP.webp?v=1753939721\">\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>"
+            "custom_liquid": "<div class=\"pdp-banner\">\n {%- assign pdp_offer_banner = images[\"pdp_offer_banner.jpg\"] -%}\n{% if pdp_offer_banner != blank %}\n<img  src=\"{{ pdp_offer_banner | img_url: '800x' }}\">\n{% endif %}\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>"
           }
         },
         "offers_section_whdpGY": {
@@ -398,7 +398,7 @@
     },
     "cart_recommendations_xK9TnG": {
       "type": "cart-recommendations",
-      "name": "t:sections.cart-recommendations.presets.name",
+      "name": "Product recommendations",
       "settings": {
         "show_divider": false,
         "heading": "You may also like",
