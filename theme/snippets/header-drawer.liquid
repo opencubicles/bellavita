@@ -149,9 +149,12 @@
           </div>
          
           <div class="nav-drawer-image-wrapper">
+            {%- assign hamburger_offer_banner = images["hamburger_offer_banner.jpg"] -%}
+            {% if hamburger_offer_banner != blank %}
             <a href="/collections/buy-more-save-more">
-              <img class="nav-drawer-image" src="https://cdn.shopify.com/s/files/1/0650/5539/1970/files/Hamburger_Banner_1.webp?v=1753940250" width="100%" />
+              <img class="nav-drawer-image" src="{{ hamburger_offer_banner | img_url: '800x' }}" width="100%" />
             </a>
+            {% endif %}
           </div>
           <nav class="menu-drawer__navigation" data-animate data-animate-delay-{{ animate_count }}>
             <ul class="menu-drawer__menu list-menu" role="list">
