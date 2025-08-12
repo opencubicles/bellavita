@@ -72,13 +72,13 @@
     "cart_recommendations_enabled": true,
     "upsell_heading": "Add 2 items to unlock an extra 20% discount!",
     "enable_upsell_script": false,
-    "upsell_collection": "upsell-100ml",
+    "upsell_collection": "bestseller",
     "cart_recommendations_show_vendor": false,
     "empty_cart_message": "",
     "cart_recommendations_heading": "You may also like",
     "empty_cart_recommendations": "",
     "empty_cart_collections": [
-      "bestsellers",
+      "bestseller",
       "sale",
       "men-fragrance",
       "unisex-fragrance",
@@ -377,58 +377,7 @@
         "settings": {}
       },
       "7885500093077574326": {
-        "type": "shopify://apps/videowise-video-platform-ugc/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-        "disabled": false,
-        "settings": {}
-      },
-      "2209279550302034861": {
-        "type": "shopify://apps/shop-quiz-product-recommender/blocks/link-popup/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
-        "disabled": false,
-        "settings": {
-          "show_list": true
-        }
-      },
-      "6441254115607727225": {
-        "type": "shopify://apps/shop-quiz-product-recommender/blocks/automatic-popup/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
-        "disabled": false,
-        "settings": {
-          "quiz_id": "",
-          "quiz_timeout": 20,
-          "quiz_width": "100",
-          "quiz_height": "100",
-          "quiz_exit_intent": false
-        }
-      },
-      "2993056048391974366": {
-        "type": "shopify://apps/shop-quiz-product-recommender/blocks/chat-button/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
-        "disabled": false,
-        "settings": {
-          "quiz_id": "",
-          "chat_color": "#1878B9",
-          "chat_hide": false,
-          "chat_dot": true,
-          "chat_greeting": "",
-          "quiz_width": "100",
-          "quiz_height": "100"
-        }
-      },
-      "14254450603262595132": {
-        "type": "shopify://apps/wizzy-search-filters/blocks/wizzy-body-assets/ae8fbc14-43c6-4ce2-b5bc-819d4b1052f6",
-        "disabled": false,
-        "settings": {}
-      },
-      "7496264633453945898": {
-        "type": "shopify://apps/wizzy-search-filters/blocks/wizzy-head-assets/ae8fbc14-43c6-4ce2-b5bc-819d4b1052f6",
-        "disabled": false,
-        "settings": {}
-      },
-      "13951170544780599758": {
-        "type": "shopify://apps/tapita-seo-speed/blocks/app-embed/cd37ca7a-40ad-4fdc-afd3-768701482209",
-        "disabled": false,
-        "settings": {}
-      },
-      "15248664582119306304": {
-        "type": "shopify://apps/verifast-ai-sales-agent/blocks/chat_bot/e8318cdf-ff4f-416b-b090-1fb4ad1a937c",
+        "type": "shopify://apps/videowise-video-commerce/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
         "disabled": false,
         "settings": {}
       }

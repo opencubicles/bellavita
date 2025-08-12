@@ -35,50 +35,6 @@
             "button_style_secondary": false
           }
         },
-        "image_UTGxj7": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Main-Banner-Desktop.webp",
-            "image_mobile": "shopify://shop_images/Main-Banner-Mobile.webp",
-            "image_position": "center center",
-            "text_box_position": "bottom-left",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h1",
-            "heading_tag": "h2",
-            "text": "",
-            "text_size": "typeset",
-            "button_label": "",
-            "button_link": "shopify://collections/buy-more-save-more",
-            "button_secondary_label": "",
-            "button_secondary_link": "",
-            "button_size": "medium",
-            "button_style_secondary": false
-          }
-        },
-        "image_4kaVAz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Mani_banner_desktop.webp",
-            "image_mobile": "shopify://shop_images/main_banner_mobile.webp",
-            "image_position": "center center",
-            "text_box_position": "middle-center",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h1",
-            "heading_tag": "h2",
-            "text": "",
-            "text_size": "typeset",
-            "button_label": "",
-            "button_link": "shopify://collections/gourmet-collection",
-            "button_secondary_label": "",
-            "button_secondary_link": "",
-            "button_size": "medium",
-            "button_style_secondary": false
-          }
-        },
         "image_tiQb3A": {
           "type": "image",
           "settings": {
@@ -100,13 +56,57 @@
             "button_size": "medium",
             "button_style_secondary": false
           }
+        },
+        "image_UTGxj7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Banner_For_Her_1_f2df91f6-81c2-45f8-bcc9-2b3a9766e22f.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Her_1_e781b738-1ecb-4a1b-8364-cf3c0f3b21db.jpg",
+            "image_position": "center center",
+            "text_box_position": "bottom-left",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/buy-more-save-more",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "image_4kaVAz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Banner_For_Unisex_1_e55703bf-287f-4a91-80ae-12d4b4e97459.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Unisex_1_71fb76dc-c8de-42e3-9684-43767fd1b305.jpg",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/gourmet-collection",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "image_D9A8zA",
+        "image_tiQb3A",
         "image_UTGxj7",
-        "image_4kaVAz",
-        "image_tiQb3A"
+        "image_4kaVAz"
       ],
       "custom_css": [
         "a.button {font-size: 19px;}",
@@ -197,18 +197,18 @@
     "1710513085af0e5eb1": {
       "type": "apps",
       "blocks": {
-        "videowise_video_platform_ugc_videowise_page_widgets_YNnAe9": {
+        "videowise_video_commerce_videowise_page_widgets_m8mNYM": {
           "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
           "settings": {
-            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65f45c8b96a30700289912ba\"></div>"
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_6894755b442cf6005849a69c\"></div>"
           }
         }
       },
       "block_order": [
-        "videowise_video_platform_ugc_videowise_page_widgets_YNnAe9"
+        "videowise_video_commerce_videowise_page_widgets_m8mNYM"
       ],
       "settings": {
-        "include_margins": true,
+        "include_margins": false,
         "show_divider": false,
         "padding_top": 24,
         "padding_bottom": 8
@@ -223,7 +223,7 @@
         ".price bdi {font-size: 20px; font-weight: 600;}"
       ],
       "settings": {
-        "collection": "bestsellers",
+        "collection": "bestseller",
         "products_to_show": 4,
         "show_view_all": true,
         "show_divider": false,
@@ -378,17 +378,6 @@
     },
     "171024877333614012": {
       "type": "apps",
-      "blocks": {
-        "videowise_video_platform_ugc_videowise_page_widgets_7TznBL": {
-          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-          "settings": {
-            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65f2c5376a19d0002965a01d\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "videowise_video_platform_ugc_videowise_page_widgets_7TznBL"
-      ],
       "settings": {
         "include_margins": true,
         "show_divider": false,
@@ -853,7 +842,7 @@
           "type": "button",
           "settings": {
             "button_label": "View Now",
-            "button_link": "shopify://products/ceo-man-luxury-perfume-3-38-fl-oz",
+            "button_link": "shopify://products/ceo-man-luxury-perfume",
             "button_size": "small",
             "button_style_secondary": false
           }
@@ -980,13 +969,13 @@
         "0237030b-2b22-46e9-a89a-7f1501509b8a": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/4_56d51848-8e29-45b6-a8fd-89e0006e057b.jpg",
+            "image": "shopify://shop_images/Artboard_14_b20cd908-3966-4a14-b7cb-31a459adcc82.jpg",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/glam-woman-perfume-3-38-fl-oz",
+            "link": "shopify://products/oud-perfume-3-4-fl-oz",
             "text_box_position": "middle-center"
           }
         },
