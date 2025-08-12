@@ -317,7 +317,7 @@
         "custom_liquid_X8RHwe": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping</span> &nbspover $30</div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\ndisplay:none;\n}\n}\n</style>"
+            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping</span> &nbspover $32</div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\ndisplay:none;\n}\n}\n</style>"
           }
         },
         "custom_liquid_kjYyfP": {
@@ -722,20 +722,6 @@
     },
     "17102359122a024747": {
       "type": "apps",
-      "blocks": {
-        "shop_quiz_product_recommender_inline_quiz_TDPdJK": {
-          "type": "shopify://apps/revenuehunt-quizzes/blocks/inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
-          "settings": {
-            "quiz_id": "vwHY5B",
-            "quiz_height": 200,
-            "quiz_autoscroll": true,
-            "quiz_fixed_height": false
-          }
-        }
-      },
-      "block_order": [
-        "shop_quiz_product_recommender_inline_quiz_TDPdJK"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true,
