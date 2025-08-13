@@ -492,11 +492,12 @@
       {% unless upsell == blank %}
       <cart-recommendations class="cart-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ cart.items.first.product_id }}&limit={{ cart_recommendations_limit }}" data-animate data-animate-delay-{{ animate_count }}>
         <!-- <div class="title h4">{{ settings.upsell_heading | escape }}</div> -->
-        {%- assign minicart_offer_banner = images["minicart_offer_banner.jpg"] -%}
-        {% if minicart_offer_banner != blank %}
-        <div class="title-image"><img class="title-img" src="{{ minicart_offer_banner | img_url: '800x' }}" width="100%"></div>
-        {% endif %}
-        <ul class="mini-cart__navigation">        
+
+      {% if shop.metafields.custom.minicart_top_offer_banner and shop.metafields.custom.minicart_top_offer_banner != blank %}
+          <div class="title-image"><img class="title-img" src="{{ shop.metafields.custom.minicart_top_offer_banner | img_url: '800x' }}"  width="100%"></div>
+      {% endif %}
+
+      <ul class="mini-cart__navigation">        
           {{upsell}}
         </ul>
       </cart-recommendations> 

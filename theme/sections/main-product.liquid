@@ -1342,14 +1342,16 @@
 
               <div class="product-form__buttons">
 
-<div class="atc-strip-container">
-    <div class="atc-strip-content">
-        <p class="atc-strip-content-text">
-            <!-- <img class= "gif-truck" src="https://cdn.shopify.com/s/files/1/0650/5539/1970/files/cargo-truck.png?v=1732554574" alt="Loading GIF" style="vertical-align: middle; margin-right: 8px;"> -->
-            Buy Any 2 or More & Get Extra 20% Off*
-        </p>
-    </div>
-</div>
+                {% assign pdp_above_atc_offer_text = shop.metafields.custom.pdp_above_atc_offer_text %}
+                  {% if pdp_above_atc_offer_text != "" %}
+                    <div class="atc-strip-container">
+                      <div class="atc-strip-content">
+                        <p class="atc-strip-content-text">
+                          {{ pdp_above_atc_offer_text }}
+                        </p>
+                      </div>
+                    </div>
+                  {% endif %}
 
 
                 {%- if sticky_cart.settings.show_quantity_selector -%}
