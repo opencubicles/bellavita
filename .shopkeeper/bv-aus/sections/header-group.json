@@ -17,11 +17,11 @@
         "b4274c71-3b8c-453a-ac62-b2f39868bcf0": {
           "type": "announcement",
           "settings": {
-            "text": "🚚FREE Shipping on orders above $32*",
+            "text": "🚚FREE Shipping",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
-            "link": "shopify://collections/shop-all"
+            "link": "shopify://collections/bestseller"
           }
         },
         "announcement_wJqJbc": {
@@ -31,7 +31,7 @@
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
-            "link": "shopify://collections/buy-more-save-more"
+            "link": "shopify://collections/bestseller"
           }
         }
       },
