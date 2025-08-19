@@ -358,19 +358,23 @@
       }
     }
 
-    if (!isMobile) {
-      // Desktop → always hide first
-      hideElements(0);
-    } else {
-      // Mobile → follow Liquid conditions
-      {% if hide_offer_block_first %}
+    // Run only if more than one block exists
+    if (fragranceNotes.length > 1) {
+      if (!isMobile) {
+        // Desktop → always hide first
         hideElements(0);
-      {% elsif hide_offer_block_second %}
-        hideElements(1);
-      {% endif %}
+      } else {
+        // Mobile → follow Liquid conditions
+        {% if hide_offer_block_first %}
+          hideElements(0);
+        {% elsif hide_offer_block_second %}
+          hideElements(1);
+        {% endif %}
+      }
     }
   });
 </script>
+
 
 
 {% endif %} 
