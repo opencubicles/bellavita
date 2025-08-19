@@ -78,11 +78,11 @@
     "cart_recommendations_heading": "You may also like",
     "empty_cart_recommendations": "",
     "empty_cart_collections": [
-      "sale",
       "men-fragrance",
       "unisex-fragrance",
       "women-fragrance",
-      "bestseller"
+      "bestseller",
+      "gift-sets"
     ],
     "search_results": "product",
     "predictive_search_enabled": false,
