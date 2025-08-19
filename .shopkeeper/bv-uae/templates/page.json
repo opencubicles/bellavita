@@ -1,1 +1,58 @@
-{"sections":{"main":{"type":"main-page","settings":{"narrow":true,"padding_top":60,"padding_bottom":72}},"contact_form_M3WQFq":{"type":"contact-form","blocks":{"contact_JkGUkn":{"type":"contact","settings":{"heading":"Customer service","text":"","link":""}},"media_BBPJhR":{"type":"media","settings":{"heading":"Follow us"}}},"block_order":["contact_JkGUkn","media_BBPJhR"],"disabled":true,"settings":{"show_phone":true,"show_divider":false,"heading":"Get in touch","heading_size":"h2","heading_tag":"h2","padding_top":36,"padding_bottom":36}}},"order":["main","contact_form_M3WQFq"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "narrow": true,
+        "padding_top": 60,
+        "padding_bottom": 72
+      }
+    },
+    "contact_form_M3WQFq": {
+      "type": "contact-form",
+      "blocks": {
+        "contact_JkGUkn": {
+          "type": "contact",
+          "settings": {
+            "heading": "Customer service",
+            "text": "",
+            "link": ""
+          }
+        },
+        "media_BBPJhR": {
+          "type": "media",
+          "settings": {
+            "heading": "Follow us"
+          }
+        }
+      },
+      "block_order": [
+        "contact_JkGUkn",
+        "media_BBPJhR"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_phone": true,
+        "show_divider": false,
+        "heading": "Get in touch",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "contact_form_M3WQFq"
+  ]
+}

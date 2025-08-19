@@ -1,1 +1,1027 @@
-{"sections":{"slideshow_kwPcBi":{"type":"slideshow","blocks":{"image_D9A8zA":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Desktop_1400_x_510.jpg","image_mobile":"shopify:\/\/shop_images\/Mobile_800_x_1070.jpg","image_position":"center center","text_box_position":"bottom-left","subheading":"","subheading_size":"h5","heading":"","heading_size":"h1","heading_tag":"h2","text":"","text_size":"typeset","button_label":"","button_link":"shopify:\/\/collections\/buy-more-save-more","button_secondary_label":"","button_secondary_link":"","button_size":"medium","button_style_secondary":false}},"image_4kaVAz":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Mani_banner_desktop.webp","image_mobile":"shopify:\/\/shop_images\/main_banner_mobile.webp","image_position":"center center","text_box_position":"middle-center","subheading":"","subheading_size":"h5","heading":"","heading_size":"h1","heading_tag":"h2","text":"","text_size":"typeset","button_label":"","button_link":"shopify:\/\/collections\/gourmet-collection","button_secondary_label":"","button_secondary_link":"","button_size":"medium","button_style_secondary":false}},"image_UTGxj7":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Mani-banner_desktop.jpg","image_mobile":"shopify:\/\/shop_images\/main-banner-mobile.jpg","image_position":"center center","text_box_position":"bottom-left","subheading":"","subheading_size":"h5","heading":"","heading_size":"h1","heading_tag":"h2","text":"","text_size":"typeset","button_label":"","button_link":"shopify:\/\/collections\/buy-more-save-more","button_secondary_label":"","button_secondary_link":"","button_size":"medium","button_style_secondary":false}},"image_tiQb3A":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Homepage_Banner_For_Him.webp","image_mobile":"shopify:\/\/shop_images\/Homepage_Mobile_Banner_For_Him.webp","image_position":"center center","text_box_position":"bottom-left","subheading":"","subheading_size":"h5","heading":"","heading_size":"h1","heading_tag":"h2","text":"","text_size":"typeset","button_label":"","button_link":"shopify:\/\/collections\/men-fragrance","button_secondary_label":"","button_secondary_link":"","button_size":"medium","button_style_secondary":false}}},"block_order":["image_D9A8zA","image_4kaVAz","image_UTGxj7","image_tiQb3A"],"custom_css":["a.button {font-size: 19px;}","@media screen and (min-width: 750px) {.slideshow--legacy .slideshow__box--middle-right {align-items: end; justify-content: flex-end; text-align: end; }}","@media screen and (max-width: 750px) {a.button {font-size: 12px; display: inline; padding: 12px; }}","a.button:nth-child(1) {min-width: 19rem; color: white; background: Black; border: none !important;}",".button::after {left: -105%; background-image: linear-gradient(90deg, transparent, #a2a2a2, transparent);}"],"settings":{"slideshow_type":"legacy","text_alignment":"center","image_ratio":"adapt_first","autorotate":false,"autorotate_speed":5,"full_width":true,"image_behavior":"none","mobile_text_alignment":"center","mobile_image_ratio":"adapt_first","show_text_below":false,"colors_button_label":"#282828","colors_button_background":"#f9f6b2","colors_text":"#ffffff","colors_background":"#ffffff","colors_overlay":"#ffffff","colors_overlay_opacity":0,"colors_navigation_text":"#ffffff","colors_navigation_background":"#ffffff","padding_top":24,"padding_bottom":36}},"ticker_banner_LiBRmh":{"type":"ticker-banner","blocks":{"image_N9AKJr":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Static_Topper_1920x140_c571d73e-c662-4167-95ef-f26bbafc7378.jpg","image_mobile":"shopify:\/\/shop_images\/Static_Topper_860x80_c0283604-1157-4d09-8c31-3c907492db86.jpg","image_position":"center center","text_box_position":"middle-center","subheading":"","subheading_size":"h5","heading":"","heading_size":"h1","heading_tag":"h2","text":"","text_size":"typeset","button_label":"","button_link":"","button_secondary_label":"","button_secondary_link":"","button_size":"medium","button_style_secondary":false}}},"block_order":["image_N9AKJr"],"disabled":true,"custom_css":["@media only screen and (min-width: 600px) {#fixed-ticker {display: none; }}"],"settings":{"slideshow_type":"legacy","text_alignment":"left","image_ratio":"adapt_first","autorotate":false,"autorotate_speed":5,"full_width":true,"image_behavior":"none","mobile_text_alignment":"left","mobile_image_ratio":"adapt_first","show_text_below":false,"colors_button_label":"#ffffff","colors_button_background":"#1a1b18","colors_text":"#1a1b18","colors_background":"#ffffff","colors_overlay":"#ffffff","colors_overlay_opacity":0,"colors_navigation_text":"#ffffff","colors_navigation_background":"#1a1b18","padding_top":0,"padding_bottom":0}},"1710513085af0e5eb1":{"type":"apps","blocks":{"videowise_video_platform_ugc_videowise_page_widgets_YNnAe9":{"type":"shopify:\/\/apps\/videowise-video-commerce\/blocks\/videowise-page-widgets\/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d","settings":{"videowise_embed":"<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65f45c8b96a30700289912ba\"><\/div>"}}},"block_order":["videowise_video_platform_ugc_videowise_page_widgets_YNnAe9"],"settings":{"include_margins":true,"show_divider":false,"padding_top":24,"padding_bottom":8}},"old_feature_collection_MdzHcP":{"type":"old-feature-collection","custom_css":["p.rating {display: block;}","a.button:nth-child(1) {min-width: 16rem; color: black; background: white;}",".button::after {left: -105%; background-image: linear-gradient(90deg, transparent, #a2a2a2, transparent);}",".price bdi {font-size: 20px; font-weight: 600;}"],"settings":{"collection":"bestsellers","products_to_show":4,"show_view_all":true,"show_divider":false,"heading":"BESTSELLERS","heading_size":"h2","heading_alignment":"center","heading_tag":"h2","columns_mobile":"1","swipe_on_mobile":true,"image_ratio":"portrait","image_position":"center center","enable_image_fill":false,"show_secondary_image":true,"secondary_image_max":1,"show_vendor":false,"show_rating":true,"show_quick_buy":true,"enable_quick_view":true,"enable_color_swatches":true,"enable_countdown":true,"padding_top":8,"padding_bottom":36}},"101185b5-3c07-4732-b6ad-25722f54d9a9":{"type":"video-hero","blocks":{"template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-0":{"type":"heading","settings":{"heading":"EXPLORE INCLUSIVE LUXURY","heading_size":"h2","heading_tag":"h2"}},"template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-1":{"type":"text","settings":{"text":"<p>Fragrances made with the world’s finest oils and ingredients.<\/p>","text_size":"typeset","secondary_color":false}},"template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-2":{"type":"button","settings":{"button_label":"Fragrances","button_link":"shopify:\/\/collections\/bestsellers","button_size":"small","button_style_secondary":false}}},"block_order":["template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-0","template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-1","template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-2"],"settings":{"video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/478dfd30e1114a6a9fe7a4c4d1b1ffa4.mp4","text_box_position":"middle-center","text_alignment":"center","image_ratio":"500px","show_text_box":false,"full_width":true,"show_divider":false,"mobile_text_alignment":"center","mobile_image_ratio":"250px","show_text_below":false,"colors_button_label":"#1a1b18","colors_button_background":"#ffffff","colors_text":"#ffffff","colors_overlay":"#000000","colors_overlay_opacity":28,"padding_top":32,"padding_bottom":32}},"68bff2e3-dcbe-4925-be57-2aac7a7011dd":{"type":"guarantees","blocks":{"template--14537741565998__68bff2e3-dcbe-4925-be57-2aac7a7011dd-168846590580505696-0":{"type":"guarantee","settings":{"icon":"price_tag","icon_size":"x-large","custom_icon":"https:\/\/cdn.shopify.com\/s\/files\/1\/0650\/5539\/1970\/files\/cruelty_free_2.svg?v=1710495203","title":"CRUELTY FREE","title_size":"h4","text":"<p><em>We, at BellaVita Luxury, love animals and do not test our products on them, ever.<\/em><\/p>"}},"template--14537741565998__68bff2e3-dcbe-4925-be57-2aac7a7011dd-168846590580505696-1":{"type":"guarantee","settings":{"icon":"truck","icon_size":"x-large","custom_icon":"https:\/\/cdn.shopify.com\/s\/files\/1\/0650\/5539\/1970\/files\/fragrance_forward.svg?v=1710495801","title":"FRAGRANCE FORWARD","title_size":"h4","text":"<p>Luxurious & imported perfume oils in every product<\/p>"}},"53e5cadd-d46a-41b0-b1d4-2df0fdfae5a1":{"type":"guarantee","settings":{"icon":"truck","icon_size":"x-large","custom_icon":"https:\/\/cdn.shopify.com\/s\/files\/1\/0650\/5539\/1970\/files\/ifra_2.svg?v=1710494946","title":"IFRA CERTIFIED","title_size":"h4","text":"<p><em>Our perfumes are internationally certified to be safe for use on your skin<\/em><\/p>"}},"1ad8713e-dfd7-4cd8-b945-7703e13c6ea1":{"type":"guarantee","settings":{"icon":"paw_print","icon_size":"x-large","custom_icon":"https:\/\/cdn.shopify.com\/s\/files\/1\/0650\/5539\/1970\/files\/imported_oils.svg?v=1710495801","title":"IMPORTED OILS","title_size":"h4","text":"<p><em>Our perfumes are sourced from the best-in-class establishments in France, Spain and Italy.<\/em><\/p>"}}},"block_order":["template--14537741565998__68bff2e3-dcbe-4925-be57-2aac7a7011dd-168846590580505696-0","template--14537741565998__68bff2e3-dcbe-4925-be57-2aac7a7011dd-168846590580505696-1","53e5cadd-d46a-41b0-b1d4-2df0fdfae5a1","1ad8713e-dfd7-4cd8-b945-7703e13c6ea1"],"settings":{"layout":"default","column_alignment":"center","horizontal_content":false,"full_width":false,"show_divider":false,"heading":"WHY BELLAVITA?","heading_size":"h2","heading_tag":"h2","columns_mobile":"2","swipe_on_mobile":false,"use_custom_colors":false,"colors_icon":"#ffffff","colors_text":"#1a1b18","colors_background":"#ffffff","gradient_background":"","padding_top":32,"padding_bottom":32}},"171024877333614012":{"type":"apps","blocks":{"videowise_video_platform_ugc_videowise_page_widgets_7TznBL":{"type":"shopify:\/\/apps\/videowise-video-commerce\/blocks\/videowise-page-widgets\/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d","settings":{"videowise_embed":"<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65f2c5376a19d0002965a01d\"><\/div>"}}},"block_order":["videowise_video_platform_ugc_videowise_page_widgets_7TznBL"],"settings":{"include_margins":true,"show_divider":false,"padding_top":36,"padding_bottom":36}},"73bdc832-ef1c-4dcf-833b-e9876f45593b":{"type":"shop-the-look","blocks":{"template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-3":{"type":"product","settings":{"product":"honey-oud-unisex-perfume-3-38-fl-oz","color":"#e7e7e7","horizontal":77,"vertical":68}},"template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-1":{"type":"product","settings":{"product":"ceo-man-luxury-perfume","color":"#e7e7e7","horizontal":50,"vertical":55}},"template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-2":{"type":"product","settings":{"product":"white-oud-unisex-perfume-3-38-fl-oz","color":"#e7e7e7","horizontal":22,"vertical":78}}},"block_order":["template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-3","template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-1","template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-2"],"custom_css":[".price bdi {font-size: 2.2rem; font-weight: 600;}"],"settings":{"image":"shopify:\/\/shop_images\/Banner_1.webp","layout":"image_first","text_box_position":"middle","text_alignment":"left","mobile_text_alignment":"left","full_width":false,"show_divider":false,"heading":"SHOP THE LOOK","heading_size":"h2","heading_alignment":"center","heading_tag":"h2","image_ratio":"adapt","image_position":"center center","enable_image_fill":false,"show_secondary_image":false,"show_vendor":false,"show_rating":true,"show_quick_buy":true,"enable_quick_view":false,"enable_color_swatches":true,"enable_countdown":false,"padding_top":32,"padding_bottom":32}},"d50d0ad6-dc3a-470f-bc9c-1fb88a328878":{"type":"multicolumn","blocks":{"69365186-94f1-439c-a441-09d77404aa25":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/l3.jpg","image_mobile":"shopify:\/\/shop_images\/l3.jpg","title":"WOMEN","title_size":"h2","text":"","button_label":"","button_link":"shopify:\/\/collections\/luxury-perfumes","button_style_secondary":true}},"template--14537741565998__d50d0ad6-dc3a-470f-bc9c-1fb88a328878-1688538755de89d03c-2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/l1.jpg","image_mobile":"shopify:\/\/shop_images\/l1.jpg","title":"GIFT SETS","title_size":"h2","text":"","button_label":"","button_link":"shopify:\/\/collections\/gift-sets","button_style_secondary":false}},"c5a9efe4-ff9f-4ff8-9724-f0cbb626a3dd":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/l2.jpg","image_mobile":"shopify:\/\/shop_images\/l2.jpg","title":"MEN","title_size":"h2","text":"","button_label":"","button_link":"shopify:\/\/collections\/tsb-deo","button_style_secondary":false}}},"block_order":["69365186-94f1-439c-a441-09d77404aa25","template--14537741565998__d50d0ad6-dc3a-470f-bc9c-1fb88a328878-1688538755de89d03c-2","c5a9efe4-ff9f-4ff8-9724-f0cbb626a3dd"],"disabled":true,"settings":{"image_ratio":"adapt","image_position":"center center","text_alignment":"center","show_divider":false,"enable_img_hover":true,"enable_link_hover":true,"image_width":"full","columns_desktop":3,"spacing_images":16,"full_width":false,"heading":"LUXURY CATEGORIES","heading_size":"h2","heading_alignment":"center","heading_tag":"h2","mobile_text_alignment":"center","columns_mobile":"2","spacing_mobile_images":15,"swipe_on_mobile":false,"padding_top":32,"padding_bottom":32}},"tab_collage_mGePMi":{"type":"tab-collage","blocks":{"image_iNtxxM":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner_2_ea8c52fe-0ad5-4eac-9e4c-59848647a3ff.jpg","image_position":"center center","heading":"Perfumes For Him","description":"<p>Intrigue lingers long after you've left the room. Whispers of sophistication that create a lasting memory and fuel the desire to leave your mark on the world.<\/p>","button_label":"Shop Now","button_link":"shopify:\/\/collections\/men-fragrance","button_size":"small","button_style_secondary":true}},"image_hMqhL6":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner_3_ee2ff768-e1b1-4d97-bb9f-d5ed6780c7ac.jpg","image_position":"center center","heading":"Perfumes For Her","description":"<p>The Essence of You — Turn heads and make hearts flutter with fragrances that are simply irresistible. Smell like a dream.<\/p>","button_label":"Shop Now","button_link":"shopify:\/\/collections\/women-fragrance","button_size":"small","button_style_secondary":true}},"image_VBV8fj":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/gift_set_category_global_1.jpg","image_position":"center center","heading":"Gift Sets","description":"<p>Beyond a box, a bouquet of fragrance. Discover the best perfumes for you, and yours. Wrap up a touch of luxury in every spritz.<\/p>","button_label":"Shop Now","button_link":"shopify:\/\/collections\/gift-sets","button_size":"small","button_style_secondary":true}},"image_7idhYz":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner_4_e713cdbe-c3ec-4058-9f5c-aee785b41ebb.jpg","image_position":"center center","heading":"Perfumes For Them","description":"<p>Imagine having a fragrance that adjusts to your style, mood, and preference. Fragrances that aren't restricted by gender, but rather by your own creativity.<\/p>","button_label":"Shop Now","button_link":"shopify:\/\/collections\/unisex-fragrance","button_size":"small","button_style_secondary":true}}},"block_order":["image_iNtxxM","image_hMqhL6","image_VBV8fj","image_7idhYz"],"settings":{"layout":"text_first","text_box_position":"top","text_alignment":"left","image_ratio":"550px","make_collapsible_rows":true,"full_width":true,"show_divider":false,"heading":"SHOP BY COLLECTION","heading_size":"h2","heading_alignment":"center","heading_tag":"h2","mobile_layout":"text_first","mobile_text_alignment":"left","mobile_image_ratio":"auto","colors_button_label":"#ffffff","colors_button_background":"#ffffff","colors_text":"#171615","colors_border":"#d2d5d9","colors_background":"#f2f2f2","gradient_background":"","padding_top":36,"padding_bottom":36}},"7a9ff4ba-f8bd-4f53-8171-2db27e089fe5":{"type":"testimonials","blocks":{"template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-3":{"type":"testimonial","settings":{"icon":"5","text":"<p>I love the bottle. Like a pretty sunset. It's not as loud as an old one. This is a very subtle spray, so this is perfect for all ages.<\/p>","image":"shopify:\/\/shop_images\/naturally_mia.jpg","author":"naturally_mia","instagram_username":"","instagram_link":""}},"template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-1":{"type":"testimonial","settings":{"icon":"5","text":"<p>Not only does it smell divine, but it's also incredibly convenient for your on-the-go lifestyle.<\/p>","image":"shopify:\/\/shop_images\/dakota.jpg","author":"dakotakihair","instagram_username":"","instagram_link":""}},"template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-2":{"type":"testimonial","settings":{"icon":"5","text":"<p>This is an amazing gift option without breaking the bank.<\/p>","image":"shopify:\/\/shop_images\/samiyataba.jpg","author":"samiatayaba","instagram_username":"","instagram_link":""}},"template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-4":{"type":"testimonial","settings":{"icon":"5","text":"<p>Luxury at its finest. first, I wanted to keep it as, like, a special occasion perfume, but then I'm like, girl, I'm wearing this every day.<\/p>","image":"shopify:\/\/shop_images\/lipstickg.jpg","author":"lipstickgawwdess","instagram_username":"","instagram_link":""}},"e42d1975-eba6-496d-acb6-f144e356084f":{"type":"testimonial","settings":{"icon":"5","text":"<p>These perfumes genuinely smell so good. These are really really amazing.<\/p>","image":"shopify:\/\/shop_images\/binx_elaine.jpg","author":"binx_elaine","instagram_username":"","instagram_link":""}}},"block_order":["template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-3","template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-1","template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-2","template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-4","e42d1975-eba6-496d-acb6-f144e356084f"],"settings":{"autorotate":true,"autorotate_speed":5,"hide_images":false,"show_divider":false,"heading":"WHAT OUR CUSTOMERS HAVE TO SAY","heading_size":"h2","heading_alignment":"center","heading_tag":"h2","padding_top":32,"padding_bottom":32}},"slideshow_BHgpzj":{"type":"slideshow","blocks":{"image_nA4CkD":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner_5_71d3e396-692a-4a03-820e-f62c9768ad46.jpg","image_mobile":"shopify:\/\/shop_images\/Banner_Mobile_Version_5.jpg","image_position":"center center","text_box_position":"middle-center","subheading":"","subheading_size":"h5","heading":"","heading_size":"h1","heading_tag":"h2","text":"","text_size":"typeset","button_label":"","button_link":"shopify:\/\/products\/skai-aquatic-unisex-perfume-3-38-fl-oz","button_secondary_label":"Button Secondary label","button_secondary_link":"","button_size":"medium","button_style_secondary":false}}},"block_order":["image_nA4CkD"],"settings":{"slideshow_type":"modern","text_alignment":"left","image_ratio":"550px","autorotate":false,"autorotate_speed":5,"full_width":true,"image_behavior":"none","mobile_text_alignment":"left","mobile_image_ratio":"500px","show_text_below":false,"colors_button_label":"#ffffff","colors_button_background":"#1a1b18","colors_text":"#1a1b18","colors_background":"#ffffff","colors_overlay":"#ffffff","colors_overlay_opacity":100,"colors_navigation_text":"#ffffff","colors_navigation_background":"#1a1b18","padding_top":36,"padding_bottom":36}},"reveal_banner_cge4U7":{"type":"reveal-banner","blocks":{"heading_peb7KX":{"type":"heading","disabled":true,"settings":{"heading":"SKAI AQUATIC","heading_size":"h1","heading_tag":"h2"}},"subheading_qeLFk6":{"type":"subheading","disabled":true,"settings":{"subheading":"EAU DE PARFUM","subheading_size":"h4","secondary_color":false}},"buttons_riPKJb":{"type":"buttons","disabled":true,"settings":{"button_label":"Shop Now","button_link":"shopify:\/\/products\/glam-woman-perfume-100ml","video_button":"","video_url":"","video_description":"Describe the video"}},"slide_NGaBwm":{"type":"slide","settings":{"heading":"SKAI AQUATIC","heading_size":"h2","heading_tag":"h2","text":"<p>SkaiAquatic, a sophisticated companion for a fresh, elegant, and captivating experience. Elevate yourself with this perfect fragrance, adding an understated, yet charming, allure to your presence.<\/p>","text_size":"typeset2","secondary_color":false,"button_label":"Shop Now","button_link":"shopify:\/\/products\/luxury-unisex-perfume-gift-set-for-men-women-4x20-ml","button_size":"small","button_style_secondary":false,"colors_button_label":"#ffffff","colors_button_background":"#1a1b18","colors_text":"#212326","colors_background":"#f3f3f3","gradient_background":""}}},"block_order":["heading_peb7KX","subheading_qeLFk6","buttons_riPKJb","slide_NGaBwm"],"disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Skai-Banner_1920-x-600_1.jpg","image_position":"center center","text_box_position":"middle","text_alignment":"left","image_ratio":"500px","full_width":true,"show_divider":false,"image_mobile":"shopify:\/\/shop_images\/SKAI.jpg","mobile_text_alignment":"center","mobile_image_ratio":"500px","show_text_below":false,"colors_text":"#ffffff","colors_overlay":"#000000","colors_overlay_opacity":0,"padding_top":36,"padding_bottom":24}},"image_with_text_FKwCrN":{"type":"image-with-text","blocks":{"heading_NeYDih":{"type":"heading","settings":{"heading":"CEO MAN","heading_size":"h2","heading_tag":"h2"}},"text_A4RACj":{"type":"text","settings":{"text":"<p>An enduring fragrance that can bring out the leader in you. This classy cologne blends refreshing citrus with calming lavender, finishing with warm and earthy notes for a timeless fragrance — Embody the essence of a true CEO.<\/p>","text_size":"typeset2","secondary_color":false}},"button_4pydJX":{"type":"button","settings":{"button_label":"View Now","button_link":"shopify:\/\/products\/ceo-man-luxury-perfume-3-38-fl-oz","button_size":"small","button_style_secondary":false}}},"block_order":["heading_NeYDih","text_A4RACj","button_4pydJX"],"settings":{"image":"shopify:\/\/shop_images\/CEO_Man_1.jpg","image_link":"","image_position":"center center","layout":"image_first","text_box_position":"middle","text_alignment":"left","image_ratio":"450px","enlarge_content":false,"full_width":false,"show_divider":false,"image_behavior":"none","mobile_layout":"image_first","mobile_text_alignment":"left","mobile_image_ratio":"adapt","use_custom_colors":false,"colors_button_label":"#ffffff","colors_button_background":"#1a1b18","colors_text":"#212326","colors_background":"#ffffff","gradient_background":"","padding_top":0,"padding_bottom":36}},"image_with_text_q4kHhN":{"type":"image-with-text","blocks":{"heading_yyM786":{"type":"heading","settings":{"heading":"HONEY OUD","heading_size":"h2","heading_tag":"h2"}},"text_i4HjgQ":{"type":"text","settings":{"text":"<p>A fragrant symphony for your senses, unfolds with honeyed whispers and citrus zest. A heart of rose unfolds, embraced by the rich depth of oud, and a final touch of vanilla lingers like a warm summer memory. Let this be your summer signature.<\/p>","text_size":"typeset2","secondary_color":false}},"button_DAY3x9":{"type":"button","settings":{"button_label":"View Now","button_link":"shopify:\/\/products\/honey-oud-unisex-perfume-3-38-fl-oz","button_size":"small","button_style_secondary":false}}},"block_order":["heading_yyM786","text_i4HjgQ","button_DAY3x9"],"settings":{"image":"shopify:\/\/shop_images\/Honey_Oud_2.jpg","image_link":"","image_position":"center center","layout":"text_first","text_box_position":"middle","text_alignment":"left","image_ratio":"450px","enlarge_content":false,"full_width":false,"show_divider":false,"image_behavior":"none","mobile_layout":"image_first","mobile_text_alignment":"left","mobile_image_ratio":"adapt","use_custom_colors":false,"colors_button_label":"#ffffff","colors_button_background":"#1a1b18","colors_text":"#212326","colors_background":"#ffffff","gradient_background":"","padding_top":36,"padding_bottom":36}},"373d64ae-f6fa-49c0-a7ba-6dd354002798":{"type":"gallery","blocks":{"template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-3":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/5_e158b600-2e3b-4a4d-952e-c4bf43dbc30f.jpg","image_position":"center center","subheading":"","subheading_size":"h5","heading":"","heading_size":"h3","link":"shopify:\/\/products\/honey-oud-unisex-perfume-3-38-fl-oz","text_box_position":"bottom-left"}},"template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/3_6eb4d897-0ce4-4eec-8914-02292a01b0c3.jpg","image_position":"center center","subheading":"","subheading_size":"h4","heading":"","heading_size":"h3","link":"shopify:\/\/products\/ceo-man-luxury-perfume","text_box_position":"middle-center"}},"0237030b-2b22-46e9-a89a-7f1501509b8a":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/4_56d51848-8e29-45b6-a8fd-89e0006e057b.jpg","image_position":"center center","subheading":"","subheading_size":"h5","heading":"","heading_size":"h3","link":"shopify:\/\/products\/glam-woman-perfume-3-38-fl-oz","text_box_position":"middle-center"}},"template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-2":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/2_e8aae230-dc4c-415d-9d6a-3e8d5702fa42.jpg","image_position":"center center","subheading":"","subheading_size":"h5","heading":"","heading_size":"h3","link":"shopify:\/\/products\/white-oud-unisex-perfume-3-38-fl-oz","text_box_position":"bottom-left"}},"template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/1_ccab1f09-db70-4b18-9a58-08759bcc173c.jpg","image_position":"center center","subheading":"","subheading_size":"h5","heading":"","heading_size":"h3","link":"shopify:\/\/products\/skai-aquatic-unisex-perfume-3-38-fl-oz","text_box_position":"bottom-left"}}},"block_order":["template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-3","template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-1","0237030b-2b22-46e9-a89a-7f1501509b8a","template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-2","template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-0"],"settings":{"per_row":5,"spacing_images":10,"image_height":300,"apply_overlay":false,"full_width":true,"show_divider":false,"heading":"","heading_size":"h2","heading_alignment":"center","heading_tag":"h2","columns_mobile":"2","swipe_on_mobile":true,"mobile_image_height":160,"padding_top":12,"padding_bottom":12}}},"order":["slideshow_kwPcBi","ticker_banner_LiBRmh","1710513085af0e5eb1","old_feature_collection_MdzHcP","101185b5-3c07-4732-b6ad-25722f54d9a9","68bff2e3-dcbe-4925-be57-2aac7a7011dd","171024877333614012","73bdc832-ef1c-4dcf-833b-e9876f45593b","d50d0ad6-dc3a-470f-bc9c-1fb88a328878","tab_collage_mGePMi","7a9ff4ba-f8bd-4f53-8171-2db27e089fe5","slideshow_BHgpzj","reveal_banner_cge4U7","image_with_text_FKwCrN","image_with_text_q4kHhN","373d64ae-f6fa-49c0-a7ba-6dd354002798"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_kwPcBi": {
+      "type": "slideshow",
+      "blocks": {
+        "image_D9A8zA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Banner_For_Him.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Him.jpg",
+            "image_position": "center center",
+            "text_box_position": "bottom-left",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/fragrance-for-him",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "image_4kaVAz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Banner_For_Her.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Her.jpg",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/fragrance-for-her",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "image_UTGxj7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Banner_For_Unisex.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Unisex.jpg",
+            "image_position": "center center",
+            "text_box_position": "bottom-left",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/unisex",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "image_tiQb3A": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_position": "center center",
+            "text_box_position": "bottom-left",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/men-fragrance",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "image_D9A8zA",
+        "image_4kaVAz",
+        "image_UTGxj7",
+        "image_tiQb3A"
+      ],
+      "custom_css": [
+        "a.button {font-size: 19px;}",
+        "@media screen and (min-width: 750px) {.slideshow--legacy .slideshow__box--middle-right {align-items: end; justify-content: flex-end; text-align: end; }}",
+        "@media screen and (max-width: 750px) {a.button {font-size: 12px; display: inline; padding: 12px; }}",
+        "a.button:nth-child(1) {min-width: 19rem; color: white; background: Black; border: none !important;}",
+        ".button::after {left: -105%; background-image: linear-gradient(90deg, transparent, #a2a2a2, transparent);}"
+      ],
+      "settings": {
+        "slideshow_type": "legacy",
+        "text_alignment": "center",
+        "image_ratio": "adapt_first",
+        "autorotate": false,
+        "autorotate_speed": 5,
+        "full_width": true,
+        "image_behavior": "none",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "adapt_first",
+        "show_text_below": false,
+        "colors_button_label": "#282828",
+        "colors_button_background": "#f9f6b2",
+        "colors_text": "#ffffff",
+        "colors_background": "#ffffff",
+        "colors_overlay": "#ffffff",
+        "colors_overlay_opacity": 0,
+        "colors_navigation_text": "#ffffff",
+        "colors_navigation_background": "#ffffff",
+        "padding_top": 24,
+        "padding_bottom": 36
+      }
+    },
+    "ticker_banner_LiBRmh": {
+      "type": "ticker-banner",
+      "blocks": {
+        "image_N9AKJr": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "image_N9AKJr"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media only screen and (min-width: 600px) {#fixed-ticker {display: none; }}"
+      ],
+      "settings": {
+        "slideshow_type": "legacy",
+        "text_alignment": "left",
+        "image_ratio": "adapt_first",
+        "autorotate": false,
+        "autorotate_speed": 5,
+        "full_width": true,
+        "image_behavior": "none",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "adapt_first",
+        "show_text_below": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "colors_overlay": "#ffffff",
+        "colors_overlay_opacity": 0,
+        "colors_navigation_text": "#ffffff",
+        "colors_navigation_background": "#1a1b18",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1710513085af0e5eb1": {
+      "type": "apps",
+      "blocks": {
+        "videowise_video_commerce_videowise_page_widgets_7pN3gK": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_68836fb3d37f740058cc8a82\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "videowise_video_commerce_videowise_page_widgets_7pN3gK"
+      ],
+      "settings": {
+        "include_margins": false,
+        "show_divider": false,
+        "padding_top": 24,
+        "padding_bottom": 8
+      }
+    },
+    "old_feature_collection_MdzHcP": {
+      "type": "old-feature-collection",
+      "custom_css": [
+        "p.rating {display: block;}",
+        "a.button:nth-child(1) {min-width: 16rem; color: black; background: white;}",
+        ".button::after {left: -105%; background-image: linear-gradient(90deg, transparent, #a2a2a2, transparent);}",
+        ".price bdi {font-size: 20px; font-weight: 600;}"
+      ],
+      "settings": {
+        "collection": "bestsellers",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "BESTSELLERS",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": false,
+        "show_secondary_image": true,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 8,
+        "padding_bottom": 36
+      }
+    },
+    "101185b5-3c07-4732-b6ad-25722f54d9a9": {
+      "type": "video-hero",
+      "blocks": {
+        "template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "EXPLORE INCLUSIVE LUXURY",
+            "heading_size": "h2",
+            "heading_tag": "h2"
+          }
+        },
+        "template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fragrances made with the world’s finest oils and ingredients.</p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Fragrances",
+            "button_link": "shopify://collections/bestsellers",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-0",
+        "template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-1",
+        "template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-2"
+      ],
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/478dfd30e1114a6a9fe7a4c4d1b1ffa4.mp4",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "500px",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "250px",
+        "show_text_below": false,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 28,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "68bff2e3-dcbe-4925-be57-2aac7a7011dd": {
+      "type": "guarantees",
+      "blocks": {
+        "template--14537741565998__68bff2e3-dcbe-4925-be57-2aac7a7011dd-168846590580505696-0": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "price_tag",
+            "icon_size": "x-large",
+            "custom_icon": "https://cdn.shopify.com/s/files/1/0650/5539/1970/files/cruelty_free_2.svg?v=1710495203",
+            "title": "CRUELTY FREE",
+            "title_size": "h4",
+            "text": "<p><em>We, at BellaVita Luxury, love animals and do not test our products on them, ever.</em></p>"
+          }
+        },
+        "template--14537741565998__68bff2e3-dcbe-4925-be57-2aac7a7011dd-168846590580505696-1": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "truck",
+            "icon_size": "x-large",
+            "custom_icon": "https://cdn.shopify.com/s/files/1/0650/5539/1970/files/fragrance_forward.svg?v=1710495801",
+            "title": "FRAGRANCE FORWARD",
+            "title_size": "h4",
+            "text": "<p>Luxurious & imported perfume oils in every product</p>"
+          }
+        },
+        "53e5cadd-d46a-41b0-b1d4-2df0fdfae5a1": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "truck",
+            "icon_size": "x-large",
+            "custom_icon": "https://cdn.shopify.com/s/files/1/0650/5539/1970/files/ifra_2.svg?v=1710494946",
+            "title": "IFRA CERTIFIED",
+            "title_size": "h4",
+            "text": "<p><em>Our perfumes are internationally certified to be safe for use on your skin</em></p>"
+          }
+        },
+        "1ad8713e-dfd7-4cd8-b945-7703e13c6ea1": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "paw_print",
+            "icon_size": "x-large",
+            "custom_icon": "https://cdn.shopify.com/s/files/1/0650/5539/1970/files/imported_oils.svg?v=1710495801",
+            "title": "IMPORTED OILS",
+            "title_size": "h4",
+            "text": "<p><em>Our perfumes are sourced from the best-in-class establishments in France, Spain and Italy.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14537741565998__68bff2e3-dcbe-4925-be57-2aac7a7011dd-168846590580505696-0",
+        "template--14537741565998__68bff2e3-dcbe-4925-be57-2aac7a7011dd-168846590580505696-1",
+        "53e5cadd-d46a-41b0-b1d4-2df0fdfae5a1",
+        "1ad8713e-dfd7-4cd8-b945-7703e13c6ea1"
+      ],
+      "settings": {
+        "layout": "default",
+        "column_alignment": "center",
+        "horizontal_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "WHY BELLAVITA?",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "use_custom_colors": false,
+        "colors_icon": "#ffffff",
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "171024877333614012": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "73bdc832-ef1c-4dcf-833b-e9876f45593b": {
+      "type": "shop-the-look",
+      "blocks": {
+        "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-3": {
+          "type": "product",
+          "settings": {
+            "product": "honey-oud",
+            "color": "#e7e7e7",
+            "horizontal": 77,
+            "vertical": 68
+          }
+        },
+        "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-1": {
+          "type": "product",
+          "settings": {
+            "product": "ceo-man",
+            "color": "#e7e7e7",
+            "horizontal": 50,
+            "vertical": 55
+          }
+        },
+        "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-2": {
+          "type": "product",
+          "settings": {
+            "product": "white-oud",
+            "color": "#e7e7e7",
+            "horizontal": 22,
+            "vertical": 78
+          }
+        }
+      },
+      "block_order": [
+        "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-3",
+        "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-1",
+        "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-2"
+      ],
+      "custom_css": [
+        ".price bdi {font-size: 2.2rem; font-weight: 600;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Banner_1.jpg",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "full_width": false,
+        "show_divider": false,
+        "heading": "SHOP THE LOOK",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": false,
+        "enable_color_swatches": true,
+        "enable_countdown": false,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "d50d0ad6-dc3a-470f-bc9c-1fb88a328878": {
+      "type": "multicolumn",
+      "blocks": {
+        "69365186-94f1-439c-a441-09d77404aa25": {
+          "type": "column",
+          "settings": {
+            "title": "WOMEN",
+            "title_size": "h2",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/luxury-perfumes",
+            "button_style_secondary": true
+          }
+        },
+        "template--14537741565998__d50d0ad6-dc3a-470f-bc9c-1fb88a328878-1688538755de89d03c-2": {
+          "type": "column",
+          "settings": {
+            "title": "GIFT SETS",
+            "title_size": "h2",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/gift-sets",
+            "button_style_secondary": false
+          }
+        },
+        "c5a9efe4-ff9f-4ff8-9724-f0cbb626a3dd": {
+          "type": "column",
+          "settings": {
+            "title": "MEN",
+            "title_size": "h2",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/tsb-deo",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "69365186-94f1-439c-a441-09d77404aa25",
+        "template--14537741565998__d50d0ad6-dc3a-470f-bc9c-1fb88a328878-1688538755de89d03c-2",
+        "c5a9efe4-ff9f-4ff8-9724-f0cbb626a3dd"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "text_alignment": "center",
+        "show_divider": false,
+        "enable_img_hover": true,
+        "enable_link_hover": true,
+        "image_width": "full",
+        "columns_desktop": 3,
+        "spacing_images": 16,
+        "full_width": false,
+        "heading": "LUXURY CATEGORIES",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "mobile_text_alignment": "center",
+        "columns_mobile": "2",
+        "spacing_mobile_images": 15,
+        "swipe_on_mobile": false,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "tab_collage_mGePMi": {
+      "type": "tab-collage",
+      "blocks": {
+        "image_iNtxxM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_2_1.webp",
+            "image_position": "center center",
+            "heading": "Perfumes For Him",
+            "description": "<p>Intrigue lingers long after you've left the room. Whispers of sophistication that create a lasting memory and fuel the desire to leave your mark on the world.</p>",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/fragrance-for-him",
+            "button_size": "small",
+            "button_style_secondary": true
+          }
+        },
+        "image_hMqhL6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1.jpg",
+            "image_position": "center center",
+            "heading": "Perfumes For Her",
+            "description": "<p>The Essence of You — Turn heads and make hearts flutter with fragrances that are simply irresistible. Smell like a dream.</p>",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/fragrance-for-her",
+            "button_size": "small",
+            "button_style_secondary": true
+          }
+        },
+        "image_VBV8fj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_3988a5fe-845d-4b6a-82fe-9ff8ede3c30b.jpg",
+            "image_position": "center center",
+            "heading": "Gift Sets",
+            "description": "<p>Beyond a box, a bouquet of fragrance. Discover the best perfumes for you, and yours. Wrap up a touch of luxury in every spritz.</p>",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/gift-sets",
+            "button_size": "small",
+            "button_style_secondary": true
+          }
+        },
+        "image_7idhYz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_4.jpg",
+            "image_position": "center center",
+            "heading": "Perfumes For Them",
+            "description": "<p>Imagine having a fragrance that adjusts to your style, mood, and preference. Fragrances that aren't restricted by gender, but rather by your own creativity.</p>",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/unisex",
+            "button_size": "small",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "image_iNtxxM",
+        "image_hMqhL6",
+        "image_VBV8fj",
+        "image_7idhYz"
+      ],
+      "settings": {
+        "layout": "text_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "image_ratio": "550px",
+        "make_collapsible_rows": true,
+        "full_width": true,
+        "show_divider": false,
+        "heading": "SHOP BY COLLECTION",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "mobile_layout": "text_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#171615",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#f2f2f2",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "7a9ff4ba-f8bd-4f53-8171-2db27e089fe5": {
+      "type": "testimonials",
+      "blocks": {
+        "template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-3": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>I love the bottle. Like a pretty sunset. It's not as loud as an old one. This is a very subtle spray, so this is perfect for all ages.</p>",
+            "image": "shopify://shop_images/naturally_mia.jpg",
+            "author": "naturally_mia",
+            "instagram_username": "",
+            "instagram_link": ""
+          }
+        },
+        "template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>Not only does it smell divine, but it's also incredibly convenient for your on-the-go lifestyle.</p>",
+            "image": "shopify://shop_images/dakota.jpg",
+            "author": "dakotakihair",
+            "instagram_username": "",
+            "instagram_link": ""
+          }
+        },
+        "template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>This is an amazing gift option without breaking the bank.</p>",
+            "image": "shopify://shop_images/samiyataba.jpg",
+            "author": "samiatayaba",
+            "instagram_username": "",
+            "instagram_link": ""
+          }
+        },
+        "template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-4": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>Luxury at its finest. first, I wanted to keep it as, like, a special occasion perfume, but then I'm like, girl, I'm wearing this every day.</p>",
+            "image": "shopify://shop_images/lipstickg.jpg",
+            "author": "lipstickgawwdess",
+            "instagram_username": "",
+            "instagram_link": ""
+          }
+        },
+        "e42d1975-eba6-496d-acb6-f144e356084f": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>These perfumes genuinely smell so good. These are really really amazing.</p>",
+            "image": "shopify://shop_images/binx_elaine.jpg",
+            "author": "binx_elaine",
+            "instagram_username": "",
+            "instagram_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-3",
+        "template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-1",
+        "template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-2",
+        "template--14537741565998__7a9ff4ba-f8bd-4f53-8171-2db27e089fe5-16887097518137dda6-4",
+        "e42d1975-eba6-496d-acb6-f144e356084f"
+      ],
+      "settings": {
+        "autorotate": true,
+        "autorotate_speed": 5,
+        "hide_images": false,
+        "show_divider": false,
+        "heading": "WHAT OUR CUSTOMERS HAVE TO SAY",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "slideshow_BHgpzj": {
+      "type": "slideshow",
+      "blocks": {
+        "image_nA4CkD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_5.jpg",
+            "image_mobile": "shopify://shop_images/Banner_Mobile_Version_5.jpg",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://products/ceo-man",
+            "button_secondary_label": "Button Secondary label",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "image_nA4CkD"
+      ],
+      "settings": {
+        "slideshow_type": "modern",
+        "text_alignment": "left",
+        "image_ratio": "550px",
+        "autorotate": false,
+        "autorotate_speed": 5,
+        "full_width": true,
+        "image_behavior": "none",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "500px",
+        "show_text_below": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "colors_overlay": "#ffffff",
+        "colors_overlay_opacity": 100,
+        "colors_navigation_text": "#ffffff",
+        "colors_navigation_background": "#1a1b18",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "reveal_banner_cge4U7": {
+      "type": "reveal-banner",
+      "blocks": {
+        "heading_peb7KX": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "SKAI AQUATIC",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "subheading_qeLFk6": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "EAU DE PARFUM",
+            "subheading_size": "h4",
+            "secondary_color": false
+          }
+        },
+        "buttons_riPKJb": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/glam-woman-perfume-100ml",
+            "video_button": "",
+            "video_url": "",
+            "video_description": "Describe the video"
+          }
+        },
+        "slide_NGaBwm": {
+          "type": "slide",
+          "settings": {
+            "heading": "SKAI AQUATIC",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "text": "<p>SkaiAquatic, a sophisticated companion for a fresh, elegant, and captivating experience. Elevate yourself with this perfect fragrance, adding an understated, yet charming, allure to your presence.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/luxury-unisex-perfume-gift-set-for-men-women-4x20-ml",
+            "button_size": "small",
+            "button_style_secondary": false,
+            "colors_button_label": "#ffffff",
+            "colors_button_background": "#1a1b18",
+            "colors_text": "#212326",
+            "colors_background": "#f3f3f3",
+            "gradient_background": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_peb7KX",
+        "subheading_qeLFk6",
+        "buttons_riPKJb",
+        "slide_NGaBwm"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_position": "center center",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "500px",
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "500px",
+        "show_text_below": false,
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 0,
+        "padding_top": 36,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_FKwCrN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_NeYDih": {
+          "type": "heading",
+          "settings": {
+            "heading": "CEO MAN",
+            "heading_size": "h2",
+            "heading_tag": "h2"
+          }
+        },
+        "text_A4RACj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>An enduring fragrance that can bring out the leader in you. This classy cologne blends refreshing citrus with calming lavender, finishing with warm and earthy notes for a timeless fragrance — Embody the essence of a true CEO.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_4pydJX": {
+          "type": "button",
+          "settings": {
+            "button_label": "View Now",
+            "button_link": "shopify://products/ceo-man",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_NeYDih",
+        "text_A4RACj",
+        "button_4pydJX"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/2_b0992589-f858-4ca8-bed5-98737217ef80.jpg",
+        "image_link": "",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "450px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "adapt",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_q4kHhN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_yyM786": {
+          "type": "heading",
+          "settings": {
+            "heading": "HONEY OUD",
+            "heading_size": "h2",
+            "heading_tag": "h2"
+          }
+        },
+        "text_i4HjgQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A fragrant symphony for your senses, unfolds with honeyed whispers and citrus zest. A heart of rose unfolds, embraced by the rich depth of oud, and a final touch of vanilla lingers like a warm summer memory. Let this be your summer signature.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_DAY3x9": {
+          "type": "button",
+          "settings": {
+            "button_label": "View Now",
+            "button_link": "shopify://products/honey-oud",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_yyM786",
+        "text_i4HjgQ",
+        "button_DAY3x9"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/2.jpg",
+        "image_link": "",
+        "image_position": "center center",
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "450px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "adapt",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "373d64ae-f6fa-49c0-a7ba-6dd354002798": {
+      "type": "gallery",
+      "blocks": {
+        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "shopify://products/honey-oud",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_2.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h4",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "shopify://products/g-o-a-t-man",
+            "text_box_position": "middle-center"
+          }
+        },
+        "0237030b-2b22-46e9-a89a-7f1501509b8a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_3.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "shopify://products/date-woman",
+            "text_box_position": "middle-center"
+          }
+        },
+        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_4.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "shopify://products/white-oud",
+            "text_box_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-3",
+        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-1",
+        "0237030b-2b22-46e9-a89a-7f1501509b8a",
+        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-2"
+      ],
+      "settings": {
+        "per_row": 5,
+        "spacing_images": 10,
+        "image_height": 300,
+        "apply_overlay": false,
+        "full_width": true,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "mobile_image_height": 160,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "slideshow_kwPcBi",
+    "ticker_banner_LiBRmh",
+    "1710513085af0e5eb1",
+    "old_feature_collection_MdzHcP",
+    "101185b5-3c07-4732-b6ad-25722f54d9a9",
+    "68bff2e3-dcbe-4925-be57-2aac7a7011dd",
+    "171024877333614012",
+    "73bdc832-ef1c-4dcf-833b-e9876f45593b",
+    "d50d0ad6-dc3a-470f-bc9c-1fb88a328878",
+    "tab_collage_mGePMi",
+    "7a9ff4ba-f8bd-4f53-8171-2db27e089fe5",
+    "slideshow_BHgpzj",
+    "reveal_banner_cge4U7",
+    "image_with_text_FKwCrN",
+    "image_with_text_q4kHhN",
+    "373d64ae-f6fa-49c0-a7ba-6dd354002798"
+  ]
+}
