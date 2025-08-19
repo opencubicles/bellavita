@@ -731,7 +731,9 @@
               <!-- custom code for product offers section ends here -->
               <!-- custom code for product offer badges -->
             {%- when 'offer_badges' -%}
-              {% render 'custom-product-offer-badges' %}
+              {% if product.metafields.custom.hide_offer_block != true %}
+               {% render 'custom-product-offer-badges' %}
+              {% endif  %}
               <!-- custom code for product offer badges ends here -->
              <!-- custom code for subtitle toggle -->
             {%- when 'subtitle' -%}

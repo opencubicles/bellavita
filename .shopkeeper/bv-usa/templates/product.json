@@ -299,6 +299,13 @@
             "show_dynamic_checkout": false
           }
         },
+        "custom_liquid_KdFJyi": {
+          "type": "custom_liquid",
+          "name": "fragnace-notes",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.product_ingredients.value != blank %}\n  <link rel=\"stylesheet\" href=\"{{ 'component-slider.css' | asset_url }}\" media=\"print\" onload=\"this.media='all'\">\n\n  <div class=\"Notes-Heading center\">\n    <h2>Fragrance Notes</h2>\n  </div>\n\n  <div class=\"product-ingredients-notes page-width\">\n    <slider-component class=\"slider-mobile-gutter\">\n      <ul\n        id=\"Slider-{{ section.id }}\"\n        class=\"grid grid--2-col grid--4-col-desktop slider slider--tablet\"\n        role=\"list\"\n      >\n        {% for metaobject in product.metafields.custom.product_ingredients.value limit: 4 %}\n          <li class=\"product-ingredients-item-notes grid__item slider__slide center-notes\">\n            \n            {% if metaobject.perfume_notes.value != blank %}\n              <p class=\"perfume-notes\">\n                <strong>{{ metaobject.perfume_notes.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_image != blank %}\n              <div class=\"ingredient-img-wrapper-notes\">  \n                <div class=\"media media--adapt pdp-ingredient-img\" style=\"--image-ratio-percent: {{ 1 | divided_by: metaobject.ingredient_image.value.aspect_ratio | times: 100 }}%;\">\n                  {{ metaobject.ingredient_image | image_url: width: 300 | image_tag: \n                    loading: 'lazy',\n                    fetchpriority: 'low',\n                    widths: '50, 100, 200, 300',\n                    is: 'lazy-image'\n                  }}\n                </div>\n              </div>  \n            {% endif %}\n\n            {% if metaobject.ingredient_title.value != blank %}\n              <p>\n                <strong>{{ metaobject.ingredient_title.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_description.value != blank %}\n              <span>{{ metaobject.ingredient_description.value }}</span>\n            {% endif %}\n          </li>\n        {% endfor %}\n      </ul>\n    </slider-component>\n  </div>\n{% endif %}"
+          }
+        },
         "meta_coms_MzxdKJ": {
           "type": "meta_coms",
           "settings": {}
@@ -341,6 +348,7 @@
         "variant_picker",
         "description",
         "buy_buttons",
+        "custom_liquid_KdFJyi",
         "meta_coms_MzxdKJ",
         "sticky_cart_t4QLHa",
         "offer_badges_hFhQyD",
@@ -707,7 +715,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_XV7AYb": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

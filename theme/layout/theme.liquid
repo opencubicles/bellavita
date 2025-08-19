@@ -306,8 +306,18 @@
   </style>
 {% endif %}
 
-          <!-- Cart custom hide  -->
+      <!-- Cart custom hide  -->
 {% if request.path contains '/products' %}
+  {% assign hide_offer_block_first = false %}
+  {% assign hide_offer_block_second = false %}
+
+  {% if product.metafields.custom.hide_offer_block == true %}
+  {% assign hide_offer_block_second = true %}
+  {% else %}
+    {% assign hide_offer_block_first = true %}
+  {% endif %}
+
+
   {% assign hide_first = false %}
   {% assign hide_second = false %}
 
@@ -330,7 +340,40 @@
 
     });
   </script>
-{% endif %}  
+{% endif %} 
+{% if hide_offer_block_second or hide_offer_block_first %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fragranceNotes = document.querySelectorAll('.product-ingredients-notes');
+    const notesHeading = document.querySelectorAll('.Notes-Heading');
+    const isMobile = window.innerWidth <= 768; // adjust breakpoint if needed
+
+    function hideElements(index) {
+      if (fragranceNotes.length > index) {
+        fragranceNotes[index].style.display = "none";
+      }
+      if (notesHeading.length > index) {
+        notesHeading[index].style.display = "none";
+      }
+    }
+
+    if (!isMobile) {
+      // Desktop → always hide first
+      hideElements(0);
+    } else {
+      // Mobile → follow Liquid conditions
+      {% if hide_offer_block_first %}
+        hideElements(0);
+      {% elsif hide_offer_block_second %}
+        hideElements(1);
+      {% endif %}
+    }
+  });
+</script>
+
+
+{% endif %} 
 {% endif %}
 </body>
 </html>

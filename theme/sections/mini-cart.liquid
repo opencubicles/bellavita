@@ -359,28 +359,41 @@
                     {%- endif -%}
                   </dt>
 
-                  {%- if item.original_line_price != item.final_line_price -%}
-                    <dl class="cart-item__discounted-prices">
-                      <dt class="visually-hidden">
-                        {{ 'products.product.price.regular_price' | t }}
-                      </dt>
-                      <dd class="price--on-sale">
-                        <s class="price price-item--regular">
-                          <price-money><bdi>{{ item.original_line_price | money }}</bdi></price-money>
-                        </s>
-                      </dd>
-                      <dt class="visually-hidden">
-                        {{ 'products.product.price.sale_price' | t }}
-                      </dt>
+                  {% assign show_discount = false %}
+                    {% assign sale_price = item.line_price %}
+                    {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' %}
+                      {% if item.original_line_price != item.final_line_price %}
+                        {% assign show_discount = true %}
+                      {% endif %}
+                      {% assign regular_price = item.original_line_price %}
+                    {% else %}
+                      {% assign regular_price = item.product.compare_at_price | times: item.quantity %}
+                      {% if regular_price != sale_price %}
+                        {% assign show_discount = true %}
+                      {% endif %}
+                      
+                    {% endif %}
+
+                    {% if show_discount %}
+                      <dl class="cart-item__discounted-prices">
+                        <dt class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</dt>
+                        <dd class="price">
+                          <price-money><bdi>{{ sale_price | money }}</bdi></price-money>
+                        </dd>
+                        <dt class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</dt>
+                        <dd class="price--on-sale">
+                          <s class="price price-item--regular">
+                            <price-money><bdi>{{ regular_price | money }}</bdi></price-money>
+                          </s>
+                        </dd>
+                      </dl>
+                    {% else %}
+
                       <dd class="price">
-                        <price-money><bdi>{{ item.final_line_price | money }}</bdi></price-money>
+                        <price-money><bdi>{{ regular_price | money }}</bdi></price-money>
                       </dd>
-                    </dl>
-                  {%- else -%}
-                    <dd class="price">
-                      <price-money><bdi>{{ item.original_line_price | money }}</bdi></price-money>
-                    </dd>
-                  {%- endif -%}
+
+                    {% endif %}
                 </div>
               </div>
             </div>
