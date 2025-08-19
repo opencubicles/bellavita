@@ -60,7 +60,7 @@
     "shipping_calculator_default_country": "India",
     "disable_view_cart": true,
     "show_free_shipping_message": true,
-    "free_shipping_minimum_amount": "30",
+    "free_shipping_minimum_amount": "",
     "show_bogo_progress_bar": false,
     "bogo_tag": "",
     "min_bogo_quantity": "",
@@ -79,7 +79,6 @@
     "empty_cart_recommendations": "",
     "empty_cart_collections": [
       "bestseller",
-      "sale",
       "men-fragrance",
       "unisex-fragrance",
       "women-fragrance"
