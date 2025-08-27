@@ -16,7 +16,31 @@
 
   assign animate_count = 1
 -%}
+{% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
+<style>
+.title-img img{
+  width:100%;
+}
+  .title-img {
+    width: 100%;
+}
+.shipping-banner-parent {
+    width: 100%;
+    background: #8bc34a36;
+    margin-block:5px;
+}
 
+.shipping-banner {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.shipping-banner span {
+    color: green;
+    font-weight: 700;
+}
+</style>
+{% endif -%}
 <form class="mini-cart{% if cart == empty %} is-empty{% endif %}" action="{{ routes.cart_url }}" method="post" id="cart">
   <div class="mini-cart__inner">
     <div class="mini-cart__header" data-animate data-animate-delay-{{ animate_count }}>
@@ -62,7 +86,7 @@
       <!-- custom code for BOGO progress bar ends here -->
       
       <!-- custom code for mini cart offer image -->
-
+      
       {%- if settings.cart_offer_image != blank -%}
       <div class="mini-cart-offer-img">
         {%- if settings.cart_offer_image_link != blank -%}
@@ -119,7 +143,14 @@
       <div class="cart-recommendations" data-animate data-animate-delay-{{ animate_count }}>
         <div class="title h4">{{ settings.cart_recommendations_heading | escape }}</div>
         <div class="title-image">
-          <img class="title-img" src="https://cdn.shopify.com/s/files/1/0650/5539/1970/files/Cart_Banner_copy_8110fd30-ace5-4032-b4ad-f364c3e09565.jpg?v=1752750411">
+          {% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
+            <img class="title-img" src="https://cdn.shopify.com/s/files/1/0650/5539/1970/files/Strip2_1.jpg?v=1746467269">
+            {%- else -%}
+            <img class="title-img" src="https://cdn.shopify.com/s/files/1/0650/5539/1970/files/Cart_Banner_copy_8110fd30-ace5-4032-b4ad-f364c3e09565.jpg?v=1752750411">
+          {% endif -%} 
+          
+
+           
         </div>
         <ul class="mini-cart__navigation">
           {%- for recommendation in settings.empty_cart_recommendations.products limit: 7 -%}
@@ -150,7 +181,12 @@
                     <div class="caption-with-letter-spacing">{{ recommendation.vendor }}</div>
                   {%- endif -%}
                   <div class="product-content">
-                    <a href="{{ recommendation.url }}" class="link product-title">{{ recommendation.title | truncatewords: 2, "" | append: "20ml" }}</a>
+                    {% if shop.permanent_domain != 'bv-uk.myshopify.com' %}
+                       <a href="{{ recommendation.url }}" class="link product-title">{{ recommendation.title | truncatewords: 2, "" | append: "20ml" }}</a>
+                    {%- else -%}
+                       <a href="{{ recommendation.url }}" class="link product-title">{{ recommendation.title | truncatewords: 2, "" }}</a>
+                    {%- endif -%}  
+                   
                   </div>
                   {%- if settings.cart_recommendations_show_price -%}
                     {% render 'price', product: recommendation %}
@@ -203,7 +239,31 @@
         </ul>
       </div>
     {%- endif -%}
+    {% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
+     <div class="shipping-banner-parent">
+       <div class="shipping-banner">
+            <span>FREE </span>Shipping Sitewide
+        </div>
+    </div>
+    {% endif %} 
+    {% if shop.permanent_domain != 'bellavitaglobal.myshopify.com' %} 
+      {% if cart.item_count == 1 %}
+        <div class="free-shipping typeset0">
+        <span class="free-shipping__text">Add one more product to get 10% off</span>
 
+        <span class="free-shipping__progress" style="--progress: 50%;"></span>
+        </div>
+        {% comment %} <div class="mini-cart-extra" style="padding: 0px 20px;">
+          <p><strong>Add one more product to get 10% off</strong></p>
+        </div> {% endcomment %}
+      {% elsif cart.item_count > 1  %}  
+        <div class="free-shipping typeset0" style="padding-bottom:10px;">
+          
+          <span class="free-shipping__text">Hurray! 10% discount applied</span>
+          <span class="free-shipping__progress free-shipping__progress--success" style="--progress: 100%; "></span>
+        </div>
+      {% endif %}
+      {% endif %}  
     <div class="mini-cart__main" id="main-cart-items">
       <cart-items>
         {%- assign animate_count = animate_count | plus: 1 -%}
@@ -367,7 +427,7 @@
                       {% endif %}
                       {% assign regular_price = item.original_line_price %}
                     {% else %}
-                      {% assign regular_price = item.product.compare_at_price | times: item.quantity %}
+                      {% assign regular_price = item.variant.compare_at_price| times: item.quantity %}
                       {% if regular_price != sale_price %}
                         {% assign show_discount = true %}
                       {% endif %}
@@ -742,3 +802,34 @@
     </div>
   </div>
 </form>
+{% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
+<style>
+
+.free-shipping__progress {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 0.3rem;
+  line-height: 1;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  background-color: rgb(var(--color-border));
+  border-radius: min(var(--button-radius), 0.4rem);
+}
+
+.free-shipping__progress::after {
+  content: '';
+  display: block;
+  background: linear-gradient(325deg,#F9423A 0,#F1E04D 100%);
+  background-color: #F9423A;
+  height: 100%;
+  width: var(--progress);
+  border-radius: min(var(--button-radius), 0.4rem);
+}
+
+.free-shipping__progress--success::after {
+  background: linear-gradient(325deg, #049cff 0, #35ee7a 100%);
+}
+
+</style>
+{% endif -%}

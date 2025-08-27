@@ -1,0 +1,93 @@
+<div class="custom-pack-picker">
+  <div class="pack-options">
+
+    {% for option in product.options_with_values %}
+      {% if option.name == "Pack Size" %}
+        {% for value in option.values %}
+
+          {% assign image_url = blank %}
+          {% assign discount_text = blank %}
+
+          {% if value contains 'Pack of 1' %}
+            {% assign image_url = product.metafields.custom.pack_of_one_image | img_url: '400x' %}
+            {% assign discount_text = "SAVE 10%" %}
+          {% elsif value contains 'B1G1 at 45% Off' %}
+            {% assign image_url = product.metafields.custom.pack_of_two_image | img_url: '400x' %}
+            {% assign discount_text = "SAVE 45%" %}
+          {% endif %}
+
+          <label class="pack-card">
+            <input
+              type="radio"
+              id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
+              name="{{ option.name }}"
+              value="{{ value | escape }}"
+              form="{{ product_form_id }}"
+              {%- if option.selected_value == value %}checked="checked"{% endif -%}
+              data-option-value="{{ value | escape }}"
+              class="hello2"
+            />
+            <div class="pack-box border-2 border-gray-300 rounded-lg overflow-hidden cursor-pointer transition peer-checked:border-black">
+              
+              <div class="discount-badge"><strong>{{ discount_text }}</strong></div>
+              
+              {% if image_url != blank %}
+                <img src="{{ image_url }}" alt="{{ value }}" class="pack-image w-full h-48 object-contain" style="max-width: 130px !important;">
+              {% endif %}
+
+              <div class="pack-label transition peer-checked:bg-black peer-checked:text-white">
+                {{ value }}
+              </div>
+            </div>
+          </label>
+
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+
+  </div>
+</div>
+
+<style>
+.custom-pack-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.pack-options {
+  display: flex;
+  gap: 1rem;
+}
+.pack-card {
+  flex: 1;
+  width:130px;
+}
+.pack-box {
+  position: relative;
+  text-align: center;
+}
+.discount-badge {
+
+  top: 6px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.pack-label {
+  background: #f8f8f8;
+  padding: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.pack-card input:checked + .pack-box {
+  border-color: #000;
+}
+.pack-card input:checked + .pack-box .pack-label {
+  background: #000;
+  color: #fff;
+}
+</style>

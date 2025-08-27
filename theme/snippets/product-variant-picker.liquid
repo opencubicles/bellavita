@@ -55,6 +55,10 @@
               {%- endif -%}
             </legend>
           {%- endif -%}
+          {% if product.tags contains "bundle-pack-product" %}
+           
+            {% render 'custom-variant-picker' %}
+          {%- else -%}  
           {%- for value in option.values -%}
             <input
               type="radio"
@@ -64,6 +68,7 @@
               form="{{ product_form_id }}"
               {%- if option.selected_value == value %}checked="checked"{% endif -%}
               data-option-value="{{ value | escape }}"
+              class="hello"
             />
             {%- if is_color -%}
               {%- liquid
@@ -85,6 +90,7 @@
               </label>
             {%- endif -%}
           {%- endfor -%}
+          {%- endif -%}
           {%- if is_size -%}
             <div class="form__popup" id="size-{{ section.id }}">
               <modal-opener class="no-js-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
