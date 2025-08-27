@@ -256,16 +256,6 @@
             "show_badges": true
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "show_variant_labels": true,
-            "picker_type": "button",
-            "enable_color_swatches": true,
-            "swatch_type": "round",
-            "size_chart": ""
-          }
-        },
         "description": {
           "type": "description",
           "settings": {}
@@ -276,9 +266,15 @@
             "custom_liquid": "<span class=\"flash-sale-tag\">\n  <img\n    src=\"https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Bolt.gif?v=1751540262\"\n    alt=\"Flash Icon\"\n    class=\"flash-icon\"\n  />\n  <strong>FLASH SALE</strong>\n</span>"
           }
         },
-        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf": {
-          "type": "shopify://apps/eb-easy-bundle-builder/blocks/app-block-mixAndMatchBundle/05b1325c-6303-4da5-8e2f-b13ab2a50e1a",
-          "settings": {}
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "swatch_type": "round",
+            "size_chart": ""
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -323,10 +319,9 @@
         "rating",
         "image_Ad9UNn",
         "price",
-        "variant_picker",
         "description",
         "custom_liquid_6BXmL7",
-        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf",
+        "variant_picker",
         "buy_buttons",
         "meta_coms_MzxdKJ",
         "sticky_cart_t4QLHa",
