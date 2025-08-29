@@ -22,7 +22,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Questions? Comments? Let your customers get in touch with you by filling out the email form below.</p>",
+            "text": "<p>Questions? Comments? Let your customers get in touch with you by filling out the email form below.<\/p>",
             "text_size": "typeset3"
           }
         }
@@ -71,7 +71,7 @@
         "rich-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
             "text_size": "typeset",
             "secondary_color": false
           }
@@ -105,7 +105,7 @@
           "settings": {
             "icon": "none",
             "title": "Guarantee 1",
-            "text": "<p>Share information about your brand with your customers.</p>"
+            "text": "<p>Share information about your brand with your customers.<\/p>"
           }
         },
         "guarantees-0-1": {
@@ -113,7 +113,7 @@
           "settings": {
             "icon": "none",
             "title": "Guarantee 2",
-            "text": "<p>Share information about your brand with your customers.</p>"
+            "text": "<p>Share information about your brand with your customers.<\/p>"
           }
         },
         "guarantees-0-2": {
@@ -121,7 +121,7 @@
           "settings": {
             "icon": "none",
             "title": "Guarantee 3",
-            "text": "<p>Share information about your brand with your customers.</p>"
+            "text": "<p>Share information about your brand with your customers.<\/p>"
           }
         }
       },
@@ -147,7 +147,7 @@
           "settings": {
             "icon": "none",
             "title": "Guarantee 4",
-            "text": "<p>Share information about your brand with your customers.</p>"
+            "text": "<p>Share information about your brand with your customers.<\/p>"
           }
         },
         "guarantees-1-1": {
@@ -155,7 +155,7 @@
           "settings": {
             "icon": "none",
             "title": "Guarantee 5",
-            "text": "<p>Share information about your brand with your customers.</p>"
+            "text": "<p>Share information about your brand with your customers.<\/p>"
           }
         },
         "guarantees-1-2": {
@@ -163,7 +163,7 @@
           "settings": {
             "icon": "none",
             "title": "Guarantee 6",
-            "text": "<p>Share information about your brand with your customers.</p>"
+            "text": "<p>Share information about your brand with your customers.<\/p>"
           }
         }
       },
@@ -194,7 +194,7 @@
         "map-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
             "text_size": "typeset",
             "secondary_color": true
           }

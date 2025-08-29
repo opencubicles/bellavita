@@ -11,16 +11,10 @@
   "sections": {
     "empty-space": {
       "type": "empty-space",
+      "disabled": true,
       "settings": {
-        "desktop_height": 200,
-        "mobile_height": 172
-      }
-    },
-    "empty_space_Gna7Rn": {
-      "type": "empty-space",
-      "settings": {
-        "desktop_height": 32,
-        "mobile_height": 12
+        "desktop_height": 36,
+        "mobile_height": 16
       }
     },
     "scrolling-promotion": {
@@ -135,6 +129,14 @@
         "padding_bottom": 16
       }
     },
+    "empty_space_Gna7Rn": {
+      "type": "empty-space",
+      "disabled": true,
+      "settings": {
+        "desktop_height": 32,
+        "mobile_height": 12
+      }
+    },
     "rich-text": {
       "type": "rich-text",
       "blocks": {
@@ -152,7 +154,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.product_meta_secondary_text.value }}</p>",
+            "text": "<p>{{ product.metafields.my_fields.product_meta_secondary_text.value }}</p>",
             "text_size": "typeset2",
             "text_style": "body",
             "secondary_color": true,
@@ -169,8 +171,8 @@
         "image_NAt34J": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Amazon_strip.jpg",
-            "image-hide-desktop": true,
+            "image": "shopify://shop_images/Group_572_b8c3fd37-6867-4990-9734-6419322296fa.jpg",
+            "image-hide-desktop": false,
             "image-hide-mobile": false
           }
         }
@@ -202,6 +204,11 @@
         "padding_bottom": 0
       }
     },
+    "tiktok_alert_8KeLVb": {
+      "type": "tiktok-alert",
+      "disabled": true,
+      "settings": {}
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -222,7 +229,7 @@
           "type": "text",
           "settings": {
             "icon": "none",
-            "text": "{{ product.metafields.custom.product_meta_secondary_text.value }}",
+            "text": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
             "text_style": "body",
             "text_hide_on_desktop": false,
             "text_hide_on_mobile": true,
@@ -241,7 +248,6 @@
         "image_Ad9UNn": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Amazon_strip.jpg",
             "link": "",
             "img_full_width_on_mobile": false,
             "image-hide-desktop": false,
@@ -268,16 +274,6 @@
         },
         "description": {
           "type": "description",
-          "settings": {}
-        },
-        "custom_liquid_6BXmL7": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<span class=\"flash-sale-tag\">\n  <img\n    src=\"https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Bolt.gif?v=1751540262\"\n    alt=\"Flash Icon\"\n    class=\"flash-icon\"\n  />\n  <strong>FLASH SALE</strong>\n</span>"
-          }
-        },
-        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf": {
-          "type": "shopify://apps/eb-easy-bundle-builder/blocks/app-block-mixAndMatchBundle/05b1325c-6303-4da5-8e2f-b13ab2a50e1a",
           "settings": {}
         },
         "buy_buttons": {
@@ -307,9 +303,15 @@
         },
         "custom_liquid_X8RHwe": {
           "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping</span></div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
+          }
+        },
+        "custom_liquid_kjYyfP": {
+          "type": "custom_liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping</span> &nbspover £22</div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
+            "custom_liquid": "<div class=\"pdp-banner\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/PDP_copy_3019080a-a8e7-4a93-831e-45ee24891cf2.jpg?v=1752749642\">\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>"
           }
         },
         "offers_section_whdpGY": {
@@ -325,13 +327,12 @@
         "price",
         "variant_picker",
         "description",
-        "custom_liquid_6BXmL7",
-        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf",
         "buy_buttons",
         "meta_coms_MzxdKJ",
         "sticky_cart_t4QLHa",
         "offer_badges_hFhQyD",
         "custom_liquid_X8RHwe",
+        "custom_liquid_kjYyfP",
         "offers_section_whdpGY"
       ],
       "custom_css": [
@@ -353,12 +354,82 @@
         "padding_bottom": 20
       }
     },
+    "17107557374313e09a": {
+      "type": "apps",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
     "ingredients_d3QziV": {
       "type": "Ingredients",
       "custom_css": [
         "@media only screen and (max-width: 600px) {.Notes-Heading {margin-top: 18px; } .ingredient-img-wrapper-notes {width: 55%; margin: auto; } .product-ingredients-item-notes p {margin: 0.3rem 0; } .center-notes {text-align: left; line-height: 17px; } .ingredient-img-wrapper-notes {margin: 0px !important; } .product-ingredients-notes {padding: 0px 2rem !important; }}"
       ],
       "settings": {}
+    },
+    "image_with_text_HN9pWz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_D63EKA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Where Mystery Meets Magnetism",
+            "heading_size": "h2",
+            "heading_tag": "h3"
+          }
+        },
+        "text_8xmFP4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>An enigma cloaked in cool allure, a fragrance that draws you in with its hidden depths.</p><p></p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_MtAFXc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore",
+            "button_link": "shopify://products/ceo-man-luxury-perfume-3-38-fl-oz",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_D63EKA",
+        "text_8xmFP4",
+        "button_MtAFXc"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_link": "shopify://products/white-oud-unisex-100ml",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "image_ratio": "450px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
     },
     "collapsible-content": {
       "type": "collapsible-content",
@@ -455,6 +526,31 @@
         "padding_bottom": 20
       }
     },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "show_divider": false,
+        "heading": "Recently Viewed",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "testimonials": {
       "type": "testimonials",
       "blocks": {
@@ -463,7 +559,7 @@
           "settings": {
             "icon": "5",
             "text": "<p>I love the bottle. Like a pretty sunset. It's not as loud as an old one. This is a very subtle spray, so this is perfect for all ages.</p>",
-            "image": "shopify://shop_images/naturally_mia.jpg",
+            "image": "shopify://shop_images/dakota.jpg",
             "author": "naturally_mia",
             "instagram_username": "",
             "instagram_link": ""
@@ -474,7 +570,7 @@
           "settings": {
             "icon": "5",
             "text": "<p>Not only does it smell divine, but it's also incredibly convenient for your on-the-go lifestyle.</p>",
-            "image": "shopify://shop_images/dakota.jpg",
+            "image": "shopify://shop_images/naturally_mia.jpg",
             "author": "dakotakihair",
             "instagram_username": "",
             "instagram_link": ""
@@ -496,7 +592,7 @@
           "settings": {
             "icon": "5",
             "text": "<p>Luxury at its finest. first, I wanted to keep it as, like, a special occasion perfume, but then I'm like, girl, I'm wearing this every day.</p>",
-            "image": "shopify://shop_images/lipstickg.jpg",
+            "image": "shopify://shop_images/dakota.jpg",
             "author": "lipstickgawwdess",
             "instagram_username": "",
             "instagram_link": ""
@@ -534,10 +630,20 @@
         "padding_bottom": 36
       }
     },
+    "1629746450643786911": {
+      "type": "areviews-section",
+      "disabled": true,
+      "settings": {
+        "hide_areviews_title_rating": false,
+        "areviews_theme_font": "inherit",
+        "areviews_stars_colors": "#f3c621",
+        "areviews_write_reviews_botton_color": "#373737"
+      }
+    },
     "17066961646756c0fa": {
       "type": "apps",
       "blocks": {
-        "judge_me_reviews_review_widget_3NrUkr": {
+        "judge_me_reviews_review_widget_N6PYCd": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
@@ -546,8 +652,18 @@
         }
       },
       "block_order": [
-        "judge_me_reviews_review_widget_3NrUkr"
+        "judge_me_reviews_review_widget_N6PYCd"
       ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17102359122a024747": {
+      "type": "apps",
+      "disabled": true,
       "settings": {
         "include_margins": true,
         "show_divider": false,
@@ -558,16 +674,22 @@
   },
   "order": [
     "empty-space",
-    "empty_space_Gna7Rn",
     "scrolling-promotion",
+    "empty_space_Gna7Rn",
     "rich-text",
+    "tiktok_alert_8KeLVb",
     "main",
+    "17107557374313e09a",
     "ingredients_d3QziV",
+    "image_with_text_HN9pWz",
     "collapsible-content",
     "video_with_text_emJiUe",
     "1710752969db39fb42",
     "product-recommendations",
+    "recently-viewed-products",
     "testimonials",
-    "17066961646756c0fa"
+    "1629746450643786911",
+    "17066961646756c0fa",
+    "17102359122a024747"
   ]
 }

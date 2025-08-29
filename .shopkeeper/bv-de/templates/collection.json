@@ -21,7 +21,7 @@
             "custom_icon": "",
             "text": "🚚FREE Delivery",
             "text_size": 18,
-            "link": "shopify://collections/bestsellers"
+            "link": "shopify:\/\/collections\/bestsellers"
           }
         },
         "template--14575227404334__ce18826f-3598-454c-bafe-8744cdb7a0c7-announcement-2": {
@@ -33,7 +33,7 @@
             "custom_icon": "",
             "text": "🔖UPTO 45% OFF SITEWIDE*",
             "text_size": 18,
-            "link": "shopify://collections/bestsellers"
+            "link": "shopify:\/\/collections\/bestsellers"
           }
         },
         "cad70bf5-567b-4d3d-adb9-b35ed70b6a0b": {
@@ -45,7 +45,7 @@
             "custom_icon": "",
             "text": "🎅Ho Ho Ho! Your Holiday Haul is Waiting!",
             "text_size": 18,
-            "link": "shopify://collections/bestsellers"
+            "link": "shopify:\/\/collections\/bestsellers"
           }
         },
         "announcement_Q7TUxc": {
@@ -56,7 +56,7 @@
             "custom_icon": "",
             "text": "🎉Extra 20% Off – Buy More, Save More!",
             "text_size": 20,
-            "link": "shopify://collections/sale"
+            "link": "shopify:\/\/collections\/sale"
           }
         }
       },

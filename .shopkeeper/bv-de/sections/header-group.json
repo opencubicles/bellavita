@@ -14,6 +14,38 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "b4274c71-3b8c-453a-ac62-b2f39868bcf0": {
+          "type": "announcement",
+          "settings": {
+            "text": "🚚FREE Shipping",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": "shopify://collections/bestsellers"
+          }
+        },
+        "announcement_wJqJbc": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "More Scents, More Savings - 10% Off!",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": "shopify://collections/buy-more-save-more"
+          }
+        },
+        "announcement-bar-0": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Buy Any 2 Gift Sets @44.99",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": "shopify://collections/gift-sets-1"
+          }
+        },
         "announcement_eXEtFh": {
           "type": "announcement",
           "settings": {
@@ -21,23 +53,15 @@
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
-            "link": "shopify://collections/shop-all"
-          }
-        },
-        "announcement_AkiHJQ": {
-          "type": "announcement",
-          "settings": {
-            "text": "🚚FREE Shipping",
-            "text_on_mobile": "",
-            "text_size": 14,
-            "end_date": "",
-            "link": ""
+            "link": "shopify://collections/sale"
           }
         }
       },
       "block_order": [
-        "announcement_eXEtFh",
-        "announcement_AkiHJQ"
+        "b4274c71-3b8c-453a-ac62-b2f39868bcf0",
+        "announcement_wJqJbc",
+        "announcement-bar-0",
+        "announcement_eXEtFh"
       ],
       "settings": {
         "only_homepage": false,
@@ -59,8 +83,8 @@
       "type": "header",
       "custom_css": [],
       "settings": {
-        "logo": "shopify://shop_images/BV-UK_LOGO.png",
-        "mobile_logo": "shopify://shop_images/BV-UK_LOGO.png",
+        "logo": "shopify://shop_images/final-logo_04e4de07-31dd-43b2-95cf-4a6489b8b764.png",
+        "mobile_logo": "shopify://shop_images/final-logo_04e4de07-31dd-43b2-95cf-4a6489b8b764.png",
         "logo_height": 62,
         "mobile_logo_height": 56,
         "logo_position": "top-center",
@@ -70,12 +94,12 @@
         "cart_icon": "bag",
         "icon_weight": "1.5",
         "enable_country_selector": false,
-        "enable_language_selector": false,
+        "enable_language_selector": true,
         "enable_sticky_header": true,
         "show_sticky_header_scroll_up": false,
         "sticky_mobile_menu": "",
-        "transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1_1.png",
-        "mobile_transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1_1.png",
+        "transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1.png",
+        "mobile_transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1.png",
         "enable_transparent_header": true,
         "enable_transparent_header_collection": false,
         "enable_transparent_header_custom": "",
