@@ -17,17 +17,6 @@
         "mobile_image": "shopify://shop_images/Collection_Mobile_Banner_Ocean_Gym_Banner.jpg"
       }
     },
-    "custom_liquid_nePafg": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap\" rel=\"stylesheet\">\n<style>\n  body.template-page {\n    font-family: 'Poppins', sans-serif !important;\n  }\n</style>",
-        "full_width": false,
-        "show_divider": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "main": {
       "type": "main-page",
       "custom_css": [],
@@ -78,7 +67,9 @@
         "text_PyHHrz",
         "button_3kKzqf"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".rich-text__text {max-width: 100.6rem;}"
+      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "text_alignment": "left",
@@ -94,159 +85,145 @@
         "colors_text": "#212326",
         "colors_background": "#ffffff",
         "gradient_background": "",
-        "padding_top": 0,
-        "padding_bottom": 20
-      }
-    },
-    "image_banner_wNprpX": {
-      "type": "image-banner",
-      "custom_css": [
-        "@media screen and (min-width: 768px) {#Banner-template--20126312923394__image_banner_wNprpX {padding: 0 9rem; }}"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/1_1_copy.png",
-        "image_position": "center center",
-        "text_box_position": "middle-center",
-        "text_alignment": "center",
-        "image_ratio": "adapt",
-        "show_text_box": false,
-        "full_width": false,
-        "show_divider": false,
-        "image_behavior": "none",
-        "mobile_text_alignment": "center",
-        "mobile_image_ratio": "auto",
-        "stack_images_on_mobile": true,
-        "show_text_below": false,
-        "colors_button_label": "#1a1b18",
-        "colors_button_background": "#ffffff",
-        "colors_text": "#ffffff",
-        "colors_overlay": "#000000",
-        "colors_overlay_opacity": 0,
-        "padding_top": 20,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_qNih8p": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_zWMEBm": {
-          "type": "heading",
-          "settings": {
-            "heading": "Stop Covering",
-            "heading_size": "h1",
-            "heading_tag": "h2",
-            "heading_bold": false,
-            "heading_semi_bold": false,
-            "heading_uppercase": false
-          }
-        },
-        "text_arjtKL": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>A Problem. Start Building a Presence.</strong></p><p>Introducing <strong>Ocean Man by BellaVita Luxury</strong>. This isn't a perfume. It's a piece of high-performance gear engineered for the man who goes hard and wants to live fresh. We cracked the code on post-gym fragrance.</p><p><strong>How Ocean Man Is Designed For This:</strong> We engineered <strong>Ocean Man</strong> with a unique ‘thermo-reactive’ scent profile.</p>",
-            "text_size": "typeset2",
-            "text_style": "body",
-            "secondary_color": false,
-            "text_bold": false,
-            "text_uppercase": false
-          }
-        },
-        "image_8mEggL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Ocean_Mobile.png",
-            "image-hide-desktop": false,
-            "image-hide-mobile": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_zWMEBm",
-        "text_arjtKL",
-        "image_8mEggL"
-      ],
-      "custom_css": [
-        "@media screen and (min-width: 768px) {.rich-text-image {position: absolute; right: 0; } .rich-text-image img {width: auto !important; }}"
-      ],
-      "name": "ocean image desktop",
-      "settings": {
-        "text_alignment": "left",
-        "mobile_text_alignment": "left",
-        "horizontal_content": true,
-        "narrow": true,
-        "show_divider": false,
-        "richtext_hide_on_desktop": false,
-        "richtext_hide_on_mobile": true,
-        "use_custom_colors": false,
-        "colors_button_label": "#ffffff",
-        "colors_button_background": "#1a1b18",
-        "colors_text": "#212326",
-        "colors_background": "#f2f2f2",
-        "gradient_background": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "rich_text_ja3d38": {
-      "type": "rich-text",
+    "image_with_text_9Cbjqe": {
+      "type": "image-with-text",
       "blocks": {
-        "image_npXQit": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Ocean_Mobile.png",
-            "image-hide-desktop": false,
-            "image-hide-mobile": true
-          }
-        },
-        "heading_FYHriP": {
+        "heading_gqAK4i": {
           "type": "heading",
           "settings": {
             "heading": "Stop Covering",
             "heading_size": "h1",
-            "heading_tag": "h2",
-            "heading_bold": false,
-            "heading_semi_bold": false,
-            "heading_uppercase": false
+            "heading_tag": "h2"
           }
         },
-        "text_H6VeAJ": {
+        "text_PAtnUq": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>A Problem. Start Building a Presence.</strong></p><p>Introducing <strong>Ocean Man by BellaVita Luxury</strong>. This isn't a perfume. It's a piece of high-performance gear engineered for the man who goes hard and wants to live fresh. We cracked the code on post-gym fragrance.</p><p><strong>How Ocean Man Is Designed For This:</strong> We engineered <strong>Ocean Man</strong> with a unique ‘thermo-reactive’ scent profile.</p>",
+            "text": "<p><strong>A Problem. Start Building a Presence. </strong></p><p><br/>Introducing <strong>Ocean Man by BellaVita Luxury</strong>. This isn't a perfume. It's a piece of high-performance gear engineered for the man who goes hard and wants to live fresh. We cracked the code on post-gym fragrance.</p><p><strong>How Ocean Man Is Designed For This:</strong> We engineered <strong>Ocean Man</strong> with a unique ‘thermo-reactive’ scent profile.</p>",
             "text_size": "typeset2",
-            "text_style": "body",
-            "secondary_color": false,
-            "text_bold": false,
-            "text_uppercase": false
+            "secondary_color": false
+          }
+        },
+        "button_aHFVmf": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "image_npXQit",
-        "heading_FYHriP",
-        "text_H6VeAJ"
+        "heading_gqAK4i",
+        "text_PAtnUq",
+        "button_aHFVmf"
       ],
+      "disabled": true,
       "custom_css": [
-        "@media screen and (max-width: 768px) {.rich-text-image img {width: auto !important; }}"
+        ".image-with-text__grid {margin-left: 115px;}",
+        ".image-with-text__content.middle {justify-content: unset;}"
       ],
-      "name": "Ocean image mobile",
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Ocean_Desktop_png.png",
+        "image_link": "",
+        "image_position": "center center",
+        "layout": "text_first",
+        "text_box_position": "middle",
         "text_alignment": "left",
-        "mobile_text_alignment": "left",
-        "horizontal_content": true,
-        "narrow": true,
+        "image_ratio": "650px",
+        "enlarge_content": false,
+        "full_width": false,
         "show_divider": false,
-        "richtext_hide_on_desktop": true,
-        "richtext_hide_on_mobile": false,
+        "image_behavior": "none",
+        "image_mobile": "shopify://shop_images/Ocean_Mobile.png",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
         "use_custom_colors": false,
         "colors_button_label": "#ffffff",
         "colors_button_background": "#1a1b18",
         "colors_text": "#212326",
         "colors_background": "#ffffff",
         "gradient_background": "",
-        "padding_top": 12,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_full_GW77Nb": {
+      "type": "image-banner-full",
+      "custom_css": [
+        ".responsive-banner {padding-top: 0;}"
+      ],
+      "name": "Responsive Banner",
+      "settings": {
+        "desktop_image": "shopify://shop_images/1_1_7797d7a4-6259-4aa3-802e-8f9d5f844c12.png",
+        "mobile_image": "shopify://shop_images/2_1_471c7203-1eff-4512-9552-288558f61e17.png"
+      }
+    },
+    "image_with_text_overlay_U9rnrj": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_hTykTK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stop Covering",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_gTxg3C": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>A Problem. Start Building a Presence.</strong></p><p>Introducing <strong>Ocean Man by BellaVita Luxury</strong>. This isn't a perfume. It's a piece of high-performance gear engineered for the man who goes hard and wants to live fresh. We cracked the code on post-gym fragrance.</p><p><strong>How Ocean Man Is Designed For This:</strong> We engineered <strong>Ocean Man</strong> with a unique ‘thermo-reactive’ scent profile.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_by46Cc": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hTykTK",
+        "text_gTxg3C",
+        "button_by46Cc"
+      ],
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Ocean_desktop.png",
+        "image_position": "center center",
+        "text_box_position": "flex-start",
+        "text_alignment": "center",
+        "image_ratio": "650px",
+        "full_width": true,
+        "show_divider": false,
+        "banner_link": "",
+        "image_behavior": "none",
+        "image_mobile": "shopify://shop_images/Ocean_mobile_1.png",
+        "mobile_text_box_position": "image_first",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_overlay": "#ffffff",
+        "colors_overlay_opacity": 92,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_MmTPF7": {
@@ -400,9 +377,6 @@
         "custom_liquid_jCGB3F",
         "custom_liquid_z83Uxm"
       ],
-      "custom_css": [
-        "@media screen and (min-width: 768px) {.featured-product {padding: 0 9rem; }}"
-      ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "ocean-man-perfume",
@@ -419,49 +393,49 @@
         "padding_bottom": 36
       }
     },
-    "gallery_ibiBjY": {
+    "gallery_Kh79fE": {
       "type": "gallery",
       "blocks": {
-        "image_4y8exy": {
+        "image_FeGkr9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Group_22860.png",
+            "image": "shopify://shop_images/image_998.png",
             "image_position": "center center",
-            "subheading": "",
+            "subheading": "Musk",
             "subheading_size": "h5",
-            "heading": "",
+            "heading": "It helps to add depth, sensuality, and longevity to the fragrance.",
             "heading_size": "h3",
             "link": "",
             "text_box_position": "bottom-left"
           }
         },
-        "image_r6qAVK": {
+        "image_Mac8mA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Group_22859.png",
+            "image": "shopify://shop_images/image_996.png",
             "image_position": "center center",
-            "subheading": "",
+            "subheading": "CITRUS",
             "subheading_size": "h5",
-            "heading": "",
+            "heading": "Vibrant and zesty; invigorates the senses like summer sunshine.",
             "heading_size": "h3",
             "link": "",
             "text_box_position": "bottom-left"
           }
         },
-        "image_AqwyKD": {
+        "image_9rnQkT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Group_22861.png",
+            "image": "shopify://shop_images/image_999.png",
             "image_position": "center center",
-            "subheading": "",
+            "subheading": "ORCHID",
             "subheading_size": "h5",
-            "heading": "",
+            "heading": "Exotic elegance; velvety with hints of vanilla and spice.",
             "heading_size": "h3",
             "link": "",
             "text_box_position": "bottom-left"
           }
         },
-        "image_tybQx3": {
+        "image_CpQJCn": {
           "type": "image",
           "disabled": true,
           "settings": {
@@ -476,10 +450,10 @@
         }
       },
       "block_order": [
-        "image_4y8exy",
-        "image_r6qAVK",
-        "image_AqwyKD",
-        "image_tybQx3"
+        "image_FeGkr9",
+        "image_Mac8mA",
+        "image_9rnQkT",
+        "image_CpQJCn"
       ],
       "name": "t:sections.gallery.presets.name",
       "settings": {
@@ -496,8 +470,44 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "mobile_image_height": 320,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq_DEp4yU": {
+      "type": "faq",
+      "blocks": {
+        "question_RtMtFK": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "question_jgXxfV": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_RtMtFK",
+        "question_jgXxfV"
+      ],
+      "disabled": true,
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "collapsible_content_AJtHQM": {
@@ -650,15 +660,15 @@
   },
   "order": [
     "image_banner_full_HLWkC3",
-    "custom_liquid_nePafg",
     "main",
     "rich_text_jYKn9z",
-    "image_banner_wNprpX",
-    "rich_text_qNih8p",
-    "rich_text_ja3d38",
+    "image_with_text_9Cbjqe",
+    "image_banner_full_GW77Nb",
+    "image_with_text_overlay_U9rnrj",
     "rich_text_MmTPF7",
     "featured_product_cD7xdz",
-    "gallery_ibiBjY",
+    "gallery_Kh79fE",
+    "faq_DEp4yU",
     "collapsible_content_AJtHQM",
     "cart_recommendations_naJBhr",
     "featured_collection_epUUcF",
