@@ -3,7 +3,9 @@
 .shopkeeper/**/**/.env
 .shopkeeper/.current-bucket
 .env
-
+.envrc
+node_modules/
+deployment.sh
 # Theme #
 ##########
 theme/assets
