@@ -26,6 +26,7 @@
         },
         "announcement_UGRHLX": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Welcome to our store",
             "text_on_mobile": "",
