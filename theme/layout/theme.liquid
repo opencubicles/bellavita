@@ -240,6 +240,33 @@
 {% endif %}
 
     <div class="transition-body">
+      
+
+        {% if template contains 'product' and shop.permanent_domain == 'bv-uk.myshopify.com' %}
+        <div class="comman-header">
+          <div class="header-top-banner">
+            <div id="daily-sale-timer" class="sale-timer-overlay">
+              <span id="countdown"></span>
+            </div>
+        
+            {% if request.path contains 'honey-oud-unisex-perfume-3-4-fl-oz' %}
+              <img src="https://cdn.shopify.com/s/files/1/0756/5813/3762/files/UPPER_PDP_BANNER_MOBILE.jpg?v=1753958792" width="100%">
+            {% else %}
+              <img src="https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Banner_Mobile.jpg?v=1750927764" width="100%">
+            {% endif %}
+          </div>
+        
+          <div class="header-top-banner-desktop">
+            {% if request.path contains 'honey-oud-unisex-perfume-3-4-fl-oz' %}
+              <img src="https://cdn.shopify.com/s/files/1/0756/5813/3762/files/PDP_UPPER_DESKTOP.jpg?v=1753958793" width="100%">
+            {% else %}
+              <img src="https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Banner_Desktop.jpg?v=1751528949" width="100%">
+            {% endif %}
+          </div>
+        </div>
+
+      {% endif %}
+
       {% sections 'header-group' %}
 
       <div class="transition-content">
