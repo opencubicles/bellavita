@@ -12,6 +12,28 @@
     "slideshow_kwPcBi": {
       "type": "slideshow",
       "blocks": {
+        "image_3nB7Ep": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Banner_AUS_Launch.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_AUS_Launch.jpg",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/bestseller",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
         "image_UTGxj7": {
           "type": "image",
           "settings": {
@@ -80,6 +102,7 @@
         }
       },
       "block_order": [
+        "image_3nB7Ep",
         "image_UTGxj7",
         "image_tiQb3A",
         "image_4kaVAz"
@@ -682,7 +705,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Banner_5_acb00a70-a08c-43bd-86e9-ccb175e362d4.jpg",
-            "image_mobile": "shopify://shop_images/Banner_Mobile_Version_5.jpg",
+            "image_mobile": "shopify://shop_images/hp-slide-mobile.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
