@@ -2,7 +2,7 @@
 {% if product.metafields.custom.product_ingredients.value != blank %}
   <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <div class="Notes-Heading center">
-  <h2>Fragrance Notes</h2>
+  <h2>{{ 'general.fragrance_notes' | t }}</h2>
 </div>
   <div class="product-ingredients-notes page-width">
     <slider-component class="slider-mobile-gutter">
