@@ -118,7 +118,7 @@
     "month_day_year": "%B %d, %Y"
   },
   "newsletter": {
-    "label": "Introducir el correo electrónico aquí",
+    "label": "Ingrese aquí el correo electrónico",
     "success": "Gracias por suscribirse",
     "button_label": "Suscribirse"
   },
@@ -940,6 +940,16 @@
       "free_shipping": "Puedes obtener envío gratuito",
       "applying_credit_message": "Solicitando crédito por favor espere",
       "credit_applied": "Crédito de la tienda aplicado"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "page_title": "Finalizar compra",
+        "checkout_context": {
+          "step_one": "%{shop_name} - Finalizar compra"
+        }
+      }
     }
   }
 }
