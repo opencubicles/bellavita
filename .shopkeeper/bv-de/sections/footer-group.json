@@ -26,7 +26,7 @@
           "disabled": true,
           "settings": {
             "heading": "INFORMATION",
-            "menu": "information"
+            "menu": ""
           }
         },
         "footer-1": {
@@ -40,7 +40,7 @@
           "type": "text",
           "settings": {
             "heading": "CONTACT US",
-            "subtext": "<p>Office C48, Madina Mall, Muhaisanah Fourth, Dubai, United Arab Emirates, PO Box : 27388<br/><br/>care@bellavitaluxury.ae</p>"
+            "subtext": "<p>BELLA VITA PERFUMES LIMITED, 205 Preston Hill, London, Harrow, HA3 9UL, United Kingdom</p><p>care@bellavitaluxury.uk</p>"
           }
         }
       },

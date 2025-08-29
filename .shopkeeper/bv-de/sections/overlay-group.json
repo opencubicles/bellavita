@@ -214,7 +214,7 @@
           "settings": {
             "custom_icon": "",
             "title": "Shop",
-            "link": "shopify://collections/bestsellers"
+            "link": "shopify://collections/bestseller"
           }
         },
         "mobile-dock-4": {

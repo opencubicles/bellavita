@@ -26,7 +26,7 @@
         "template--14545717755950__72c700b4-b426-402b-9d1c-6e084983b5fd-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Have a question or comment? Use the form below to send us a message and our team will get back to you ASAP. Or Reach us at care@bellavitaluxury.ae </p>",
+            "text": "<p>Have a question or comment? Use the form below to send us a message and our team will get back to you ASAP. Or Reach us at care@bellavitaluxury.uk (10:00 AM to 7:00 PM, Monday to Sunday)</p>",
             "text_size": "typeset",
             "text_style": "body",
             "secondary_color": false,
@@ -91,8 +91,8 @@
           "type": "contact",
           "settings": {
             "heading": "Email:",
-            "text": "<p>care@bellavitaluxury.ae</p>",
-            "link": "mailto:care@bellavitaluxury.ae"
+            "text": "<p>care@bellavitaluxury.uk</p>",
+            "link": "mailto:care@bellavitaluxury.uk"
           }
         },
         "contact-3": {
