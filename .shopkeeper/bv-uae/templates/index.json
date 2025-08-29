@@ -12,6 +12,28 @@
     "slideshow_kwPcBi": {
       "type": "slideshow",
       "blocks": {
+        "image_tiQb3A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Banner_UAE_Launch.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_UAE_Launch.jpg",
+            "image_position": "center center",
+            "text_box_position": "bottom-left",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/bestsellers",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
         "image_D9A8zA": {
           "type": "image",
           "settings": {
@@ -77,34 +99,13 @@
             "button_size": "medium",
             "button_style_secondary": false
           }
-        },
-        "image_tiQb3A": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image_position": "center center",
-            "text_box_position": "bottom-left",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h1",
-            "heading_tag": "h2",
-            "text": "",
-            "text_size": "typeset",
-            "button_label": "",
-            "button_link": "shopify://collections/men-fragrance",
-            "button_secondary_label": "",
-            "button_secondary_link": "",
-            "button_size": "medium",
-            "button_style_secondary": false
-          }
         }
       },
       "block_order": [
+        "image_tiQb3A",
         "image_D9A8zA",
         "image_4kaVAz",
-        "image_UTGxj7",
-        "image_tiQb3A"
+        "image_UTGxj7"
       ],
       "custom_css": [
         "a.button {font-size: 19px;}",
@@ -279,7 +280,7 @@
         "template--14537741565998__101185b5-3c07-4732-b6ad-25722f54d9a9-16885440264fe24441-2"
       ],
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/478dfd30e1114a6a9fe7a4c4d1b1ffa4.mp4",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/cfc1270d735e4dea9fc010822657fcb1.mp4",
         "text_box_position": "middle-center",
         "text_alignment": "center",
         "image_ratio": "500px",
@@ -518,7 +519,7 @@
         "image_iNtxxM": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_2_1.webp",
+            "image": "shopify://shop_images/PERFUMES_FOR_HIM_1.jpg",
             "image_position": "center center",
             "heading": "Perfumes For Him",
             "description": "<p>Intrigue lingers long after you've left the room. Whispers of sophistication that create a lasting memory and fuel the desire to leave your mark on the world.</p>",
@@ -531,7 +532,7 @@
         "image_hMqhL6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1.jpg",
+            "image": "shopify://shop_images/PERFUMES_FOR_HER_a9291cd3-13bd-4373-a8a0-856dddced4e2.jpg",
             "image_position": "center center",
             "heading": "Perfumes For Her",
             "description": "<p>The Essence of You — Turn heads and make hearts flutter with fragrances that are simply irresistible. Smell like a dream.</p>",
@@ -544,7 +545,7 @@
         "image_VBV8fj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_3988a5fe-845d-4b6a-82fe-9ff8ede3c30b.jpg",
+            "image": "shopify://shop_images/GIFT_SETS_b934e518-03ad-47d9-a981-d660b8dc6110.jpg",
             "image_position": "center center",
             "heading": "Gift Sets",
             "description": "<p>Beyond a box, a bouquet of fragrance. Discover the best perfumes for you, and yours. Wrap up a touch of luxury in every spritz.</p>",
@@ -557,7 +558,7 @@
         "image_7idhYz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_4.jpg",
+            "image": "shopify://shop_images/PERFUMES_FOR_THEM_0a4b93c0-6dfc-421a-b27c-3ae1706c11bc.jpg",
             "image_position": "center center",
             "heading": "Perfumes For Them",
             "description": "<p>Imagine having a fragrance that adjusts to your style, mood, and preference. Fragrances that aren't restricted by gender, but rather by your own creativity.</p>",
@@ -842,7 +843,7 @@
         "button_4pydJX"
       ],
       "settings": {
-        "image": "shopify://shop_images/2_b0992589-f858-4ca8-bed5-98737217ef80.jpg",
+        "image": "shopify://shop_images/CEO.jpg",
         "image_link": "",
         "image_position": "center center",
         "layout": "image_first",
@@ -901,7 +902,7 @@
         "button_DAY3x9"
       ],
       "settings": {
-        "image": "shopify://shop_images/2.jpg",
+        "image": "shopify://shop_images/HONEY_OUD.jpg",
         "image_link": "",
         "image_position": "center center",
         "layout": "text_first",
