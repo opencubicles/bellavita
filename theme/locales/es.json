@@ -112,7 +112,11 @@
       "home": "Inicio",
       "home_link_title": "Volver a la portada"
     },
-    "fragrance_notes": "NOTAS DE FRAGANCIA"
+    "fragrance_notes": "NOTAS DE FRAGANCIA",
+    "free_shipping_pdp": "Envío gratis",
+    "tax_mc": "Impuesto incluido",
+    "read_more_pdp": "Leer más",
+    "retail_price_pdp": "PRECIO DE VENTA"
   },
   "date_formats": {
     "month_year": "%B %Y",
