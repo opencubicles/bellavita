@@ -34,7 +34,7 @@
       "settings": {
         "narrow": true,
         "padding_top": 0,
-        "padding_bottom": 28
+        "padding_bottom": 20
       }
     },
     "rich_text_jYKn9z": {
@@ -54,7 +54,7 @@
         "text_PyHHrz": {
           "type": "text",
           "settings": {
-            "text": "<p>You did everything right.</p><p>You crushed the workout. You hit the showers. You scrubbed away the grime and sweat. You step out, spray on your usual stuff, and head out the door feeling clean.</p><p><strong>For about 20 minutes.</strong></p><p>Then, the ‘aura’ creeps back in. That phantom smell of the locker room. That stale, sour note that clings to you, turning your powerful post-workout high into a paranoid, self-conscious low.</p><p>Here’s the brutal truth: You’re not fixing the problem. You're just creating a disgusting chemical cocktail. You’re layering a heavy, clumsy fragrance over the top of brewing body odour, praying it will win.</p><p>It never does.</p><p>The fittest guys — the ones who always smell impossibly fresh — know the secret. They don't MASK the scent of battle. <strong>They strategically REBUILD their scent from clean skin up.</strong></p><p>They use a weapon. And we just perfected it.</p>",
+            "text": "<p></p><p>You did everything right.</p><p>You crushed the workout. You hit the showers. You scrubbed away the grime and sweat. You step out, spray on your usual stuff, and head out the door feeling clean.</p><p><strong>For about 20 minutes.</strong></p><p>Then, the ‘aura’ creeps back in. That phantom smell of the locker room. That stale, sour note that clings to you, turning your powerful post-workout high into a paranoid, self-conscious low.</p><p>Here’s the brutal truth: You’re not fixing the problem. You're just creating a disgusting chemical cocktail. You’re layering a heavy, clumsy fragrance over the top of brewing body odour, praying it will win.</p><p>It never does.</p><p>The fittest guys — the ones who always smell impossibly fresh — know the secret. They don't MASK the scent of battle. <strong>They strategically REBUILD their scent from clean skin up.</strong></p><p>They use a weapon. And we just perfected it.</p>",
             "text_size": "typeset2",
             "text_style": "body",
             "secondary_color": false,
@@ -228,13 +228,13 @@
         "text_H6VeAJ"
       ],
       "custom_css": [
-        "@media screen and (max-width: 768px) {.rich-text-image img {width: auto !important; }}"
+        "@media screen and (max-width: 768px) {.rich-text-image img {width: auto !important; max-width: 200%; }}"
       ],
       "name": "Ocean image mobile",
       "settings": {
         "text_alignment": "left",
         "mobile_text_alignment": "left",
-        "horizontal_content": true,
+        "horizontal_content": false,
         "narrow": true,
         "show_divider": false,
         "richtext_hide_on_desktop": true,
@@ -401,7 +401,8 @@
         "custom_liquid_z83Uxm"
       ],
       "custom_css": [
-        "@media screen and (min-width: 768px) {.featured-product {padding: 0 9rem; }}"
+        "@media screen and (min-width: 768px) {.featured-product {padding: 0 9rem; }}",
+        "@media screen and (max-width: 768px) {.product-form__quantity {padding-bottom: 10px; }}"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
@@ -481,6 +482,7 @@
         "image_AqwyKD",
         "image_tybQx3"
       ],
+      "custom_css": [],
       "name": "t:sections.gallery.presets.name",
       "settings": {
         "per_row": 3,
