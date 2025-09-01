@@ -44,6 +44,10 @@
     },
     "continue_shopping": "Return to shop",
     "fragrance_notes": "Fragrance Notes",
+    "free_shipping_pdp": "Free Shipping",
+    "tax_mc":"Tax Included",
+    "read_more_pdp":"Read More",
+    "retail_price_pdp":"Retail Price",
     "pagination": {
       "label": "Pagination",
       "page": "Page {{ number }}",
