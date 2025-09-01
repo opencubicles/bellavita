@@ -111,7 +111,9 @@
     "breadcrumbs": {
       "home": "Startseite",
       "home_link_title": "Zurück zur Startseite"
-    }
+    },
+    "fragrance_notes": "DUFTNOTEN",
+    "read_more_pdp": "Mehr lesen"
   },
   "date_formats": {
     "month_year": "%B %Y",
