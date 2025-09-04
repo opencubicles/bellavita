@@ -386,9 +386,7 @@
     },
     "featured_collection_wYX7ij": {
       "type": "featured-collection",
-      "custom_css": [
-        "@media (max-width: 768px) {.title-wrapper .title {justify-content: flex-start !important; letter-spacing: 0px; }}"
-      ],
+      "custom_css": [],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "bestsellers",
