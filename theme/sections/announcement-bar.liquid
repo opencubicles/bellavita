@@ -1,3 +1,4 @@
+
 {%- liquid
   assign show_announcement_bar = true
 
@@ -23,7 +24,7 @@
   </style>
 {% endunless %}
 
-
+{%- if template.name != 'page' -%}
 {%- if show_announcement_bar -%}
   {%- style -%}
     #shopify-section-{{ section.id }} {
@@ -95,8 +96,14 @@
 {%- if request.design_mode -%}
   <script src="{{ 'announcement-bar.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-
-
+{%- endif -%}
+{%- if template.name == 'page' -%}
+  <style>
+    .shopify-section-header-sticky {
+      top:0px !important;
+    }
+  </style>
+{%- endif -%}
 {% schema %}
 {
   "name": "t:sections.announcement-bar.name",

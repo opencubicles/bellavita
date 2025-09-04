@@ -136,8 +136,25 @@
             {% render 'mega-menu', link: link, block: mega_menu_block %}
           {%- else -%}
             <dropdown-menu>
-              <a href="{{ link.url }}" class="header__menu-item{% if link.current %} header__active-menu-item{% endif %} header__menu-item--top list-menu__item focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+              <a href="{{ link.url }}" 
+                class="first header__menu-item{% if link.current %} header__active-menu-item{% endif %} header__menu-item--top list-menu__item focus-inset" 
+                {% if link.current %} aria-current="page"{% endif %} 
+                style="margin-top:4px">
+
                 <span class="label">{{ link.title | escape }}</span>
+
+                {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' %}
+                  {% if link.title == 'BUY ANY 3 @ $51.99' or link.title == 'BUY MORE SAVE MORE' %}
+                    {% if shop.metafields.custom.menu_gif != blank %}
+                      <img 
+                        src="{{ shop.metafields.custom.menu_gif | file_url }}" 
+                        alt="menu gif" 
+                        class="menu-gif"
+                        style="width: 16px;"
+                      >
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
               </a>
             </dropdown-menu>
           {%- endif -%}

@@ -226,8 +226,20 @@
                       </div>
                     </details>
                   {%- else -%}
-                    <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__itemfocus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
-                      {{ link.title | escape }}
+                    <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__itemfocus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %} {% if shop.metafields.custom.menu_gif != blank %} style="justify-content:inherit !important;" {% endif %}>
+                        {{ link.title | escape }} 
+                        {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' %}
+                        {% if link.title == 'BUY ANY 3 @ $51.99' or link.title == 'BUY MORE SAVE MORE' %}
+                          {% if shop.metafields.custom.menu_gif != blank %}
+                            <img 
+                              src="{{ shop.metafields.custom.menu_gif | file_url }}" 
+                              alt="menu gif" 
+                              class="menu-gif"
+                              style="width: 16px;"
+                            >
+                          {% endif %}
+                        {% endif %}
+                      {% endif %}
                     </a>
                   {%- endif -%}
                 </li>
@@ -276,4 +288,5 @@
       </div>
     </div>
   </details>
+
 </header-drawer>

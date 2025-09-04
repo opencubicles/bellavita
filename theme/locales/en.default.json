@@ -240,7 +240,7 @@
       "view_images": "View images",
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
-      "include_taxes": "Exclusive of all taxes",
+      "include_taxes": "Inclusive of all taxes",
       "shipping_policy_html": "",
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}"

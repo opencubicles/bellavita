@@ -35,11 +35,33 @@
             "button_style_secondary": false
           }
         },
+        "image_tiQb3A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Main_Banner_Desktop.jpg",
+            "image_mobile": "shopify://shop_images/Main_Banner_Mobile.jpg",
+            "image_position": "center center",
+            "text_box_position": "bottom-left",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "https://www.bellavitaluxe.com/apps/gbb/easybundle/1?page=addProductsPage1&currentFlow=byob",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMain_Banner_Desktop_73697ded-43d4-443a-99f8-307a3099ea39.jpg",
-            "image_mobile": "shopify://shop_images/Home_Page_BannerMain_Banner_Mobile_eeeb3194-f252-4b30-a653-75caaa838699.jpg",
+            "image": "shopify://shop_images/Main_Banner_Desktop_1.jpg",
+            "image_mobile": "shopify://shop_images/Main_Banner_Mobile_1.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -78,35 +100,13 @@
             "button_size": "medium",
             "button_style_secondary": false
           }
-        },
-        "image_tiQb3A": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Him.webp",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Him.webp",
-            "image_position": "center center",
-            "text_box_position": "bottom-left",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h1",
-            "heading_tag": "h2",
-            "text": "",
-            "text_size": "typeset",
-            "button_label": "",
-            "button_link": "shopify://collections/men-fragrance",
-            "button_secondary_label": "",
-            "button_secondary_link": "",
-            "button_size": "medium",
-            "button_style_secondary": false
-          }
         }
       },
       "block_order": [
         "image_D9A8zA",
+        "image_tiQb3A",
         "image_UTGxj7",
-        "image_4kaVAz",
-        "image_tiQb3A"
+        "image_4kaVAz"
       ],
       "custom_css": [
         "a.button {font-size: 19px;}",
