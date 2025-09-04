@@ -10,7 +10,7 @@
 {
   "sections": {
     "cart": {
-      "empty": "سلة التسوق خاصتك فارغة الآن ",
+      "empty": "سلة التسوق خاصتك فارغة الآن  hello",
       "checkout": "إتمام الشراء",
       "title": "سلة التسوق"
     },
@@ -3968,7 +3968,9 @@
     "breadcrumbs": {
       "home": "بيت",
       "home_link_title": "العودة إلى الصفحة الرئيسية"
-    }
+    },
+    "fragrance_notes": "مكونات العطر ",
+    "read_more_pdp": "اقرأ المزيد "
   },
   "date_formats": {
     "month_year": "٪بواسطة"
