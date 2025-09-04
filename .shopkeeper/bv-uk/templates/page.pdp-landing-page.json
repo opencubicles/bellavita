@@ -133,10 +133,10 @@
         "heading_zWMEBm": {
           "type": "heading",
           "settings": {
-            "heading": "Stop Covering",
+            "heading": "Stop Covering A Problem. Start Building a Presence.",
             "heading_size": "h1",
-            "heading_tag": "h2",
-            "heading_bold": false,
+            "heading_tag": "h1",
+            "heading_bold": true,
             "heading_semi_bold": false,
             "heading_uppercase": false
           }
@@ -144,7 +144,7 @@
         "text_arjtKL": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>A Problem. Start Building a Presence.</strong></p><p>Introducing <strong>Ocean Man by BellaVita Luxury</strong>. This isn't a perfume. It's a piece of high-performance gear engineered for the man who goes hard and wants to live fresh. We cracked the code on post-gym fragrance.</p><p><strong>How Ocean Man Is Designed For This:</strong> We engineered <strong>Ocean Man</strong> with a unique ‘thermo-reactive’ scent profile.</p>",
+            "text": "<p>Introducing <strong>Ocean Man by BellaVita Luxury</strong>. This isn't a perfume. It's a piece of high-performance gear engineered for the man who goes hard and wants to live fresh. We cracked the code on post-gym fragrance.</p><p><strong>How Ocean Man Is Designed For This:</strong> We engineered <strong>Ocean Man</strong> with a unique ‘thermo-reactive’ scent profile.</p>",
             "text_size": "typeset2",
             "text_style": "body",
             "secondary_color": false,
@@ -202,10 +202,10 @@
         "heading_FYHriP": {
           "type": "heading",
           "settings": {
-            "heading": "Stop Covering",
+            "heading": "Stop Covering A Problem. Start Building a Presence.",
             "heading_size": "h1",
-            "heading_tag": "h2",
-            "heading_bold": false,
+            "heading_tag": "h1",
+            "heading_bold": true,
             "heading_semi_bold": false,
             "heading_uppercase": false
           }
@@ -213,7 +213,7 @@
         "text_H6VeAJ": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>A Problem. Start Building a Presence.</strong></p><p>Introducing <strong>Ocean Man by BellaVita Luxury</strong>. This isn't a perfume. It's a piece of high-performance gear engineered for the man who goes hard and wants to live fresh. We cracked the code on post-gym fragrance.</p><p><strong>How Ocean Man Is Designed For This:</strong> We engineered <strong>Ocean Man</strong> with a unique ‘thermo-reactive’ scent profile.</p>",
+            "text": "<h2></h2><p>Introducing <strong>Ocean Man by BellaVita Luxury</strong>. This isn't a perfume. It's a piece of high-performance gear engineered for the man who goes hard and wants to live fresh. We cracked the code on post-gym fragrance.</p><p><strong>How Ocean Man Is Designed For This:</strong> We engineered <strong>Ocean Man</strong> with a unique ‘thermo-reactive’ scent profile.</p>",
             "text_size": "typeset2",
             "text_style": "body",
             "secondary_color": false,
@@ -267,7 +267,7 @@
         "text_XJE4F4": {
           "type": "text",
           "settings": {
-            "text": "<h3><strong>1. IT'S AQUATIC, NOT ARROGANT.</strong></h3><p>Amateurs use heavy, musky colognes that curdle with sweat. Pros use a scent architecture built for freshness. <strong>Ocean Man's</strong> core is <strong>Sea Salt, Italian Bergamot, Vetiver and Musk.</strong> It’s not a heavy blanket; it's a blast of cold, clean ocean air that neutralizes odour and builds a fresh foundation.</p><h3><strong>2. IT WORKS WITH HEAT, NOT AGAINST IT.</strong></h3><p>Your body is a furnace post-workout. Most fragrances collapse and distort under that heat. <strong>Ocean Man</strong> is different. Our <strong>thermo-reactive molecules</strong> and unique <strong>Hydro-Lock Essence</strong> use your body heat to evolve the scent, moving from crisp sea air to a magnetic, masculine base of <strong>Vetiver</strong> and <strong>Musk </strong>that lasts for hours. It doesn't die; it lives on your skin.</p><h3><strong>3. IT'S A MINDSET, NOT A MASK.</strong></h3><p>Your scent is a psychological trigger. The smell of stale sweat tells your brain the day is already lost. The clean, powerful scent of <strong>Ocean Man</strong> signals victory. It's the final rep for your confidence, switching you from ‘beast mode’ in the gym to ‘command mode’ for the rest of your life.</p>",
+            "text": "<p><strong>1. IT'S AQUATIC, NOT ARROGANT.</strong></p><p>Amateurs use heavy, musky colognes that curdle with sweat. Pros use a scent architecture built for freshness. <strong>Ocean Man's</strong> core is <strong>Sea Salt, Italian Bergamot, Vetiver and Musk.</strong> It’s not a heavy blanket; it's a blast of cold, clean ocean air that neutralizes odour and builds a fresh foundation.</p><p><strong>2. IT WORKS WITH HEAT, NOT AGAINST IT.</strong></p><p>Your body is a furnace post-workout. Most fragrances collapse and distort under that heat. <strong>Ocean Man</strong> is different. Our <strong>thermo-reactive molecules</strong> and unique <strong>Hydro-Lock Essence</strong> use your body heat to evolve the scent, moving from crisp sea air to a magnetic, masculine base of <strong>Vetiver</strong> and <strong>Musk </strong>that lasts for hours. It doesn't die; it lives on your skin.</p><p><strong>3. IT'S A MINDSET, NOT A MASK.</strong></p><p>Your scent is a psychological trigger. The smell of stale sweat tells your brain the day is already lost. The clean, powerful scent of <strong>Ocean Man</strong> signals victory. It's the final rep for your confidence, switching you from ‘beast mode’ in the gym to ‘command mode’ for the rest of your life.</p>",
             "text_size": "typeset2",
             "text_style": "body",
             "secondary_color": false,
@@ -340,7 +340,7 @@
           "type": "price",
           "settings": {
             "price_size": "medium",
-            "show_badges": false
+            "show_badges": true
           }
         },
         "variant_picker_wPxBPn": {
@@ -402,7 +402,8 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.featured-product {padding: 0 9rem; }}",
-        "@media screen and (max-width: 768px) {.product-form__quantity {padding-bottom: 10px; }}"
+        "@media screen and (max-width: 768px) {.product-form__quantity {padding-bottom: 10px; }}",
+        ".price__badge-sale {background: #00994f; color: white; font-size: 14px;}"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
@@ -497,7 +498,7 @@
         "heading_tag": "h2",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "mobile_image_height": 200,
+        "mobile_image_height": 230,
         "padding_top": 0,
         "padding_bottom": 12
       }

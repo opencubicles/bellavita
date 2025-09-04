@@ -291,6 +291,7 @@
         },
         "sticky_cart_t4QLHa": {
           "type": "sticky_cart",
+          "disabled": true,
           "settings": {
             "show_quantity_selector": true,
             "show_price_on_mobile": true
