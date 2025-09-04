@@ -59,8 +59,8 @@
     "show_shipping_calculator": false,
     "shipping_calculator_default_country": "India",
     "disable_view_cart": true,
-    "show_free_shipping_message": true,
-    "free_shipping_minimum_amount": "60",
+    "show_free_shipping_message": false,
+    "free_shipping_minimum_amount": "0",
     "show_bogo_progress_bar": false,
     "bogo_tag": "",
     "min_bogo_quantity": "",
@@ -380,6 +380,11 @@
       },
       "7885500093077574326": {
         "type": "shopify://apps/videowise-video-commerce/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+        "disabled": false,
+        "settings": {}
+      },
+      "2567389343055140935": {
+        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
       }

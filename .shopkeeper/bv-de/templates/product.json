@@ -151,15 +151,13 @@
             "heading_uppercase": false
           }
         },
-        "text": {
-          "type": "text",
+        "subtitle_rJBxj6": {
+          "type": "subtitle",
           "settings": {
-            "text": "<p>{{ product.metafields.my_fields.product_meta_secondary_text.value }}</p>",
-            "text_size": "typeset2",
-            "text_style": "body",
-            "secondary_color": true,
-            "text_bold": false,
-            "text_uppercase": false
+            "text_one": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_two": "{{ product.metafields.custom.perfume_notes_secondary_title.value }}",
+            "hide_on_mobile": false,
+            "text_transform": "uppercase"
           }
         },
         "rating_kKidtU": {
@@ -179,7 +177,7 @@
       },
       "block_order": [
         "heading",
-        "text",
+        "subtitle_rJBxj6",
         "rating_kKidtU",
         "image_NAt34J"
       ],
@@ -225,16 +223,13 @@
             "price_size": "medium"
           }
         },
-        "text_pb8jUB": {
-          "type": "text",
+        "subtitle_HU6GtL": {
+          "type": "subtitle",
           "settings": {
-            "icon": "none",
-            "text": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
-            "text_style": "body",
-            "text_hide_on_desktop": false,
-            "text_hide_on_mobile": true,
-            "text_bold": false,
-            "text_uppercase": false
+            "text_one": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_two": "{{ product.metafields.custom.perfume_notes_secondary_title.value }}",
+            "hide_on_mobile": true,
+            "text_transform": "uppercase"
           }
         },
         "rating": {
@@ -248,6 +243,7 @@
         "image_Ad9UNn": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Group_572_b8c3fd37-6867-4990-9734-6419322296fa.jpg",
             "link": "",
             "img_full_width_on_mobile": false,
             "image-hide-desktop": false,
@@ -321,7 +317,7 @@
       },
       "block_order": [
         "title",
-        "text_pb8jUB",
+        "subtitle_HU6GtL",
         "rating",
         "image_Ad9UNn",
         "price",
