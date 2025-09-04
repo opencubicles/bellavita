@@ -292,9 +292,7 @@
         "image_V9xGeJ",
         "image_XXekrm"
       ],
-      "custom_css": [
-        "@media (max-width: 768px) {.title-wrapper.center {justify-content: flex-start !important; }}"
-      ],
+      "custom_css": [],
       "name": "t:sections.gallery.presets.name",
       "settings": {
         "per_row": 4,
@@ -362,9 +360,7 @@
         "image_B7akd9",
         "image_DAtKhA"
       ],
-      "custom_css": [
-        "@media (max-width: 768px) {.title-wrapper.center {justify-content: flex-start !important; }}"
-      ],
+      "custom_css": [],
       "name": "t:sections.gallery.presets.name",
       "settings": {
         "per_row": 3,
