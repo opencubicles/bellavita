@@ -1,0 +1,670 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_full_HLWkC3": {
+      "type": "image-banner-full",
+      "name": "Responsive Banner",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Collection_Banner_Ocean_Gym_Banner.jpg",
+        "mobile_image": "shopify://shop_images/Collection_Mobile_Banner_Ocean_Gym_Banner.jpg"
+      }
+    },
+    "custom_liquid_nePafg": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap\" rel=\"stylesheet\">\n<style>\n  body.template-page {\n    font-family: 'Poppins', sans-serif !important;\n  }\n</style>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "narrow": true,
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_jYKn9z": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cnxYTV": {
+          "type": "heading",
+          "settings": {
+            "heading": "The #1 Reason You Still Stink After Your Post-Gym Shower",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "heading_bold": false,
+            "heading_semi_bold": false,
+            "heading_uppercase": false
+          }
+        },
+        "text_PyHHrz": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p>You did everything right.</p><p>You crushed the workout. You hit the showers. You scrubbed away the grime and sweat. You step out, spray on your usual stuff, and head out the door feeling clean.</p><p><strong>For about 20 minutes.</strong></p><p>Then, the ‘aura’ creeps back in. That phantom smell of the locker room. That stale, sour note that clings to you, turning your powerful post-workout high into a paranoid, self-conscious low.</p><p>Here’s the brutal truth: You’re not fixing the problem. You're just creating a disgusting chemical cocktail. You’re layering a heavy, clumsy fragrance over the top of brewing body odour, praying it will win.</p><p>It never does.</p><p>The fittest guys — the ones who always smell impossibly fresh — know the secret. They don't MASK the scent of battle. <strong>They strategically REBUILD their scent from clean skin up.</strong></p><p>They use a weapon. And we just perfected it.</p>",
+            "text_size": "typeset2",
+            "text_style": "body",
+            "secondary_color": false,
+            "text_bold": false,
+            "text_uppercase": false
+          }
+        },
+        "button_3kKzqf": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cnxYTV",
+        "text_PyHHrz",
+        "button_3kKzqf"
+      ],
+      "custom_css": [],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": true,
+        "narrow": true,
+        "show_divider": false,
+        "richtext_hide_on_desktop": false,
+        "richtext_hide_on_mobile": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "image_banner_wNprpX": {
+      "type": "image-banner",
+      "custom_css": [
+        "@media screen and (min-width: 768px) {#Banner-template--20126312923394__image_banner_wNprpX {padding: 0 9rem; }}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/1_1_copy.png",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "show_text_box": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 0,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_qNih8p": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zWMEBm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stop Covering A Problem. Start Building a Presence.",
+            "heading_size": "h1",
+            "heading_tag": "h1",
+            "heading_bold": true,
+            "heading_semi_bold": false,
+            "heading_uppercase": false
+          }
+        },
+        "text_arjtKL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Introducing <strong>Ocean Man by BellaVita Luxury</strong>. This isn't a perfume. It's a piece of high-performance gear engineered for the man who goes hard and wants to live fresh. We cracked the code on post-gym fragrance.</p><p><strong>How Ocean Man Is Designed For This:</strong> We engineered <strong>Ocean Man</strong> with a unique ‘thermo-reactive’ scent profile.</p>",
+            "text_size": "typeset2",
+            "text_style": "body",
+            "secondary_color": false,
+            "text_bold": false,
+            "text_uppercase": false
+          }
+        },
+        "image_8mEggL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ocean_Mobile.png",
+            "image-hide-desktop": false,
+            "image-hide-mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_zWMEBm",
+        "text_arjtKL",
+        "image_8mEggL"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.rich-text-image {position: absolute; right: 0; } .rich-text-image img {width: auto !important; }}"
+      ],
+      "name": "ocean image desktop",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": true,
+        "narrow": true,
+        "show_divider": false,
+        "richtext_hide_on_desktop": false,
+        "richtext_hide_on_mobile": true,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#f2f2f2",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_ja3d38": {
+      "type": "rich-text",
+      "blocks": {
+        "image_npXQit": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ocean_Mobile.png",
+            "image-hide-desktop": false,
+            "image-hide-mobile": true
+          }
+        },
+        "heading_FYHriP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stop Covering A Problem. Start Building a Presence.",
+            "heading_size": "h1",
+            "heading_tag": "h1",
+            "heading_bold": true,
+            "heading_semi_bold": false,
+            "heading_uppercase": false
+          }
+        },
+        "text_H6VeAJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2></h2><p>Introducing <strong>Ocean Man by BellaVita Luxury</strong>. This isn't a perfume. It's a piece of high-performance gear engineered for the man who goes hard and wants to live fresh. We cracked the code on post-gym fragrance.</p><p><strong>How Ocean Man Is Designed For This:</strong> We engineered <strong>Ocean Man</strong> with a unique ‘thermo-reactive’ scent profile.</p>",
+            "text_size": "typeset2",
+            "text_style": "body",
+            "secondary_color": false,
+            "text_bold": false,
+            "text_uppercase": false
+          }
+        }
+      },
+      "block_order": [
+        "image_npXQit",
+        "heading_FYHriP",
+        "text_H6VeAJ"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {.rich-text-image img {width: auto !important; max-width: 200%; }}"
+      ],
+      "name": "Ocean image mobile",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": true,
+        "show_divider": false,
+        "richtext_hide_on_desktop": true,
+        "richtext_hide_on_mobile": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_MmTPF7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xqKMFc": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "heading_bold": false,
+            "heading_semi_bold": false,
+            "heading_uppercase": false
+          }
+        },
+        "text_XJE4F4": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>1. IT'S AQUATIC, NOT ARROGANT.</strong></p><p>Amateurs use heavy, musky colognes that curdle with sweat. Pros use a scent architecture built for freshness. <strong>Ocean Man's</strong> core is <strong>Sea Salt, Italian Bergamot, Vetiver and Musk.</strong> It’s not a heavy blanket; it's a blast of cold, clean ocean air that neutralizes odour and builds a fresh foundation.</p><p><strong>2. IT WORKS WITH HEAT, NOT AGAINST IT.</strong></p><p>Your body is a furnace post-workout. Most fragrances collapse and distort under that heat. <strong>Ocean Man</strong> is different. Our <strong>thermo-reactive molecules</strong> and unique <strong>Hydro-Lock Essence</strong> use your body heat to evolve the scent, moving from crisp sea air to a magnetic, masculine base of <strong>Vetiver</strong> and <strong>Musk </strong>that lasts for hours. It doesn't die; it lives on your skin.</p><p><strong>3. IT'S A MINDSET, NOT A MASK.</strong></p><p>Your scent is a psychological trigger. The smell of stale sweat tells your brain the day is already lost. The clean, powerful scent of <strong>Ocean Man</strong> signals victory. It's the final rep for your confidence, switching you from ‘beast mode’ in the gym to ‘command mode’ for the rest of your life.</p>",
+            "text_size": "typeset2",
+            "text_style": "body",
+            "secondary_color": false,
+            "text_bold": false,
+            "text_uppercase": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xqKMFc",
+        "text_XJE4F4"
+      ],
+      "custom_css": [
+        ".rich-text__text {max-width: 100.6rem;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": true,
+        "narrow": true,
+        "show_divider": false,
+        "richtext_hide_on_desktop": false,
+        "richtext_hide_on_mobile": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_cD7xdz": {
+      "type": "featured-product",
+      "blocks": {
+        "title_fMEXxx": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "title_tag": "h2",
+            "show_price": false,
+            "price_size": "medium"
+          }
+        },
+        "text_tQF9nn": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "{{ section.settings.product.metafields.custom.product_meta_secondary_text.value }}",
+            "text_style": "uppercase"
+          }
+        },
+        "rating_ggtHQg": {
+          "type": "rating",
+          "settings": {}
+        },
+        "countdown_8ybD8F": {
+          "type": "countdown",
+          "settings": {
+            "heading": "Hurry up ! Sale end in:",
+            "number_size": "compact",
+            "colors_heading": "#da3f3f",
+            "colors_text": "#da3f3f",
+            "colors_background": "#feeeee"
+          }
+        },
+        "price_mzdqRn": {
+          "type": "price",
+          "settings": {
+            "price_size": "medium",
+            "show_badges": true
+          }
+        },
+        "variant_picker_wPxBPn": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "swatch_type": "round",
+            "size_chart": ""
+          }
+        },
+        "buy_buttons_WXq3Qn": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false
+          }
+        },
+        "share_LeqBei": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "read_more_bpLkXf": {
+          "type": "read_more",
+          "disabled": true,
+          "settings": {
+            "show_icon": false
+          }
+        },
+        "custom_liquid_jCGB3F": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"meta-coms-container\" style=\"display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 3rem !important;\">\n    \n  <div class=\"meta-coms-img-container\">\n    <img src=\"//bellavitaluxury.uk/cdn/shop/files/Long_Lasting.svg?crop=center&amp;height=40&amp;v=1748868721&amp;width=40\" alt=\"\" width=\"40\" height=\"40\" loading=\"eager\" fetchpriority=\"high\" is=\"lazy-image\">\n    <p>Long Lasting</p>\n  </div>\n\n  <div class=\"meta-coms-img-container\">\n    <img src=\"//bellavitaluxury.uk/cdn/shop/files/ifra.svg?crop=center&amp;height=40&amp;v=1748868721&amp;width=40\" alt=\"\" width=\"40\" height=\"40\" loading=\"eager\" fetchpriority=\"high\" is=\"lazy-image\">\n    <p>IFRA - Certified</p>\n  </div>\n\n  <div class=\"meta-coms-img-container\">\n    <img src=\"//bellavitaluxury.uk/cdn/shop/files/Imported_oils_3.svg?crop=center&amp;height=40&amp;v=1748868721&amp;width=40\" alt=\"\" width=\"40\" height=\"40\" loading=\"eager\" fetchpriority=\"high\" is=\"lazy-image\">\n    <p>Imported Oils</p>\n  </div>\n\n  <div class=\"meta-coms-img-container\">\n    <img src=\"//bellavitaluxury.uk/cdn/shop/files/Vegan.svg?crop=center&amp;height=40&amp;v=1748868721&amp;width=40\" alt=\"\" width=\"40\" height=\"40\" loading=\"eager\" fetchpriority=\"high\" is=\"lazy-image\">\n    <p>Vegan</p>\n  </div>\n\n</div>"
+          }
+        },
+        "custom_liquid_z83Uxm": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"offers-section-container\">\n\n  <div class=\"offer-section-heading\" style=\"display:flex;align-items:center;gap:8px;margin-bottom:16px;\">\n    <img src=\"//bellavitaluxury.uk/cdn/shop/files/offer-9678.svg?width=22\" alt=\"\" width=\"22\" height=\"22\">\n    <p class=\"text-bold uppercase no-margin\">EXCLUSIVE OFFERS</p>\n  </div>\n\n  <slider-component>\n    <ul role=\"list\"\n        style=\"display:flex;flex-wrap:nowrap;justify-content:space-between;gap:0;padding:0;margin:0;list-style:none;overflow:hidden;\">\n\n      <!-- CARD 1 -->\n      <li style=\"display:flex;flex-direction:column;flex:0 0 49%;max-width:49%;\">\n        <div style=\"display:flex;flex-direction:column;height:100%;border-bottom:2px dashed #000;border-image-source:url('https://i.stack.imgur.com/wLdVc.png');border-image-slice:3;border-image-repeat:round;border-top-left-radius:8px;border-top-right-radius:8px;padding:8px 10px 5px;background:#f2f2f2;\">\n          <div style=\"display:flex;align-items:center;gap:8px;\">\n            <img src=\"//bellavitaluxury.uk/cdn/shop/files/Crazy_Deal.svg?width=18\" alt=\"\" width=\"18\" height=\"18\">\n            <p class=\"text-bold uppercase\" style=\"margin:0;\">Hello Bonus</p>\n          </div>\n          <p style=\"margin-top:8px;\">Get 5% off your first order! 🎉 Keep the savings coming!</p>\n        </div>\n        <div style=\"border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding:5px 10px;background:#f2f2f2;margin-top:4px;\">\n          <p>Copy Code: <a onclick=\"copy(this)\" class=\"text-bold\">FirstFab</a></p>\n        </div>\n      </li>\n\n      <!-- CARD 2 -->\n      <li style=\"display:flex;flex-direction:column;flex:0 0 49%;max-width:49%;\">\n        <div style=\"display:flex;flex-direction:column;height:100%;border-bottom:2px dashed #000;border-image-source:url('https://i.stack.imgur.com/wLdVc.png');border-image-slice:3;border-image-repeat:round;border-top-left-radius:8px;border-top-right-radius:8px;padding:8px 10px 5px;background:#f2f2f2;\">\n          <div style=\"display:flex;align-items:center;gap:8px;\">\n            <img src=\"//bellavitaluxury.uk/cdn/shop/files/Crazy_Deal.svg?width=18\" alt=\"\" width=\"18\" height=\"18\">\n            <p class=\"text-bold uppercase\" style=\"margin:0;\">Buy More<br>Save More</p>\n          </div>\n          <p style=\"margin-top:8px;\">Buy 2 or more products &amp; enjoy an ADDITIONAL 10% OFF! Hurry ✨</p>\n        </div>\n        <div style=\"border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding:5px 10px;background:#f2f2f2;margin-top:4px;\">\n          <p>Double the joy! 🎉</p>\n        </div>\n      </li>\n\n    </ul>\n  </slider-component>\n</div>\n\n<script>\nfunction copy(el){\n  const t = el.textContent;\n  navigator.clipboard.writeText(t).then(()=>{\n    const o = el.textContent; el.textContent='Copied!'; setTimeout(()=>{ el.textContent=o; },2000);\n  });\n}\n</script>\n<style>\n.product__title {\nmargin-bottom:-10px !important;\n}\n.product__text {\nmargin-left:2px !important;\n}\n\n.product-form__submit {\nbackground-color:#002863;\n}\n</style>"
+          }
+        }
+      },
+      "block_order": [
+        "title_fMEXxx",
+        "text_tQF9nn",
+        "rating_ggtHQg",
+        "countdown_8ybD8F",
+        "price_mzdqRn",
+        "variant_picker_wPxBPn",
+        "buy_buttons_WXq3Qn",
+        "share_LeqBei",
+        "read_more_bpLkXf",
+        "custom_liquid_jCGB3F",
+        "custom_liquid_z83Uxm"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.featured-product {padding: 0 9rem; }}",
+        "@media screen and (max-width: 768px) {.product-form__quantity {padding-bottom: 10px; }}",
+        ".price__badge-sale {background: #00994f; color: white; font-size: 14px;}"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "ocean-man-perfume",
+        "layout": "media_first",
+        "full_width": false,
+        "show_divider": false,
+        "hide_variants": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": false,
+        "image_ratio": "adapt_first",
+        "image_position": "center center",
+        "enable_layered_images": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_ibiBjY": {
+      "type": "gallery",
+      "blocks": {
+        "image_4y8exy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_22860.png",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_r6qAVK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_22859.png",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_AqwyKD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_22861.png",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_tybQx3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_position": "center center",
+            "subheading": "Subheading",
+            "subheading_size": "h5",
+            "heading": "Tell your story",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_4y8exy",
+        "image_r6qAVK",
+        "image_AqwyKD",
+        "image_tybQx3"
+      ],
+      "custom_css": [],
+      "name": "t:sections.gallery.presets.name",
+      "settings": {
+        "per_row": 3,
+        "spacing_images": 2,
+        "image_height": 320,
+        "apply_overlay": true,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "THE ESSENCE OF NOTES",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "mobile_image_height": 230,
+        "padding_top": 0,
+        "padding_bottom": 12
+      }
+    },
+    "collapsible_content_AJtHQM": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_9aVBC6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "KEY  BENEFITS",
+            "row_content": "<p><br/>  - IFRA-certified and Safe to Use on Skin<br/>  - Long-lasting<br/>  - Made with Authentic Oils from France, Spain and Italy<br/><br/></p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_K6bQit": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW TO  USE",
+            "row_content": "<p>Spray the perfume on your pulse points such as sides of the neck and wrists for all day freshness.<br/><br/></p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_DXaJp8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "row_content": "",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_m97PPz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FAQ",
+            "row_content": "<p><strong>Q. Is it safe to use perfumes on the skin?</strong><br/>  A. Yes, high-quality perfumes like BellaVita Perfumes are formulated using safe ingredients that ensure a pleasant fragrance experience without causing harm to the skin.<br/><br/><br/><strong>Q. What occasions are perfume gift sets suitable for?</strong><br/>  A. Perfume gift sets are a versatile gifting option that is suitable for various occasions. They make an excellent choice for someone exploring new scents, or for those who like to pamper themselves with fragrant body care products. They are perfect for birthdays, anniversaries, holidays, or as a special token of appreciation.<br/><br/><br/><strong>Q. How long can perfumes last?</strong><br/>  A. Perfumes can last up to 8 hours, depending on the fragrance concentration, application method, and individual body chemistry. Our formulations are specifically designed to withstand the Indian climate, so you can rest assured that you won't experience any long-lasting problems.<br/><br/><br/><strong>Q. Do our perfumes contain Alcohol?</strong><br/>  A. No, BellaVita Perfumes do not contain alcohol. The alcohol used in perfumes is called perfumer's alcohol, which is different from the alcohol consumed directly. Perfumer's alcohol is not intended for consumption, and cannot be purchased at liquor stores.<br/><br/><br/><strong>Q. Are perfume gift sets travel-friendly?</strong><br/>  A. Yes, perfume gift sets are travel-friendly as they come in smaller sizes that comply with airline regulations. They can easily fit into toiletry bags or carry-on luggage, making them a convenient option for travel purposes.<br/><br/><br/><strong>Q. What is the best way to store perfume?</strong><br/>  A. The best way to store perfume is to keep it away from direct sunlight and extreme temperatures. Exposure to heat, light, and air can degrade the quality of the fragrance and reduce its shelf life.<br/><br/><br/><strong>Q. How can one make a perfume last longer on the skin?</strong><br/>  A. One way to make perfume last longer on the skin is to moisturize the skin before application. This helps the fragrance to last longer and smell better overall. Using a fragrance-free lotion or petroleum jelly can also help extend the duration of the fragrance, especially for those with dry skin.<br/></p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_zMYT4w": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "ALL  INGREDIENTS",
+            "row_content": "<p>Alcohol Denat, Fragrance (PARFUM), Aqua, BHT.</p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_9aVBC6",
+        "collapsible_row_K6bQit",
+        "collapsible_row_DXaJp8",
+        "collapsible_row_m97PPz",
+        "collapsible_row_zMYT4w"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "open_first_collapsible_row": false,
+        "narrow": true,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cart_recommendations_naJBhr": {
+      "type": "cart-recommendations",
+      "disabled": true,
+      "name": "t:sections.cart-recommendations.presets.name",
+      "settings": {
+        "show_divider": false,
+        "heading": "You may also like",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_epUUcF": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bestseller",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "You May Also Like",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_desktop": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1756274825abe203b7": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_homepage_Yjq6Tz": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget_homepage/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "ocean-man-perfume-3-4-fl-oz",
+            "review_data": "real_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_homepage_Yjq6Tz"
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_full_HLWkC3",
+    "custom_liquid_nePafg",
+    "main",
+    "rich_text_jYKn9z",
+    "image_banner_wNprpX",
+    "rich_text_qNih8p",
+    "rich_text_ja3d38",
+    "rich_text_MmTPF7",
+    "featured_product_cD7xdz",
+    "gallery_ibiBjY",
+    "collapsible_content_AJtHQM",
+    "cart_recommendations_naJBhr",
+    "featured_collection_epUUcF",
+    "1756274825abe203b7"
+  ]
+}
