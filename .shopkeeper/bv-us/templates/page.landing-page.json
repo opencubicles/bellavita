@@ -1,0 +1,448 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_63Vmiz": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_JGMz4J": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_YPcpCr": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_CPntCJ": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JGMz4J",
+        "text_YPcpCr",
+        "button_CPntCJ"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Top_Hero_Banner_website_size.jpg",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "650px",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 28,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_full_T487xA": {
+      "type": "image-banner-full",
+      "custom_css": [
+        ".responsive-banner {padding-top: 10px !important;}"
+      ],
+      "name": "Responsive Banner",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Top_Hero_Banner_website_size.jpg",
+        "mobile_image": "shopify://shop_images/Top_Hero_Banner.jpg"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "narrow": true,
+        "padding_top": 60,
+        "padding_bottom": 72
+      }
+    },
+    "contact_form_M3WQFq": {
+      "type": "contact-form",
+      "blocks": {
+        "contact_JkGUkn": {
+          "type": "contact",
+          "settings": {
+            "heading": "Customer service",
+            "text": "",
+            "link": ""
+          }
+        },
+        "media_BBPJhR": {
+          "type": "media",
+          "settings": {
+            "heading": "Follow us"
+          }
+        }
+      },
+      "block_order": [
+        "contact_JkGUkn",
+        "media_BBPJhR"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_phone": true,
+        "show_divider": false,
+        "heading": "Get in touch",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_xcBbQ6": {
+      "type": "featured-product",
+      "blocks": {
+        "title_cKDyGt": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "title_tag": "h2",
+            "show_price": false,
+            "price_size": "medium"
+          }
+        },
+        "text_cLEM8K": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "{{ section.settings.product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "rating_jVyXzC": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "countdown_fWFPay": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "heading": "Hurry up ! Sale end in:",
+            "number_size": "compact",
+            "colors_heading": "#da3f3f",
+            "colors_text": "#da3f3f",
+            "colors_background": "#feeeee"
+          }
+        },
+        "price_XaBRbk": {
+          "type": "price",
+          "settings": {
+            "price_size": "medium",
+            "show_badges": true
+          }
+        },
+        "variant_picker_Rx4Dp9": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "swatch_type": "round",
+            "size_chart": ""
+          }
+        },
+        "buy_buttons_LGhRtE": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false
+          }
+        },
+        "description_eGexHX": {
+          "type": "description",
+          "settings": {}
+        },
+        "share_qwizWM": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "read_more_YjUTB7": {
+          "type": "read_more",
+          "disabled": true,
+          "settings": {
+            "show_icon": false
+          }
+        },
+        "custom_liquid_wcEjfy": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping on All Orders</span></div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
+          }
+        }
+      },
+      "block_order": [
+        "title_cKDyGt",
+        "text_cLEM8K",
+        "rating_jVyXzC",
+        "countdown_fWFPay",
+        "price_XaBRbk",
+        "variant_picker_Rx4Dp9",
+        "buy_buttons_LGhRtE",
+        "description_eGexHX",
+        "share_qwizWM",
+        "read_more_YjUTB7",
+        "custom_liquid_wcEjfy"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.price-quantity-wrapper {margin-bottom: 1rem; }}",
+        "#ProductInfo-template--19857431855330__featured_product_xcBbQ6 .product-form__submit {background-color: #cf6e25 !important; color: #fff !important; border-color: #cf6e25 !important;}",
+        ".product__text {margin-top: 0rem;}",
+        ".product__title {margin-bottom: 0rem;}",
+        ".product__title .product__heading {letter-spacing: 0rem; font-weight: 600; text-transform: uppercase;}"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "honey-oud-unisex-perfume-3-38-fl-oz",
+        "layout": "media_first",
+        "full_width": false,
+        "show_divider": false,
+        "hide_variants": false,
+        "enable_image_zoom": false,
+        "enable_video_looping": false,
+        "image_ratio": "adapt_first",
+        "image_position": "center center",
+        "enable_layered_images": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_XaP6D7": {
+      "type": "gallery",
+      "blocks": {
+        "image_KCdDWM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_22858.png",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_V9xGeJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Item.png",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_XXekrm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lemon_40d524d6-2830-40d7-8579-3de18456c5d6.png",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_KCdDWM",
+        "image_V9xGeJ",
+        "image_XXekrm"
+      ],
+      "custom_css": [],
+      "name": "t:sections.gallery.presets.name",
+      "settings": {
+        "per_row": 4,
+        "spacing_images": 10,
+        "image_height": 350,
+        "apply_overlay": true,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "THE ESSENCE OF NOTES",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "mobile_image_height": 250,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_H9DChW": {
+      "type": "gallery",
+      "blocks": {
+        "image_QiLb73": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4-review.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_B7akd9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3-REVIEW.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_DAtKhA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2-review.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_QiLb73",
+        "image_B7akd9",
+        "image_DAtKhA"
+      ],
+      "custom_css": [],
+      "name": "t:sections.gallery.presets.name",
+      "settings": {
+        "per_row": 3,
+        "spacing_images": 10,
+        "image_height": 330,
+        "apply_overlay": true,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "FEEL THE EXPERIENCE",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "mobile_image_height": 220,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_wYX7ij": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bestsellers",
+        "products_to_show": 4,
+        "show_view_all": false,
+        "show_divider": false,
+        "heading": "EXPLORE GIFT SET",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_desktop": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17567981523fecf9bc": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_homepage_r63hXG": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget_homepage/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "honey-oud-unisex-perfume-0-7-fl-oz",
+            "review_data": "real_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_homepage_r63hXG"
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_63Vmiz",
+    "image_banner_full_T487xA",
+    "main",
+    "contact_form_M3WQFq",
+    "featured_product_xcBbQ6",
+    "gallery_XaP6D7",
+    "gallery_H9DChW",
+    "featured_collection_wYX7ij",
+    "17567981523fecf9bc"
+  ]
+}
