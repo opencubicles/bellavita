@@ -397,6 +397,38 @@
         "padding_bottom": 12
       }
     },
+    "featured_collection_pKrDdE": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "20-ml-colllection",
+        "custom_featured_collection_changes": true,
+        "products_to_show": 8,
+        "show_view_all": false,
+        "show_divider": false,
+        "heading": "Double the impact",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_desktop": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
     "ingredients_d3QziV": {
       "type": "Ingredients",
       "custom_css": [
@@ -764,6 +796,7 @@
     "tiktok_alert_8KeLVb",
     "main",
     "17107557374313e09a",
+    "featured_collection_pKrDdE",
     "ingredients_d3QziV",
     "cart_recommendations_xK9TnG",
     "image_with_text_HN9pWz",

@@ -69,7 +69,8 @@
               enable_color_swatches: section.settings.enable_color_swatches,
               enable_countdown: section.settings.enable_countdown,
               enable_image_fill: section.settings.enable_image_fill,
-              lazy_load: true
+              lazy_load: true,
+              custom_design:section.settings.custom_featured_collection_changes
             %}
           </li>
           {%- endunless -%}  
@@ -98,7 +99,24 @@
     {%- endif -%}
   </div>
 </div>
-
+ {%- if section.settings.custom_featured_collection_changes -%}
+  {%- style -%}
+    /* ✅ Custom CSS when enabled */
+    #shopify-section-{{ section.id }} .card-information__button {
+     display:none;
+    }
+    #shopify-section-{{ section.id }} .custom-add-to-cart {
+      position: absolute;
+      bottom: 0;  
+      right: 0;
+     }
+    #shopify-section-{{ section.id }} .custom-add-to-cart .button {
+      min-width: 0px !important;
+      max-width: 0px !important;
+      padding: 10px 25px !important;
+     }
+  {%- endstyle -%}
+  {%- endif -%}
 {% schema %}
 {
   "name": "t:sections.featured-collection.name",
@@ -109,6 +127,12 @@
       "type": "collection",
       "id": "collection",
       "label": "t:sections.featured-collection.settings.collection.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_featured_collection_changes",
+      "default": false,
+      "label": "Enable custom featured collection changes"
     },
     {
       "type": "range",

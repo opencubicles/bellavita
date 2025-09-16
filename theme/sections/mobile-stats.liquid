@@ -1,0 +1,101 @@
+<div class="bv-stats-mobile">
+  <div class="bv-stat">
+    <div class="bv-num">{{ section.settings.stat_1_number }}</div>
+    <div class="bv-label">{{ section.settings.stat_1_label }}</div>
+  </div>
+
+  <div class="bv-divider"></div>
+
+  <div class="bv-stat">
+    <div class="bv-num">{{ section.settings.stat_2_number }}</div>
+    <div class="bv-label">{{ section.settings.stat_2_label }}</div>
+  </div>
+</div>
+
+<style>
+/* Hide on desktop */
+.bv-stats-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) { /* show only on mobile/tablet */
+  .bv-stats-mobile {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(90deg, #FFEDC6, #ffefcf);
+
+    border-radius: 10px;
+    padding: 16px 24px;
+    margin: 20px auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bv-stat {
+    text-align: center;
+    min-width: 120px;
+  }
+
+  .bv-num {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.1;
+    color: #9b4d00;
+    white-space: nowrap;
+  }
+
+  .bv-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #9b4d00;
+    white-space: nowrap;
+  }
+
+  .bv-divider {
+    width: 1px;
+    height: 32px;
+    background: #9b4d00;
+    flex: 0 0 auto;
+    border-radius: 1px;
+  }
+}
+</style>
+{% schema %}
+{
+  "name": "Mobile Stats",
+  "settings": [
+    {
+      "type": "text",
+      "id": "stat_1_number",
+      "label": "Stat 1 Number",
+      "default": "35,000+"
+    },
+    {
+      "type": "text",
+      "id": "stat_1_label",
+      "label": "Stat 1 Label",
+      "default": "5 star reviews"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_number",
+      "label": "Stat 2 Number",
+      "default": "4,000+"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_label",
+      "label": "Stat 2 Label",
+      "default": "Repeat Orders"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mobile Stats"
+    }
+  ]
+}
+{% endschema %}

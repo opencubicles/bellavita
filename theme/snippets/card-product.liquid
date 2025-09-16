@@ -19,7 +19,9 @@
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
-
+{%- liquid
+  assign custom_design = custom_design | default: false
+-%}
 {%- liquid
   assign show_countdown = false
   if enable_countdown and card_product.metafields.theme.countdown.value != blank
@@ -338,6 +340,16 @@
         {%- endif -%}
       {%- endif -%}
     </div>
+    {%- if custom_design -%}
+      <div class="custom-add-to-cart">
+      <add-to-cart
+            class="button"
+            data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
+          >
+            <span class="plus-icon">+</span>
+          </add-to-cart>
+        </div>
+    {% endif -%}
   </use-animate>
 
   <div class="card-information">
@@ -359,6 +371,7 @@
       {%- endif -%}
 
       <!-- custom code for secondary title metafield -->
+      {%- if custom_design == false -%}
       <div class="card-information__top">
         <div class="card-article-info caption-with-letter-spacing">
           {% if card_product.metafields.my_fields.product_meta_secondary_text != blank %}
@@ -368,6 +381,7 @@
           {% endif %}
         </div>
       </div>
+       {%- endif -%}
       <!-- custom code for secondary title metafield ends here -->
 
       {%- if card_product.featured_media -%}
