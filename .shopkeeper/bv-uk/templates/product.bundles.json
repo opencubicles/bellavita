@@ -291,7 +291,6 @@
         },
         "sticky_cart_t4QLHa": {
           "type": "sticky_cart",
-          "disabled": true,
           "settings": {
             "show_quantity_selector": true,
             "show_price_on_mobile": true
@@ -331,7 +330,8 @@
         "offers_section_whdpGY"
       ],
       "custom_css": [
-        ".pdp-offer-img-wrapper {width: 55%; margin-top: 5px;}"
+        ".pdp-offer-img-wrapper {width: 55%; margin-top: 5px;}",
+        "@media screen and (min-width: 768px) {#sticky-cart-main {display: none !important;}}"
       ],
       "settings": {
         "enable_sticky_info": true,

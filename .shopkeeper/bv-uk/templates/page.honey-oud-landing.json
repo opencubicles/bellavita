@@ -1,0 +1,432 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_full_Gkjhb9": {
+      "type": "image-banner-full",
+      "name": "Responsive Banner",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Top_Hero_Banner_website_size.jpg",
+        "mobile_image": "shopify://shop_images/Top_Hero_Banner.jpg"
+      }
+    },
+    "mobile_stats_qdTBP9": {
+      "type": "mobile-stats",
+      "name": "Mobile Stats",
+      "settings": {
+        "stat_1_number": "35,000+",
+        "stat_1_label": "5 star reviews",
+        "stat_2_number": "4,000+",
+        "stat_2_label": "Repeat Orders",
+        "full_width": false
+      }
+    },
+    "custom_liquid_wVpLqm": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"bv-stats-mobile\">\n  <div class=\"bv-stat\">\n    <div class=\"bv-num\">35,000+</div>\n    <div class=\"bv-label\">5 star reviews</div>\n  </div>\n\n  <div class=\"bv-divider\"></div>\n\n  <div class=\"bv-stat\">\n    <div class=\"bv-num\">4,000+</div>\n    <div class=\"bv-label\">Repeat Orders</div>\n  </div>\n</div>\n\n<style>\n/* Hide on desktop */\n.bv-stats-mobile {\n  display: none;\n}\n\n@media (max-width: 768px) { /* show only on mobile/tablet */\n  .bv-stats-mobile {\n    display: flex !important;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    gap: 30px;\n    background: linear-gradient(90deg, #FFEDC6, #ffefcf);\n\n    border-radius: 10px;\n    padding: 16px 24px;\n    margin: 20px auto;\n    width: 100%;\n    box-sizing: border-box;\n  }\n\n  .bv-stat {\n    text-align: center;\n    min-width: 120px;\n  }\n\n  .bv-num {\n    font-weight: 800;\n    font-size: 24px;\n    line-height: 1.1;\n    color: #9b4d00;\n    white-space: nowrap;\n  }\n\n  .bv-label {\n    font-weight: 600;\n    font-size: 14px;\n    color: #9b4d00;\n    white-space: nowrap;\n  }\n\n  .bv-divider {\n    width: 1px;\n    height: 32px;\n    background: #9b4d00;\n    flex: 0 0 auto;\n    border-radius: 1px;\n  }\n}\n</style>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "narrow": true,
+        "padding_top": 60,
+        "padding_bottom": 72
+      }
+    },
+    "contact_form_M3WQFq": {
+      "type": "contact-form",
+      "blocks": {
+        "contact_JkGUkn": {
+          "type": "contact",
+          "settings": {
+            "heading": "Customer service",
+            "text": "",
+            "link": ""
+          }
+        },
+        "media_BBPJhR": {
+          "type": "media",
+          "settings": {
+            "heading": "Follow us"
+          }
+        }
+      },
+      "block_order": [
+        "contact_JkGUkn",
+        "media_BBPJhR"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_phone": true,
+        "show_divider": false,
+        "heading": "Get in touch",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_xcBbQ6": {
+      "type": "featured-product",
+      "blocks": {
+        "title_cKDyGt": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "title_tag": "h2",
+            "show_price": false,
+            "price_size": "medium"
+          }
+        },
+        "text_HGVi3w": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "{{ section.settings.product.metafields.custom.product_meta_secondary_text.value }}",
+            "text_style": "body"
+          }
+        },
+        "rating_jVyXzC": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "countdown_fWFPay": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "heading": "Hurry up ! Sale end in:",
+            "number_size": "compact",
+            "colors_heading": "#da3f3f",
+            "colors_text": "#da3f3f",
+            "colors_background": "#feeeee"
+          }
+        },
+        "price_XaBRbk": {
+          "type": "price",
+          "settings": {
+            "price_size": "medium",
+            "show_badges": true
+          }
+        },
+        "variant_picker_Rx4Dp9": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "swatch_type": "round",
+            "size_chart": ""
+          }
+        },
+        "buy_buttons_LGhRtE": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false
+          }
+        },
+        "description_eGexHX": {
+          "type": "description",
+          "settings": {}
+        },
+        "share_qwizWM": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "read_more_YjUTB7": {
+          "type": "read_more",
+          "disabled": true,
+          "settings": {
+            "show_icon": false
+          }
+        },
+        "custom_liquid_wcEjfy": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"shipping-container\"><div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping on All Orders</span></div></div> <div class=\"shipping-honey\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Honey.png?v=1756972555\">\n    </div></div>\n<style>\n.shipping-container{\n  width:100%;\n  display:flex;\n  justify-content:space-between;\n  align-items:center;\n}\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\n  align-items:center;\n  padding: 5px 10px;\n  border-radius: 5px;\n}\n.shipping-text {\n    font-size: 15px;\n  font-weight:700;\n  margin-left: 5px;\n  white-space: nowrap;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin-left: 5px;\n    margin-right: 5px;\n}\n.shipping-image img{\nwidth:17px;\n}\n.shipping-honey img{\n  height:70px;\n}\n@media(max-width:800px){\n.shipping-text{\n  font-size: 13px;\n}\n}\n</style>"
+          }
+        }
+      },
+      "block_order": [
+        "title_cKDyGt",
+        "text_HGVi3w",
+        "rating_jVyXzC",
+        "countdown_fWFPay",
+        "price_XaBRbk",
+        "variant_picker_Rx4Dp9",
+        "buy_buttons_LGhRtE",
+        "description_eGexHX",
+        "share_qwizWM",
+        "read_more_YjUTB7",
+        "custom_liquid_wcEjfy"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.price-quantity-wrapper {margin-bottom: 1rem; }}",
+        "#ProductInfo-template--20175041659138__featured_product_xcBbQ6 .product-form__submit {background-color: #a23f00 !important; color: #fff !important; border-color: #cf6e25 !important; font-size: 20px;}",
+        ".product__text {margin-top: 0rem;}",
+        ".product__title {margin-bottom: 0rem;}",
+        ".product__title .product__heading {letter-spacing: 0rem; font-weight: 600; text-transform: uppercase;}",
+        ".price__badge-sale {background: #00994f; color: white; font-size: 14px;}"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "honey-oud-unisex-perfume",
+        "layout": "media_first",
+        "full_width": false,
+        "show_divider": false,
+        "hide_variants": false,
+        "enable_image_zoom": false,
+        "enable_video_looping": false,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_layered_images": false,
+        "padding_top": 16,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_XaP6D7": {
+      "type": "gallery",
+      "blocks": {
+        "image_KCdDWM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_22858.png",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_V9xGeJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Item.png",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_XXekrm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lemon.png",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_KCdDWM",
+        "image_V9xGeJ",
+        "image_XXekrm"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.title-wrapper.center {justify-content: flex-start !important; }}",
+        ".title-wrapper .title {letter-spacing: 0px;}"
+      ],
+      "name": "t:sections.gallery.presets.name",
+      "settings": {
+        "per_row": 3,
+        "spacing_images": 6,
+        "image_height": 310,
+        "apply_overlay": true,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "THE ESSENCE OF NOTES",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "mobile_image_height": 210,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_H9DChW": {
+      "type": "gallery",
+      "blocks": {
+        "image_B7akd9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_1_8c5c9e01-2258-40c5-b587-82ecbc8037df.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_DAtKhA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_152caa5b-aec7-4242-b449-c8d3a8df5d15.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_QiLb73": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_8b368b7a-40ff-486a-846c-8f9720708043.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_bfPLWP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_4_713b9c46-e584-4fae-85d8-4ae63de28dab.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_B7akd9",
+        "image_DAtKhA",
+        "image_QiLb73",
+        "image_bfPLWP"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.title-wrapper.center {justify-content: flex-start !important; }}",
+        ".title-wrapper .title {letter-spacing: 0px;}"
+      ],
+      "name": "t:sections.gallery.presets.name",
+      "settings": {
+        "per_row": 4,
+        "spacing_images": 10,
+        "image_height": 200,
+        "apply_overlay": true,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "FEEL THE EXPERIENCE",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "mobile_image_height": 210,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_wYX7ij": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media (max-width: 768px) {.title-wrapper.center {justify-content: flex-start !important; }}",
+        ".title-wrapper .title {letter-spacing: 0px;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bestseller",
+        "products_to_show": 4,
+        "show_view_all": false,
+        "show_divider": false,
+        "heading": "EXPLORE GIFT SET",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_desktop": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17567981523fecf9bc": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_homepage_r63hXG": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget_homepage/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "honey-oud-unisex-perfume-3-4-fl-oz",
+            "review_data": "real_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_homepage_r63hXG"
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_full_Gkjhb9",
+    "mobile_stats_qdTBP9",
+    "custom_liquid_wVpLqm",
+    "main",
+    "contact_form_M3WQFq",
+    "featured_product_xcBbQ6",
+    "gallery_XaP6D7",
+    "gallery_H9DChW",
+    "featured_collection_wYX7ij",
+    "17567981523fecf9bc"
+  ]
+}
