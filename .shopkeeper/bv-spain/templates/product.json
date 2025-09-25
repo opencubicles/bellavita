@@ -11,6 +11,7 @@
   "sections": {
     "empty-space": {
       "type": "empty-space",
+      "disabled": true,
       "settings": {
         "desktop_height": 200,
         "mobile_height": 172
@@ -18,6 +19,7 @@
     },
     "empty_space_Gna7Rn": {
       "type": "empty-space",
+      "disabled": true,
       "settings": {
         "desktop_height": 32,
         "mobile_height": 12
@@ -220,6 +222,7 @@
         },
         "text_pb8jUB": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "text": "{{ product.metafields.custom.product_meta_secondary_text.value }}",
@@ -228,6 +231,15 @@
             "text_hide_on_mobile": true,
             "text_bold": false,
             "text_uppercase": false
+          }
+        },
+        "subtitle_tHtqyp": {
+          "type": "subtitle",
+          "settings": {
+            "text_one": "{{ product.metafields.custom.product_meta_secondary_text.value }}",
+            "text_two": "{{ product.metafields.custom.perfume_notes_secondary_title.value }}",
+            "hide_on_mobile": false,
+            "text_transform": "uppercase"
           }
         },
         "rating": {
@@ -272,13 +284,10 @@
         },
         "custom_liquid_6BXmL7": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<span class=\"flash-sale-tag\">\n  <img\n    src=\"https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Bolt.gif?v=1751540262\"\n    alt=\"Flash Icon\"\n    class=\"flash-icon\"\n  />\n  <strong>FLASH SALE</strong>\n</span>"
           }
-        },
-        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf": {
-          "type": "shopify://apps/eb-easy-bundle-builder/blocks/app-block-mixAndMatchBundle/05b1325c-6303-4da5-8e2f-b13ab2a50e1a",
-          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -302,14 +311,12 @@
         },
         "offer_badges_hFhQyD": {
           "type": "offer_badges",
-          "disabled": true,
           "settings": {}
         },
         "custom_liquid_X8RHwe": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
-            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping</span> &nbspover £22</div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
+            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping</span> &nbsp</div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
           }
         },
         "offers_section_whdpGY": {
@@ -320,13 +327,13 @@
       "block_order": [
         "title",
         "text_pb8jUB",
+        "subtitle_tHtqyp",
         "rating",
         "image_Ad9UNn",
         "price",
         "variant_picker",
         "description",
         "custom_liquid_6BXmL7",
-        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf",
         "buy_buttons",
         "meta_coms_MzxdKJ",
         "sticky_cart_t4QLHa",
@@ -537,7 +544,7 @@
     "17066961646756c0fa": {
       "type": "apps",
       "blocks": {
-        "judge_me_reviews_review_widget_3NrUkr": {
+        "judge_me_reviews_review_widget_TnC7hr": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
@@ -546,7 +553,7 @@
         }
       },
       "block_order": [
-        "judge_me_reviews_review_widget_3NrUkr"
+        "judge_me_reviews_review_widget_TnC7hr"
       ],
       "settings": {
         "include_margins": true,

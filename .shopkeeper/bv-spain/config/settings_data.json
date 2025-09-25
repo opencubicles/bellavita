@@ -35,7 +35,7 @@
     "type_button_size": 13,
     "type_price_font": "heading",
     "price_superscript": true,
-    "page_width": 1000,
+    "page_width": 1200,
     "spacing_sections": 0,
     "page_transition_enabled": true,
     "image_zoom_effect_enabled": false,
@@ -371,6 +371,11 @@
     },
     "content_for_index": [],
     "blocks": {
+      "2567389343055140935": {
+        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+        "disabled": false,
+        "settings": {}
+      },
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
@@ -378,16 +383,6 @@
       },
       "7885500093077574326": {
         "type": "shopify://apps/videowise-video-commerce/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-        "disabled": false,
-        "settings": {}
-      },
-      "11348531219507317188": {
-        "type": "shopify://apps/eb-easy-bundle-builder/blocks/app-embed/05b1325c-6303-4da5-8e2f-b13ab2a50e1a",
-        "disabled": false,
-        "settings": {}
-      },
-      "2567389343055140935": {
-        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
       }
