@@ -377,17 +377,6 @@
     },
     "17107557374313e09a": {
       "type": "apps",
-      "blocks": {
-        "videowise_video_platform_ugc_videowise_page_widgets_DYNhEp": {
-          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-          "settings": {
-            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65f45c8b96a30700289912ba\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "videowise_video_platform_ugc_videowise_page_widgets_DYNhEp"
-      ],
       "disabled": true,
       "custom_css": [],
       "settings": {
@@ -586,17 +575,6 @@
     },
     "1710752969db39fb42": {
       "type": "apps",
-      "blocks": {
-        "videowise_video_platform_ugc_videowise_page_widgets_8MjNDi": {
-          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-          "settings": {
-            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65f802ddca090f0028ad9141\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "videowise_video_platform_ugc_videowise_page_widgets_8MjNDi"
-      ],
       "settings": {
         "include_margins": true,
         "show_divider": false,
@@ -765,20 +743,6 @@
     },
     "17102359122a024747": {
       "type": "apps",
-      "blocks": {
-        "shop_quiz_product_recommender_inline_quiz_TDPdJK": {
-          "type": "shopify://apps/revenuehunt-quizzes/blocks/inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
-          "settings": {
-            "quiz_id": "vwHY5B",
-            "quiz_height": 200,
-            "quiz_autoscroll": true,
-            "quiz_fixed_height": false
-          }
-        }
-      },
-      "block_order": [
-        "shop_quiz_product_recommender_inline_quiz_TDPdJK"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true,

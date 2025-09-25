@@ -58,6 +58,7 @@
         },
         "announcement_zAeFRF": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "3 Perfumes @ $51.99",
             "text_on_mobile": "",
@@ -109,8 +110,8 @@
         "enable_sticky_header": true,
         "show_sticky_header_scroll_up": false,
         "sticky_mobile_menu": "",
-        "transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1.png",
-        "mobile_transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1.png",
+        "transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1_932a2156-83ef-49a2-a3d7-c6909bc99ee0.png",
+        "mobile_transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1_932a2156-83ef-49a2-a3d7-c6909bc99ee0.png",
         "enable_transparent_header": true,
         "enable_transparent_header_collection": false,
         "enable_transparent_header_custom": "",
