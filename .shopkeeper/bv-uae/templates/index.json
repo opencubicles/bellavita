@@ -932,7 +932,59 @@
         "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_1.jpg",
+            "image": "shopify://shop_images/1_2.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "shopify://products/skai-aquatic",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_1.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h4",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "shopify://products/white-oud",
+            "text_box_position": "middle-center"
+          }
+        },
+        "0237030b-2b22-46e9-a89a-7f1501509b8a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_1.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "shopify://products/ceo-man",
+            "text_box_position": "middle-center"
+          }
+        },
+        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_1_1.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "shopify://products/date-woman",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_kDeAKw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_1.jpg",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h5",
@@ -941,52 +993,14 @@
             "link": "shopify://products/honey-oud",
             "text_box_position": "bottom-left"
           }
-        },
-        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Banner_2.jpg",
-            "image_position": "center center",
-            "subheading": "",
-            "subheading_size": "h4",
-            "heading": "",
-            "heading_size": "h3",
-            "link": "shopify://products/g-o-a-t-man",
-            "text_box_position": "middle-center"
-          }
-        },
-        "0237030b-2b22-46e9-a89a-7f1501509b8a": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Banner_3.jpg",
-            "image_position": "center center",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h3",
-            "link": "shopify://products/date-woman",
-            "text_box_position": "middle-center"
-          }
-        },
-        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Banner_4.jpg",
-            "image_position": "center center",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h3",
-            "link": "shopify://products/white-oud",
-            "text_box_position": "bottom-left"
-          }
         }
       },
       "block_order": [
         "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-3",
         "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-1",
         "0237030b-2b22-46e9-a89a-7f1501509b8a",
-        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-2"
+        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-2",
+        "image_kDeAKw"
       ],
       "settings": {
         "per_row": 5,
