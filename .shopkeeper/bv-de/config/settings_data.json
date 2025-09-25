@@ -81,8 +81,6 @@
       "bestsellers",
       "gift-sets",
       "unisex",
-      "shop-all",
-      "buy-more-save-more",
       "fragrance-for-her",
       "fragrance-for-him"
     ],
@@ -1906,7 +1904,12 @@
       ".free-shipping.typeset0 {width: 89%; margin: auto; display: flex; flex-direction: column-reverse;}",
       "span.free-shipping__text {font-size: 16px; color: black; padding-top: 1rem;}",
       ".free-shipping__progress:after {height: 4px; background: linear-gradient(325deg, #1ad715 0, #e1cc14); background-color: #0ee90f;}",
-      ".cart-drawer .free-shipping__progress {height: 4px;}"
+      ".cart-drawer .free-shipping__progress {height: 4px;}",
+      ".cart-drawer .product-option {display: none;}",
+      ".cart__items-wrapper .product-option {display: none;}",
+      ".meta-coms-img-container:first-of-type p:first-of-type {font-size: 9px;}",
+      " /* Mobile override */@media (max-width: 768px) {.meta-coms-img-container p {font-size: 9px; } .meta-coms-img-container:first-of-type p:first-of-type {font-size: 6px; }}",
+      "@media (max-width: 768px) {.card-information__button {height: 4.4rem !important; } add-to-cart.button {white-space: normal; text-align: center; word-break: break-word; } .cart-recommendations .mini-cart__navigation .product-button .button.button--cta {height: auto !important; }}"
     ]
   }
 }
