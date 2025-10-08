@@ -561,6 +561,13 @@
         "label": "Show BOGO progress bar"
       },
       {
+        "type": "checkbox",
+        "id": "show_tier_progress_bar",
+        "default": false,
+        "label": "Show tier progress bar",
+        "info": "Enable tier progress bar in {{shop.metafields.global.tier_data}} JSON metafield"
+      },
+      {
         "type": "text",
         "id": "bogo_tag",
         "default": "BOGO",

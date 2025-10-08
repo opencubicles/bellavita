@@ -86,7 +86,11 @@
       <!-- custom code for BOGO progress bar ends here -->
       
       <!-- custom code for mini cart offer image -->
-      
+       {% # Custom code for Tier Progress Bar functionality %}
+      {%- if settings.show_tier_progress_bar -%}
+        {% render 'custom-tier-progress-bar' %}
+      {%- endif -%}
+      {% # Custom code for Tier Progress Bar functionality ends here %}
       {%- if settings.cart_offer_image != blank -%}
       <div class="mini-cart-offer-img">
         {%- if settings.cart_offer_image_link != blank -%}
@@ -266,6 +270,9 @@
       {% endif %}  
     <div class="mini-cart__main" id="main-cart-items">
       <cart-items>
+        {%- if settings.show_tier_progress_bar -%}
+          {% render 'custom-tier-progress-bar-item' %}
+        {% endif %} 
         {%- assign animate_count = animate_count | plus: 1 -%}
         <ul class="mini-cart__navigation" data-animate data-animate-delay-{{ animate_count }}>
           {%- for item in cart.items -%}
@@ -788,13 +795,30 @@
         
       </div>             
 
+       {%- liquid
+      assign tier_data = shop.metafields.global.tier_data
+
+      if tier_data != blank
+        assign is_enabled = tier_data.value.enable_tier_progress_bar
+        assign progress_type = tier_data.value.tier_progress_type | default: 'add'
+      endif
+    -%} 
       <div class="button-container">
-        <button class="button" name="checkout" type="submit">
+        {%- if tier_data != blank and is_enabled -%}
+            <button class="button" name="checkout" type="submit" onclick="event.preventDefault(); window.preCheckoutCheck(this);">
+          {{ 'sections.cart.checkout' | t }}
+          {%- if settings.disable_view_cart -%}
+            <span class="price" id="mini-cart-subtotal">{{ cart.total_price | money_with_currency }}</span>
+          {%- endif -%}
+        </button> 
+        {%- else -%}
+          <button class="button" name="checkout" type="submit" >
           {{ 'sections.cart.checkout' | t }}
           {%- if settings.disable_view_cart -%}
             <span class="price" id="mini-cart-subtotal">{{ cart.total_price | money_with_currency }}</span>
           {%- endif -%}
         </button>
+        {%- endif -%}
         {%- unless settings.disable_view_cart -%}
           <a class="button button--secondary" href="{{ routes.cart_url }}">{{ 'general.cart.view' | t }}</a>
         {%- endunless -%}

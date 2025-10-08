@@ -11,7 +11,7 @@
 {% comment %}
   {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
 {% endcomment %} 
-{% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
+{% if shop.permanent_domain == 'bv-uk1.myshopify.com' %}
 <style>
   .header-top-banner {
     position: fixed;
@@ -56,6 +56,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="alternate" href="{{ canonical_url }}" hreflang="en-us" />
+
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <meta name="google-site-verification" content="XVP2KbWCPGQvAIiidjf_0z4e186VmL9EvlnJr1RIUMU">
     {%- if settings.favicon != blank -%}
@@ -233,7 +235,9 @@
     <a class="skip-to-content-link button button--small visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
-
+  {%- if settings.show_tier_progress_bar -%}
+    {%- render 'custom-tier-progress-bar-script' -%}
+  {%- endif -%}  
     
 {% if template contains 'index' %}
   {% render 'transition-cover' %}  
@@ -242,7 +246,7 @@
     <div class="transition-body">
       
 
-        {% if template contains 'product' and shop.permanent_domain == 'bv-uk.myshopify.com' %}
+        {% if template contains 'product' and shop.permanent_domain == 'bv-uk1.myshopify.com' %}
         <div class="comman-header">
           <div class="header-top-banner">
             <div id="daily-sale-timer" class="sale-timer-overlay">
@@ -482,7 +486,7 @@
   }, 500)
 </script>
 {% endif %}
-{% if template contains "product" and shop.permanent_domain == 'bv-uk.myshopify.com' %}
+{% if template contains "product" and shop.permanent_domain == 'bv-uk1.myshopify.com' %}
 <script>
   function startCountdown() {
     const now = new Date();

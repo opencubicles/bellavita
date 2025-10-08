@@ -1,4 +1,4 @@
-{%- liquid
+ {%- liquid
   assign products_per_row = section.settings.products_per_row
   assign products_per_page = section.settings.products_per_row | times: section.settings.rows_per_page
   assign default_layout = 'grid-' | append: products_per_row

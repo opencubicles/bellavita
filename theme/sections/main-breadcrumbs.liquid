@@ -1,0 +1,59 @@
+{% comment %}
+  Breadcrumbs Section
+  Can be added from theme editor
+{% endcomment %}
+<div class="section--padding page-width page-width-pdp">
+<div class="breadcrumb-wrapper">
+  <nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+    <a href="{{ routes.root_url }}">Home</a>
+
+    {%- if template.name == 'collection' -%}
+      <span class="breadcrumb__divider">/</span>
+      <span>{{ collection.title }}</span>
+
+    {%- elsif template.name == 'product' -%}
+      {%- if collection and collection.handle -%}
+        <span class="breadcrumb__divider">/</span>
+        <a href="{{ routes.collections_url }}/{{ collection.handle }}">{{ collection.title }}</a>
+      {%- endif -%}
+      <span class="breadcrumb__divider">/</span>
+      <span>{{ product.title }}</span>
+
+    {%- elsif template.name == 'article' -%}
+      <span class="breadcrumb__divider">/</span>
+      <a href="{{ blog.url }}">{{ blog.title }}</a>
+      <span class="breadcrumb__divider">/</span>
+      <span>{{ article.title }}</span>
+
+    {%- elsif template.name == 'page' -%}
+      <span class="breadcrumb__divider">/</span>
+      <span>{{ page.title }}</span>
+    {%- endif -%}
+  </nav>
+</div>
+</div>
+<style>
+.breadcrumb-wrapper {
+  margin: 10px 0;
+}
+.breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+.breadcrumb__divider {
+  margin: 0 5px;
+  color: #999;
+}
+</style>
+{% schema %}
+{
+  "name": "Main Breadcrumbs",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Main Breadcrumbs"
+    }
+  ]
+}
+{% endschema %}
+
