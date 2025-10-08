@@ -72,17 +72,17 @@
     "cart_recommendations_enabled": true,
     "upsell_heading": "Add 2 items to unlock an extra 10% discount!",
     "enable_upsell_script": false,
-    "upsell_collection": "bestseller",
+    "upsell_collection": "bestsellers",
     "cart_recommendations_show_vendor": false,
     "empty_cart_message": "",
     "cart_recommendations_heading": "You may also like",
     "empty_cart_recommendations": "",
     "empty_cart_collections": [
-      "men-fragrance",
-      "unisex-fragrance",
-      "women-fragrance",
       "bestseller",
-      "gift-sets"
+      "men-fragrance",
+      "women-fragrance",
+      "unisex-fragrance",
+      "gift-sets-1"
     ],
     "search_results": "product",
     "predictive_search_enabled": false,
@@ -371,18 +371,13 @@
     },
     "content_for_index": [],
     "blocks": {
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      },
       "7885500093077574326": {
         "type": "shopify://apps/videowise-video-platform-ugc/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
         "disabled": false,
         "settings": {}
       },
-      "2567389343055140935": {
-        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
       }
