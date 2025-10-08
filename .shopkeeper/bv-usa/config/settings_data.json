@@ -62,6 +62,7 @@
     "show_free_shipping_message": true,
     "free_shipping_minimum_amount": "30",
     "show_bogo_progress_bar": false,
+    "show_tier_progress_bar": true,
     "bogo_tag": "",
     "min_bogo_quantity": "",
     "cart_offer_image_link": "",
