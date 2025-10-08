@@ -1,0 +1,770 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "empty-space": {
+      "type": "empty-space",
+      "disabled": true,
+      "settings": {
+        "desktop_height": 36,
+        "mobile_height": 16
+      }
+    },
+    "scrolling-promotion": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "announcement_D9pEtA": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "text": "",
+            "text_size": 20,
+            "link": ""
+          }
+        },
+        "announcement-0": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "text": "🚚FREE Delivery",
+            "text_size": 18,
+            "link": ""
+          }
+        },
+        "announcement_VrgyQQ": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "text": "",
+            "text_size": 20,
+            "link": ""
+          }
+        },
+        "announcement_ggcymM": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "text": "🔖UPTO 45% OFF SITEWIDE*",
+            "text_size": 18,
+            "link": ""
+          }
+        },
+        "announcement_M6iDHr": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "text": "",
+            "text_size": 20,
+            "link": ""
+          }
+        },
+        "announcement_nxQNMm": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "text": "🎅Ho Ho Ho! Your Holiday Haul is Waiting!",
+            "text_size": 18,
+            "link": ""
+          }
+        },
+        "announcement_zRVYdn": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "text": "🎉Extra 20% Off – Buy More, Save More!",
+            "text_size": 20,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_D9pEtA",
+        "announcement-0",
+        "announcement_VrgyQQ",
+        "announcement_ggcymM",
+        "announcement_M6iDHr",
+        "announcement_nxQNMm",
+        "announcement_zRVYdn"
+      ],
+      "disabled": true,
+      "settings": {
+        "direction": "left",
+        "speed": 2.1,
+        "show_divider": false,
+        "scrolling_promotion_hide_on_desktop": true,
+        "scrolling_promotion_hide_on_mobile": false,
+        "use_custom_colors": true,
+        "colors_icon": "#f1ff34",
+        "colors_text": "#ffffff",
+        "colors_background": "#171615",
+        "gradient_background": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "empty_space_Gna7Rn": {
+      "type": "empty-space",
+      "disabled": true,
+      "settings": {
+        "desktop_height": 32,
+        "mobile_height": 12
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.title }}",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "heading_bold": true,
+            "heading_semi_bold": false,
+            "heading_uppercase": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>{{ product.metafields.my_fields.product_meta_secondary_text.value }}</p>",
+            "text_size": "typeset2",
+            "text_style": "body",
+            "secondary_color": true,
+            "text_bold": false,
+            "text_uppercase": false
+          }
+        },
+        "subtitle_BgtEBx": {
+          "type": "subtitle",
+          "settings": {
+            "text_one": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_two": "{{ product.metafields.custom.perfume_notes_secondary_title.value }}",
+            "hide_on_mobile": false,
+            "text_transform": "uppercase"
+          }
+        },
+        "rating_kKidtU": {
+          "type": "rating",
+          "settings": {
+            "show_share_botton": false
+          }
+        },
+        "image_NAt34J": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_572.jpg",
+            "image-hide-desktop": true,
+            "image-hide-mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "subtitle_BgtEBx",
+        "rating_kKidtU",
+        "image_NAt34J"
+      ],
+      "custom_css": [
+        "@media (max-width: 800px) {.rich-text {padding-top: 4px; }}"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "richtext_hide_on_desktop": true,
+        "richtext_hide_on_mobile": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "tiktok_alert_8KeLVb": {
+      "type": "tiktok-alert",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "show_price": false,
+            "title_hide_on_desktop": false,
+            "title_hide_on_mobile": true,
+            "title_bold": false,
+            "title_semi_bold": false,
+            "title_uppercase": false,
+            "price_size": "medium"
+          }
+        },
+        "subtitle_3EYiG7": {
+          "type": "subtitle",
+          "settings": {
+            "text_one": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_two": "{{ product.metafields.custom.perfume_notes_secondary_title.value }}",
+            "hide_on_mobile": true,
+            "text_transform": "uppercase"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_share_botton": true,
+            "rating_hide_on_desktop": false,
+            "rating_hide_on_mobile": true
+          }
+        },
+        "image_Ad9UNn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_572.jpg",
+            "link": "",
+            "img_full_width_on_mobile": false,
+            "image-hide-desktop": false,
+            "image-hide-mobile": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+            "price_size": "medium",
+            "show_badges": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "swatch_type": "round",
+            "size_chart": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_price_container": true,
+            "hide_atc_on_mobile": true,
+            "show_dynamic_checkout": false
+          }
+        },
+        "meta_coms_MzxdKJ": {
+          "type": "meta_coms",
+          "settings": {}
+        },
+        "sticky_cart_t4QLHa": {
+          "type": "sticky_cart",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_price_on_mobile": true
+          }
+        },
+        "offer_badges_hFhQyD": {
+          "type": "offer_badges",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_liquid_X8RHwe": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping</span></div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\ndisplay:none;\n}\n}\n</style>"
+          }
+        },
+        "custom_liquid_kjYyfP": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"pdp-banner\">\n\n{% if shop.metafields.custom.pdp_atc_desk_offer_banner and shop.metafields.custom.pdp_atc_desk_offer_banner != blank %}\n\n\t<img  src=\"{{ shop.metafields.custom.pdp_atc_desk_offer_banner | img_url: '800x' }}\">\n\n{% endif %}\n\n\n\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>"
+          }
+        },
+        "offers_section_whdpGY": {
+          "type": "offers_section",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_qYEcr4": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "subtitle_3EYiG7",
+        "rating",
+        "image_Ad9UNn",
+        "price",
+        "variant_picker",
+        "description",
+        "buy_buttons",
+        "meta_coms_MzxdKJ",
+        "sticky_cart_t4QLHa",
+        "offer_badges_hFhQyD",
+        "custom_liquid_X8RHwe",
+        "custom_liquid_kjYyfP",
+        "offers_section_whdpGY",
+        "judge_me_reviews_preview_badge_qYEcr4"
+      ],
+      "custom_css": [
+        ".pdp-offer-img-wrapper {width: 55%; margin-top: 5px;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_position": "left",
+        "media_size": "medium",
+        "gallery_layout": "thumbnail_slider",
+        "image_ratio": "adapt_first",
+        "show_thumbnails": true,
+        "hide_variants": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": false,
+        "mobile_image_ratio": "adapt_first",
+        "show_mobile_thumbnails": true,
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "17107557374313e09a": {
+      "type": "apps",
+      "blocks": {
+        "videowise_video_platform_ugc_videowise_page_widgets_DYNhEp": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65f45c8b96a30700289912ba\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "videowise_video_platform_ugc_videowise_page_widgets_DYNhEp"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "ingredients_d3QziV": {
+      "type": "Ingredients",
+      "custom_css": [
+        "@media only screen and (max-width: 600px) {.Notes-Heading {margin-top: 18px; } .ingredient-img-wrapper-notes {width: 55%; margin: auto; } .product-ingredients-item-notes p {margin: 0.3rem 0; } .center-notes {text-align: left; line-height: 17px; } .ingredient-img-wrapper-notes {margin: 0px !important; } .product-ingredients-notes {padding: 0px 2rem !important; }}"
+      ],
+      "settings": {}
+    },
+    "cart_recommendations_xK9TnG": {
+      "type": "cart-recommendations",
+      "name": "t:sections.cart-recommendations.presets.name",
+      "settings": {
+        "show_divider": false,
+        "heading": "You may also like",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": false,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_HN9pWz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_D63EKA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Where Mystery Meets Magnetism",
+            "heading_size": "h2",
+            "heading_tag": "h3"
+          }
+        },
+        "text_8xmFP4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>An enigma cloaked in cool allure, a fragrance that draws you in with its hidden depths.</p><p></p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_MtAFXc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore",
+            "button_link": "shopify://products/ceo-man-luxury-perfume-3-38-fl-oz",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_D63EKA",
+        "text_8xmFP4",
+        "button_MtAFXc"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/14_1.jpg",
+        "image_link": "shopify://products/white-oud-unisex-100ml",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "image_ratio": "450px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "image_mobile": "shopify://shop_images/14_1.jpg",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "collapsible-content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "question-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "KEY BENEFITS",
+            "row_content": "",
+            "row_content_liquid": "<div class=\"page-width\">{{ product.metafields.custom.key_benefits }}</div>",
+            "page": ""
+          }
+        },
+        "question-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW TO USE",
+            "row_content": "",
+            "row_content_liquid": "<div class=\"page-width\">{{ product.metafields.custom.how_to_use }}</div>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NXAhEg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FAQ",
+            "row_content": "",
+            "row_content_liquid": "<div class=\"page-width\">{{ product.metafields.custom.product_faq_content }}</div>",
+            "page": ""
+          }
+        },
+        "collapsible_row_VX7tAw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "ALL INGREDIENTS",
+            "row_content": "",
+            "row_content_liquid": "<div class=\"page-width\">{{ product.metafields.custom.all_ingredients }}</div>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "question-0",
+        "question-1",
+        "collapsible_row_NXAhEg",
+        "collapsible_row_VX7tAw"
+      ],
+      "settings": {
+        "open_first_collapsible_row": false,
+        "narrow": true,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_with_text_emJiUe": {
+      "type": "Video-with-text",
+      "settings": {}
+    },
+    "1710752969db39fb42": {
+      "type": "apps",
+      "blocks": {
+        "videowise_video_platform_ugc_videowise_page_widgets_8MjNDi": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65f802ddca090f0028ad9141\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "videowise_video_platform_ugc_videowise_page_widgets_8MjNDi"
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_divider": false,
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": false,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "show_divider": false,
+        "heading": "Recently Viewed",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>I love the bottle. Like a pretty sunset. It's not as loud as an old one. This is a very subtle spray, so this is perfect for all ages.</p>",
+            "image": "shopify://shop_images/naturally_mia_596a4c1f-019c-4553-abf3-b7b6bcae12b3.jpg",
+            "author": "naturally_mia",
+            "instagram_username": "",
+            "instagram_link": ""
+          }
+        },
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>Not only does it smell divine, but it's also incredibly convenient for your on-the-go lifestyle.</p>",
+            "image": "shopify://shop_images/dakota_a6939f35-ef39-4da9-a0f1-e8f43c722f49.jpg",
+            "author": "dakotakihair",
+            "instagram_username": "",
+            "instagram_link": ""
+          }
+        },
+        "testimonial_QyPmXA": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>This is an amazing gift option without breaking the bank.</p>",
+            "image": "shopify://shop_images/samiyataba_431c2c42-910f-4c9e-b346-ba047e148d0d.jpg",
+            "author": "samiatayaba",
+            "instagram_username": "",
+            "instagram_link": ""
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>Luxury at its finest. first, I wanted to keep it as, like, a special occasion perfume, but then I'm like, girl, I'm wearing this every day.</p>",
+            "image": "shopify://shop_images/lipstickg_d5924bc7-f1d7-4d5d-93ca-a1e3514e6013.jpg",
+            "author": "lipstickgawwdess",
+            "instagram_username": "",
+            "instagram_link": ""
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5",
+            "text": "<p>These perfumes genuinely smell so good. These are really really amazing.</p>",
+            "image": "shopify://shop_images/binx_elaine_22bb072d-9d08-4ec1-8b03-6e760f0fbd04.jpg",
+            "author": "binx_elaine",
+            "instagram_username": "",
+            "instagram_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-0",
+        "testimonial-1",
+        "testimonial_QyPmXA",
+        "testimonial-2",
+        "testimonial-3"
+      ],
+      "settings": {
+        "autorotate": false,
+        "autorotate_speed": 5,
+        "hide_images": false,
+        "show_divider": false,
+        "heading": "What our Customer has to say",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1629746450643786911": {
+      "type": "areviews-section",
+      "disabled": true,
+      "settings": {
+        "hide_areviews_title_rating": false,
+        "areviews_theme_font": "inherit",
+        "areviews_stars_colors": "#f3c621",
+        "areviews_write_reviews_botton_color": "#373737"
+      }
+    },
+    "17066961646756c0fa": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17102359122a024747": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "175888722795573f4e": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_QpYpTB": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_QpYpTB"
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "empty-space",
+    "scrolling-promotion",
+    "empty_space_Gna7Rn",
+    "rich-text",
+    "tiktok_alert_8KeLVb",
+    "main",
+    "17107557374313e09a",
+    "ingredients_d3QziV",
+    "cart_recommendations_xK9TnG",
+    "image_with_text_HN9pWz",
+    "collapsible-content",
+    "video_with_text_emJiUe",
+    "1710752969db39fb42",
+    "product-recommendations",
+    "recently-viewed-products",
+    "testimonials",
+    "1629746450643786911",
+    "17066961646756c0fa",
+    "17102359122a024747",
+    "175888722795573f4e"
+  ]
+}

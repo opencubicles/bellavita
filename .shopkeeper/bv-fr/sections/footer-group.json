@@ -1,0 +1,77 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer-group.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-2": {
+          "type": "link_list",
+          "settings": {
+            "heading": "CATEGORIES",
+            "menu": "main-menu"
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "INFORMATION",
+            "menu": "information"
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "SUPPORT",
+            "menu": "information"
+          }
+        },
+        "12403f5e-c1b9-410f-b4c1-b2ca87785be8": {
+          "type": "text",
+          "settings": {
+            "heading": "CONTACT US",
+            "subtext": "<p>Bella Vita Perfumes Pty Ltd<br/>6 Hunt Club Road<br/>Narre Warren South VIC 3805<br/>Australia</p><p>care@bellavitaluxury.au</p>"
+          }
+        }
+      },
+      "block_order": [
+        "footer-2",
+        "footer-0",
+        "footer-1",
+        "12403f5e-c1b9-410f-b4c1-b2ca87785be8"
+      ],
+      "settings": {
+        "show_divider": true,
+        "newsletter_enable": true,
+        "newsletter_heading": "EXCLUSIVE",
+        "newsletter_text": "<p>Sign up here to get the latest news, updates and special offers delivered to your inbox.</p><p>Plus, you'll be the first to know about our discounts!</p>",
+        "show_social": true,
+        "social_heading": "",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "copyright_text": "",
+        "colors_text": "#ffffff",
+        "colors_heading": "#ffffff",
+        "colors_link": "#ffffff",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#434343",
+        "gradient_background": ""
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
