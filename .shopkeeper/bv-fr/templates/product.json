@@ -326,11 +326,6 @@
         "offers_section_whdpGY": {
           "type": "offers_section",
           "settings": {}
-        },
-        "judge_me_reviews_preview_badge_qYEcr4": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {}
         }
       },
       "block_order": [
@@ -347,8 +342,7 @@
         "offer_badges_hFhQyD",
         "custom_liquid_X8RHwe",
         "custom_liquid_kjYyfP",
-        "offers_section_whdpGY",
-        "judge_me_reviews_preview_badge_qYEcr4"
+        "offers_section_whdpGY"
       ],
       "custom_css": [
         ".pdp-offer-img-wrapper {width: 55%; margin-top: 5px;}"
@@ -371,17 +365,6 @@
     },
     "17107557374313e09a": {
       "type": "apps",
-      "blocks": {
-        "videowise_video_platform_ugc_videowise_page_widgets_DYNhEp": {
-          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-          "settings": {
-            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65f45c8b96a30700289912ba\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "videowise_video_platform_ugc_videowise_page_widgets_DYNhEp"
-      ],
       "disabled": true,
       "custom_css": [],
       "settings": {
@@ -548,17 +531,6 @@
     },
     "1710752969db39fb42": {
       "type": "apps",
-      "blocks": {
-        "videowise_video_platform_ugc_videowise_page_widgets_8MjNDi": {
-          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-          "settings": {
-            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65f802ddca090f0028ad9141\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "videowise_video_platform_ugc_videowise_page_widgets_8MjNDi"
-      ],
       "settings": {
         "include_margins": true,
         "show_divider": false,
@@ -725,18 +697,6 @@
     },
     "175888722795573f4e": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_QpYpTB": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "real_data",
-            "max_width": 1200
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_QpYpTB"
-      ],
       "settings": {
         "include_margins": true,
         "show_divider": false,

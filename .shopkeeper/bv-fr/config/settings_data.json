@@ -369,19 +369,7 @@
         }
       }
     },
-    "content_for_index": [],
-    "blocks": {
-      "7885500093077574326": {
-        "type": "shopify://apps/videowise-video-platform-ugc/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-        "disabled": false,
-        "settings": {}
-      },
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      }
-    }
+    "content_for_index": []
   },
   "presets": {
     "Beauty": {
