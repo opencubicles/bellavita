@@ -52,12 +52,17 @@
   endif  
 -%}
 
-{%- if tier_data != blank and is_enabled -%}
+{%- if tier_data != blank and is_enabled and cart.total_price > 4000 -%}
   <div class="free-shipping tier-progress-bar">
+    <div class="progress-container1">
+        <div class="progress-track">
+          <div class="progress-fill" style="width: {{ progress_percent }}%;"></div>
+        </div>
+    </div>
     {%- if total_price >= highest_tier -%}
       <span class="free-shipping__text free-shipping__text--success">
         {%- if progress_type == 'add' -%}
-          🎉 You've unlocked all the FREE Gifts
+          🎉 Free Gift worth $8.99 unlocked
         {%- elsif progress_type == 'replace' -%}
           🎉 You've unlocked the best FREE Gift
         {%- endif -%}
@@ -65,14 +70,14 @@
     {%- else -%}
       <span class="free-shipping__text">
         {%- if unlocked_index == 0 -%}
-          Shop for <price-money class="price"><bdi>{{ remaining_amount }}</bdi></price-money> more to Unlock a FREE Gift
+          Shop for <price-money class="price"><bdi>{{ remaining_amount }}</bdi></price-money> & Get Free Gift worth $8.99
         {%- else -%}
-          Shop for <price-money class="price"><bdi>{{ remaining_amount }}</bdi></price-money> more to Unlock the next FREE Gift
+          Shop for <price-money class="price"><bdi>{{ remaining_amount }}</bdi></price-money> & Get Free Gift worth $8.99
         {%- endif -%}
       </span>
     {%- endif -%}
   
-    <div class="progress-wrapper">
+    <div class="progress-wrapper" style="display:none;">
       <div class="progress-container">
         <div class="progress-track">
           <div class="progress-fill" style="width: {{ progress_percent }}%;"></div>
@@ -180,7 +185,7 @@
     }
     .free-shipping__text .price bdi {
       color: #009951;
-      font-size: 13px !important;
+      font-size: 16px !important;
       font-weight: 900;
     }  
     .free-shipping__text--success {

@@ -20,7 +20,7 @@
         {{ collection.title | link_to: url, class: "link" }}
       {%- endif %}
       
-      <span class="breadcrumb__divider" aria-hidden="true">/ {{ product.title }}</span>
+      <span class="breadcrumb__divider" aria-hidden="true">/</span>
 
     {%- elsif template.name == 'collection' and collection.handle %}
       <span class="breadcrumb__divider" aria-hidden="true">/</span>

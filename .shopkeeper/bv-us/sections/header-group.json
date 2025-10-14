@@ -36,13 +36,12 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Buy Any 2 Gift Sets @44.99",
+            "text": "Free Gift on orders above $55",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
-            "link": "shopify://collections/gift-sets-1"
+            "link": ""
           }
         },
         "announcement_eXEtFh": {

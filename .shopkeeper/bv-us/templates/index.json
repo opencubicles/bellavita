@@ -515,11 +515,12 @@
         "image_VBV8fj": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/gift_set_category_global_1.jpg",
             "image_position": "center center",
             "heading": "Gift Sets",
             "description": "<p>Beyond a box, a bouquet of fragrance. Discover the best perfumes for you, and yours. Wrap up a touch of luxury in every spritz.</p>",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/gift-sets",
+            "button_link": "shopify://products/unisex-perfume-gift-set-4-x-0-7-fl-oz",
             "button_size": "small",
             "button_style_secondary": true
           }
@@ -666,7 +667,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "shopify://products/honey-oud-unisex-perfume-3-38-fl-oz",
+            "button_link": "shopify://products/ceo-man-luxury-perfume",
             "button_secondary_label": "Button Secondary label",
             "button_secondary_link": "",
             "button_size": "medium",
@@ -907,7 +908,7 @@
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/honey-oud-unisex-perfume-3-38-fl-oz",
+            "link": "shopify://products/skai-aquatic-unisex-perfume-3-38-fl-oz",
             "text_box_position": "bottom-left"
           }
         },
@@ -920,7 +921,7 @@
             "subheading_size": "h4",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/ceo-man-luxury-perfume",
+            "link": "shopify://products/white-oud-unisex-perfume-3-38-fl-oz",
             "text_box_position": "middle-center"
           }
         },
@@ -933,7 +934,7 @@
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/glam-woman-perfume-3-38-fl-oz",
+            "link": "shopify://products/ceo-man-luxury-perfume",
             "text_box_position": "middle-center"
           }
         },
@@ -946,7 +947,7 @@
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/white-oud-unisex-perfume-3-38-fl-oz",
+            "link": "shopify://products/date-woman-perfume-3-4-fl-oz",
             "text_box_position": "bottom-left"
           }
         },
@@ -959,7 +960,7 @@
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/skai-aquatic-unisex-perfume-3-38-fl-oz",
+            "link": "shopify://products/honey-oud-unisex-perfume-3-38-fl-oz",
             "text_box_position": "bottom-left"
           }
         }

@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "main_breadcrumbs_w469Nm": {
+      "type": "main-breadcrumbs",
+      "disabled": true,
+      "name": "Main Breadcrumbs",
+      "settings": {}
+    },
     "empty-space": {
       "type": "empty-space",
       "disabled": true,
@@ -389,9 +395,9 @@
     "featured_collection_pKrDdE": {
       "type": "featured-collection",
       "disabled": true,
-      "name": "t:sections.featured-collection.presets.name",
+      "name": "Upsell Collection",
       "settings": {
-        "collection": "20-ml-colllection",
+        "collection": "20-ml-collection",
         "custom_featured_collection_changes": true,
         "products_to_show": 8,
         "show_view_all": false,
@@ -569,6 +575,14 @@
         "padding_bottom": 36
       }
     },
+    "main_breadcrumbs_HixkyY": {
+      "type": "main-breadcrumbs",
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.breadcrumb-wrapper {padding-left: 50px; }}"
+      ],
+      "name": "Main Breadcrumbs",
+      "settings": {}
+    },
     "video_with_text_emJiUe": {
       "type": "Video-with-text",
       "settings": {}
@@ -727,6 +741,8 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget",
             "max_width": 1200
           }
         }
@@ -753,6 +769,7 @@
     }
   },
   "order": [
+    "main_breadcrumbs_w469Nm",
     "empty-space",
     "scrolling-promotion",
     "empty_space_Gna7Rn",
@@ -765,6 +782,7 @@
     "cart_recommendations_xK9TnG",
     "image_with_text_HN9pWz",
     "collapsible-content",
+    "main_breadcrumbs_HixkyY",
     "video_with_text_emJiUe",
     "1710752969db39fb42",
     "product-recommendations",

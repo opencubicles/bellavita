@@ -543,6 +543,13 @@
         "label": "t:settings_schema.cart-drawer.settings.show_free_shipping_message.label"
       },
       {
+        "type": "checkbox",
+        "id": "show_tier_progress_bar",
+        "default": false,
+        "label": "Show tier progress bar",
+        "info": "Enable tier progress bar in {{shop.metafields.global.tier_data}} JSON metafield"
+      },
+      {
         "type": "text",
         "id": "free_shipping_minimum_amount",
         "default": "100",
@@ -559,13 +566,6 @@
         "id": "show_bogo_progress_bar",
         "default": false,
         "label": "Show BOGO progress bar"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_tier_progress_bar",
-        "default": false,
-        "label": "Show tier progress bar",
-        "info": "Enable tier progress bar in {{shop.metafields.global.tier_data}} JSON metafield"
       },
       {
         "type": "text",

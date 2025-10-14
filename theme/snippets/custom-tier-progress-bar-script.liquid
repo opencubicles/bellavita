@@ -60,6 +60,7 @@
             else console.error("Checkout button not found");
           }, 500);*/
           setTimeout(() => {
+            buttonElement.classList.remove('loading');
             window.location.href = "/checkout"; 
           }, 500);
         })
