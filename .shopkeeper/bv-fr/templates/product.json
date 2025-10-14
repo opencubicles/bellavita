@@ -606,7 +606,7 @@
           "settings": {
             "icon": "5",
             "text": "<p>Not only does it smell divine, but it's also incredibly convenient for your on-the-go lifestyle.</p>",
-            "image": "shopify://shop_images/dakota_a6939f35-ef39-4da9-a0f1-e8f43c722f49.jpg",
+            "image": "shopify://shop_images/dakota_a6939f35-ef39-4da9-a0f1-e8f43c722f49.webp",
             "author": "dakotakihair",
             "instagram_username": "",
             "instagram_link": ""
@@ -678,6 +678,20 @@
     },
     "17066961646756c0fa": {
       "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_fzMmze": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_fzMmze"
+      ],
       "settings": {
         "include_margins": true,
         "show_divider": false,
