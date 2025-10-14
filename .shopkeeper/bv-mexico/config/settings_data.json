@@ -60,7 +60,7 @@
     "shipping_calculator_default_country": "India",
     "disable_view_cart": true,
     "show_free_shipping_message": true,
-    "free_shipping_minimum_amount": "",
+    "free_shipping_minimum_amount": "0",
     "show_bogo_progress_bar": false,
     "bogo_tag": "",
     "min_bogo_quantity": "",
@@ -1912,7 +1912,8 @@
       ".free-shipping.typeset0 {width: 89%; margin: auto; display: flex; flex-direction: column-reverse;}",
       "span.free-shipping__text {font-size: 16px; color: black; padding-top: 1rem;}",
       ".free-shipping__progress:after {height: 4px; background: linear-gradient(325deg, #1ad715 0, #e1cc14); background-color: #0ee90f;}",
-      ".cart-drawer .free-shipping__progress {height: 4px;}"
+      ".cart-drawer .free-shipping__progress {height: 4px;}",
+      "@media only screen and (max-width: 767px) {.cart-recommendations .mini-cart__navigation .product-button .button.button--cta {height: auto; }}"
     ]
   }
 }
