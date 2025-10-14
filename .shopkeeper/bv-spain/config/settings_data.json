@@ -78,24 +78,30 @@
     "cart_recommendations_show_vendor": false,
     "empty_cart_message": "",
     "cart_recommendations_heading": "",
-    "empty_cart_recommendations": "bestseller",
+    "empty_cart_recommendations": "",
     "empty_cart_collections": [
       "gift-sets",
       "men-fragrance",
-      "women-fragrance"
+      "women-fragrance",
+      "bestseller",
+      "unisex-fragrance"
     ],
     "search_results": "product",
     "predictive_search_enabled": false,
     "predictive_search_show_vendor": false,
+    "share_facebook": false,
+    "share_twitter": false,
     "share_pinterest": false,
+    "share_whatsapp": false,
     "share_telegram": false,
-    "social_facebook_link": "https://www.facebook.com/profile.php?id=61576564124983",
-    "social_twitter_link": "https://x.com/BellavitaUKI",
+    "share_email": false,
+    "social_facebook_link": "",
+    "social_twitter_link": "",
     "social_pinterest_link": "",
-    "social_instagram_link": "https://www.instagram.com/bellavita_uki/",
-    "social_tiktok_link": "https://www.tiktok.com/@bellavitaluxuryuk",
+    "social_instagram_link": "",
+    "social_tiktok_link": "",
     "social_snapchat_link": "",
-    "social_youtube_link": "https://www.youtube.com/@BELLAVITAUKI",
+    "social_youtube_link": "",
     "favicon": "shopify://shop_images/Favicon_logo_1.png",
     "gift_card_logo_height": 70,
     "checkout_logo_image": "shopify://shop_images/Asset_3_00aea36a-9db4-49ad-a274-f7a93de4aa3c.png",
@@ -1906,7 +1912,8 @@
       ".free-shipping__progress:after {height: 4px; background: linear-gradient(325deg, #1ad715 0, #e1cc14); background-color: #0ee90f;}",
       ".cart-drawer .free-shipping__progress {height: 4px;}",
       ".cart-drawer .product-option {display: none;}",
-      ".cart__items-wrapper .product-option {display: none;}"
+      ".cart__items-wrapper .product-option {display: none;}",
+      "@media only screen and (max-width: 767px) {.cart-recommendations .mini-cart__navigation .product-button .button.button--cta {height: auto; }}"
     ]
   }
 }
