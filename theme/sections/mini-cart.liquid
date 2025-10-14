@@ -803,14 +803,22 @@
       endif
     -%} 
       <div class="button-container">
-  
-            <button class="button" name="checkout" type="submit" onclick="event.preventDefault(); window.preCheckoutCheck(this);">
-          {{ 'sections.cart.checkout' | t }}
-          {%- if settings.disable_view_cart -%}
-            <span class="price" id="mini-cart-subtotal">{{ cart.total_price | money_with_currency }}</span>
-          {%- endif -%}
-        </button> 
-         
+          
+          {% if shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' %}
+          <button class="button" name="checkout" type="submit" onclick="event.preventDefault(); window.preCheckoutCheck(this);">
+            {{ 'sections.cart.checkout' | t }}
+            {%- if settings.disable_view_cart -%}
+              <span class="price" id="mini-cart-subtotal">{{ cart.total_price | money_with_currency }}</span>
+            {%- endif -%}
+          </button> 
+          {%- else -%}
+            <button class="button" name="checkout" type="submit">
+            {{ 'sections.cart.checkout' | t }}
+            {%- if settings.disable_view_cart -%}
+              <span class="price" id="mini-cart-subtotal">{{ cart.total_price | money_with_currency }}</span>
+            {%- endif -%}
+          </button> 
+         {%- endif -%}
         
        
         {%- unless settings.disable_view_cart -%}
