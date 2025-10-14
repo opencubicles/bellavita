@@ -385,6 +385,11 @@
         "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
+      },
+      "back-in-stock-restock-alerts-4bb73be2-b7c2-4870-949f-c528145452a3": {
+        "type": "shopify://apps/stoq/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
