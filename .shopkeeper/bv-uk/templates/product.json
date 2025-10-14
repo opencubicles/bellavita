@@ -11,6 +11,7 @@
   "sections": {
     "empty-space": {
       "type": "empty-space",
+      "disabled": true,
       "settings": {
         "desktop_height": 200,
         "mobile_height": 172
@@ -18,6 +19,7 @@
     },
     "empty_space_Gna7Rn": {
       "type": "empty-space",
+      "disabled": true,
       "settings": {
         "desktop_height": 92,
         "mobile_height": 12
@@ -272,6 +274,7 @@
         },
         "custom_liquid_6BXmL7": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<span class=\"flash-sale-tag\">\n  <img\n    src=\"https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Bolt.gif?v=1751540262\"\n    alt=\"Flash Icon\"\n    class=\"flash-icon\"\n  />\n  <strong>FLASH SALE</strong>\n</span>"
           }
