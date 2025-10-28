@@ -76,7 +76,7 @@
                     {% endif %}
                   </td>
 
-                  <td class="cart-item__details">
+                  <td class="cart-item__details 1">
                     {%- if section.settings.show_vendor -%}
                       <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                     {%- endif -%}
@@ -101,7 +101,8 @@
                           {%- for property in sortedProperties -%}
                             {%- assign property_first_char = property.first | slice: 0 -%}
                             {%- if property.last != blank and property.last != 'upsell_product' -%}
-                              <div class="product-option">
+                              {%- unless item.product.title contains 'BYOB' -%}
+                              <div class="product-option" >
                                 <dt>{{ property.first | replace: '_ITEM', 'ITEM' }}{% unless property.last contains 'Default Title' %}{% endunless %}</dt>
                                 <dd>
                                   {%- if property.last contains '/uploads/' -%}
@@ -113,6 +114,7 @@
                                   {%- endif -%}
                                 </dd>  
                               </div>
+                              {%- endunless -%}
                             {%- endif -%}
                           {%- endfor -%}
                         </dl>

@@ -13,7 +13,8 @@
             {% assign discount_text = "SAVE 10%" %}
           {% elsif value contains 'B1G1 at 45% Off' %}
             {% assign image_url = product.metafields.custom.pack_of_two_image | img_url: '400x' %}
-            {% assign discount_text = "SAVE 45%" %}
+            {% assign discount_value = product.metafields.custom.pack_product_discount | default: 45 %}
+            {% assign discount_text = 'SAVE ' | append: discount_value | append: '%' %}
           {% endif %}
 
           <label class="pack-card">

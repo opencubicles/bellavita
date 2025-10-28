@@ -242,20 +242,6 @@
             "price_size": "medium"
           }
         },
-        "subtitle_3EYiG7": {
-          "type": "subtitle",
-          "settings": {
-            "text_one": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
-            "text_two": "{{ product.metafields.custom.perfume_notes_secondary_title.value }}",
-            "hide_on_mobile": true,
-            "text_transform": "uppercase"
-          }
-        },
-        "judge_me_reviews_preview_badge_4da7RT": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {}
-        },
         "rating": {
           "type": "rating",
           "settings": {
@@ -264,15 +250,9 @@
             "rating_hide_on_mobile": true
           }
         },
-        "image_Ad9UNn": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Group_572.jpg",
-            "link": "",
-            "img_full_width_on_mobile": false,
-            "image-hide-desktop": false,
-            "image-hide-mobile": true
-          }
+        "description": {
+          "type": "description",
+          "settings": {}
         },
         "price": {
           "type": "price",
@@ -292,10 +272,6 @@
             "size_chart": ""
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -305,16 +281,50 @@
             "show_dynamic_checkout": false
           }
         },
-        "custom_liquid_KdFJyi": {
-          "type": "custom_liquid",
-          "name": "fragnace-notes",
+        "collapsible_tab_TxxFY8": {
+          "type": "collapsible_tab",
           "settings": {
-            "custom_liquid": "{% if product.metafields.custom.product_ingredients.value != blank %}\n  <link rel=\"stylesheet\" href=\"{{ 'component-slider.css' | asset_url }}\" media=\"print\" onload=\"this.media='all'\">\n\n  <div class=\"Notes-Heading center\">\n    <h2>Fragrance Notes</h2>\n  </div>\n\n  <div class=\"product-ingredients-notes page-width\">\n    <slider-component class=\"slider-mobile-gutter\">\n      <ul\n        id=\"Slider-{{ section.id }}\"\n        class=\"grid grid--2-col grid--4-col-desktop slider slider--tablet\"\n        role=\"list\"\n      >\n        {% for metaobject in product.metafields.custom.product_ingredients.value limit: 4 %}\n          <li class=\"product-ingredients-item-notes grid__item slider__slide center-notes\">\n            \n            {% if metaobject.perfume_notes.value != blank %}\n              <p class=\"perfume-notes\">\n                <strong>{{ metaobject.perfume_notes.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_image != blank %}\n              <div class=\"ingredient-img-wrapper-notes\">  \n                <div class=\"media media--adapt pdp-ingredient-img\" style=\"--image-ratio-percent: {{ 1 | divided_by: metaobject.ingredient_image.value.aspect_ratio | times: 100 }}%;\">\n                  {{ metaobject.ingredient_image | image_url: width: 300 | image_tag: \n                    loading: 'lazy',\n                    fetchpriority: 'low',\n                    widths: '50, 100, 200, 300',\n                    is: 'lazy-image'\n                  }}\n                </div>\n              </div>  \n            {% endif %}\n\n            {% if metaobject.ingredient_title.value != blank %}\n              <p>\n                <strong>{{ metaobject.ingredient_title.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_description.value != blank %}\n              <span>{{ metaobject.ingredient_description.value }}</span>\n            {% endif %}\n          </li>\n        {% endfor %}\n      </ul>\n    </slider-component>\n  </div>\n{% endif %}"
+            "icon": "none",
+            "heading": "Product Details",
+            "content": "{{ product.description }}",
+            "page": ""
           }
         },
-        "meta_coms_MzxdKJ": {
-          "type": "meta_coms",
-          "settings": {}
+        "collapsible_tab_MFE73G": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Notes",
+            "content": "<p>{{ product.metafields.custom.perfume_notes_secondary_title.value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_pRyEAx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "How to use?",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_3cnKiU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Ingredients",
+            "content": "<p>{{ product.metafields.custom.all_ingredients.value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_bwRjyU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Shipping & Returns",
+            "content": "<p><strong>Shipping: </strong><br/>\"Free shipping across India.<br/>Orders are delivered within 3-7 business days.<br/>A signature is required upon delivery; Embarouge is not responsible for goods signed by others or any damage post-delivery.\"<br/><br/><strong>Returns: </strong><br/>In rare cases of damage during transit (leakage, breakage, or missing items), refunds or exchanges may be initiated following verification.<br/>Please contact our Customer Care team within 48 hours of delivery to report any such issues.</p>",
+            "page": ""
+          }
         },
         "sticky_cart_t4QLHa": {
           "type": "sticky_cart",
@@ -323,54 +333,100 @@
             "show_price_on_mobile": true
           }
         },
+        "subtitle_3EYiG7": {
+          "type": "subtitle",
+          "disabled": true,
+          "settings": {
+            "text_one": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_two": "{{ product.metafields.custom.perfume_notes_secondary_title.value }}",
+            "hide_on_mobile": true,
+            "text_transform": "uppercase"
+          }
+        },
+        "judge_me_reviews_preview_badge_4da7RT": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "image_Ad9UNn": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Group_572.jpg",
+            "link": "",
+            "img_full_width_on_mobile": false,
+            "image-hide-desktop": false,
+            "image-hide-mobile": true
+          }
+        },
+        "custom_liquid_KdFJyi": {
+          "type": "custom_liquid",
+          "name": "fragnace-notes",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.product_ingredients.value != blank %}\n  <link rel=\"stylesheet\" href=\"{{ 'component-slider.css' | asset_url }}\" media=\"print\" onload=\"this.media='all'\">\n\n  <div class=\"Notes-Heading center\">\n    <h2>Fragrance Notes</h2>\n  </div>\n\n  <div class=\"product-ingredients-notes page-width\">\n    <slider-component class=\"slider-mobile-gutter\">\n      <ul\n        id=\"Slider-{{ section.id }}\"\n        class=\"grid grid--2-col grid--4-col-desktop slider slider--tablet\"\n        role=\"list\"\n      >\n        {% for metaobject in product.metafields.custom.product_ingredients.value limit: 4 %}\n          <li class=\"product-ingredients-item-notes grid__item slider__slide center-notes\">\n            \n            {% if metaobject.perfume_notes.value != blank %}\n              <p class=\"perfume-notes\">\n                <strong>{{ metaobject.perfume_notes.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_image != blank %}\n              <div class=\"ingredient-img-wrapper-notes\">  \n                <div class=\"media media--adapt pdp-ingredient-img\" style=\"--image-ratio-percent: {{ 1 | divided_by: metaobject.ingredient_image.value.aspect_ratio | times: 100 }}%;\">\n                  {{ metaobject.ingredient_image | image_url: width: 300 | image_tag: \n                    loading: 'lazy',\n                    fetchpriority: 'low',\n                    widths: '50, 100, 200, 300',\n                    is: 'lazy-image'\n                  }}\n                </div>\n              </div>  \n            {% endif %}\n\n            {% if metaobject.ingredient_title.value != blank %}\n              <p>\n                <strong>{{ metaobject.ingredient_title.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_description.value != blank %}\n              <span>{{ metaobject.ingredient_description.value }}</span>\n            {% endif %}\n          </li>\n        {% endfor %}\n      </ul>\n    </slider-component>\n  </div>\n{% endif %}"
+          }
+        },
+        "meta_coms_MzxdKJ": {
+          "type": "meta_coms",
+          "disabled": true,
+          "settings": {}
+        },
         "offer_badges_hFhQyD": {
           "type": "offer_badges",
+          "disabled": true,
           "settings": {}
         },
         "custom_liquid_X8RHwe": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n{% if product.metafields.custom.free_shipping_products == true %}\n<div class=\"shipping-text\">\n<span>Free Shipping</span></div>\n {% else %}\n<div class=\"shipping-text\">\n<span>Free Shipping</span> &nbspover $30</div>\n {% endif %}\n</div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n\n</style>"
           }
         },
         "custom_liquid_kjYyfP": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"pdp-banner\">\n\n{% if shop.metafields.custom.pdp_atc_desk_offer_banner and shop.metafields.custom.pdp_atc_desk_offer_banner != blank %}\n\n\t<img  src=\"{{ shop.metafields.custom.pdp_atc_desk_offer_banner | img_url: '800x' }}\">\n\n{% endif %}\n\n\n\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>"
           }
         },
         "offers_section_whdpGY": {
           "type": "offers_section",
+          "disabled": true,
           "settings": {}
         }
       },
       "block_order": [
         "title",
-        "subtitle_3EYiG7",
-        "judge_me_reviews_preview_badge_4da7RT",
         "rating",
-        "image_Ad9UNn",
+        "description",
         "price",
         "variant_picker",
-        "description",
         "buy_buttons",
+        "collapsible_tab_TxxFY8",
+        "collapsible_tab_MFE73G",
+        "collapsible_tab_pRyEAx",
+        "collapsible_tab_3cnKiU",
+        "collapsible_tab_bwRjyU",
+        "sticky_cart_t4QLHa",
+        "subtitle_3EYiG7",
+        "judge_me_reviews_preview_badge_4da7RT",
+        "image_Ad9UNn",
         "custom_liquid_KdFJyi",
         "meta_coms_MzxdKJ",
-        "sticky_cart_t4QLHa",
         "offer_badges_hFhQyD",
         "custom_liquid_X8RHwe",
         "custom_liquid_kjYyfP",
         "offers_section_whdpGY"
       ],
-      "custom_css": [
-        ".pdp-offer-img-wrapper {width: 55%; margin-top: 5px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "enable_sticky_info": true,
         "media_position": "left",
-        "media_size": "medium",
+        "media_size": "small",
         "gallery_layout": "thumbnail_slider",
-        "image_ratio": "adapt_first",
+        "image_ratio": "adapt",
         "show_thumbnails": true,
         "hide_variants": true,
         "enable_image_zoom": true,
@@ -381,51 +437,95 @@
         "padding_bottom": 20
       }
     },
-    "17107557374313e09a": {
-      "type": "apps",
-      "disabled": true,
-      "custom_css": [],
+    "video_ab8NNc": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
       "settings": {
-        "include_margins": true,
+        "cover_image": "shopify://shop_images/2_ec873d65-9dcf-4a03-86c0-23f7f873275f_1.jpg",
+        "video_url": "",
+        "description": "",
+        "full_width": true,
         "show_divider": false,
-        "padding_top": 12,
-        "padding_bottom": 12
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "featured_collection_pKrDdE": {
-      "type": "featured-collection",
-      "disabled": true,
-      "name": "Upsell Collection",
+    "multicolumn_pVN4y8": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_cbBkAw": {
+          "type": "column",
+          "settings": {
+            "image": "{{ product.metafields.custom.key_notes_section.value.image_1.value }}",
+            "title": "{{ product.metafields.custom.key_notes_section.value.heading_1.value }}",
+            "title_size": "h3",
+            "text": "<p>{{ product.metafields.custom.key_notes_section.value.description_1.value }}</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "column_jhtw7h": {
+          "type": "column",
+          "settings": {
+            "image": "{{ product.metafields.custom.key_notes_section.value.image_2.value }}",
+            "title": "{{ product.metafields.custom.key_notes_section.value.heading_2.value }}",
+            "title_size": "h3",
+            "text": "<p>{{ product.metafields.custom.key_notes_section.value.description_2.value }}</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "column_7e7HER": {
+          "type": "column",
+          "settings": {
+            "image": "{{ product.metafields.custom.key_notes_section.value.image_3.value }}",
+            "title": "{{ product.metafields.custom.key_notes_section.value.heading_3.value }}",
+            "title_size": "h3",
+            "text": "<p>{{ product.metafields.custom.key_notes_section.value.description_3.value }}</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "column_cbBkAw",
+        "column_jhtw7h",
+        "column_7e7HER"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "collection": "20-ml-collection",
-        "custom_featured_collection_changes": true,
-        "products_to_show": 8,
-        "show_view_all": false,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "text_alignment": "left",
         "show_divider": false,
-        "heading": "Double the impact",
+        "enable_img_hover": false,
+        "enable_link_hover": false,
+        "image_width": "full",
+        "columns_desktop": 3,
+        "spacing_images": 2,
+        "full_width": false,
+        "heading": "Key Notes",
         "heading_size": "h1",
         "heading_alignment": "left",
         "heading_tag": "h2",
-        "columns_mobile": "2",
-        "swipe_on_desktop": true,
-        "swipe_on_mobile": true,
-        "image_ratio": "adapt",
-        "image_position": "center center",
-        "enable_image_fill": true,
-        "show_secondary_image": false,
-        "secondary_image_max": 1,
-        "show_vendor": false,
-        "show_rating": false,
-        "show_quick_buy": true,
-        "enable_quick_view": true,
-        "enable_color_swatches": true,
-        "enable_countdown": false,
-        "padding_top": 12,
-        "padding_bottom": 12
+        "mobile_text_alignment": "left",
+        "columns_mobile": "1",
+        "spacing_mobile_images": 2,
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "ingredients_d3QziV": {
       "type": "Ingredients",
+      "disabled": true,
       "custom_css": [
         "@media only screen and (max-width: 600px) {.Notes-Heading {margin-top: 18px; } .ingredient-img-wrapper-notes {width: 55%; margin: auto; } .product-ingredients-item-notes p {margin: 0.3rem 0; } .center-notes {text-align: left; line-height: 17px; } .ingredient-img-wrapper-notes {margin: 0px !important; } .product-ingredients-notes {padding: 0px 2rem !important; }}"
       ],
@@ -454,67 +554,6 @@
         "enable_countdown": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "image_with_text_HN9pWz": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_D63EKA": {
-          "type": "heading",
-          "settings": {
-            "heading": "Where Mystery Meets Magnetism",
-            "heading_size": "h2",
-            "heading_tag": "h3"
-          }
-        },
-        "text_8xmFP4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>An enigma cloaked in cool allure, a fragrance that draws you in with its hidden depths.</p><p></p>",
-            "text_size": "typeset2",
-            "secondary_color": false
-          }
-        },
-        "button_MtAFXc": {
-          "type": "button",
-          "settings": {
-            "button_label": "Explore",
-            "button_link": "shopify://products/ceo-man-luxury-perfume-3-38-fl-oz",
-            "button_size": "small",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_D63EKA",
-        "text_8xmFP4",
-        "button_MtAFXc"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/14_1.jpg",
-        "image_link": "shopify://products/white-oud-unisex-100ml",
-        "image_position": "center center",
-        "layout": "image_first",
-        "text_box_position": "top",
-        "text_alignment": "left",
-        "image_ratio": "450px",
-        "enlarge_content": false,
-        "full_width": false,
-        "show_divider": false,
-        "image_behavior": "none",
-        "image_mobile": "shopify://shop_images/14_1.jpg",
-        "mobile_layout": "image_first",
-        "mobile_text_alignment": "left",
-        "mobile_image_ratio": "auto",
-        "use_custom_colors": false,
-        "colors_button_label": "#ffffff",
-        "colors_button_background": "#1a1b18",
-        "colors_text": "#212326",
-        "colors_background": "#ffffff",
-        "gradient_background": "",
-        "padding_top": 32,
-        "padding_bottom": 32
       }
     },
     "collapsible-content": {
@@ -563,6 +602,7 @@
         "collapsible_row_NXAhEg",
         "collapsible_row_VX7tAw"
       ],
+      "disabled": true,
       "settings": {
         "open_first_collapsible_row": false,
         "narrow": true,
@@ -575,20 +615,9 @@
         "padding_bottom": 36
       }
     },
-    "main_breadcrumbs_HixkyY": {
-      "type": "main-breadcrumbs",
-      "custom_css": [
-        "@media screen and (min-width: 768px) {.breadcrumb-wrapper {padding-left: 50px; }}"
-      ],
-      "name": "Main Breadcrumbs",
-      "settings": {}
-    },
-    "video_with_text_emJiUe": {
-      "type": "Video-with-text",
-      "settings": {}
-    },
     "1710752969db39fb42": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "include_margins": true,
         "show_divider": false,
@@ -598,6 +627,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "show_divider": false,
         "heading": "You May Also Like",
@@ -618,31 +648,6 @@
         "enable_countdown": true,
         "padding_top": 20,
         "padding_bottom": 20
-      }
-    },
-    "recently-viewed-products": {
-      "type": "recently-viewed-products",
-      "disabled": true,
-      "settings": {
-        "show_divider": false,
-        "heading": "Recently Viewed",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "heading_tag": "h2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "image_ratio": "portrait",
-        "image_position": "center center",
-        "enable_image_fill": true,
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": true,
-        "show_quick_buy": true,
-        "enable_quick_view": true,
-        "enable_color_swatches": true,
-        "enable_countdown": true,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "testimonials": {
@@ -711,6 +716,7 @@
         "testimonial-2",
         "testimonial-3"
       ],
+      "disabled": true,
       "settings": {
         "autorotate": false,
         "autorotate_speed": 5,
@@ -722,16 +728,6 @@
         "heading_tag": "h2",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "1629746450643786911": {
-      "type": "areviews-section",
-      "disabled": true,
-      "settings": {
-        "hide_areviews_title_rating": false,
-        "areviews_theme_font": "inherit",
-        "areviews_stars_colors": "#f3c621",
-        "areviews_write_reviews_botton_color": "#373737"
       }
     },
     "17066961646756c0fa": {
@@ -757,14 +753,129 @@
         "padding_bottom": 36
       }
     },
-    "17102359122a024747": {
-      "type": "apps",
+    "custom_multicolumn_slider_KYew8H": {
+      "type": "custom-multicolumn-slider",
+      "blocks": {
+        "column_TW3r7Y": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/20_perfume_oil.png",
+            "title": "FRAGRANCE  OIL",
+            "title_size": "h3",
+            "text": "",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "decrease": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_njfg8d": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/long_lasting.png",
+            "title": "LONG LASTING",
+            "title_size": "h3",
+            "text": "",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "decrease": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_cmKMtf": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/ifra_certified.png",
+            "title": "IFRA CERTIFIED",
+            "title_size": "h3",
+            "text": "",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "decrease": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_9kyFCX": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/paraben_free_e150458d-1c0b-4218-a5ad-7b63500e70d5.png",
+            "title": "PARABEN FREE",
+            "title_size": "h3",
+            "text": "",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "decrease": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "column_TW3r7Y",
+        "column_njfg8d",
+        "column_cmKMtf",
+        "column_9kyFCX"
+      ],
       "disabled": true,
+      "name": "Multicolumn slider",
       "settings": {
-        "include_margins": true,
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "desktop_layout": "grid",
+        "text_alignment": "left",
+        "horizontal_scroll": false,
+        "show_ingredient": false,
+        "enable_drag": false,
+        "enable_navigation_buttons": false,
         "show_divider": false,
+        "image_width": "full",
+        "columns_desktop": 4,
+        "open_in_new_tab": false,
+        "heading": "Multicolumn",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_layout": "grid",
+        "mobile_text_alignment": "left",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "colors_highlight": "#ffb503",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "card_border_radius": 0,
+        "enable_highlight": false,
+        "highlight_style": "marker"
       }
     }
   },
@@ -776,20 +887,15 @@
     "rich-text",
     "tiktok_alert_8KeLVb",
     "main",
-    "17107557374313e09a",
-    "featured_collection_pKrDdE",
+    "video_ab8NNc",
+    "multicolumn_pVN4y8",
     "ingredients_d3QziV",
     "cart_recommendations_xK9TnG",
-    "image_with_text_HN9pWz",
     "collapsible-content",
-    "main_breadcrumbs_HixkyY",
-    "video_with_text_emJiUe",
     "1710752969db39fb42",
     "product-recommendations",
-    "recently-viewed-products",
     "testimonials",
-    "1629746450643786911",
     "17066961646756c0fa",
-    "17102359122a024747"
+    "custom_multicolumn_slider_KYew8H"
   ]
 }

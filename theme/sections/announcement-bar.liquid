@@ -104,6 +104,58 @@
     }
   </style>
 {%- endif -%}
+
+{% if request.path contains 'honey-oud-unisex-perfume-3-38-fl-oz'  and shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' %}
+  <style>
+    .announcement-slider__slide[data-index="0"] {
+      display: none !important;
+    }
+  </style>
+{% endif %}
+
+{% if template contains 'product' and shop.permanent_domain == 'bv-uk.myshopify.com' %}
+  {% if product.tags contains 'VBH' %}
+    <style>
+      .announcement-slider__slide[data-index="2"], .announcement-slider__slide[data-index="3"], .announcement-slider__slide[data-index="4"] {
+        display: none !important;
+      }
+      .announcement-slider__slide[data-index="5"] {
+        display: flex !important;
+      }
+    </style>
+  {% elsif product.tags contains 'SHO' %}
+    <style>
+      .announcement-slider__slide[data-index="2"], .announcement-slider__slide[data-index="5"], .announcement-slider__slide[data-index="4"] {
+        display: none !important;
+      }
+       .announcement-slider__slide[data-index="3"], {
+        display: flex !important;
+      }
+    </style>
+  {% elsif product.tags contains 'GSH' %}
+    <style>
+      .announcement-slider__slide[data-index="2"],.announcement-slider__slide[data-index="5"], .announcement-slider__slide[data-index="3"] {
+        display: none !important;
+      }
+       .announcement-slider__slide[data-index="4"] {
+        display: flex !important;
+      }
+    </style>
+  {% else  %}  
+    <style>
+     .announcement-slider__slide[data-index="3"], .announcement-slider__slide[data-index="4"], .announcement-slider__slide[data-index="5"] {
+        display: none !important;
+      }
+    </style>
+  {% endif %}
+{% else  %}  
+  <style>
+  .announcement-slider__slide[data-index="3"], .announcement-slider__slide[data-index="4"], .announcement-slider__slide[data-index="5"] {
+        display: none !important;
+      }
+  </style>
+{% endif %}
+
 {% schema %}
 {
   "name": "t:sections.announcement-bar.name",

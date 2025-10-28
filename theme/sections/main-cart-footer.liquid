@@ -127,7 +127,7 @@
                 </button>
               </noscript>
 
-              <button type="submit" class="cart__checkout-button button" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
+              <button type="submit" id="precheckout" onclick="event.preventDefault(); window.preCheckoutCheck(this);"  class="button " name="checkout"{% if cart == empty %} disabled{% endif %} >
                 {{ 'sections.cart.checkout' | t }}
               </button>
             </div>

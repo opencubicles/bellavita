@@ -29,7 +29,8 @@
     assign total_price = total_price | minus: gift_wraps_in_cart
   endif
 -%}
-{%- if cart.total_price < 4000 -%}
+{%- if shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' -%}
+{%- if cart.total_price < 4000  -%}
 <div class="free-shipping{% if is_last %} is-last{% endif %} typeset0">
   {%- if total_price >= minimum_amount_in_cents -%}
     <span class="free-shipping__text free-shipping__text--success">{{ 'general.cart.free_shipping.congratulations_html' | t }}</span>
@@ -42,4 +43,18 @@
     <span class="free-shipping__progress" style="--progress: {{ progress_percent }};"></span>
   {%- endif -%}
 </div>
+{%- endif -%}
+{%- else -%}
+  <div class="free-shipping{% if is_last %} is-last{% endif %} typeset0">
+    {%- if total_price >= minimum_amount_in_cents -%}
+      <span class="free-shipping__text free-shipping__text--success">{{ 'general.cart.free_shipping.congratulations_html' | t }}</span>
+      <span class="free-shipping__progress free-shipping__progress--success" style="--progress: 100%;"></span>
+    {%- else -%}
+      {%- capture remaining_amount -%}<price-money class="price"><bdi>{{ total_price | minus: minimum_amount_in_cents | abs | money }}</bdi></price-money>{%- endcapture -%}
+      <span class="free-shipping__text">{{ 'general.cart.free_shipping.remaining_html' | t: remaining_amount: remaining_amount }}</span>
+
+      {%- capture progress_percent -%}{{ total_price | times: 1.0 | divided_by: minimum_amount_in_cents | at_most: 1 | times: 100 | round }}%{%- endcapture -%}
+      <span class="free-shipping__progress" style="--progress: {{ progress_percent }};"></span>
+    {%- endif -%}
+  </div>
 {%- endif -%}

@@ -52,8 +52,16 @@
           </svg>
         </drawer-close-button>
       </div>  
+      {% assign shipping_bar = false %}
+
+      {%- for item in cart.items -%}
+        {% if item.product.metafields.custom.free_shipping_products %}
+          {% assign shipping_bar = true %}
+        {% endif %}
+      {%- endfor -%}
+
       {%- liquid
-        if settings.show_free_shipping_message and settings.free_shipping_minimum_amount != blank
+        if settings.show_free_shipping_message and settings.free_shipping_minimum_amount != blank and shipping_bar == false
           assign free_shipping_minimum_amounts = settings.free_shipping_minimum_amount | remove: ' ' | split: ','
           assign show_free_shipping_message = false
 
@@ -147,7 +155,7 @@
       <div class="cart-recommendations" data-animate data-animate-delay-{{ animate_count }}>
         <div class="title h4">{{ settings.cart_recommendations_heading | escape }}</div>
         <div class="title-image">
-          {% if shop.permanent_domain == 'bv-uk1.myshopify.com' %}
+          {% if shop.permanent_domain != 'bellavitaglobal.myshopify.com' and shop.permanent_domain != 'bellavita-bangladesh.myshopify.com' and shop.permanent_domain != 'bv-us.myshopify.com' %}
             <img class="title-img" src="https://cdn.shopify.com/s/files/1/0650/5539/1970/files/Strip2_1.jpg?v=1746467269">
             {%- else -%}
             <img class="title-img" src="https://cdn.shopify.com/s/files/1/0650/5539/1970/files/Cart_Banner_copy_8110fd30-ace5-4032-b4ad-f364c3e09565.jpg?v=1752750411">
@@ -276,6 +284,7 @@
         {%- assign animate_count = animate_count | plus: 1 -%}
         <ul class="mini-cart__navigation" data-animate data-animate-delay-{{ animate_count }}>
           {%- for item in cart.items -%}
+           
           <li data-variant-id="{{ item.variant_id }}" data-handle="{{ item.product.handle }}" data-quantity="{{ item.quantity }}" data-price="{{ item.original_line_price }}">
             <div class="loading-overlay hidden">
               <div class="loading-overlay__spinner">
@@ -804,7 +813,7 @@
     -%} 
       <div class="button-container">
           
-          {% if shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' %}
+          {% if shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' and 1==2 %}
           <button class="button" name="checkout" type="submit" onclick="event.preventDefault(); window.preCheckoutCheck(this);">
             {{ 'sections.cart.checkout' | t }}
             {%- if settings.disable_view_cart -%}

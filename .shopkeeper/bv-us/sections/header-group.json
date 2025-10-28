@@ -36,6 +36,7 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Free Gift on orders above $55",
             "text_on_mobile": "",

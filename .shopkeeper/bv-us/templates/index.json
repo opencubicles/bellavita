@@ -14,8 +14,9 @@
       "blocks": {
         "image_tiQb3A": {
           "type": "image",
-          "disabled": true,
           "settings": {
+            "image": "shopify://shop_images/Home_Page_BannerMain_Banner_Desktop_1.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_BannerMain_Banner_Mobile_1.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -26,7 +27,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "https://www.bellavitaluxe.com/apps/gbb/easybundle/1?page=addProductsPage1&currentFlow=byob",
+            "button_link": "https://bellavitaluxe.com/apps/gbb/easybundle/4?page=addProductsPage1&currentFlow=byob",
             "button_secondary_label": "",
             "button_secondary_link": "",
             "button_size": "medium",
@@ -36,8 +37,8 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_2.webp",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_2.webp",
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_7e9e8d6d-9681-4ea5-9dd2-d333ff69d63d.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_96f1d9e6-b53c-4269-b8cb-18bfc24e0753.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -48,7 +49,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "shopify://collections/buy-more-save-more-men",
+            "button_link": "shopify://collections/buy-more-save-more",
             "button_secondary_label": "",
             "button_secondary_link": "",
             "button_size": "medium",
@@ -57,6 +58,7 @@
         },
         "image_JDf3Bj": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Home_Page_BannerArtboard_1_c8cabeed-bccf-46fb-8a0e-aadf0063a2e6.webp",
             "image_mobile": "shopify://shop_images/Home_Page_BannerArtboard_2_b6ee847e-f8c2-459d-9cdd-155c7294f832.webp",
