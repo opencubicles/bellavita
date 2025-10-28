@@ -29,7 +29,7 @@
     assign total_price = total_price | minus: gift_wraps_in_cart
   endif
 -%}
-{%- if shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' -%}
+{% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com' %}
 {%- if cart.total_price < 4000  -%}
 <div class="free-shipping{% if is_last %} is-last{% endif %} typeset0">
   {%- if total_price >= minimum_amount_in_cents -%}

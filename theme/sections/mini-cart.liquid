@@ -251,7 +251,7 @@
         </ul>
       </div>
     {%- endif -%}
-    {% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
+    {% if shop.permanent_domain == 'bv-uk1.myshopify.com' %}
      <div class="shipping-banner-parent">
        <div class="shipping-banner">
             <span>FREE </span>Shipping Sitewide
@@ -278,13 +278,13 @@
       {% endif %}  
     <div class="mini-cart__main" id="main-cart-items">
       <cart-items>
-        {%- if settings.show_tier_progress_bar -%}
+        {%- if settings.show_tier_progress_bar and 1 == 2 -%}
           {% render 'custom-tier-progress-bar-item' %}
         {% endif %} 
         {%- assign animate_count = animate_count | plus: 1 -%}
         <ul class="mini-cart__navigation" data-animate data-animate-delay-{{ animate_count }}>
           {%- for item in cart.items -%}
-           
+          
           <li data-variant-id="{{ item.variant_id }}" data-handle="{{ item.product.handle }}" data-quantity="{{ item.quantity }}" data-price="{{ item.original_line_price }}">
             <div class="loading-overlay hidden">
               <div class="loading-overlay__spinner">
@@ -387,11 +387,13 @@
                   <dt>
                     {%- if gift_wrap_id == nil or item.id != gift_wrap_id -%}
                       <label for="Quantity-{{ item.index | plus: 1 }}" class="visually-hidden">{{ 'products.product.quantity.label' | t }}</label>
+                       {% if item.product.handle != "honey-oud-unisex-perfume-0-7-fl-oz" %} 
                       <quantity-input class="quantity{% if item.product.tags contains 'Upsell Mixed' %} visibility-hidden{% endif %}">
                         <button class="quantity__button no-js-hidden" name="minus" type="button">
                           <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
                           {% render 'icon', icon: 'minus' %}
                         </button>
+                                
                         <input class="quantity__input"
                           type="number"
                           name="updates[]"
@@ -401,11 +403,14 @@
                           id="Quantity-{{ item.index | plus: 1 }}"
                           data-index="{{ item.index | plus: 1 }}"
                         />
+
                         <button class="quantity__button no-js-hidden" name="plus" type="button">
                           <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
                           {% render 'icon', icon: 'plus' %}
                         </button>
+                       
                       </quantity-input>
+                       {% endif %}
                     {%- else -%}
                       <gift-quantity class="quantity"
                         cart-items-size="{{ cart.items.size }}"
@@ -813,7 +818,7 @@
     -%} 
       <div class="button-container">
           
-          {% if shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' and 1==2 %}
+          {% if shop.permanent_domain == 'bellavitaglobal1.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh1.myshopify.com' or shop.permanent_domain == 'bv-us1.myshopify.com' %}
           <button class="button" name="checkout" type="submit" onclick="event.preventDefault(); window.preCheckoutCheck(this);">
             {{ 'sections.cart.checkout' | t }}
             {%- if settings.disable_view_cart -%}
