@@ -87,15 +87,19 @@
     "search_results": "product",
     "predictive_search_enabled": false,
     "predictive_search_show_vendor": false,
+    "share_facebook": false,
+    "share_twitter": false,
     "share_pinterest": false,
+    "share_whatsapp": false,
     "share_telegram": false,
+    "share_email": false,
     "social_facebook_link": "",
-    "social_twitter_link": "https://twitter.com/bellavitaluxury",
-    "social_pinterest_link": "https://www.pinterest.com/bellavitaluxe/",
-    "social_instagram_link": "https://www.instagram.com/bellavitaluxury_au",
-    "social_tiktok_link": "https://www.tiktok.com/@bellavitausa",
-    "social_snapchat_link": "https://www.snapchat.com/add/bellavitaluxe",
-    "social_youtube_link": "https://www.youtube.com/channel/UCUu_si4RrIqf1CwhWPA4BVg",
+    "social_twitter_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_tiktok_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
     "favicon": "shopify://shop_images/Favicon_logo_1.png",
     "gift_card_logo_height": 70,
     "checkout_logo_image": "shopify://shop_images/Asset_3_00aea36a-9db4-49ad-a274-f7a93de4aa3c.png",
@@ -373,6 +377,16 @@
     "blocks": {
       "2567389343055140935": {
         "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+        "disabled": false,
+        "settings": {}
+      },
+      "7885500093077574326": {
+        "type": "shopify://apps/videowise-video-commerce/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+        "disabled": false,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
       }

@@ -14,6 +14,7 @@
       "blocks": {
         "image_3nB7Ep": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Homepage_Banner_AUS_Launch.jpg",
             "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_AUS_Launch.jpg",
@@ -195,6 +196,17 @@
     },
     "1710513085af0e5eb1": {
       "type": "apps",
+      "blocks": {
+        "videowise_video_commerce_videowise_page_widgets_HWtmVd": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_68ef3242cf0eed0047b3653d\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "videowise_video_commerce_videowise_page_widgets_HWtmVd"
+      ],
       "settings": {
         "include_margins": false,
         "show_divider": false,

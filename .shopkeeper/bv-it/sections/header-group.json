@@ -64,7 +64,7 @@
         "logo_height": 62,
         "mobile_logo_height": 56,
         "logo_position": "top-center",
-        "menu": "main-menu",
+        "menu": "main-menu-1",
         "enable_dropdown_menu": true,
         "show_line_separator": true,
         "cart_icon": "bag",
