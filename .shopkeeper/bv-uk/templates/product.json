@@ -274,9 +274,8 @@
         },
         "custom_liquid_6BXmL7": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
-            "custom_liquid": "<span class=\"flash-sale-tag\">\n  <img\n    src=\"https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Bolt.gif?v=1751540262\"\n    alt=\"Flash Icon\"\n    class=\"flash-icon\"\n  />\n  <strong>FLASH SALE</strong>\n</span>"
+            "custom_liquid": "<span class=\"flash-sale-tag\">\n  <img\n    src=\"https://cdn.shopify.com/s/files/1/0756/5813/3762/files/halloween.gif?v=1761298806\"\n    alt=\"Flash Icon\"\n    class=\"flash-icon\"\n  />\n  <strong>HALLOWEEN SALE</strong>\n</span>"
           }
         },
         "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf": {
@@ -310,8 +309,16 @@
         },
         "custom_liquid_X8RHwe": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping</span> &nbsp</div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
+          }
+        },
+        "custom_liquid_T9Tc7g": {
+          "type": "custom_liquid",
+          "name": "Free Shipping",
+          "settings": {
+            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping Above £30</span> &nbsp</div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
           }
         },
         "offers_section_whdpGY": {
@@ -334,6 +341,7 @@
         "sticky_cart_t4QLHa",
         "offer_badges_hFhQyD",
         "custom_liquid_X8RHwe",
+        "custom_liquid_T9Tc7g",
         "offers_section_whdpGY"
       ],
       "custom_css": [
@@ -421,17 +429,13 @@
         "padding_bottom": 36
       }
     },
-    "video_with_text_emJiUe": {
-      "type": "Video-with-text",
-      "settings": {}
-    },
     "1710752969db39fb42": {
       "type": "apps",
       "settings": {
         "include_margins": true,
         "show_divider": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 8,
+        "padding_bottom": 0
       }
     },
     "product-recommendations": {
@@ -457,6 +461,11 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "video_with_text_H8QRXX": {
+      "type": "Video-with-text",
+      "name": "Video With Text",
+      "settings": {}
     },
     "testimonials": {
       "type": "testimonials",
@@ -544,6 +553,8 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget",
             "max_width": 1200
           }
         }
@@ -567,9 +578,9 @@
     "main",
     "ingredients_d3QziV",
     "collapsible-content",
-    "video_with_text_emJiUe",
     "1710752969db39fb42",
     "product-recommendations",
+    "video_with_text_H8QRXX",
     "testimonials",
     "17066961646756c0fa"
   ]

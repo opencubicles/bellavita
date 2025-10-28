@@ -24,10 +24,50 @@
             "link": "shopify://collections/shop-all"
           }
         },
+        "announcement_PpnE34": {
+          "type": "announcement",
+          "settings": {
+            "text": "🚚FREE Shipping Above £30",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        },
         "announcement_AkiHJQ": {
           "type": "announcement",
           "settings": {
-            "text": "🚚FREE Shipping",
+            "text": "🎃Halloween Sale is Live －Up To 25% OFF on ALL🔥",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        },
+        "announcement_QLwgzc": {
+          "type": "announcement",
+          "settings": {
+            "text": "🎃BUY THIS & GET 16% OFF TODAY🎁",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        },
+        "announcement_9t6J3t": {
+          "type": "announcement",
+          "settings": {
+            "text": "🎃BUY THIS & GET 21% OFF TODAY🎁",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        },
+        "announcement_LPWFyn": {
+          "type": "announcement",
+          "settings": {
+            "text": "🎃BUY THIS & GET 25% OFF TODAY🎁",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
@@ -37,7 +77,11 @@
       },
       "block_order": [
         "announcement_eXEtFh",
-        "announcement_AkiHJQ"
+        "announcement_PpnE34",
+        "announcement_AkiHJQ",
+        "announcement_QLwgzc",
+        "announcement_9t6J3t",
+        "announcement_LPWFyn"
       ],
       "settings": {
         "only_homepage": false,

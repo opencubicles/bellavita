@@ -15,8 +15,8 @@
         "image_MdXHCy": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Him_894e0007-7e17-4bc6-9d03-8f86616112cb.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Him_8ca0dc4e-c286-4024-ad10-6c28a2823712.jpg",
+            "image": "shopify://shop_images/Main_Banner_1-_Desktop.png",
+            "image_mobile": "shopify://shop_images/Main_Banner_1-_Mobile.png",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -27,9 +27,9 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "shopify://collections/sale",
+            "button_link": "shopify://collections/bestseller",
             "button_secondary_label": "",
-            "button_secondary_link": "shopify://collections/sale",
+            "button_secondary_link": "shopify://collections/men-fragrance",
             "button_size": "medium",
             "button_style_secondary": false
           }
@@ -37,10 +37,32 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Her_edbd9b20-d8c6-4558-8e3b-b2352d2fc520.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Her_75bc6251-ae4d-40d0-ab7b-feb13cdfe37f.jpg",
+            "image": "shopify://shop_images/Fragrance_for_him_Banner_2_-_Desktop.png",
+            "image_mobile": "shopify://shop_images/Fragrance_for_him_vBanner_2_-_Mobile.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/men-fragrance",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "image_4kaVAz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Fragrance_for_her_-_desktop.png",
+            "image_mobile": "shopify://shop_images/Fragrance_for_her_-_Mobile.png",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
             "subheading": "",
             "subheading_size": "h5",
             "heading": "",
@@ -56,34 +78,11 @@
             "button_style_secondary": false
           }
         },
-        "image_4kaVAz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Unisex_21da1164-c5ea-49d9-8a46-0db176bce325.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Unisex_09cadf12-6c0f-4ddd-a3b4-25cd42751959.jpg",
-            "image_position": "center center",
-            "text_box_position": "middle-center",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h1",
-            "heading_tag": "h2",
-            "text": "",
-            "text_size": "typeset",
-            "button_label": "",
-            "button_link": "shopify://collections/unisex-fragrance",
-            "button_secondary_label": "",
-            "button_secondary_link": "",
-            "button_size": "medium",
-            "button_style_secondary": false
-          }
-        },
         "image_tiQb3A": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_for_unisex.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_for_unisex.jpg",
+            "image": "shopify://shop_images/Unisex_banner_-_Desktop__1.png",
+            "image_mobile": "shopify://shop_images/Unisex_banner_-_Mobile_2.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -94,7 +93,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "shopify://collections/men-fragrance",
+            "button_link": "shopify://collections/unisex-fragrance",
             "button_secondary_label": "",
             "button_secondary_link": "",
             "button_size": "medium",

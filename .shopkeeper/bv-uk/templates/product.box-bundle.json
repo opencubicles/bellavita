@@ -11,6 +11,7 @@
   "sections": {
     "empty-space": {
       "type": "empty-space",
+      "disabled": true,
       "settings": {
         "desktop_height": 200,
         "mobile_height": 172
@@ -18,6 +19,7 @@
     },
     "empty_space_Gna7Rn": {
       "type": "empty-space",
+      "disabled": true,
       "settings": {
         "desktop_height": 32,
         "mobile_height": 12
@@ -541,6 +543,8 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget",
             "max_width": 1200
           }
         }
