@@ -136,26 +136,47 @@
                   assign lazy_load = false
                 endif
               -%}
-              {%- unless product.tags contains 'upsell_product' or product.tags contains 'Skip Collection' or product.tags contains 'product-hide' -%}
-              <li class="grid__item" data-available="{{ product.available }}" data-index="{% if product.available %}{{- paginate.current_page  | times: 100 | plus: counter -}}{% else %}9999{% endif %}">
-                {% render 'card-product',
-                  card_product: product,
-                  card_collection: collection,
-                  media_size: section.settings.image_ratio,
-                  show_secondary_image: section.settings.show_secondary_image,
-                  show_quick_buy: section.settings.show_quick_buy,
-                  show_vendor: section.settings.show_vendor,
-                  show_rating: section.settings.show_rating,
-                  enable_quick_view: section.settings.enable_quick_view,
-                  enable_color_swatches: section.settings.enable_color_swatches,
-                  enable_countdown: section.settings.enable_countdown,
-                  enable_image_fill: section.settings.enable_image_fill,
-                  lazy_load: true,
-                  position: forloop.index,
-                  section_index: section.index
-                %}
-              </li>
-              {%- endunless -%}
+              {% if collection.handle == 'buy2get1' %}
+                <li class="grid__item" data-available="{{ product.available }}" data-index="{% if product.available %}{{- paginate.current_page  | times: 100 | plus: counter -}}{% else %}9999{% endif %}">
+                  {% render 'card-product',
+                    card_product: product,
+                    card_collection: collection,
+                    media_size: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_quick_buy: section.settings.show_quick_buy,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    enable_quick_view: section.settings.enable_quick_view,
+                    enable_color_swatches: section.settings.enable_color_swatches,
+                    enable_countdown: section.settings.enable_countdown,
+                    enable_image_fill: section.settings.enable_image_fill,
+                    lazy_load: true,
+                    position: forloop.index,
+                    section_index: section.index
+                  %}
+                </li>
+              {% else %}
+                {%- unless product.tags contains 'upsell_product' or product.tags contains 'Skip Collection' or product.tags contains 'product-hide' -%}
+                  <li class="grid__item" data-available="{{ product.available }}" data-index="{% if product.available %}{{- paginate.current_page  | times: 100 | plus: counter -}}{% else %}9999{% endif %}">
+                    {% render 'card-product',
+                      card_product: product,
+                      card_collection: collection,
+                      media_size: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_quick_buy: section.settings.show_quick_buy,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      enable_quick_view: section.settings.enable_quick_view,
+                      enable_color_swatches: section.settings.enable_color_swatches,
+                      enable_countdown: section.settings.enable_countdown,
+                      enable_image_fill: section.settings.enable_image_fill,
+                      lazy_load: true,
+                      position: forloop.index,
+                      section_index: section.index
+                    %}
+                  </li>
+                  {%- endunless -%}
+              {% endif %}
               {% assign counter = counter | plus: 1 %}
               {% #Custom code for responsive collection offer image %}
               {% if collection.metafields.custom.collection_offer_image != blank %}
