@@ -1,0 +1,306 @@
+{% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
+{% if template.name != 'index' %}
+ <style>
+   
+    .shopify-section-header-sticky .header {
+        padding-top: 4rem !important;
+    }
+  </style>
+{% else %} 
+  <style>
+     @media (min-width: 750px) {
+      .header-wrapper {
+        margin-top: 40px !important;
+      }
+    }
+     @media(max-width:750px){
+      .header-wrapper {
+          margin-top: 40px !important;
+      }
+      
+    }
+    
+  </style>
+{% endif %}
+{% endif %}
+{%- comment -%}
+  sections/announcement-countdown.liquid
+  Announcement bar with fixed end date and customizable countdown format.
+{%- endcomment -%}
+<div
+  id="announcement-countdown"
+  class="announcement-countdown-section"
+  data-end-date="{{ section.settings.sale_end_date }}"
+  data-enable-countdown="{{ section.settings.enable_countdown }}"
+  data-show-bar="{{ section.settings.show_bar }}"
+  data-format="{{ section.settings.countdown_format }}"
+  role="region"
+  aria-label="Announcement"
+>
+  {% if section.settings.show_bar %}
+    <div class="announcement-inner">
+      <div class="announcement-left">
+        {{ section.settings.announcement_text }}
+      </div>
+
+      {% if section.settings.enable_countdown %}
+        <div class="announcement-center">
+          <div class="countdown-wrap" aria-live="polite">
+            <span class="countdown-label">Sale ends in</span>
+            <span class="countdown-timer">00d 00h 00m 00s</span>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="announcement-right">
+        {{ section.settings.right_text }}
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+ @media(min-width:750px){
+    .announcement-countdown-section {
+      z-index: 101;
+    }
+   
+  } 
+  @media(max-width:750px){
+    .announcement-countdown-section {
+      z-index: 101;
+    }
+    
+    .menu-mobile--open .announcement-countdown-section {
+      z-index: 9 !important;
+    }
+    
+  } 
+  /* === Fixed, full-width announcement bar === */
+  
+  .announcement-countdown-section {
+    position: fixed;
+    top: 29px;
+    left: 0;
+    width: 100%;
+    background: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    
+  }
+
+  .announcement-inner {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .announcement-left,
+  .announcement-right {
+    flex: 1 1 25%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  }
+
+  .announcement-center {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .countdown-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .countdown-label {
+    font-size: 13px;
+    opacity: 0.9;
+  }
+
+  .countdown-timer {
+    font-family: monospace;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .announcement-left,
+    .announcement-right {
+      display: none;
+    }
+    .announcement-center {
+      flex: 1;
+    }
+    .announcement-inner {
+      padding: 8px 12px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const container = document.getElementById('announcement-countdown');
+    if (!container) return;
+
+    const showBar = container.getAttribute('data-show-bar') === 'true';
+    if (!showBar) {
+      container.style.display = 'none';
+      return;
+    }
+
+    const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index';
+    const enableCountdown = container.getAttribute('data-enable-countdown') === 'true';
+    const endDateString = container.getAttribute('data-end-date');
+    const formatType = container.getAttribute('data-format') || 'days';
+    const endDate = new Date(endDateString);
+    const timerEl = container.querySelector('.countdown-timer');
+
+    // --- Hide initially on all non-home pages ---
+    if (!isHomePage) {
+      container.style.display = 'none';
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          container.style.display = 'block';
+        } else {
+          container.style.display = 'none';
+        }
+      });
+    }
+
+    // --- Observe for .menu-opening class anywhere in DOM ---
+    const checkMenuClass = () => {
+      if (document.querySelector('.menu-opening')) {
+        container.style.zIndex = '9';
+      } else {
+        setTimeout(() => {
+          container.style.zIndex = '101';
+        }, 500);
+      }
+    };
+
+    // Run once initially
+    checkMenuClass();
+
+    // Observe DOM changes
+    const observer = new MutationObserver(checkMenuClass);
+    observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+
+    // --- Countdown logic ---
+    if (!enableCountdown || !timerEl || isNaN(endDate)) return;
+
+    function pad(n) {
+      return n < 10 ? '0' + n : n;
+    }
+
+    function updateTimer() {
+      const now = new Date();
+      const diff = endDate - now;
+
+      if (diff <= 0) {
+        timerEl.textContent = 'Sale Ended';
+        clearInterval(interval);
+        return;
+      }
+
+      const totalSeconds = Math.floor(diff / 1000);
+
+      if (formatType === 'hours') {
+        const totalHours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+        timerEl.textContent =
+          pad(totalHours) + 'h ' + pad(minutes) + 'm ' + pad(seconds) + 's';
+      } else {
+        const days = Math.floor(totalSeconds / 86400);
+        const hours = Math.floor((totalSeconds % 86400) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+        timerEl.textContent =
+          pad(days) + 'd ' + pad(hours) + 'h ' + pad(minutes) + 'm ' + pad(seconds) + 's';
+      }
+    }
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+  })();
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Announcement — Countdown",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_bar",
+      "label": "Show announcement bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Left announcement text",
+      "default": "Free shipping on orders above ₹999"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_countdown",
+      "label": "Enable sale countdown (center)",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "sale_end_date",
+      "label": "Sale end date and time (YYYY-MM-DD HH:MM:SS)",
+      "default": "2025-12-31 23:59:59",
+      "info": "Enter date/time in your store's local timezone, e.g. 2025-12-31 23:59:59"
+    },
+    {
+      "type": "select",
+      "id": "countdown_format",
+      "label": "Countdown format",
+      "options": [
+        { "value": "days", "label": "Show Days + Hours + Minutes + Seconds" },
+        { "value": "hours", "label": "Show Total Hours + Minutes + Seconds" }
+      ],
+      "default": "days"
+    },
+    {
+      "type": "text",
+      "id": "right_text",
+      "label": "Right-side text (optional)",
+      "default": "Hurry! Limited time offer"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#111827"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement — Countdown",
+      "category": "Header"
+    }
+  ]
+}
+{% endschema %}

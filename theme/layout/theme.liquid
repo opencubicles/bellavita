@@ -44,7 +44,6 @@
       .header-top-banner {
         display: none !important;
       }
-    
     }
   </style>
 {% endif -%}
@@ -143,10 +142,12 @@
       >
       <noscript>{{ 'component-gift-wrapping.css' | asset_url | stylesheet_tag }}</noscript>
     {%- endif -%}
-    {% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
-      {{ 'oc-custom.css' | asset_url | stylesheet_tag }}
-    {% endif -%}
-     {{ 'oc-custom-design.css' | asset_url | stylesheet_tag }}
+      <link
+        rel="stylesheet"
+        href="{{ 'oc-custom-design.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     </script>
@@ -207,7 +208,7 @@
   </head>
   <!-- OC Test Comment3 -->
   <body
-    class="template-{{ request.page_type }}{% if request.design_mode %} shopify-design-mode{% endif %}"
+    class="template-{{ request.page_type }}{% if request.design_mode %} shopify-design-mode{% endif %} {{ template | replace: '.', '-' }}"
     {%- if settings.image_zoom_effect_enabled %}
       data-animate-image
     {% endif -%}
@@ -450,11 +451,27 @@
     }
   });
 </script>
-
-
-
 {% endif %} 
 {% endif %}
+
+
+{% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+  {% if request.path contains 'men-perfume-gift-set' %}
+    <style>
+      .atc-strip-container {
+        display: none !important;
+      }
+      .product-form__submit {
+        background-color: #eb6123; 
+        color:black !important;
+      }
+      .product-form__submit:hover {
+        background-color: #fff; 
+        color:black !important;
+      }
+    </style>
+  {% endif %}
+{% endif -%}
 
 {% if shop.permanent_domain != 'bellavitaglobal.myshopify.com' and shop.permanent_domain != 'bellavita-bangladesh.myshopify.com' and shop.permanent_domain != 'bv-us.myshopify.com'%}
 {% if template contains "product" %}
@@ -465,6 +482,16 @@
   </style>
   {% endif %}
 {% endif -%}
+
+
+
+{% if template.suffix == "embarouge" %}
+  <style>
+    .mobile-dock {
+      display:none !important;
+    }
+  </style>
+  {% endif %}
 
 </body>
 </html>
@@ -519,5 +546,14 @@
   }
 
   document.addEventListener("DOMContentLoaded", startCountdown);
+</script>
+{% endif %}
+{% if shop.permanent_domain == 'bv-uk1.myshopify.com' %}
+<script>
+  window.buy2collection = [
+    {% for product in collections['buy2get1'].products %}
+      {{ product.id }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
 </script>
 {% endif %}

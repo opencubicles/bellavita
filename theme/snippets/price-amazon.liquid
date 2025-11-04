@@ -89,7 +89,10 @@
           {% endif %}
         >
           <span class="price-item price-item--regular">
-            {{ money_price }}
+            {{ money_price }} 
+            {% if product.metafields.custom.volume and template.suffix == 'embarouge' %}
+              <span class="special-volume">| {{ product.metafields.custom.volume }} </span>
+            {% endif %}
           </span>
         </dd>
       </div>

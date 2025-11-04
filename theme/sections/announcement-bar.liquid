@@ -105,13 +105,13 @@
   </style>
 {%- endif -%}
 
-{% if request.path contains 'honey-oud-unisex-perfume-3-38-fl-oz'  and shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' %}
+{% comment %} {% if request.path contains 'honey-oud-unisex-perfume-3-38-fl-oz'  and shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' %}
   <style>
     .announcement-slider__slide[data-index="0"] {
       display: none !important;
     }
   </style>
-{% endif %}
+{% endif %} {% endcomment %}
 
 {% if template contains 'product' and shop.permanent_domain == 'bv-uk.myshopify.com' %}
   {% if product.tags contains 'VBH' %}

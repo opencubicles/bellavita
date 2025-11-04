@@ -7,13 +7,18 @@
       --image-position: {{ section.settings.image_position }};
     {% endif -%}
   }
+
 {%- endstyle -%}
 
 {{ 'section-image-with-text.css' | asset_url | stylesheet_tag }}
 {{ 'section-images-with-text.css' | asset_url | stylesheet_tag }}
 
 <div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
+
   <div class="image-with-text image-with-text--alt page-width{% if section.settings.full_width %} page-width--full-width{% endif %}">
+    {%- if section.settings.main_heading != blank -%}
+      <h2 class="section-main-heading text-center"><strong>{{ section.settings.main_heading | escape }}</strong></h2>
+    {%- endif -%}
     <div class="image-with-text__grid{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} grid grid--gapless grid--1-col grid--2-col-tablet">
       <div class="grid__item">
         <div class="images-with-text">
@@ -117,6 +122,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Section main heading",
+      "info": "This heading will appear above the section if filled."
+    },
     {
       "type": "image_picker",
       "id": "image",

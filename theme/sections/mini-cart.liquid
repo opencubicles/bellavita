@@ -54,11 +54,11 @@
       </div>  
       {% assign shipping_bar = false %}
 
-      {%- for item in cart.items -%}
+      {% comment %} {%- for item in cart.items -%}
         {% if item.product.metafields.custom.free_shipping_products %}
           {% assign shipping_bar = true %}
         {% endif %}
-      {%- endfor -%}
+      {%- endfor -%} {% endcomment %}
 
       {%- liquid
         if settings.show_free_shipping_message and settings.free_shipping_minimum_amount != blank and shipping_bar == false

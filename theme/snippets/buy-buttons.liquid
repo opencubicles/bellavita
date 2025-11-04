@@ -51,9 +51,58 @@
             </div>
           </div>
         {%- endif -%}
-        <!-- custom code for price container ends here -->
+        {%- if template.suffix != 'embarouge' -%}
+          <!-- custom code for price container ends here -->
+          {%- if block.settings.show_quantity_selector -%}
+            <div class="product-form__quantity" >
+              <label for="Quantity-{{ block.id }}" class="visually-hidden">
+                {{- 'products.product.quantity.label' | t -}}
+              </label>
+              <quantity-input class="quantity">
+                <button class="quantity__button no-js-hidden" name="minus" type="button">
+                  <span class="visually-hidden">
+                    {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
+                  </span>
+                  {% render 'icon', icon: 'minus' %}
+                </button>
+                <input
+                  class="quantity__input"
+                  type="number"
+                  name="quantity"
+                  id="Quantity-{{ block.id }}"
+                  min="1"
+                  value="1"
+                  form="{{ product_form_id }}"
+                  onchange="passValue(this.value)"
+                >
+                <button class="quantity__button no-js-hidden" name="plus" type="button">
+                  <span class="visually-hidden">
+                    {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
+                  </span>
+                  {% render 'icon', icon: 'plus' %}
+                </button>
+              </quantity-input>
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+        <!-- custom code for price container -->
+      </div>
+      <!-- custom code for price container ends here -->
+      <!-- custom code for app exclusive button -->
+      {%- if product.tags contains 'app-exclusive' -%}
+        <a href="https://bellavita.page.link/ceo-intense" class="button button--full-width medium-hide large-up-hide{% if block.settings.hide_atc_on_mobile %} small-hide{% endif %}" tabindex="-1">
+          {{ 'App Exclusive' | upcase }}
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.bellavita.shopifyapps" class="button button--full-width small-hide" tabindex="-1" target="_blank">
+          {{ 'App Exclusive' | upcase }}
+        </a>
+      {%- else -%}
+
+      
+      {%- if template.suffix == 'embarouge' -%}
+      <div class="embarouge-desktop-buy" >
         {%- if block.settings.show_quantity_selector -%}
-          <div class="product-form__quantity">
+          <div class="product-form__quantity" style="width:30%;">
             <label for="Quantity-{{ block.id }}" class="visually-hidden">
               {{- 'products.product.quantity.label' | t -}}
             </label>
@@ -83,18 +132,6 @@
             </quantity-input>
           </div>
         {%- endif -%}
-        <!-- custom code for price container -->
-      </div>
-      <!-- custom code for price container ends here -->
-      <!-- custom code for app exclusive button -->
-      {%- if product.tags contains 'app-exclusive' -%}
-        <a href="https://bellavita.page.link/ceo-intense" class="button button--full-width medium-hide large-up-hide{% if block.settings.hide_atc_on_mobile %} small-hide{% endif %}" tabindex="-1">
-          {{ 'App Exclusive' | upcase }}
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.bellavita.shopifyapps" class="button button--full-width small-hide" tabindex="-1" target="_blank">
-          {{ 'App Exclusive' | upcase }}
-        </a>
-      {%- else -%}
       <!-- custom code for app exclusive button ends here -->  
       <button
         type="submit"
@@ -106,7 +143,9 @@
         {%- if product.template_suffix == 'pre-order' %}
           data-pre-order="true"
         {% endif -%}
+        style="background-color: white; color: black;"
       >
+
         {%- liquid
           if product.selected_or_first_available_variant.available
             if product.template_suffix != 'pre-order'
@@ -119,6 +158,33 @@
           endif
         -%}
       </button>
+      </div>
+    {%- else -%}
+       <button
+        type="submit"
+        name="add"
+        class="product-form__submit button{% if block.settings.show_dynamic_checkout %} button--secondary{% endif %} button--full-width{% if block.settings.hide_atc_on_mobile %} small-hide{% endif %}"
+        {%- if product.selected_or_first_available_variant.available == false %}
+          disabled="disabled"
+        {% endif -%}
+        {%- if product.template_suffix == 'pre-order' %}
+          data-pre-order="true"
+        {% endif -%}
+      >
+
+        {%- liquid
+          if product.selected_or_first_available_variant.available
+            if product.template_suffix != 'pre-order'
+              echo 'products.product.add_to_cart' | t
+            else
+              echo 'products.product.pre_order' | t
+            endif
+          else
+            echo 'products.product.sold_out' | t
+          endif
+        -%}
+      </button>
+    {%- endif -%}    
       <!-- custom code for app exclusive button -->
       {%- endif -%}  
       <!-- custom code for app exclusive button ends here -->
