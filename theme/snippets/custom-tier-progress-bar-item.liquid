@@ -1,10 +1,3 @@
-{% comment %}Tier Progress Bar Item{% endcomment %}
-{% comment %}
-{%- if settings.show_tier_progress_bar -%}
-  {% render 'custom-tier-progress-bar-item' %} in sections/mini-cart.liquid
-{% endif %}  
-{% endcomment %}
-
 {%- liquid
   assign tier_data = shop.metafields.global.tier_data.value
     

@@ -142,12 +142,6 @@
                 style="margin-top:4px">
 
                 <span class="label">{{ link.title | escape }}</span>
-
-                {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or  shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
-                  {% if link.title == 'Buy 3@54.99 + FREE Gift' or link.title == 'Buy 2 for Extra 20% Off' %}
-                    <span class="special-offer-halloween">Halloween Deal</span>
-                  {% endif %}
-                {% endif %}
               </a>
             </dropdown-menu>
           {%- endif -%}

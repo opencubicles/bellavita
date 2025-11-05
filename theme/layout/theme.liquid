@@ -235,9 +235,7 @@
     <a class="skip-to-content-link button button--small visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
-  {%- if settings.show_tier_progress_bar -%}
-    {%- render 'custom-tier-progress-bar-script' -%}
-  {%- endif -%}  
+
     
 {% if template contains 'index' %}
   {% render 'transition-cover' %}  
@@ -463,11 +461,11 @@
       }
       .product-form__submit {
         background-color: #eb6123; 
-        color:black !important;
+        color:#fff !important;
       }
       .product-form__submit:hover {
-        background-color: #fff; 
-        color:black !important;
+        background-color: black; 
+        color:#fff !important;
       }
     </style>
   {% endif %}

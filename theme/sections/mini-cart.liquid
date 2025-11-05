@@ -51,14 +51,22 @@
             <use href="#icon-close"></use>
           </svg>
         </drawer-close-button>
-      </div>  
-      {% assign shipping_bar = false %}
+      </div>
 
-      {% comment %} {%- for item in cart.items -%}
+      {% assign shipping_bar = false %}
+      {% assign buy2collectionProductexist = false %}
+      {% assign target_collection = 'buy2get1' %}
+
+      {% for item in cart.items %}
         {% if item.product.metafields.custom.free_shipping_products %}
           {% assign shipping_bar = true %}
         {% endif %}
-      {%- endfor -%} {% endcomment %}
+
+        {% assign collection_handles = item.product.collections | map: 'handle' %}
+        {% if collection_handles contains target_collection %}
+          {% assign buy2collectionProductexist = true %}
+        {% endif %}
+      {% endfor %}
 
       {%- liquid
         if settings.show_free_shipping_message and settings.free_shipping_minimum_amount != blank and shipping_bar == false
@@ -95,9 +103,7 @@
       
       <!-- custom code for mini cart offer image -->
        {% # Custom code for Tier Progress Bar functionality %}
-      {%- if settings.show_tier_progress_bar -%}
-        {% render 'custom-tier-progress-bar' %}
-      {%- endif -%}
+     
       {% # Custom code for Tier Progress Bar functionality ends here %}
       {%- if settings.cart_offer_image != blank -%}
       <div class="mini-cart-offer-img">
@@ -259,6 +265,7 @@
     </div>
     {% endif %} 
     {% if shop.permanent_domain != 'bellavitaglobal.myshopify.com' and shop.permanent_domain != 'bellavita-bangladesh.myshopify.com' and shop.permanent_domain != 'bv-us.myshopify.com' %} 
+      {% if buy2collectionProductexist == false %}
       {% if cart.item_count == 1 %}
         <div class="free-shipping typeset0">
         <span class="free-shipping__text">Add one more product to get 10% off</span>
@@ -276,11 +283,10 @@
         </div>
       {% endif %}
       {% endif %}  
+      {% endif %} 
     <div class="mini-cart__main" id="main-cart-items">
       <cart-items>
-        {%- if settings.show_tier_progress_bar and 1 == 2 -%}
-          {% render 'custom-tier-progress-bar-item' %}
-        {% endif %} 
+      
         {%- assign animate_count = animate_count | plus: 1 -%}
         <ul class="mini-cart__navigation" data-animate data-animate-delay-{{ animate_count }}>
           {%- for item in cart.items -%}

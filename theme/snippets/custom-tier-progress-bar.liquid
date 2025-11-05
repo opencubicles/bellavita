@@ -1,10 +1,3 @@
-{% comment %}Tier Progress Bar{% endcomment %}
-{% comment %}
-{%- if settings.show_tier_progress_bar -%}
-  {% render 'custom-tier-progress-bar' %} in sections/mini-cart.liquid
-{%- endif -%}
-{% endcomment %}
-
 {{ 'component-free-shipping.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
