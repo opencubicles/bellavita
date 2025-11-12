@@ -59,7 +59,7 @@
     "show_shipping_calculator": false,
     "shipping_calculator_default_country": "India",
     "disable_view_cart": true,
-    "show_free_shipping_message": true,
+    "show_free_shipping_message": false,
     "free_shipping_minimum_amount": "0",
     "show_bogo_progress_bar": false,
     "bogo_tag": "",
@@ -72,19 +72,17 @@
     "cart_recommendations_enabled": true,
     "upsell_heading": "Add 2 items to unlock an extra 20% discount!",
     "enable_upsell_script": false,
-    "upsell_collection": "upsell-100ml",
+    "upsell_collection": "bestseller",
     "cart_recommendations_show_vendor": false,
     "empty_cart_message": "",
     "cart_recommendations_heading": "You may also like",
     "empty_cart_recommendations": "",
     "empty_cart_collections": [
-      "bestsellers",
-      "gift-sets",
-      "unisex",
-      "shop-all",
-      "buy-more-save-more",
-      "fragrance-for-her",
-      "fragrance-for-him"
+      "bestseller",
+      "men-fragrance",
+      "women-fragrance",
+      "unisex-fragrance",
+      "gift-sets"
     ],
     "search_results": "product",
     "predictive_search_enabled": false,
@@ -380,11 +378,6 @@
       },
       "7885500093077574326": {
         "type": "shopify://apps/videowise-video-commerce/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-        "disabled": false,
-        "settings": {}
-      },
-      "2567389343055140935": {
-        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
       }

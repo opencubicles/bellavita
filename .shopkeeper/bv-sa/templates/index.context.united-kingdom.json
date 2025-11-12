@@ -1,0 +1,83 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "index.json",
+  "context": {
+    "market": "united-kingdom"
+  },
+  "sections": {
+    "old_feature_collection_MdzHcP": {
+      "settings": {
+        "collection": "bestsellers-uk"
+      },
+      "blocks": {}
+    },
+    "73bdc832-ef1c-4dcf-833b-e9876f45593b": {
+      "settings": {},
+      "blocks": {
+        "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-2": {
+          "settings": {
+            "product": "white-oud-unisex-perfume-uk"
+          }
+        },
+        "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-1": {
+          "settings": {
+            "product": "ceo-man-luxury-perfume-uk"
+          }
+        },
+        "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-3": {
+          "settings": {
+            "product": "honey-oud-unisex-perfume-uk"
+          }
+        }
+      }
+    },
+    "slideshow_kwPcBi": {
+      "settings": {},
+      "blocks": {
+        "image_UTGxj7": {
+          "settings": {
+            "button_link": "shopify://collections/perfumes-for-women-uk"
+          }
+        },
+        "image_4kaVAz": {
+          "settings": {
+            "button_link": "shopify://collections/unisex-fragrance-uk"
+          }
+        },
+        "image_tiQb3A": {
+          "settings": {
+            "button_link": "shopify://collections/perfumes-for-men-uk"
+          }
+        }
+      }
+    },
+    "image_with_text_FKwCrN": {
+      "settings": {},
+      "blocks": {
+        "button_4pydJX": {
+          "settings": {
+            "button_link": "shopify://products/ceo-man-luxury-perfume-uk"
+          }
+        }
+      }
+    },
+    "image_with_text_q4kHhN": {
+      "settings": {},
+      "blocks": {
+        "button_DAY3x9": {
+          "settings": {
+            "button_link": "shopify://products/honey-oud-unisex-perfume-uk"
+          }
+        }
+      }
+    }
+  }
+}
