@@ -12,6 +12,28 @@
     "slideshow_kwPcBi": {
       "type": "slideshow",
       "blocks": {
+        "image_Cy7EAB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_a867db88-bc0a-4a70-8f4b-537959bccdc4.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_ff652772-dfdd-4193-a096-195e36554507.jpg",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/embarouge",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
         "image_tiQb3A": {
           "type": "image",
           "settings": {
@@ -80,6 +102,7 @@
         }
       },
       "block_order": [
+        "image_Cy7EAB",
         "image_tiQb3A",
         "image_UTGxj7",
         "image_4kaVAz"

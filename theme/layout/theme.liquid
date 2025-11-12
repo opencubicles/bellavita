@@ -453,7 +453,7 @@
 {% endif %}
 
 
-{% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+{% comment %} {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
   {% if request.path contains 'men-perfume-gift-set' %}
     <style>
       .atc-strip-container {
@@ -469,7 +469,7 @@
       }
     </style>
   {% endif %}
-{% endif -%}
+{% endif -%} {% endcomment %}
 
 {% if shop.permanent_domain != 'bellavitaglobal.myshopify.com' and shop.permanent_domain != 'bellavita-bangladesh.myshopify.com' and shop.permanent_domain != 'bv-us.myshopify.com'%}
 {% if template contains "product" %}
@@ -546,7 +546,7 @@
   document.addEventListener("DOMContentLoaded", startCountdown);
 </script>
 {% endif %}
-{% if shop.permanent_domain == 'bv-uk1.myshopify.com' %}
+{% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
 <script>
   window.buy2collection = [
     {% for product in collections['buy2get1'].products %}
@@ -554,4 +554,21 @@
     {% endfor %}
   ];
 </script>
+{% endif %}
+{% if shop.permanent_domain == 'bellavitauae.myshopify.com' %}
+{%- unless page.handle contains '404' -%}
+  <script>
+    fetch('/browsing_context_suggestions.json')
+      .then(res => res.json())
+      .then(data => {
+        const country = data?.detected_values?.country?.handle?.toUpperCase();
+
+        // Redirect to the India store if visitor is from India
+        if (country === "IN") {
+          window.location.href = "https://embarouge.in/";
+        }
+      })
+      .catch(() => {});
+  </script>
+{%- endunless -%}
 {% endif %}

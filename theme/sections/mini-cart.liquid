@@ -454,7 +454,13 @@
                       {% endif %}
                       {% assign regular_price = item.original_line_price %}
                     {% else %}
-                      {% assign regular_price = item.variant.compare_at_price| times: item.quantity %}
+                     {% assign compare_price = item.variant.compare_at_price %}
+
+                      {% if compare_price == nil or compare_price == 0 %}
+                        {% assign compare_price = item.variant.price %}
+                      {% endif %}
+
+                      {% assign regular_price = compare_price | times: item.quantity %}
                       {% if regular_price != sale_price %}
                         {% assign show_discount = true %}
                       {% endif %}
