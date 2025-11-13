@@ -59,7 +59,7 @@
     "show_shipping_calculator": false,
     "shipping_calculator_default_country": "United Kingdom",
     "disable_view_cart": true,
-    "show_free_shipping_message": false,
+    "show_free_shipping_message": true,
     "show_tier_progress_bar": false,
     "free_shipping_minimum_amount": "30",
     "show_bogo_progress_bar": false,
