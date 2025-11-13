@@ -14,10 +14,9 @@
       "blocks": {
         "image_tiQb3A": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_UAE_Launch.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_UAE_Launch.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_UAE_Launch_7ddfe485-b25c-45b6-88a0-1ff3a4a2e5b9.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_UAE_Launch_ec98bc13-e1a1-4427-a875-e28f0e465a09.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
