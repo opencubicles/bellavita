@@ -48,6 +48,7 @@
               <div class="grid__item">
                 {%- if section.settings.newsletter_enable -%}
                   <footer-accordion class="accordion footer-block--newsletter" data-open>
+                    <details>
                       <summary tabindex="-1">
                         <p class="h4 accordion__title">{{ section.settings.newsletter_heading | escape }}</p>
                       </summary>
@@ -103,6 +104,7 @@
                           {%- endform -%}
                         </div>
                       </div>
+                      </details>
                   </footer-accordion>
                 {%- endif -%}
               </div>

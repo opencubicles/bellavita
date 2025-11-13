@@ -415,6 +415,11 @@
         "type": "shopify://apps/kite-discount-free-gift/blocks/app-embed/2c7302c4-455d-4078-a829-48563ba26089",
         "disabled": false,
         "settings": {}
+      },
+      "18281310450600262962": {
+        "type": "shopify://apps/clevertap/blocks/app-embed/2566991a-cd89-49d8-997d-74717582b9ed",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
