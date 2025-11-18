@@ -9,34 +9,76 @@
  */
 {
   "sections": {
-    "image_banner_full_Gkjhb9": {
+    "image_banner_63Vmiz": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_JGMz4J": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_YPcpCr": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_CPntCJ": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JGMz4J",
+        "text_YPcpCr",
+        "button_CPntCJ"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Top_Hero_Banner_website_size.jpg",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "650px",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 28,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_full_T487xA": {
       "type": "image-banner-full",
+      "custom_css": [
+        ".responsive-banner {padding-top: 10px !important;}"
+      ],
       "name": "Responsive Banner",
       "settings": {
         "desktop_image": "shopify://shop_images/Top_Hero_Banner_website_size.jpg",
         "mobile_image": "shopify://shop_images/Top_Hero_Banner.jpg"
-      }
-    },
-    "mobile_stats_qdTBP9": {
-      "type": "mobile-stats",
-      "name": "Mobile Stats",
-      "settings": {
-        "stat_1_number": "35,000+",
-        "stat_1_label": "5 star reviews",
-        "stat_2_number": "4,000+",
-        "stat_2_label": "Repeat Orders"
-      }
-    },
-    "custom_liquid_wVpLqm": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"bv-stats-mobile\">\n  <div class=\"bv-stat\">\n    <div class=\"bv-num\">35,000+</div>\n    <div class=\"bv-label\">5 star reviews</div>\n  </div>\n\n  <div class=\"bv-divider\"></div>\n\n  <div class=\"bv-stat\">\n    <div class=\"bv-num\">4,000+</div>\n    <div class=\"bv-label\">Repeat Orders</div>\n  </div>\n</div>\n\n<style>\n/* Hide on desktop */\n.bv-stats-mobile {\n  display: none;\n}\n\n@media (max-width: 768px) { /* show only on mobile/tablet */\n  .bv-stats-mobile {\n    display: flex !important;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    gap: 30px;\n    background: linear-gradient(90deg, #FFEDC6, #ffefcf);\n\n    border-radius: 10px;\n    padding: 16px 24px;\n    margin: 20px auto;\n    width: 100%;\n    box-sizing: border-box;\n  }\n\n  .bv-stat {\n    text-align: center;\n    min-width: 120px;\n  }\n\n  .bv-num {\n    font-weight: 800;\n    font-size: 24px;\n    line-height: 1.1;\n    color: #9b4d00;\n    white-space: nowrap;\n  }\n\n  .bv-label {\n    font-weight: 600;\n    font-size: 14px;\n    color: #9b4d00;\n    white-space: nowrap;\n  }\n\n  .bv-divider {\n    width: 1px;\n    height: 32px;\n    background: #9b4d00;\n    flex: 0 0 auto;\n    border-radius: 1px;\n  }\n}\n</style>",
-        "full_width": false,
-        "show_divider": false,
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "main": {
@@ -93,12 +135,12 @@
             "price_size": "medium"
           }
         },
-        "text_HGVi3w": {
+        "text_cLEM8K": {
           "type": "text",
           "settings": {
             "icon": "none",
-            "text": "{{ section.settings.product.metafields.custom.product_meta_secondary_text.value }}",
-            "text_style": "body"
+            "text": "{{ section.settings.product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_style": "subtitle"
           }
         },
         "rating_jVyXzC": {
@@ -162,13 +204,13 @@
         "custom_liquid_wcEjfy": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"shipping-container\"><div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping on All Orders</span></div></div> <div class=\"shipping-honey\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Honey.png?v=1756972555\">\n    </div></div>\n<style>\n.shipping-container{\n  width:100%;\n  display:flex;\n  justify-content:space-between;\n  align-items:center;\n}\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\n  align-items:center;\n  padding: 5px 10px;\n  border-radius: 5px;\n}\n.shipping-text {\n    font-size: 15px;\n  font-weight:700;\n  margin-left: 5px;\n  white-space: nowrap;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin-left: 5px;\n    margin-right: 5px;\n}\n.shipping-image img{\nwidth:17px;\n}\n.shipping-honey img{\n  height:70px;\n}\n@media(max-width:800px){\n.shipping-text{\n  font-size: 13px;\n}\n}\n</style>"
+            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping on All Orders</span></div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
           }
         }
       },
       "block_order": [
         "title_cKDyGt",
-        "text_HGVi3w",
+        "text_cLEM8K",
         "rating_jVyXzC",
         "countdown_fWFPay",
         "price_XaBRbk",
@@ -181,25 +223,24 @@
       ],
       "custom_css": [
         "@media (max-width: 768px) {.price-quantity-wrapper {margin-bottom: 1rem; }}",
-        "#ProductInfo-template--20175041659138__featured_product_xcBbQ6 .product-form__submit {background-color: #a23f00 !important; color: #fff !important; border-color: #cf6e25 !important; font-size: 20px;}",
+        "#ProductInfo-template--19857431855330__featured_product_xcBbQ6 .product-form__submit {background-color: #cf6e25 !important; color: #fff !important; border-color: #cf6e25 !important;}",
         ".product__text {margin-top: 0rem;}",
         ".product__title {margin-bottom: 0rem;}",
-        ".product__title .product__heading {letter-spacing: 0rem; font-weight: 600; text-transform: uppercase;}",
-        ".price__badge-sale {background: #00994f; color: white; font-size: 14px;}"
+        ".product__title .product__heading {letter-spacing: 0rem; font-weight: 600; text-transform: uppercase;}"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "product": "honey-oud-unisex-perfume",
+        "product": "honey-oud-unisex-perfume-3-38-fl-oz",
         "layout": "media_first",
         "full_width": false,
         "show_divider": false,
         "hide_variants": false,
         "enable_image_zoom": false,
         "enable_video_looping": false,
-        "image_ratio": "adapt",
+        "image_ratio": "adapt_first",
         "image_position": "center center",
         "enable_layered_images": false,
-        "padding_top": 16,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -235,7 +276,7 @@
         "image_XXekrm": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/lemon.png",
+            "image": "shopify://shop_images/lemon_40d524d6-2830-40d7-8579-3de18456c5d6.png",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h5",
@@ -251,15 +292,12 @@
         "image_V9xGeJ",
         "image_XXekrm"
       ],
-      "custom_css": [
-        "@media (max-width: 768px) {.title-wrapper.center {justify-content: flex-start !important; }}",
-        ".title-wrapper .title {letter-spacing: 0px;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.gallery.presets.name",
       "settings": {
-        "per_row": 3,
-        "spacing_images": 6,
-        "image_height": 310,
+        "per_row": 4,
+        "spacing_images": 10,
+        "image_height": 350,
         "apply_overlay": true,
         "full_width": false,
         "show_divider": false,
@@ -269,7 +307,7 @@
         "heading_tag": "h2",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "mobile_image_height": 210,
+        "mobile_image_height": 250,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -277,10 +315,23 @@
     "gallery_H9DChW": {
       "type": "gallery",
       "blocks": {
+        "image_QiLb73": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4-review.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left"
+          }
+        },
         "image_B7akd9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Artboard_1_8c5c9e01-2258-40c5-b587-82ecbc8037df.jpg",
+            "image": "shopify://shop_images/3-REVIEW.jpg",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h5",
@@ -293,33 +344,7 @@
         "image_DAtKhA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Artboard_2_152caa5b-aec7-4242-b449-c8d3a8df5d15.jpg",
-            "image_position": "center center",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h3",
-            "link": "",
-            "text_box_position": "bottom-left"
-          }
-        },
-        "image_QiLb73": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_3_8b368b7a-40ff-486a-846c-8f9720708043.jpg",
-            "image_position": "center center",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h3",
-            "link": "",
-            "text_box_position": "bottom-left"
-          }
-        },
-        "image_bfPLWP": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Artboard_4_713b9c46-e584-4fae-85d8-4ae63de28dab.jpg",
+            "image": "shopify://shop_images/2-review.jpg",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h5",
@@ -331,20 +356,16 @@
         }
       },
       "block_order": [
-        "image_B7akd9",
-        "image_DAtKhA",
         "image_QiLb73",
-        "image_bfPLWP"
+        "image_B7akd9",
+        "image_DAtKhA"
       ],
-      "custom_css": [
-        "@media (max-width: 768px) {.title-wrapper.center {justify-content: flex-start !important; }}",
-        ".title-wrapper .title {letter-spacing: 0px;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.gallery.presets.name",
       "settings": {
-        "per_row": 4,
+        "per_row": 3,
         "spacing_images": 10,
-        "image_height": 200,
+        "image_height": 330,
         "apply_overlay": true,
         "full_width": false,
         "show_divider": false,
@@ -354,20 +375,17 @@
         "heading_tag": "h2",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "mobile_image_height": 210,
+        "mobile_image_height": 220,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
     "featured_collection_wYX7ij": {
       "type": "featured-collection",
-      "custom_css": [
-        "@media (max-width: 768px) {.title-wrapper.center {justify-content: flex-start !important; }}",
-        ".title-wrapper .title {letter-spacing: 0px;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "bestseller",
+        "collection": "bestsellers",
         "products_to_show": 4,
         "show_view_all": false,
         "show_divider": false,
@@ -404,9 +422,8 @@
     }
   },
   "order": [
-    "image_banner_full_Gkjhb9",
-    "mobile_stats_qdTBP9",
-    "custom_liquid_wVpLqm",
+    "image_banner_63Vmiz",
+    "image_banner_full_T487xA",
     "main",
     "contact_form_M3WQFq",
     "featured_product_xcBbQ6",

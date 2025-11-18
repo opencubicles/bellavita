@@ -21,13 +21,13 @@
     "slideshow_kwPcBi": {
       "type": "slideshow",
       "blocks": {
-        "image_MdXHCy": {
+        "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Him_92e8a38b-9ff6-47df-94a0-64d6ff296fcd.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Him_aa50d835-b6dc-4488-b68a-b0fcfa590a8e.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_For_Him_1_ac27434d-fc53-441e-a06a-6c7e7852942c.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Him_1_2a425ba4-7add-4df4-8f46-502511edea3b.jpg",
             "image_position": "center center",
-            "text_box_position": "middle-center",
+            "text_box_position": "bottom-left",
             "subheading": "",
             "subheading_size": "h5",
             "heading": "",
@@ -38,18 +38,18 @@
             "button_label": "",
             "button_link": "shopify://collections/men-fragrance",
             "button_secondary_label": "",
-            "button_secondary_link": "shopify://collections/men-fragrance",
+            "button_secondary_link": "",
             "button_size": "medium",
             "button_style_secondary": false
           }
         },
-        "image_UTGxj7": {
+        "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Her_e558cab7-6c28-4ff9-b14e-08bad639e0db.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Her_ccd7309d-7102-4d19-8b5a-8aa0138308fe.jpg",
+            "image": "shopify://shop_images/Homepage_Banner_For_Her_1_d4c50c4d-3353-49f0-8c1e-f3b9034c4728.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Her_1_3149331a-ce15-4889-be1e-ac789571da44.jpg",
             "image_position": "center center",
-            "text_box_position": "bottom-left",
+            "text_box_position": "middle-center",
             "subheading": "",
             "subheading_size": "h5",
             "heading": "",
@@ -65,34 +65,11 @@
             "button_style_secondary": false
           }
         },
-        "image_4kaVAz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Unisex_c2ca3769-db2a-4145-9152-8118580789de.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Unisex_6d0a0776-7daf-421d-854f-5658c1d3f4fc.jpg",
-            "image_position": "center center",
-            "text_box_position": "middle-center",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h1",
-            "heading_tag": "h2",
-            "text": "",
-            "text_size": "typeset",
-            "button_label": "",
-            "button_link": "shopify://collections/unisex-fragrance",
-            "button_secondary_label": "",
-            "button_secondary_link": "",
-            "button_size": "medium",
-            "button_style_secondary": false
-          }
-        },
         "image_tiQb3A": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Unisex_banner_-_Desktop__1.png",
-            "image_mobile": "shopify://shop_images/Unisex_banner_-_Mobile_2.png",
+            "image": "shopify://shop_images/Homepage_Banner_For_Unisex_1_92b8bbbd-33ae-4531-a025-7d3eabeb20f9.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Unisex_1_2e696fce-2f62-4e18-9f48-47ef8c3d70e3.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -112,7 +89,6 @@
         }
       },
       "block_order": [
-        "image_MdXHCy",
         "image_UTGxj7",
         "image_4kaVAz",
         "image_tiQb3A"
@@ -204,15 +180,15 @@
     "1710513085af0e5eb1": {
       "type": "apps",
       "blocks": {
-        "videowise_video_commerce_videowise_page_widgets_zfRBMk": {
+        "videowise_video_commerce_videowise_page_widgets_ir97ff": {
           "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
           "settings": {
-            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_685ba61d1e06a50058897e5c\"></div>"
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_691aa6595c16640048383a2b\"></div>"
           }
         }
       },
       "block_order": [
-        "videowise_video_commerce_videowise_page_widgets_zfRBMk"
+        "videowise_video_commerce_videowise_page_widgets_ir97ff"
       ],
       "settings": {
         "include_margins": true,
@@ -398,7 +374,7 @@
         "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-3": {
           "type": "product",
           "settings": {
-            "product": "honey-oud-unisex-perfume-3-4-fl-oz",
+            "product": "honey-oud-unisex-perfume-3-38-fl-oz",
             "color": "#e7e7e7",
             "horizontal": 77,
             "vertical": 68
@@ -407,7 +383,7 @@
         "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-1": {
           "type": "product",
           "settings": {
-            "product": "ceo-man-luxury-perfume-3-4-fl-oz",
+            "product": "ceo-man-luxury-perfume",
             "color": "#e7e7e7",
             "horizontal": 50,
             "vertical": 55
@@ -416,7 +392,7 @@
         "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-2": {
           "type": "product",
           "settings": {
-            "product": "white-oud-unisex-perfume-3-4-fl-oz",
+            "product": "white-oud-unisex-perfume-3-38-fl-oz",
             "color": "#e7e7e7",
             "horizontal": 22,
             "vertical": 78
@@ -707,7 +683,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "shopify://products/ceo-man-luxury-perfume-3-4-fl-oz",
+            "button_link": "shopify://products/ceo-man-luxury-perfume",
             "button_secondary_label": "Button Secondary label",
             "button_secondary_link": "",
             "button_size": "medium",
@@ -841,7 +817,7 @@
           "type": "button",
           "settings": {
             "button_label": "View Now",
-            "button_link": "shopify://products/ceo-man-luxury-perfume-3-4-fl-oz",
+            "button_link": "shopify://products/ceo-man-luxury-perfume",
             "button_size": "small",
             "button_style_secondary": false
           }
@@ -853,7 +829,7 @@
         "button_4pydJX"
       ],
       "settings": {
-        "image": "shopify://shop_images/ceo.webp",
+        "image": "shopify://shop_images/CEO.jpg",
         "image_link": "",
         "image_position": "center center",
         "layout": "image_first",
@@ -900,7 +876,7 @@
           "type": "button",
           "settings": {
             "button_label": "View Now",
-            "button_link": "shopify://products/honey-oud-unisex-perfume-3-4-fl-oz",
+            "button_link": "shopify://products/honey-oud-unisex-perfume-3-38-fl-oz",
             "button_size": "small",
             "button_style_secondary": false
           }
@@ -912,7 +888,7 @@
         "button_DAY3x9"
       ],
       "settings": {
-        "image": "shopify://shop_images/honey_oud.webp",
+        "image": "shopify://shop_images/HONEY_OUD_8fa179df-69a4-405f-bafa-291c5c357643.jpg",
         "image_link": "",
         "image_position": "center center",
         "layout": "text_first",
@@ -942,65 +918,65 @@
         "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/honey_oud_1.jpg",
+            "image": "shopify://shop_images/1_ccab1f09-db70-4b18-9a58-08759bcc173c.jpg",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/honey-oud-unisex-perfume-3-4-fl-oz",
+            "link": "shopify://products/skai-aquatic-unisex-perfume-3-38-fl-oz",
             "text_box_position": "bottom-left"
           }
         },
         "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ceo2.jpg",
+            "image": "shopify://shop_images/2_e8aae230-dc4c-415d-9d6a-3e8d5702fa42.jpg",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h4",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/ceo-man-luxury-perfume-3-4-fl-oz",
+            "link": "shopify://products/white-oud-unisex-perfume-3-38-fl-oz",
             "text_box_position": "middle-center"
           }
         },
         "0237030b-2b22-46e9-a89a-7f1501509b8a": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/white_oud_4.jpg",
+            "image": "shopify://shop_images/3_6eb4d897-0ce4-4eec-8914-02292a01b0c3.jpg",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/white-oud-unisex-perfume-3-4-fl-oz",
+            "link": "shopify://products/ceo-man-luxury-perfume",
             "text_box_position": "middle-center"
           }
         },
         "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/skai5.jpg",
-            "image_position": "center center",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h3",
-            "link": "shopify://products/skai-aquatic-unisex-perfume-3-4-fl-oz",
-            "text_box_position": "bottom-left"
-          }
-        },
-        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/4_1.jpg",
+            "image": "shopify://shop_images/4_1_4f70b220-7c95-4101-a980-674285c478a5.jpg",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
             "link": "shopify://products/date-woman-perfume-3-4-fl-oz",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_e158b600-2e3b-4a4d-952e-c4bf43dbc30f.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "shopify://products/honey-oud-unisex-perfume-3-38-fl-oz",
             "text_box_position": "bottom-left"
           }
         }
