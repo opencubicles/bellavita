@@ -226,8 +226,14 @@
                       </div>
                     </details>
                   {%- else -%}
-                    <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__itemfocus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %} {% if shop.metafields.custom.menu_gif != blank %} style="justify-content:inherit !important;" {% endif %}>
+                   
+                    <a href="{{ link.url }}" class="test menu-drawer__menu-item list-menu__itemfocus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %} {% if shop.metafields.custom.menu_gif != blank %} style="justify-content:inherit !important;" {% endif %}>
+                        
+                        {%- if link.title == 'Buy 3 @ $59.99 + Free Gift' -%}
+                          {{ link.title | escape }}&nbsp;<span class="special-offer-menu">Black Friday</span>
+                        {%- else -%}
                         {{ link.title | escape }}
+                        {%- endif -%}
                     </a>
                   {%- endif -%}
                 </li>

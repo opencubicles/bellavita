@@ -55,17 +55,30 @@
 
       {% assign shipping_bar = false %}
       {% assign buy2collectionProductexist = false %}
-      {% assign target_collection = 'buy2get1' %}
+
+      {%- comment -%}
+      Define the target collections **as an array**
+      Example: buy2get1, winter-sale, free-items
+      {%- endcomment -%}
+      {% assign target_collections = "buy2get1,buy1get1" | split: "," %}
 
       {% for item in cart.items %}
+
+
         {% if item.product.metafields.custom.free_shipping_products %}
           {% assign shipping_bar = true %}
         {% endif %}
 
-        {% assign collection_handles = item.product.collections | map: 'handle' %}
-        {% if collection_handles contains target_collection %}
-          {% assign buy2collectionProductexist = true %}
-        {% endif %}
+      
+        {% assign product_collections = item.product.collections | map: "handle" %}
+
+      
+        {% for t in target_collections %}
+          {% if product_collections contains t %}
+            {% assign buy2collectionProductexist = true %}
+          {% endif %}
+        {% endfor %}
+
       {% endfor %}
 
       {%- liquid

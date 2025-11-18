@@ -12,6 +12,28 @@
     "slideshow_kwPcBi": {
       "type": "slideshow",
       "blocks": {
+        "image_maVL8h": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Main_Banner_Desktop_feb1d2cf-ba94-4491-905a-f3d599603673.jpg",
+            "image_mobile": "shopify://shop_images/Main_Banner_Mobile_99c57c98-6072-4368-b815-86c2c2edb7df.jpg",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "https://bellavitaluxe.com/apps/gbb/easybundle/5?page=addProductsPage1&currentFlow=byob",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
         "image_Cy7EAB": {
           "type": "image",
           "settings": {
@@ -104,6 +126,7 @@
         }
       },
       "block_order": [
+        "image_maVL8h",
         "image_Cy7EAB",
         "image_tiQb3A",
         "image_UTGxj7",
@@ -536,7 +559,7 @@
             "heading": "Perfumes For Them",
             "description": "<p>Imagine having a fragrance that adjusts to your style, mood, and preference. Fragrances that aren't restricted by gender, but rather by your own creativity.</p>",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/unisex",
+            "button_link": "shopify://collections/unisex-perfumes",
             "button_size": "small",
             "button_style_secondary": true
           }

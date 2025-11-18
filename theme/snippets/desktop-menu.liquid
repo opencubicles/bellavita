@@ -140,9 +140,13 @@
                 class="first header__menu-item{% if link.current %} header__active-menu-item{% endif %} header__menu-item--top list-menu__item focus-inset" 
                 {% if link.current %} aria-current="page"{% endif %} 
                 style="margin-top:4px">
-
+                {%- if link.title == 'Buy 3 @ $59.99 + Free Gift' -%}
+                  <span class="label test">{{ link.title | escape }}</span><span class="special-offer-menu">Black Friday</span>
+                {%- else -%}
                 <span class="label">{{ link.title | escape }}</span>
+                {%- endif -%}
               </a>
+             
             </dropdown-menu>
           {%- endif -%}
         {%- endif -%}

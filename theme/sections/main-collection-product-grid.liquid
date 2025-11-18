@@ -136,7 +136,7 @@
                   assign lazy_load = false
                 endif
               -%}
-              {% if collection.handle == 'buy2get1' %}
+              {% if collection.handle == 'buy2get1' or collection.handle == 'buy1get1' %}
                 <li class="grid__item" data-available="{{ product.available }}" data-index="{% if product.available %}{{- paginate.current_page  | times: 100 | plus: counter -}}{% else %}9999{% endif %}">
                   {% render 'card-product',
                     card_product: product,
