@@ -14,6 +14,26 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_AkiHJQ": {
+          "type": "announcement",
+          "settings": {
+            "text": "🛒BLACK FRIDAY SALE IS LIVE🔥",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        },
+        "announcement_QLwgzc": {
+          "type": "announcement",
+          "settings": {
+            "text": "GET UP TO 40% OFF🚨",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        },
         "announcement_eXEtFh": {
           "type": "announcement",
           "settings": {
@@ -33,59 +53,13 @@
             "end_date": "",
             "link": ""
           }
-        },
-        "announcement_AkiHJQ": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "🎃Halloween Sale is Live －Up To 25% OFF on ALL🔥",
-            "text_on_mobile": "",
-            "text_size": 14,
-            "end_date": "",
-            "link": ""
-          }
-        },
-        "announcement_QLwgzc": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "🎃BUY THIS & GET 16% OFF TODAY🎁",
-            "text_on_mobile": "",
-            "text_size": 14,
-            "end_date": "",
-            "link": ""
-          }
-        },
-        "announcement_9t6J3t": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "🎃BUY THIS & GET 21% OFF TODAY🎁",
-            "text_on_mobile": "",
-            "text_size": 14,
-            "end_date": "",
-            "link": ""
-          }
-        },
-        "announcement_LPWFyn": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "🎃BUY THIS & GET 25% OFF TODAY🎁",
-            "text_on_mobile": "",
-            "text_size": 14,
-            "end_date": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "announcement_eXEtFh",
-        "announcement_PpnE34",
         "announcement_AkiHJQ",
         "announcement_QLwgzc",
-        "announcement_9t6J3t",
-        "announcement_LPWFyn"
+        "announcement_eXEtFh",
+        "announcement_PpnE34"
       ],
       "settings": {
         "only_homepage": false,
