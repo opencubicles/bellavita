@@ -15,8 +15,8 @@
         "image_tiQb3A": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_UAE_Launch.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_UAE_Launch.jpg",
+            "image": "shopify://shop_images/1_4.jpg",
+            "image_mobile": "shopify://shop_images/1_5.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -37,8 +37,8 @@
         "image_D9A8zA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Him.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Him.jpg",
+            "image": "shopify://shop_images/2_2.jpg",
+            "image_mobile": "shopify://shop_images/2_3.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -59,8 +59,8 @@
         "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Her.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Her.jpg",
+            "image": "shopify://shop_images/3_1_a4851e16-c8b5-4c65-ab38-02a9fb304870.jpg",
+            "image_mobile": "shopify://shop_images/3_2.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -81,8 +81,8 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Unisex.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Unisex.jpg",
+            "image": "shopify://shop_images/4_2.jpg",
+            "image_mobile": "shopify://shop_images/4_3.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
