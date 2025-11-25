@@ -52,10 +52,10 @@
           </svg>
         </drawer-close-button>
       </div>
-
+      
       {% assign shipping_bar = false %}
       {% assign buy2collectionProductexist = false %}
-
+      
       {%- comment -%}
       Define the target collections **as an array**
       Example: buy2get1, winter-sale, free-items
@@ -78,6 +78,7 @@
             {% assign buy2collectionProductexist = true %}
           {% endif %}
         {% endfor %}
+
 
       {% endfor %}
 
@@ -277,6 +278,7 @@
         </div>
     </div>
     {% endif %} 
+
     {% if shop.permanent_domain != 'bellavitaglobal.myshopify.com' and shop.permanent_domain != 'bellavita-bangladesh.myshopify.com' and shop.permanent_domain != 'bv-us.myshopify.com' and shop.permanent_domain != 'bv-uk.myshopify.com' %} 
       {% if buy2collectionProductexist == false %}
       {% if cart.item_count == 1 %}
@@ -290,13 +292,12 @@
         </div> {% endcomment %}
       {% elsif cart.item_count > 1  %}  
         <div class="free-shipping typeset0" style="padding-bottom:10px;">
-          
           <span class="free-shipping__text">Hurray! 10% discount applied</span>
           <span class="free-shipping__progress free-shipping__progress--success" style="--progress: 100%; "></span>
         </div>
       {% endif %}
       {% endif %}  
-      {% endif %} 
+    {% endif %} 
     <div class="mini-cart__main" id="main-cart-items">
       <cart-items>
       
@@ -608,18 +609,33 @@
         {%- endfor -%}
       {%- endif -%}
 
+      {% assign embrougecollectionProductexist = false %}
+
+      {% for item in cart.items %}
+        
+        {% assign product_collectionss = item.product.collections | map: "handle" %}
+        
+        {% if product_collectionss contains "embarouge" %}
+          {% assign embrougecollectionProductexist = true %}
+        {% endif %}
+
+      {% endfor %}
+
       {% unless upsell == blank %}
-      <cart-recommendations class="cart-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ cart.items.first.product_id }}&limit={{ cart_recommendations_limit }}" data-animate data-animate-delay-{{ animate_count }}>
-        <!-- <div class="title h4">{{ settings.upsell_heading | escape }}</div> -->
+        
+      {% if embrougecollectionProductexist == false %}
+        <cart-recommendations  class="cart-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ cart.items.first.product_id }}&limit={{ cart_recommendations_limit }}" data-animate data-animate-delay-{{ animate_count }}>
+          <!-- <div class="title h4">{{ settings.upsell_heading | escape }}</div> -->
 
-      {% if shop.metafields.custom.minicart_top_offer_banner and shop.metafields.custom.minicart_top_offer_banner != blank %}
-          <div class="title-image"><img class="title-img" src="{{ shop.metafields.custom.minicart_top_offer_banner | img_url: '800x' }}"  width="100%"></div>
+        {% if shop.metafields.custom.minicart_top_offer_banner and shop.metafields.custom.minicart_top_offer_banner != blank %}
+            <div class="title-image"><img class="title-img" src="{{ shop.metafields.custom.minicart_top_offer_banner | img_url: '800x' }}"  width="100%"></div>
+        {% endif %}
+
+        <ul class="mini-cart__navigation">        
+            {{upsell}}
+          </ul>
+        </cart-recommendations> 
       {% endif %}
-
-      <ul class="mini-cart__navigation">        
-          {{upsell}}
-        </ul>
-      </cart-recommendations> 
       {% endunless %} 
     </div>
 
@@ -869,7 +885,6 @@
 </form>
 {% if shop.permanent_domain != 'bellavitaglobal.myshopify.com' and shop.permanent_domain != 'bellavita-bangladesh.myshopify.com' and shop.permanent_domain != 'bv-us.myshopify.com' %}
 <style>
-
 .free-shipping__progress {
   display: block;
   width: 100%;

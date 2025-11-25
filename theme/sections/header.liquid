@@ -377,6 +377,21 @@
     {%- endif -%}
         <a href="{{ routes.root_url }}" class="header__heading-link focus-inset">
           {%- if section.settings.logo != blank -%}
+           
+            {% if request.path contains 'embarouge' %}
+            {%- liquid
+              assign logo = section.settings.embarouge_logo
+              assign logo_height = section.settings.logo_height
+              assign logo_height_2x = section.settings.logo_height | times: 2
+
+              assign mobile_logo = section.settings.embarouge_logo | default: logo
+              assign mobile_logo_height = section.settings.mobile_logo_height
+              assign mobile_logo_height_2x = section.settings.mobile_logo_height | times: 2
+
+              assign transparent_logo = section.settings.transparent_logo
+              assign mobile_transparent_logo = section.settings.mobile_transparent_logo | default: transparent_logo
+            -%}
+          {%- else -%}
             {%- liquid
               assign logo = section.settings.logo
               assign logo_height = section.settings.logo_height
@@ -389,6 +404,7 @@
               assign transparent_logo = section.settings.transparent_logo
               assign mobile_transparent_logo = section.settings.mobile_transparent_logo | default: transparent_logo
             -%}
+           {%- endif -%} 
 
             {%- if mobile_logo -%}
               {%- capture loading_strategy -%}{% if template.name == 'index' %}lazy{% else %}eager{% endif %}{%- endcapture -%} 
@@ -787,6 +803,11 @@
       "type": "image_picker",
       "id": "mobile_logo",
       "label": "t:sections.header.settings.mobile_logo.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "embarouge_logo",
+      "label": "t:sections.header.settings.logo.label"
     },
     {
       "type": "range",

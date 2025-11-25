@@ -1,0 +1,689 @@
+<!-- FULL DYNAMIC FRAGRANCE FINDER (copy/paste over your existing block) -->
+{% schema %}
+{
+  "name": "Fragrance Finder App",
+  "settings": []
+}
+{% endschema %}
+
+<style>
+/* WRAPPER */
+.ff-wrapper {
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #faf2ff, #fdeff6);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+}
+
+/* MAIN CONTAINER */
+.ff-main {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ALIGN WRAPPER for progress + back button */
+.ff-align {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.ff-header h1 { font-size: 28px; margin: 0; font-weight: 700; }
+.ff-header p { color: #555; margin: 4px 0 20px; }
+
+/* PROGRESS */
+.ff-progress-wrap { margin-bottom: 8px; display:none; }
+.ff-progress-text { display: flex; justify-content: space-between; font-size: 13px; color: #444; }
+.ff-progress-track { width: 100%; height: 6px; background: #e9e9e9; border-radius: 10px; margin-top: 6px; }
+.ff-progress-bar { height: 6px; width: 0%; background: linear-gradient(90deg,#a855f7,#ec4899); border-radius: 10px; transition: width .3s; }
+
+/* BACK BUTTON */
+.ff-global-back {
+  display: none;
+  margin: 12px 0 0;
+  padding-left: 3px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #222;
+}
+
+/* MAIN CARD */
+.ff-card {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 28px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* INTRO STEP 0 */
+.ff-intro-icon { font-size: 42px; color: #a855f7; }
+.ff-intro-title { font-size: 32px; font-weight: 700; margin: 12px 0; }
+.ff-intro-sub { color: #666; margin-bottom: 30px; font-size: 16px; }
+.ff-start-btn {
+  background: linear-gradient(90deg,#a855f7,#ec4899);
+  padding: 14px 36px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+}
+
+/* TITLE */
+.ff-title { font-size: 28px; font-weight: 700; margin-bottom: 25px; }
+
+/* OPTIONS */
+.ff-options { display: grid; gap: 20px; }
+
+.ff-option {
+  padding: 25px;
+  border: 2px solid #eee;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: center;
+}
+.ff-option:hover { transform: scale(1.02); border-color: #d9c7ff; }
+
+.ff-option h3 { margin: 10px 0 5px; font-size: 20px; }
+.ff-option p { color: #666; margin: 0; font-size: 14px; }
+.ff-icon { font-size: 34px; margin-bottom: 6px; }
+
+/* LIST TYPE STEPS (left aligned) */
+.ff-list .ff-option { text-align: left; }
+
+/* RESULTS */
+.ff-results { margin-top: 20px; }
+
+/* PRODUCT CARD */
+.ff-product-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.ff-product-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  background: #f0f1f4;
+}
+
+.ff-product-info {
+  padding: 18px 22px;
+}
+
+.ff-product-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.ff-product-info p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.ff-product-bottom {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ff-price {
+  color: #c026d3;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ff-shop-btn {
+  background: linear-gradient(90deg,#a855f7,#ec4899);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.ff-footer {
+  margin-top: 40px;
+  color: #777;
+}
+/* list option: icon left, text column on the right */
+.ff-list .ff-option {
+  display: flex;
+  align-items: center;      /* vertical center the icon and text block */
+  gap: 18px;                /* spacing between icon and text */
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1.5px solid #e9ecef;
+  background: #fff;
+}
+
+/* icon size and fixed box so text doesn't shift */
+.ff-list .ff-option .ff-icon {
+  font-size: 30px;
+  width: 48px;
+  text-align: center;
+  flex-shrink: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+/* text column: title above subtitle */
+.ff-list .ff-option .ff-option-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* title */
+.ff-list .ff-option .ff-option-text h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.06;
+  font-weight: 700;
+}
+
+/* subtitle under title */
+.ff-list .ff-option .ff-option-text p {
+  margin: 6px 0 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* small helper for empty state */
+.ff-empty { color:#666; padding:18px; border-radius:12px; background:#fff; border:1px dashed #eee; }
+</style>
+
+<div class="ff-wrapper">
+  <div class="ff-main">
+
+    <!-- HEADER -->
+    <div class="ff-header">
+      <h1>Bella Vita Luxury</h1>
+      <p>Fragrance Finder</p>
+    </div>
+
+    <!-- PROGRESS + BACK BUTTON WRAPPER -->
+    <div class="ff-align">
+      <div class="ff-progress-wrap" id="ff-progress-wrap">
+        <div class="ff-progress-text">
+          <span>Progress</span>
+          <span id="ff-step-text">Step 1 of 4</span>
+        </div>
+        <div class="ff-progress-track">
+          <div id="ff-progress-bar" class="ff-progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- BACK BUTTON -->
+      <button id="ff-global-back" class="ff-global-back">← Back</button>
+    </div>
+
+    <!-- MAIN CARD -->
+    <div class="ff-card">
+
+      <!-- STEP 0: INTRO -->
+      <div class="ff-step" data-step="0">
+        <div class="ff-intro-icon">✨</div>
+        <div class="ff-intro-title">Still Scent-less? Don’t Overthink</div>
+        <div class="ff-intro-sub">Find your perfect perfume in just 3 steps</div>
+        <a class="ff-start-btn" id="ff-start">Find My Fragrance →</a>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="ff-step" data-step="1" style="display:none;">
+        <h2 class="ff-title">Who Are You Shopping For?</h2>
+        <div id="step2-options" class="ff-options"></div>
+      </div>
+
+      <!-- STEP 2 (Who Is This For) -->
+      <div class="ff-step" data-step="2" style="display:none;">
+        <h2 class="ff-title">Who Is This Gift For?</h2>
+        <div id="step3-options" class="ff-options"></div>
+      </div>
+
+      <!-- STEP 3 (Scent) -->
+      <div class="ff-step" data-step="3" style="display:none;">
+        <h2 class="ff-title">What Type of Scent Do You Like?</h2>
+        <div id="step4-options" class="ff-options ff-list"></div>
+      </div>
+
+      <!-- STEP 4 (Occasion) -->
+      <div class="ff-step" data-step="4" style="display:none;">
+        <h2 class="ff-title">When Will You Wear It?</h2>
+        <div id="step5-options" class="ff-options ff-list"></div>
+      </div>
+
+      <!-- STEP 5 RESULTS -->
+      <div class="ff-step" data-step="5" style="display:none;">
+        <h2 class="ff-title">FOUND IT! Top Picks For You</h2>
+        <p class="ff-sub" style="color:#666;margin-bottom:20px;">Based on your preferences, here are your perfect matches</p>
+
+        <div id="ff-results" class="ff-results"></div>
+
+      </div>
+
+    </div>
+
+    <p class="ff-footer">✨ IFRA Certified • Cruelty Free • Imported Oils</p>
+
+  </div>
+</div>
+
+<script>
+(function(){
+
+  /***********************
+   * 1) YOUR CLEAN JSON  *
+   * (sanitized & used)  *
+   ***********************/
+  const FRAGRANCE_DATA = [
+{"Step 2":"For Myself","Step 3":"Him","Step 4: Scent":"Fresh & Citrusy","Step 5: Occasion":"Everyday / Work","Final step Product 1 Perfect Match":"CEO Man","Final step Product 2 Best Alternative":"Alpha Him Mood","Final step Product 3 Premium/Niche":"Fresh Unisex","Final step Product 4 Cross-Category":"Skai Aquatic","Final step Product 5 Best Value Combo":"Trendsetter Combo"},
+{"Step 2":"For Myself","Step 3":"Him","Step 4: Scent":"Fresh & Citrusy","Step 5: Occasion":"Active / Gym","Final step Product 1 Perfect Match":"Ocean Man","Final step Product 2 Best Alternative":"Skai Aquatic","Final step Product 3 Premium/Niche":"Fresh Unisex","Final step Product 4 Cross-Category":"CEO Man","Final step Product 5 Best Value Combo":"Sigma Male Combo"},
+{"Step 2":"For Myself","Step 3":"Him","Step 4: Scent":"Fresh & Citrusy","Step 5: Occasion":"Date / Night","Final step Product 1 Perfect Match":"Magnetic Him Mood","Final step Product 2 Best Alternative":"Alpha Him","Final step Product 3 Premium/Niche":"Urban Oud Embarouge","Final step Product 4 Cross-Category":"CEO Man","Final step Product 5 Best Value Combo":"Sharp & Sexy Combo"},
+{"Step 2":"For Myself","Step 3":"Him","Step 4: Scent":"Woody & Earthy","Step 5: Occasion":"Everyday / Work","Final step Product 1 Perfect Match":"G.O.A.T. Man","Final step Product 2 Best Alternative":"White Oud","Final step Product 3 Premium/Niche":"22 North Embarouge","Final step Product 4 Cross-Category":"Alpha Him","Final step Product 5 Best Value Combo":"Sigma Male Combo"},
+{"Step 2":"For Myself","Step 3":"Him","Step 4: Scent":"Woody & Earthy","Step 5: Occasion":"Special / Luxury","Final step Product 1 Perfect Match":"Oud Perfume Gold","Final step Product 2 Best Alternative":"G.O.A.T. Man","Final step Product 3 Premium/Niche":"Monark Embarouge","Final step Product 4 Cross-Category":"Oud Dark","Final step Product 5 Best Value Combo":"All Kings Bundle"},
+{"Step 2":"For Myself","Step 3":"Him","Step 4: Scent":"Woody & Earthy","Step 5: Occasion":"Date / Mystery","Final step Product 1 Perfect Match":"Oud Dark","Final step Product 2 Best Alternative":"G.O.A.T. Man","Final step Product 3 Premium/Niche":"Kama Noir Embarouge","Final step Product 4 Cross-Category":"Fantasy Him","Final step Product 5 Best Value Combo":"The Best & The Beast"},
+{"Step 2":"For Myself","Step 3":"Him","Step 4: Scent":"Spicy & Bold","Step 5: Occasion":"Party / Energy","Final step Product 1 Perfect Match":"Klub Man","Final step Product 2 Best Alternative":"Oud Dark","Final step Product 3 Premium/Niche":"Monark Embarouge","Final step Product 4 Cross-Category":"Fantasy Him","Final step Product 5 Best Value Combo":"All Kings Bundle"},
+{"Step 2":"For Myself","Step 3":"Him","Step 4: Scent":"Spicy & Bold","Step 5: Occasion":"Date / Sensual","Final step Product 1 Perfect Match":"Fantasy Him Mood","Final step Product 2 Best Alternative":"Klub Man","Final step Product 3 Premium/Niche":"Oud Studio Embarouge","Final step Product 4 Cross-Category":"Magnetic Him","Final step Product 5 Best Value Combo":"The Best & The Beast"},
+{"Step 2":"For Myself","Step 3":"Him","Step 4: Scent":"Sweet & Fruity","Step 5: Occasion":"Romantic / Soft","Final step Product 1 Perfect Match":"Magnetic Him Mood","Final step Product 2 Best Alternative":"Honey Oud","Final step Product 3 Premium/Niche":"Vanilla Gourmet","Final step Product 4 Cross-Category":"White Oud","Final step Product 5 Best Value Combo":"Sharp & Sexy Combo"},
+{"Step 2":"For Myself","Step 3":"Her","Step 4: Scent":"Floral","Step 5: Occasion":"Chic / Brunch","Final step Product 1 Perfect Match":"Senorita Woman","Final step Product 2 Best Alternative":"Alpha Her Mood","Final step Product 3 Premium/Niche":"Luxria Embarouge","Final step Product 4 Cross-Category":"Rose Woman","Final step Product 5 Best Value Combo":"Girls Night Out"},
+{"Step 2":"For Myself","Step 3":"Her","Step 4: Scent":"Floral","Step 5: Occasion":"Elegant / Classic","Final step Product 1 Perfect Match":"Rose Woman","Final step Product 2 Best Alternative":"Senorita Woman","Final step Product 3 Premium/Niche":"22 North Embarouge","Final step Product 4 Cross-Category":"Luxria Embarouge","Final step Product 5 Best Value Combo":"All Queens Bundle"},
+{"Step 2":"For Myself","Step 3":"Her","Step 4: Scent":"Floral","Step 5: Occasion":"Party / Bold","Final step Product 1 Perfect Match":"Glam Woman","Final step Product 2 Best Alternative":"Rose Woman","Final step Product 3 Premium/Niche":"Luxria Embarouge","Final step Product 4 Cross-Category":"Fantasy Her","Final step Product 5 Best Value Combo":"Double Trouble"},
+{"Step 2":"For Myself","Step 3":"Her","Step 4: Scent":"Sweet & Fruity","Step 5: Occasion":"Date / Romance","Final step Product 1 Perfect Match":"Date Woman","Final step Product 2 Best Alternative":"Magnetic Her","Final step Product 3 Premium/Niche":"Honey Oud","Final step Product 4 Cross-Category":"Vanilla Gourmet","Final step Product 5 Best Value Combo":"Girls Night Out"},
+{"Step 2":"For Myself","Step 3":"Her","Step 4: Scent":"Sweet & Fruity","Step 5: Occasion":"Sensual / Night","Final step Product 1 Perfect Match":"Magnetic Her Mood","Final step Product 2 Best Alternative":"Date Woman","Final step Product 3 Premium/Niche":"Pistachio Gourmet","Final step Product 4 Cross-Category":"Fantasy Her","Final step Product 5 Best Value Combo":"Too Sweet Too Sexy"},
+{"Step 2":"For Myself","Step 3":"Her","Step 4: Scent":"Fresh & Citrusy","Step 5: Occasion":"Confidence / Work","Final step Product 1 Perfect Match":"Alpha Her Mood","Final step Product 2 Best Alternative":"Senorita Woman","Final step Product 3 Premium/Niche":"Fresh Unisex","Final step Product 4 Cross-Category":"Skai Aquatic","Final step Product 5 Best Value Combo":"Girls Night Out"},
+{"Step 2":"For Myself","Step 3":"Her","Step 4: Scent":"Spicy & Bold","Step 5: Occasion":"Intense / Night","Final step Product 1 Perfect Match":"Fantasy Her Mood","Final step Product 2 Best Alternative":"Glam Woman","Final step Product 3 Premium/Niche":"Oud Dark","Final step Product 4 Cross-Category":"Kama Noir Embarouge","Final step Product 5 Best Value Combo":"All Queens Bundle"},
+{"Step 2":"For Myself","Step 3":"Unisex","Step 4: Scent":"Fresh & Citrusy","Step 5: Occasion":"Clean / Daily","Final step Product 1 Perfect Match":"Fresh Unisex","Final step Product 2 Best Alternative":"Skai Aquatic","Final step Product 3 Premium/Niche":"Urban Oud Embarouge","Final step Product 4 Cross-Category":"Ocean Man","Final step Product 5 Best Value Combo":"Green & Cream Combo"},
+{"Step 2":"For Myself","Step 3":"Unisex","Step 4: Scent":"Fresh & Citrusy","Step 5: Occasion":"Sporty / Summer","Final step Product 1 Perfect Match":"Skai Aquatic","Final step Product 2 Best Alternative":"Ocean Man","Final step Product 3 Premium/Niche":"Fresh Unisex","Final step Product 4 Cross-Category":"Alpha Him","Final step Product 5 Best Value Combo":"Double Trouble"},
+{"Step 2":"For Myself","Step 3":"Unisex","Step 4: Scent":"Sweet & Fruity","Step 5: Occasion":"Summer Fun","Final step Product 1 Perfect Match":"Mango Gourmet","Final step Product 2 Best Alternative":"Pistachio Gourmet","Final step Product 3 Premium/Niche":"Honey Oud","Final step Product 4 Cross-Category":"Date Woman","Final step Product 5 Best Value Combo":"The MVP Trio"},
+{"Step 2":"For Myself","Step 3":"Unisex","Step 4: Scent":"Sweet & Fruity","Step 5: Occasion":"Warm / Luxury","Final step Product 1 Perfect Match":"Honey Oud","Final step Product 2 Best Alternative":"Vanilla Gourmet","Final step Product 3 Premium/Niche":"Oud Studio Embarouge","Final step Product 4 Cross-Category":"Oud Gold","Final step Product 5 Best Value Combo":"Too Sweet Too Sexy"},
+{"Step 2":"For Myself","Step 3":"Unisex","Step 4: Scent":"Sweet & Fruity","Step 5: Occasion":"Cozy / Comfort","Final step Product 1 Perfect Match":"Vanilla Gourmet","Final step Product 2 Best Alternative":"Pistachio Gourmet","Final step Product 3 Premium/Niche":"Honey Oud","Final step Product 4 Cross-Category":"Magnetic Her","Final step Product 5 Best Value Combo":"Green & Cream Combo"},
+{"Step 2":"For Myself","Step 3":"Unisex","Step 4: Scent":"Woody & Earthy","Step 5: Occasion":"Spiritual / Calm","Final step Product 1 Perfect Match":"White Oud","Final step Product 2 Best Alternative":"Oud Perfume Gold","Final step Product 3 Premium/Niche":"22 North Embarouge","Final step Product 4 Cross-Category":"Fresh Unisex","Final step Product 5 Best Value Combo":"Trendsetter Combo"},
+{"Step 2":"For Myself","Step 3":"Unisex","Step 4: Scent":"Woody & Earthy","Step 5: Occasion":"Nutty / Unique","Final step Product 1 Perfect Match":"Pistachio Gourmet","Final step Product 2 Best Alternative":"White Oud","Final step Product 3 Premium/Niche":"Honey Oud","Final step Product 4 Cross-Category":"Oud Studio Embarouge","Final step Product 5 Best Value Combo":"Sweet & Nutty"},
+{"Step 2":"For Myself","Step 3":"Unisex","Step 4: Scent":"Spicy & Bold","Step 5: Occasion":"Statement / Regal","Final step Product 1 Perfect Match":"Monark Embarouge","Final step Product 2 Best Alternative":"Oud Perfume Gold","Final step Product 3 Premium/Niche":"Kama Noir Embarouge","Final step Product 4 Cross-Category":"G.O.A.T Man","Final step Product 5 Best Value Combo":"All Kings Bundle"},
+{"Step 2":"For Myself","Step 3":"Unisex","Step 4: Scent":"Spicy & Bold","Step 5: Occasion":"Night / Seductive","Final step Product 1 Perfect Match":"Kama Noir Embarouge","Final step Product 2 Best Alternative":"Oud Dark","Final step Product 3 Premium/Niche":"Oud Studio Embarouge","Final step Product 4 Cross-Category":"Fantasy Him","Final step Product 5 Best Value Combo":"The Best & The Beast"},
+{"Step 2":"For Gifting","Step 3":"Him","Step 4: Scent":"Discovery","Step 5: Occasion":"Minis / Variety","Final step Product 1 Perfect Match":"Men's Gift Set","Final step Product 2 Best Alternative":"8-in-1 Him/Her Set","Final step Product 3 Premium/Niche":"Unisex Gift Set","Final step Product 4 Cross-Category":"Build Your Own Box","Final step Product 5 Best Value Combo":"Men's Deo Set"},
+{"Step 2":"For Gifting","Step 3":"Him","Step 4: Scent":"Big Bundle","Step 5: Occasion":"Best Sellers","Final step Product 1 Perfect Match":"Sigma Male Combo","Final step Product 2 Best Alternative":"Trendsetter Combo","Final step Product 3 Premium/Niche":"Sharp & Sexy Combo","Final step Product 4 Cross-Category":"All Kings Bundle","Final step Product 5 Best Value Combo":"The Best & The Beast"},
+{"Step 2":"For Gifting","Step 3":"Him","Step 4: Scent":"Custom","Step 5: Occasion":"Personal Choice","Final step Product 1 Perfect Match":"Build Your Own Box","Final step Product 2 Best Alternative":"Sigma Male Combo","Final step Product 3 Premium/Niche":"Trendsetter Combo","Final step Product 4 Cross-Category":"Sharp & Sexy Combo","Final step Product 5 Best Value Combo":"All Kings Bundle"},
+{"Step 2":"For Gifting","Step 3":"Her","Step 4: Scent":"Discovery","Step 5: Occasion":"Minis / Variety","Final step Product 1 Perfect Match":"Women's Gift Set","Final step Product 2 Best Alternative":"8-in-1 Him/Her Set","Final step Product 3 Premium/Niche":"Unisex Gift Set","Final step Product 4 Cross-Category":"Build Your Own Box","Final step Product 5 Best Value Combo":"Women's Deo Set"},
+{"Step 2":"For Gifting","Step 3":"Her","Step 4: Scent":"Big Bundle","Step 5: Occasion":"Best Sellers","Final step Product 1 Perfect Match":"Girls Night Out","Final step Product 2 Best Alternative":"All Queens Bundle","Final step Product 3 Premium/Niche":"Double Trouble","Final step Product 4 Cross-Category":"The 69 Duo","Final step Product 5 Best Value Combo":"Too Sweet Too Sexy"},
+{"Step 2":"For Gifting","Step 3":"Her","Step 4: Scent":"Custom","Step 5: Occasion":"Personal Choice","Final step Product 1 Perfect Match":"Build Your Own Box","Final step Product 2 Best Alternative":"Girls Night Out","Final step Product 3 Premium/Niche":"All Queens Bundle","Final step Product 4 Cross-Category":"Double Trouble","Final step Product 5 Best Value Combo":"The 69 Duo"},
+{"Step 2":"For Gifting","Step 3":"Couple","Step 4: Scent":"Discovery","Step 5: Occasion":"Variety Pack","Final step Product 1 Perfect Match":"8-in-1 Him/Her Set","Final step Product 2 Best Alternative":"Unisex Gift Set","Final step Product 3 Premium/Niche":"Men's  Women's Set","Final step Product 4 Cross-Category":"Build Your Own Box","Final step Product 5 Best Value Combo":"Him & Her Deo Set"},
+{"Step 2":"For Gifting","Step 3":"Couple","Step 4: Scent":"Big Bundle","Step 5: Occasion":"Romantic Duo","Final step Product 1 Perfect Match":"The 69 Duo","Final step Product 2 Best Alternative":"Double Trouble","Final step Product 3 Premium/Niche":"Kings & Queens Bundle","Final step Product 4 Cross-Category":"Too Sweet Too Sexy","Final step Product 5 Best Value Combo":"Sigma Male  Girls Night"},
+{"Step 2":"For Gifting","Step 3":"Unisex","Step 4: Scent":"Gourmet","Step 5: Occasion":"Foodie Scents","Final step Product 1 Perfect Match":"The MVP Trio","Final step Product 2 Best Alternative":"Green & Cream Combo","Final step Product 3 Premium/Niche":"Sweet & Nutty","Final step Product 4 Cross-Category":"The Cheeky Sundae","Final step Product 5 Best Value Combo":"Vanilla  Mango"},
+{"Step 2":"For Gifting","Step 3":"Unisex","Step 4: Scent":"Discovery","Step 5: Occasion":"Variety Pack","Final step Product 1 Perfect Match":"Unisex Gift Set","Final step Product 2 Best Alternative":"8-in-1 Him/Her Set","Final step Product 3 Premium/Niche":"Build Your Own Box","Final step Product 4 Cross-Category":"Men's Gift Set","Final step Product 5 Best Value Combo":"Women's Gift Set"},
+{"Step 2":"For Gifting","Step 3":"Unisex","Step 4: Scent":"Custom","Step 5: Occasion":"Personal Choice","Final step Product 1 Perfect Match":"Build Your Own Box","Final step Product 2 Best Alternative":"The MVP Trio","Final step Product 3 Premium/Niche":"Unisex Gift Set","Final step Product 4 Cross-Category":"Too Sweet Too Sexy","Final step Product 5 Best Value Combo":"Kings & Queens Bundle"}
+  ];
+
+  /*****************************
+   * 2) DOM REFS & STATE
+   *****************************/
+  const steps = document.querySelectorAll(".ff-step");
+  const progressBar = document.getElementById("ff-progress-bar");
+  const stepText = document.getElementById("ff-step-text");
+  const progressWrap = document.getElementById("ff-progress-wrap");
+  const backBtn = document.getElementById("ff-global-back");
+  const startBtn = document.getElementById("ff-start");
+
+  const step2Container = document.getElementById("step2-options");
+  const step3Container = document.getElementById("step3-options");
+  const step4Container = document.getElementById("step4-options");
+  const step5Container = document.getElementById("step5-options");
+  const resultsBox = document.getElementById("ff-results");
+
+  let currentStep = 0;        // 0..5
+  const totalSteps = 4;       // steps 1..4 are the selectable steps
+  const selection = {};       // selection.step2, step3, step4, step5
+
+  /*****************************
+   * 3) ICON MAPS (keep icons)
+   *****************************/
+  const ICONS = {
+    "For Myself": "🧑",
+    "For Gifting": "🎁",
+    "Him": "👔",
+    "Her": "👗",
+    "Unisex": "✨",
+    "Couple": "💑",
+    "Fresh & Citrusy": "🍋",
+    "Floral": "🌸",
+    "Sweet & Fruity": "🍯",
+    "Woody & Earthy": "🌲",
+    "Spicy & Bold": "🌶️",
+    // Gift/uncommon scents / bundles - default to sparkle
+    "Discovery": "🔍",
+    "Big Bundle": "📦",
+    "Custom": "⚙️",
+    "Gourmet": "🍨",
+    "Default": "✨"
+  };
+
+  /*****************************
+   * 4) UTIL: unique reducer
+   *****************************/
+  function unique(arr){
+    return Array.from(new Set(arr));
+  }
+
+  /*****************************
+   * 5) GENERATORS: create option DOM nodes
+   *****************************/
+  function createOption({label, subtitle, isList=false}){
+    const el = document.createElement("div");
+    el.className = "ff-option";
+    el.setAttribute("data-value", label);
+
+    if(isList){
+      // list style (icon left + text)
+      el.classList.add("ff-list-item");
+      const iconSpan = document.createElement("span");
+      iconSpan.className = "ff-icon";
+      iconSpan.textContent = ICONS[label] || ICONS["Default"];
+
+      const right = document.createElement("div");
+      right.className = "ff-option-text";
+      const h3 = document.createElement("h3");
+      h3.textContent = label;
+      right.appendChild(h3);
+      if(subtitle){
+        const p = document.createElement("p");
+        p.textContent = subtitle;
+        right.appendChild(p);
+      }
+
+      el.appendChild(iconSpan);
+      el.appendChild(right);
+    } else {
+      // card style
+      const icon = document.createElement("div");
+      icon.className = "ff-icon";
+      icon.textContent = ICONS[label] || ICONS["Default"];
+      const h3 = document.createElement("h3");
+      h3.textContent = label;
+      if(subtitle){
+        const p = document.createElement("p");
+        p.textContent = subtitle;
+        el.appendChild(icon);
+        el.appendChild(h3);
+        el.appendChild(p);
+      } else {
+        el.appendChild(icon);
+        el.appendChild(h3);
+      }
+    }
+
+    // click handler will be attached externally
+    return el;
+  }
+
+  /*****************************
+   * 6) RENDER STEP 2 OPTIONS
+   *****************************/
+  function renderStep2(){
+    step2Container.innerHTML = "";
+    const step2Options = ["For Myself", "For Gifting"];
+    if(!step2Options.length){
+      step2Container.innerHTML = '<div class="ff-empty">No options available.</div>';
+      return;
+    }
+    step2Options.forEach(label=>{
+      const opt = createOption({label, subtitle: null, isList:false});
+      opt.addEventListener("click", ()=> {
+        selection.step2 = label;
+        // reset deeper selections
+        delete selection.step3; delete selection.step4; delete selection.step5;
+        renderStep3();
+        showStep(2);
+      });
+      step2Container.appendChild(opt);
+    });
+  }
+
+  /*****************************
+   * 7) RENDER STEP 3 OPTIONS (depends on step2)
+   *****************************/
+  function renderStep3(){
+    step3Container.innerHTML = "";
+    if(!selection.step2){
+      step3Container.innerHTML = '<div class="ff-empty">Choose who you are shopping for first.</div>';
+      return;
+    }
+    const matches = FRAGRANCE_DATA.filter(i => i["Step 2"] === selection.step2);
+    const step3Options = unique(matches.map(i => i["Step 3"])).sort();
+    if(!step3Options.length){
+      step3Container.innerHTML = '<div class="ff-empty">No options for this selection.</div>';
+      return;
+    }
+    step3Options.forEach(label=>{
+      const subtitle = null;
+      const opt = createOption({label, subtitle, isList:false});
+      opt.addEventListener("click", ()=> {
+        selection.step3 = label;
+        delete selection.step4; delete selection.step5;
+        renderStep4();
+        showStep(3);
+      });
+      step3Container.appendChild(opt);
+    });
+  }
+
+  /*****************************
+   * 8) RENDER STEP 4 OPTIONS (scent) depends on step2+3
+   *****************************/
+  function renderStep4(){
+    step4Container.innerHTML = "";
+    if(!selection.step2 || !selection.step3){
+      step4Container.innerHTML = '<div class="ff-empty">Choose previous options first.</div>';
+      return;
+    }
+    const matches = FRAGRANCE_DATA.filter(i => i["Step 2"] === selection.step2 && i["Step 3"] === selection.step3);
+    const scents = unique(matches.map(i => i["Step 4: Scent"])).sort();
+    if(!scents.length){
+      step4Container.innerHTML = '<div class="ff-empty">No scents available for this selection.</div>';
+      return;
+    }
+    scents.forEach(label=>{
+      // optional subtitle: try to show short parenthetical info (not available in JSON), so keep null
+      const subtitle = null;
+      const opt = createOption({label, subtitle, isList:true});
+      opt.addEventListener("click", ()=> {
+        selection.step4 = label;
+        delete selection.step5;
+        renderStep5();
+        showStep(4);
+      });
+      step4Container.appendChild(opt);
+    });
+  }
+
+  /*****************************
+   * 9) RENDER STEP 5 OPTIONS (occasion) depends on step2+3+4
+   *****************************/
+  function renderStep5(){
+    step5Container.innerHTML = "";
+    if(!selection.step2 || !selection.step3 || !selection.step4){
+      step5Container.innerHTML = '<div class="ff-empty">Choose previous options first.</div>';
+      return;
+    }
+    const matches = FRAGRANCE_DATA.filter(i => i["Step 2"] === selection.step2 && i["Step 3"] === selection.step3 && i["Step 4: Scent"] === selection.step4);
+    const occasions = unique(matches.map(i => i["Step 5: Occasion"])).sort();
+    if(!occasions.length){
+      step5Container.innerHTML = '<div class="ff-empty">No occasions available for this selection.</div>';
+      return;
+    }
+    occasions.forEach(label=>{
+      const opt = createOption({label, subtitle: null, isList:true});
+      opt.addEventListener("click", ()=> {
+        selection.step5 = label;
+        renderResults();
+        showStep(5);
+      });
+      step5Container.appendChild(opt);
+    });
+  }
+
+  /*****************************
+   * 10) RENDER RESULTS (final 5 picks)
+   *****************************/
+  function renderResults(){
+    resultsBox.innerHTML = "";
+    if(!selection.step2 || !selection.step3 || !selection.step4 || !selection.step5){
+      resultsBox.innerHTML = '<div class="ff-empty">Please complete the selections to see results.</div>';
+      return;
+    }
+
+    // Find matching rows (should be at least one)
+    const matches = FRAGRANCE_DATA.filter(i =>
+      i["Step 2"] === selection.step2 &&
+      i["Step 3"] === selection.step3 &&
+      i["Step 4: Scent"] === selection.step4 &&
+      i["Step 5: Occasion"] === selection.step5
+    );
+
+    if(!matches.length){
+      resultsBox.innerHTML = '<div class="ff-empty">No product recommendations found for this combination.</div>';
+      return;
+    }
+
+    // We will use the first match to show the 5 recommended items
+    const row = matches[0];
+
+    // map to product display objects
+    const products = [
+      { title: row["Final step Product 1 Perfect Match"], subtitle: "Perfect Match", price: "£19.99", image: `https://via.placeholder.com/1100x900?text=${encodeURIComponent(row["Final step Product 1 Perfect Match"])}` },
+      { title: row["Final step Product 2 Best Alternative"], subtitle: "Best Alternative", price: "£17.99", image: `https://via.placeholder.com/1100x900?text=${encodeURIComponent(row["Final step Product 2 Best Alternative"])}` },
+      { title: row["Final step Product 3 Premium/Niche"], subtitle: "Premium / Niche", price: "£24.99", image: `https://via.placeholder.com/1100x900?text=${encodeURIComponent(row["Final step Product 3 Premium/Niche"])}` },
+      { title: row["Final step Product 4 Cross-Category"], subtitle: "Cross-Category Pick", price: "£16.99", image: `https://via.placeholder.com/1100x900?text=${encodeURIComponent(row["Final step Product 4 Cross-Category"])}` },
+      { title: row["Final step Product 5 Best Value Combo"], subtitle: "Best Value Combo", price: "£29.99", image: `https://via.placeholder.com/1100x900?text=${encodeURIComponent(row["Final step Product 5 Best Value Combo"])}` }
+    ];
+
+    // render each product card
+    const html = products.map(p => {
+      return `
+        <div class="ff-product-card">
+          <img src="${p.image}" class="ff-product-img" alt="${escapeHtml(p.title)}">
+          <div class="ff-product-info">
+            <h4>${escapeHtml(p.title)}</h4>
+            <p>${escapeHtml(p.subtitle)}</p>
+            <div class="ff-product-bottom">
+              <span class="ff-price">${p.price}</span>
+              <a href="#" class="ff-shop-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    resultsBox.innerHTML = html;
+  }
+
+  /*****************************
+   * 11) STEP NAV & PROGRESS
+   *****************************/
+  function showStep(step){
+    steps.forEach(s => s.style.display = (Number(s.dataset.step) === step) ? "block" : "none");
+    currentStep = step;
+
+    if(step === 0){
+      progressWrap.style.display = "none";
+      backBtn.style.display = "none";
+      return;
+    }
+
+    progressWrap.style.display = "block";
+    backBtn.style.display = step > 1 ? "block" : "none";
+
+    // progress bar: Step 1..4 map to 0..100
+    if(step === 5){
+      progressBar.style.width = "100%";
+      stepText.textContent = "Complete";
+      backBtn.style.display = "block";
+      return;
+    }
+
+    const pct = ((step - 1) / totalSteps) * 100;
+    progressBar.style.width = pct + "%";
+    stepText.textContent = `Step ${step} of ${totalSteps}`;
+  }
+
+  /*****************************
+   * 12) BACK BUTTON LOGIC
+   *****************************/
+  backBtn.addEventListener("click", ()=>{
+    if(currentStep <= 1){
+      showStep(1);
+      return;
+    }
+
+    // navigate back and clear deeper selections
+    if(currentStep === 5){
+      // from results go back to occasion step
+      delete selection.step5;
+      showStep(4);
+      return;
+    }
+    if(currentStep === 4){
+      // from occasion -> scent
+      delete selection.step4;
+      showStep(3);
+      return;
+    }
+    if(currentStep === 3){
+      delete selection.step3;
+      showStep(2);
+      return;
+    }
+    if(currentStep === 2){
+      delete selection.step2;
+      showStep(1);
+      return;
+    }
+  });
+
+  /*****************************
+   * 13) START BUTTON (intro -> step1)
+   *****************************/
+  startBtn.addEventListener("click", ()=>{
+    renderStep2();
+    showStep(1);
+  });
+
+  /*****************************
+   * 14) INITIALIZE: render step2 when page loads? we wait for start
+   *****************************/
+  showStep(0);
+
+  /*****************************
+   * 15) HELPER: escape HTML
+   *****************************/
+  function escapeHtml(text){
+    if(!text && text !== 0) return "";
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  /*****************************
+   * 16) OPTIONAL: expose state for debugging (dev only)
+   *****************************/
+  // window._ff = {FRAGRANCE_DATA, selection, renderStep2, renderStep3, renderStep4, renderStep5, renderResults};
+
+})();
+</script>
