@@ -114,13 +114,12 @@
     },
     "annoucment_countdown_Qp8nbd": {
       "type": "annoucment-countdown",
-      "disabled": true,
       "name": "Announcement — Countdown",
       "settings": {
         "show_bar": true,
         "announcement_text": "",
         "enable_countdown": true,
-        "sale_end_date": "2025-11-3 12:00:00",
+        "sale_end_date": "2025-12-2 12:00:00",
         "countdown_format": "hours",
         "right_text": "",
         "bg_color": "#111827",
