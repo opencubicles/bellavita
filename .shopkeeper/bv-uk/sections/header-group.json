@@ -17,7 +17,7 @@
         "announcement_AkiHJQ": {
           "type": "announcement",
           "settings": {
-            "text": "🛒BLACK FRIDAY SALE IS LIVE🔥",
+            "text": "🎄Delivery Before Christmas is Live🎁",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
@@ -114,6 +114,7 @@
     },
     "annoucment_countdown_Qp8nbd": {
       "type": "annoucment-countdown",
+      "disabled": true,
       "name": "Announcement — Countdown",
       "settings": {
         "show_bar": true,
