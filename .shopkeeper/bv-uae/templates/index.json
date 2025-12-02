@@ -15,8 +15,8 @@
         "image_tiQb3A": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1_4.jpg",
-            "image_mobile": "shopify://shop_images/1_5.jpg",
+            "image": "shopify://shop_images/1_Bestseller.png",
+            "image_mobile": "shopify://shop_images/1_BESTSELLER_1.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -37,8 +37,8 @@
         "image_D9A8zA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_2.jpg",
-            "image_mobile": "shopify://shop_images/2_3.jpg",
+            "image": "shopify://shop_images/2_HIM.png",
+            "image_mobile": "shopify://shop_images/2_HIM_1.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -59,8 +59,8 @@
         "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/3_1_a4851e16-c8b5-4c65-ab38-02a9fb304870.jpg",
-            "image_mobile": "shopify://shop_images/3_2.jpg",
+            "image": "shopify://shop_images/3_HER.png",
+            "image_mobile": "shopify://shop_images/3_HER_1.png",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -81,8 +81,8 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/4_2.jpg",
-            "image_mobile": "shopify://shop_images/4_3.jpg",
+            "image": "shopify://shop_images/4_UNISEX.png",
+            "image_mobile": "shopify://shop_images/4_UNISEX_1.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",

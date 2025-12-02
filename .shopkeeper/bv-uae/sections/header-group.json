@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "🛒WHITE FRIDAY SALE IS LIVE🔥",
+            "text": "🎄Delivery Before Christmas is Live🎁",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
@@ -111,10 +111,26 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
+    },
+    "annoucment_countdown_kxdmRd": {
+      "type": "annoucment-countdown",
+      "disabled": true,
+      "name": "Announcement — Countdown",
+      "settings": {
+        "show_bar": true,
+        "announcement_text": "",
+        "enable_countdown": true,
+        "sale_end_date": "2025-12-2 12:00:00",
+        "countdown_format": "days",
+        "right_text": "",
+        "bg_color": "#111827",
+        "text_color": "#ffffff"
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "annoucment_countdown_kxdmRd"
   ]
 }
