@@ -11,45 +11,7 @@
 {% comment %}
   {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
 {% endcomment %} 
-{% if shop.permanent_domain == 'bv-uk1.myshopify.com' %}
-<style>
-  .header-top-banner {
-    position: fixed;
-    margin-top: 30px;
-    z-index: 20;
-    width:100%;
-  }
-  .header-top-banner img {
-    min-height: 80px;
-    display:block;
-    width:100%;
-}
-    .header-top-banner-desktop {
-    position: fixed;
-    margin-top: 30px;
-    z-index: 20;
-      width:100%;
-
-  }
-  .header-top-banner-desktop img {
-    height: 120px;
-    display:block;
-}
-@media(max-width:750px){
-    .header-top-banner-desktop{
-    display:none;
-  }
-}
-   @media (min-width: 750px) {
-      .header-top-banner {
-        display: none !important;
-      }
-    }
-  </style>
-{% endif -%}
-
-  
-    
+     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
@@ -242,32 +204,72 @@
 {% endif %}
 
     <div class="transition-body">
-      
+      {% if template contains 'product' and shop.permanent_domain == 'bv-uk.myshopify.com' %}
+          {% if product.metafields.custom.pdp_custom_top_banner %}
+            <style>
+              .header-top-banner {
+                position: fixed;
+                margin-top: 30px;
+                z-index: 20;
+                width:100%;
+              }
+              .header-top-banner img {
+                min-height: 80px;
+                display:block;
+                width:100%;
+              }
+              .header-top-banner-desktop {
+                position: fixed;
+                margin-top: 30px;
+                z-index: 20;
+                  width:100%;
 
-        {% if template contains 'product' and shop.permanent_domain == 'bv-uk1.myshopify.com' %}
-        <div class="comman-header">
-          <div class="header-top-banner">
-            <div id="daily-sale-timer" class="sale-timer-overlay">
-              <span id="countdown"></span>
+              }
+              .header-top-banner-desktop img {
+                height: 120px;
+                display:block;
+              }
+              @media (min-width: 768px) {
+                .header-top-banner {
+                    display: none !important;
+                }
+                .page-width-pdp {
+                  padding-top:270px !important;
+                }
+                .header-wrapper {
+                  position: fixed;
+                  top: 140px;
+                  width: 100%;
+                }
+              }
+              @media (max-width: 768px) {
+                .header-top-banner-desktop{
+                  display:none;
+                }
+                .page-width-pdp {
+                  padding-top:98px !important;
+                }
+                 .header-wrapper{
+                  position:fixed;
+                  top:108px;
+                  width:100%
+                }
+              }
+            </style>
+            <div class="comman-header">
+
+              <div class="header-top-banner">
+                <img src="{{ product.metafields.custom.pdp_custom_top_banner | img_url: 'master' }}" width="100%">
+              </div>
+
+              <div class="header-top-banner-desktop">
+                <img src="{{ product.metafields.custom.pdp_custom_top_banner | img_url: 'master' }}" width="100%">
+              </div>
+
             </div>
-        
-            {% if request.path contains 'honey-oud-unisex-perfume-3-4-fl-oz' %}
-              <img src="https://cdn.shopify.com/s/files/1/0756/5813/3762/files/UPPER_PDP_BANNER_MOBILE.jpg?v=1753958792" width="100%">
-            {% else %}
-              <img src="https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Banner_Mobile.jpg?v=1750927764" width="100%">
-            {% endif %}
-          </div>
-        
-          <div class="header-top-banner-desktop">
-            {% if request.path contains 'honey-oud-unisex-perfume-3-4-fl-oz' %}
-              <img src="https://cdn.shopify.com/s/files/1/0756/5813/3762/files/PDP_UPPER_DESKTOP.jpg?v=1753958793" width="100%">
-            {% else %}
-              <img src="https://cdn.shopify.com/s/files/1/0756/5813/3762/files/Banner_Desktop.jpg?v=1751528949" width="100%">
-            {% endif %}
-          </div>
-        </div>
+          {% endif %}
 
-      {% endif %}
+        {% endif %}
 
       {% sections 'header-group' %}
 

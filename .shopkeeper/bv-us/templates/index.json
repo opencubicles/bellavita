@@ -15,8 +15,8 @@
         "image_maVL8h": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Main_Banner_Desktop_feb1d2cf-ba94-4491-905a-f3d599603673.jpg",
-            "image_mobile": "shopify://shop_images/Main_Banner_Mobile_99c57c98-6072-4368-b815-86c2c2edb7df.jpg",
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1_9b232779-b710-43d6-a0fd-1d8128fcdf97.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1_027b446d-3cfd-491b-9445-d5929ac1dc21.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -27,7 +27,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "https://bellavitaluxe.com/apps/gbb/easybundle/5?page=addProductsPage1&currentFlow=byob",
+            "button_link": "shopify://collections/men-fragrance",
             "button_secondary_label": "",
             "button_secondary_link": "",
             "button_size": "medium",
@@ -37,8 +37,8 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/HomePage_-_GIFTfor_HER_2.jpg",
-            "image_mobile": "shopify://shop_images/HomePage_Banner_-_GIFTmobile_-_HER.jpg",
+            "image": "shopify://shop_images/Home_Page_BannerArtboard_1_f934ac27-37e7-4bfe-8351-12124e667554.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_BannerArtboard_2_1.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -58,6 +58,7 @@
         },
         "image_tiQb3A": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/HomePage_Banner_-_GIFTfor_HIM_2.jpg",
             "image_mobile": "shopify://shop_images/HomePage_Banner_-_GIFTmobile_-_HIM.jpg",
@@ -80,6 +81,7 @@
         },
         "image_4kaVAz": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/HomePage_Banner_-_GIFTgiftset_for_YOU.jpg",
             "image_mobile": "shopify://shop_images/HomePage_Banner_-_GIFTmobile_-_giftset_for_YOU.jpg",

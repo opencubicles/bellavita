@@ -298,9 +298,7 @@
       {% endif %}
       {% endif %}  
     {% endif %} 
-    {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' 
-        or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' 
-        or shop.permanent_domain == 'bv-us.myshopify.com' %}
+    {% if 1 == 3 %}
 
           {% assign target_amount = 5999 %}
           {% assign current_amount = cart.total_price %}
@@ -918,6 +916,7 @@
     </div>
   </div>
 </form>
+{% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
 <style>
 .free-shipping__progress {
   display: block;
@@ -946,3 +945,4 @@
 }
 
 </style>
+{% endif %}

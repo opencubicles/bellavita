@@ -38,35 +38,6 @@
     --icon-weight: {{ section.settings.icon_weight }}px;
   }
 {%- endstyle -%}
-
-{% if template contains 'product' and shop.permanent_domain == 'bv-uk1.myshopify.com' %}
-
-  <style>
-
-    @media(min-width:750px){
-
-  .header-wrapper {
-
-      position: fixed;
-      top: 140px;
-      width: 100%;
-    }
-    }
-
-@media(max-width:750px){
-
-  .header-wrapper{
-  position:fixed;
-  top:108px;
-  width:100%
-
-}
-
-}
-
-  </style>
-
-{% endif %}
 <style>
   @media screen and (min-width: 750px) {
     #shopify-section-{{ section.id }} {
