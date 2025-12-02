@@ -15,8 +15,8 @@
         "image_tiQb3A": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Main_Banner_1-_Desktop.png",
-            "image_mobile": "shopify://shop_images/Main_banner_-_mobile.png",
+            "image": "shopify://shop_images/1_BESTSELLER.png",
+            "image_mobile": "shopify://shop_images/1_BESTSELLER_1.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -27,7 +27,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "shopify://collections/sale",
+            "button_link": "shopify://collections/bestsellers",
             "button_secondary_label": "",
             "button_secondary_link": "",
             "button_size": "medium",
@@ -37,8 +37,8 @@
         "image_D9A8zA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Gifts_for_him-_desktop.png",
-            "image_mobile": "shopify://shop_images/Gifts_for_him_-_Mobile.png",
+            "image": "shopify://shop_images/2_HIM_-_desktop.png",
+            "image_mobile": "shopify://shop_images/2_HIM.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -59,8 +59,8 @@
         "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Gifts_for_her_-_desktop.png",
-            "image_mobile": "shopify://shop_images/Gifts_for_her_-_mobile.png",
+            "image": "shopify://shop_images/3_HER_-_desktop.png",
+            "image_mobile": "shopify://shop_images/3_HER.png",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -81,8 +81,8 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Gifts_for_all_-_desktop.png",
-            "image_mobile": "shopify://shop_images/Gifts_for_all_-_Mobile.png",
+            "image": "shopify://shop_images/4_UNISEX_-_desktop.png",
+            "image_mobile": "shopify://shop_images/4_UNISEX.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
