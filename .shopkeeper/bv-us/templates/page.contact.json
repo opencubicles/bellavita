@@ -97,6 +97,7 @@
         },
         "contact-3": {
           "type": "contact",
+          "disabled": true,
           "settings": {
             "heading": "Contact Number",
             "text": "<p>+1 302 600-5480<br/></p>",

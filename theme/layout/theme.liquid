@@ -205,7 +205,7 @@
 
     <div class="transition-body">
       {% if template contains 'product' and shop.permanent_domain == 'bv-uk.myshopify.com' %}
-          {% if product.metafields.custom.pdp_custom_top_banner %}
+           {% if product.metafields.custom.pdp_custom_top_banner %}
             <style>
               .header-top-banner {
                 position: fixed;
@@ -242,6 +242,9 @@
                 }
               }
               @media (max-width: 768px) {
+                #shopify-section-template--20110883586306__rich-text {
+                  padding-top: 116px !important;
+                }
                 .header-top-banner-desktop{
                   display:none;
                 }
@@ -559,21 +562,9 @@
 </script>
 {% endif %}
 {% if shop.permanent_domain == 'bellavitauae.myshopify.com' %}
-{%- unless page.handle contains '404' -%}
-  <script>
-    fetch('/browsing_context_suggestions.json')
-      .then(res => res.json())
-      .then(data => {
-        const country = data?.detected_values?.country?.handle?.toUpperCase();
-
-        // Redirect to the India store if visitor is from India
-        if (country === "IN") {
-          window.location.href = "https://embarouge.in/";
-        }
-      })
-      .catch(() => {});
-  </script>
-{%- endunless -%}
+  {%- unless page.handle contains '404' -%}
+    {% render 'location-redirect' %} 
+  {%- endunless -%}
 {% endif %}
 {% if product.handle == 'bellavita-luxury-s-mood-collection-fantasy-for-him-edp-apple-cinnamon-musk-premium-long-lasting-fragrance-for-men-3-38-fl-oz' %}
 <style>
