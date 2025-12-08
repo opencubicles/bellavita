@@ -294,7 +294,7 @@
           "settings": {
             "show_quantity_selector": true,
             "show_price_container": true,
-            "hide_atc_on_mobile": true,
+            "hide_atc_on_mobile": false,
             "show_dynamic_checkout": false
           }
         },
@@ -306,15 +306,15 @@
             "tryon-description-color": "#000000",
             "description-align-text": "center",
             "tryon-button-description": "Try at home, pay for what you keep",
-            "tryon-with-price-in-button": false,
+            "tryon-with-price-in-button": true,
             "tryon-hide-add-to-cart": false,
             "tryon-copy-add-to-cart-styles": true,
-            "tryon-text-color": "#FFFFFF",
+            "tryon-text-color": "#ffffff",
             "tryon-background-color": "#000000",
             "tryon-modal-background-color": "#435a8d",
             "tryon-modal-primary-color": "#ffde7a",
-            "tryon-modal-text-primary-color": "#FFFFFF",
-            "tryon-modal-text-secondary-color": "#000",
+            "tryon-modal-text-primary-color": "#ffffff",
+            "tryon-modal-text-secondary-color": "#000000",
             "tryon-modal-header": "Try at home before you pay",
             "tryon-modal-stage1-header": "Pay $0 today",
             "tryon-modal-stage1-description": "At checkout, we'll temporarily place an authorization hold on your card but won't charge you anything.",
