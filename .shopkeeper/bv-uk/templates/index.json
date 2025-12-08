@@ -24,8 +24,8 @@
         "image_tiQb3A": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1_BESTSELLER.png",
-            "image_mobile": "shopify://shop_images/1_BESTSELLER_1.png",
+            "image": "shopify://shop_images/1_BESTSELLER_0e7616e1-5387-4d50-9e77-cdadd0a12347.png",
+            "image_mobile": "shopify://shop_images/1_BESTSELLER_1_f126a39c-c13d-4f9a-88e3-92224bc84577.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -46,8 +46,8 @@
         "image_MdXHCy": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_HIM_f8b4febe-4b12-4c36-9358-bf2bcf0f3e10.png",
-            "image_mobile": "shopify://shop_images/2_HIM_1.png",
+            "image": "shopify://shop_images/2_HIM_dce5b139-9a56-4c92-b979-7c97ca9701f5.png",
+            "image_mobile": "shopify://shop_images/2_HIM_1_102dfb80-75c3-4f04-9a04-8abd1483d39a.png",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -68,8 +68,8 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/3_HER.png",
-            "image_mobile": "shopify://shop_images/3_HER_1.png",
+            "image": "shopify://shop_images/3_HER_68550e82-a033-4037-b85b-4f7036d67948.png",
+            "image_mobile": "shopify://shop_images/3_HER_1_d73a04d0-f107-4b12-8a8f-7025ec7c478a.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -90,8 +90,8 @@
         "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/4_UNISEX.png",
-            "image_mobile": "shopify://shop_images/4_UNISEX_1.png",
+            "image": "shopify://shop_images/4_UNISEX_ca754360-a7ca-46e8-8050-ba3f81f65cb5.png",
+            "image_mobile": "shopify://shop_images/4_UNISEX_1_5f918d27-b646-41c4-9f4c-828a14098277.png",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
