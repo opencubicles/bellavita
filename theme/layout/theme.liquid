@@ -578,3 +578,12 @@
   }
 </style>
 {% endif %}
+{% if shop.permanent_domain == 'bv-uk.myshopify.com' and product.handle != 'ceo-man-luxury-perfume-3-4-fl-oz' %}
+<style>
+@media (max-width: 768px) { /* Adjust breakpoint if needed */
+  #product-form-template--20110883586306__main button.product-form__submit[name="add"] {
+        display: none !important;
+    }
+}
+</style>
+{% endif %}
