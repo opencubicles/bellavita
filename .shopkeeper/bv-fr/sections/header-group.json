@@ -70,7 +70,7 @@
         "cart_icon": "bag",
         "icon_weight": "1.5",
         "enable_country_selector": false,
-        "enable_language_selector": false,
+        "enable_language_selector": true,
         "enable_sticky_header": true,
         "show_sticky_header_scroll_up": false,
         "sticky_mobile_menu": "",
