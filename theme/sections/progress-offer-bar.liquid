@@ -1,0 +1,147 @@
+{% comment %}
+  Progress Bar Section using COLLECTION METAFIELDS
+{% endcomment %}
+
+{% if collection and collection.metafields.custom.show_progress_bar == true %}
+  <style>
+    /* Sticky styling */
+    #progress-offer-bar.sticky-offerbar {
+      position: fixed;
+      top: 165px;
+      left: 259px;
+      width: 100%;
+      z-index: 9999;
+      background: white;
+    }
+
+    /* Spacer will appear only when sticky is active */
+    #offerBarSpacer {
+      display: none;
+    }
+    #offerBarSpacer.active {
+      display: block;
+    }
+  </style>
+
+  <!-- SPACER to prevent layout jump -->
+  <div id="offerBarSpacer"></div>
+
+  <section class="page-width" id="progress-offer-bar" style="padding: 15px;">
+    <div style="font-size: 16px; font-weight: 600;">
+      <span id="offerBarMessage">
+        {{ section.settings.collection_message }}
+      </span>
+    </div>
+
+    <div style="margin-top: 10px;">
+      <div style="background:#eee; height: 8px; width:100%; border-radius: 5px;">
+        <div
+          id="offerBarProgress"
+          style="
+            background: {{ section.settings.progress_color }};
+            height: 8px; width:0%; border-radius: 5px;
+          "
+        ></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ============ STICKY BEHAVIOR ============ */
+
+  const bar = document.getElementById("progress-offer-bar");
+  const spacer = document.getElementById("offerBarSpacer");
+  const barHeight = bar.offsetHeight;
+  const stickyTop = bar.offsetTop;
+
+  function handleSticky() {
+    if (window.scrollY > stickyTop) {
+      bar.classList.add("sticky-offerbar");
+      spacer.classList.add("active");
+      spacer.style.height = barHeight + "px";
+    } else {
+      bar.classList.remove("sticky-offerbar");
+      spacer.classList.remove("active");
+      spacer.style.height = "0px";
+    }
+  }
+
+  window.addEventListener("scroll", handleSticky);
+
+
+
+  /* ============ PROGRESS BAR LOGIC ============ */
+
+  const buyX = {{ collection.metafields.custom.buy_x | default: 2 }};
+  const getY = {{ collection.metafields.custom.get_y | default: 1 }};
+  const required = buyX + getY;
+
+  function updateBar() {
+    fetch("/cart.js")
+      .then(r => r.json())
+      .then(cart => {
+        const qty = cart.item_count;
+        const remaining = Math.max(required - qty, 0);
+        const progress = Math.min((qty / required) * 100, 100);
+
+        document.getElementById("offerBarProgress").style.width = progress + "%";
+
+        const msgEl = document.getElementById("offerBarMessage");
+
+        if (remaining > 0) {
+          msgEl.textContent = `Add ${remaining} more product${remaining > 1 ? 's' : ''} to unlock your free item`;
+        } else {
+          msgEl.textContent = `Congrats! You're eligible for your offer 🎉`;
+        }
+      });
+  }
+
+  updateBar();
+
+  // Watch for add-to-cart changes
+  {% comment %} const _fetch = window.fetch;
+  window.fetch = function() {
+    return _fetch.apply(this, arguments).then(res => {
+      if (arguments[0].includes("/add") || arguments[0].includes("/cart")) {
+        setTimeout(updateBar, 300);
+      }
+      return res;
+    });
+  }; {% endcomment %}
+   document.addEventListener("ajaxProduct:added", function (event) {  
+    updateBar();
+  });
+  document.addEventListener("cart:updated", function (event) {
+    updateBar();
+  });
+
+});
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Progress Offer Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "collection_message",
+      "label": "Collection Message",
+      "default": "Buy X Get Y Free — Add products to unlock the offer."
+    },
+    {
+      "type": "color",
+      "id": "progress_color",
+      "label": "Progress Bar Color",
+      "default": "#23c552"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Progress Offer Bar"
+    }
+  ]
+}
+{% endschema %}

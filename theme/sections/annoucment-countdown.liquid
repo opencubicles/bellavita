@@ -1,26 +1,68 @@
-{% if shop.permanent_domain == 'bv-uk.myshopify.com' or shop.permanent_domain == 'bellavitauae.myshopify.com' or shop.permanent_domain == 'bellavita-luxury-germany.myshopify.com' %}
-{% if template.name != 'index' %}
- <style>
-   
-    .shopify-section-header-sticky .header {
-        padding-top: 4rem !important;
-    }
-  </style>
-{% else %} 
-  <style>
-     @media (min-width: 750px) {
-      .header-wrapper {
-        margin-top: 40px !important;
+{% if shop.permanent_domain == 'bv-uk.myshopify.com'
+  or shop.permanent_domain == 'bellavitauae.myshopify.com'
+  or shop.permanent_domain == 'bellavita-luxury-germany.myshopify.com'
+%}
+  {% if template.name != 'index' %}
+    <style>
+      .shopify-section-header-sticky .header {
+          padding-top: 4rem !important;
       }
-    }
-     @media(max-width:750px){
-      .header-wrapper {
-        margin-top: 40px !important;
+    </style>
+  {% else %}
+    <style>
+       @media (min-width: 750px) {
+        .header-wrapper {
+          margin-top: 40px !important;
+        }
+
       }
-    }
-    
-  </style>
+       @media(max-width:750px){
+        .header-wrapper {
+          margin-top: 40px !important;
+        }
+      }
+    </style>
+  {% endif %}
 {% endif %}
+
+{% if template contains 'product' and shop.permanent_domain == 'bv-uk1.myshopify.com' %}
+  {% if product.metafields.custom.pdp_custom_top_banner %}
+    <style>
+      .shopify-section-header-sticky .header {
+          padding-top: 1rem !important;
+      }
+      @media (min-width: 750px) {
+        {% comment %} .header-top-banner-desktop {
+            margin-top: 70px !important;
+        } {% endcomment %}
+        .page-width-pdp {
+          padding-top: 335px !important;
+        }
+        .header-wrapper {
+          margin-top: 40px !important;
+          top: 148px !important;
+        }
+        .announcement-countdown-section {
+          top: 149px !important;
+        }
+      }
+       @media(max-width:750px){
+         #shopify-section-template--20110883586306__rich-text, #shopify-section-template--20923644510466__rich-text {
+          padding-top: 156px !important;
+         }
+        .announcement-countdown-section {
+           top: 62px !important;
+        }
+        {% comment %} .header-top-banner {
+          margin-top: 70px !important;
+        } {% endcomment %}
+        .header-wrapper {
+          margin-top: 40px !important;
+          top: 60px !important;
+        }
+      }
+    </style>
+  {% endif %}
 {% endif %}
 {%- comment -%}
   sections/announcement-countdown.liquid
@@ -45,7 +87,7 @@
       {% if section.settings.enable_countdown %}
         <div class="announcement-center">
           <div class="countdown-wrap" aria-live="polite">
-            <span class="countdown-label">Sale ends in</span>
+            <span class="countdown-label">Delivery Before Christmas Offer Ends in</span>
             <span class="countdown-timer">00d 00h 00m 00s</span>
           </div>
         </div>
@@ -59,92 +101,92 @@
 </div>
 
 <style>
- @media(min-width:750px){
-    .announcement-countdown-section {
-      z-index: 101;
-    }
-   
-  } 
-  @media(max-width:750px){
-    .announcement-countdown-section {
-      z-index: 101;
-    }
-    
-    .menu-mobile--open .announcement-countdown-section {
-      z-index: 9 !important;
-    }
-    
-  } 
-  /* === Fixed, full-width announcement bar === */
-  
-  .announcement-countdown-section {
-    position: fixed;
-    top: 29px;
-    left: 0;
-    width: 100%;
-    background: {{ section.settings.bg_color }};
-    color: {{ section.settings.text_color }};
-    
-  }
+  @media(min-width:750px){
+     .announcement-countdown-section {
+       z-index: 101;
+     }
 
-  .announcement-inner {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    text-align: center;
-  }
+   }
+   @media(max-width:750px){
+     .announcement-countdown-section {
+       z-index: 101;
+     }
 
-  .announcement-left,
-  .announcement-right {
-    flex: 1 1 25%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 14px;
-  }
+     .menu-mobile--open .announcement-countdown-section {
+       z-index: 9 !important;
+     }
 
-  .announcement-center {
-    flex: 0 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-weight: 600;
-    font-size: 14px;
-  }
+   }
+   /* === Fixed, full-width announcement bar === */
 
-  .countdown-wrap {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+   .announcement-countdown-section {
+     position: fixed;
+     top: 29px;
+     left: 0;
+     width: 100%;
+     background: {{ section.settings.bg_color }};
+     color: {{ section.settings.text_color }};
 
-  .countdown-label {
-    font-size: 13px;
-    opacity: 0.9;
-  }
+   }
 
-  .countdown-timer {
-    font-family: monospace;
-    font-size: 14px;
-  }
+   .announcement-inner {
+     width: 100%;
+     max-width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 10px 20px;
+     box-sizing: border-box;
+     text-align: center;
+   }
 
-  @media (max-width: 768px) {
-    .announcement-left,
-    .announcement-right {
-      display: none;
-    }
-    .announcement-center {
-      flex: 1;
-    }
-    .announcement-inner {
-      padding: 8px 12px;
-    }
-  }
+   .announcement-left,
+   .announcement-right {
+     flex: 1 1 25%;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     font-size: 14px;
+   }
+
+   .announcement-center {
+     flex: 0 1 auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 8px;
+     font-weight: 600;
+     font-size: 14px;
+   }
+
+   .countdown-wrap {
+     display: flex;
+     align-items: center;
+     gap: 6px;
+   }
+
+   .countdown-label {
+     font-size: 11px;
+     opacity: 0.9;
+   }
+
+   .countdown-timer {
+     font-family: monospace;
+     font-size: 12px;
+   }
+
+   @media (max-width: 768px) {
+     .announcement-left,
+     .announcement-right {
+       display: none;
+     }
+     .announcement-center {
+       flex: 1;
+     }
+     .announcement-inner {
+       padding: 10px 12px;
+     }
+   }
 </style>
 
 <script>
@@ -164,6 +206,7 @@
     const formatType = container.getAttribute('data-format') || 'days';
     const endDate = new Date(endDateString);
     const timerEl = container.querySelector('.countdown-timer');
+    const labelEl = container.querySelector('.countdown-label');
 
     // --- Hide initially on all non-home pages ---
     if (!isHomePage) {
@@ -208,6 +251,7 @@
 
       if (diff <= 0) {
         timerEl.textContent = 'Sale Ended';
+        labelEl.style.display = 'none';
         clearInterval(interval);
         return;
       }
@@ -218,15 +262,13 @@
         const totalHours = Math.floor(totalSeconds / 3600);
         const minutes = Math.floor((totalSeconds % 3600) / 60);
         const seconds = totalSeconds % 60;
-        timerEl.textContent =
-          pad(totalHours) + 'h ' + pad(minutes) + 'm ' + pad(seconds) + 's';
+        timerEl.textContent = pad(totalHours) + 'h ' + pad(minutes) + 'm ' + pad(seconds) + 's';
       } else {
         const days = Math.floor(totalSeconds / 86400);
         const hours = Math.floor((totalSeconds % 86400) / 3600);
         const minutes = Math.floor((totalSeconds % 3600) / 60);
         const seconds = totalSeconds % 60;
-        timerEl.textContent =
-          pad(days) + 'd ' + pad(hours) + 'h ' + pad(minutes) + 'm ' + pad(seconds) + 's';
+        timerEl.textContent = pad(days) + 'd ' + pad(hours) + 'h ' + pad(minutes) + 'm ' + pad(seconds) + 's';
       }
     }
 
@@ -234,8 +276,6 @@
     const interval = setInterval(updateTimer, 1000);
   })();
 </script>
-
-
 
 {% schema %}
 {

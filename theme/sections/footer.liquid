@@ -1,3 +1,9 @@
+
+{% assign seo_class = 'not-seo-footer' %}
+
+{% if section.settings.enable_custom_footer == true %}
+  {% assign seo_class = 'seo_footer' %}
+{% endif %}
 {%- style -%}
   #shopify-section-{{ section.id }} {
     --gradient-background: {% if section.settings.gradient_background != blank %}{{ section.settings.gradient_background }}{% else %}{{ section.settings.colors_background }}{% endif %};
@@ -8,7 +14,7 @@
     --color-heading: {{ section.settings.colors_heading.red }}, {{ section.settings.colors_heading.green }}, {{ section.settings.colors_heading.blue }};
   }
 {%- endstyle -%}
-
+{%- if section.settings.enable_custom_footer  == false -%}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -26,7 +32,7 @@
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
 
 <script src="{{ 'footer-accordion.js' | asset_url }}" defer="defer"></script>
-
+{%- endif -%}
 <footer class="footer{% if section.settings.show_divider %} footer--border-top{% endif %}">
   {%- liquid
     assign enable_right_column = false
@@ -35,10 +41,10 @@
     endif
   -%}
   {%- if section.blocks.size > 0 or enable_right_column -%}
-    <div class="footer__content-top page-width">
+    <div class="footer__content-top page-width {{seo_class}}">
     <!-- Excusive starts here -->
             {%- if enable_right_column -%}
-          <div class="grid__item footer__content-right mobile_exclusive_footer">
+          <div class="grid__item footer__content-right mobile_exclusive_footer {{seo_class}}">
             <div class="grid">
               {%- if section.blocks.size > 0 -%}
                 <div class="grid__item small-hide">
@@ -279,7 +285,7 @@
       </div>
     </div>
   {%- endif -%}
-
+{%- if section.settings.enable_custom_footer  == false -%}
   <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__column--info">
@@ -426,6 +432,7 @@
       </div>
     </div>
   </div>
+{%- endif -%}
 </footer>
 
 {% javascript %}
@@ -493,7 +500,7 @@
 {
   "name": "t:sections.footer.name",
   "class": "shopify-section-footer",
-  "max_blocks": 4,
+  "max_blocks": 6,
   "blocks": [
     {
       "type": "link_list",
@@ -587,6 +594,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_custom_footer",
+      "default": false,
+      "label": "Custom Footer"
+    },
     {
       "type": "checkbox",
       "id": "show_divider",

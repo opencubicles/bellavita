@@ -11,6 +11,82 @@
   "name": "t:sections.footer-group.name",
   "type": "footer",
   "sections": {
+    "footer2": {
+      "type": "footer",
+      "blocks": {
+        "link_list_9jyR93": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Men's Perfume",
+            "menu": "mens-perfume"
+          }
+        },
+        "footer-2": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Women'S Perfume",
+            "menu": "womens-perfume"
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Gifting Range",
+            "menu": "gifting-range"
+          }
+        },
+        "link_list_74kERH": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Perfume Notes",
+            "menu": "perfume-notes"
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Occasion Perfumes",
+            "menu": "occasion-perfumes"
+          }
+        },
+        "link_list_jCMkgg": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Seasonal Perfumes",
+            "menu": "seasonal-perfumes"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_9jyR93",
+        "footer-2",
+        "footer-0",
+        "link_list_74kERH",
+        "footer-1",
+        "link_list_jCMkgg"
+      ],
+      "name": "Footer-Custom",
+      "settings": {
+        "enable_custom_footer": true,
+        "show_divider": true,
+        "newsletter_enable": false,
+        "newsletter_heading": "",
+        "newsletter_text": "",
+        "show_social": false,
+        "social_heading": "",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "copyright_text": "",
+        "colors_text": "#ffffff",
+        "colors_heading": "#ffffff",
+        "colors_link": "#ffffff",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#434343",
+        "gradient_background": ""
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -40,7 +116,7 @@
           "type": "text",
           "settings": {
             "heading": "CONTACT US",
-            "subtext": "<p>BellaVita Luxury (IDAM NATURAL INC), 8 The Green STE B Dover DE, 19901</p><p>care@bellavitaluxe.com</p><p>Timing: 10:00 AM to 7:00 PM, Monday to Friday</p>"
+            "subtext": "<p>BellaVita Luxury (IDAM NATURAL INC), 8 The Green STE B Dover DE, 19901</p><p>care@bellavitaluxe.com<br/>+1 302 305 2811<br/></p><p>Timing: 10:00 AM to 7:00 PM, Monday to Friday</p>"
           }
         }
       },
@@ -51,6 +127,7 @@
         "12403f5e-c1b9-410f-b4c1-b2ca87785be8"
       ],
       "settings": {
+        "enable_custom_footer": false,
         "show_divider": true,
         "newsletter_enable": true,
         "newsletter_heading": "EXCLUSIVE",
@@ -72,6 +149,7 @@
     }
   },
   "order": [
+    "footer2",
     "footer"
   ]
 }
