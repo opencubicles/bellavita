@@ -17,7 +17,7 @@
         "announcement_AkiHJQ": {
           "type": "announcement",
           "settings": {
-            "text": "🎄Delivery Before Christmas is Live🎁",
+            "text": "🎄Bell~A~Christmas sale is Live🎁",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
@@ -120,7 +120,7 @@
         "show_bar": true,
         "announcement_text": "",
         "enable_countdown": true,
-        "sale_end_date": "2025-12-2 12:00:00",
+        "sale_end_date": "2025-12-16 04:59:59",
         "countdown_format": "hours",
         "right_text": "",
         "bg_color": "#111827",
