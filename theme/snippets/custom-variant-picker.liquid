@@ -2,19 +2,25 @@
   <div class="pack-options">
 
     {% for option in product.options_with_values %}
-      {% if option.name == "Pack Size" %}
+      {% if option.name == "Pack Size" or option.name == "Size" %}
         {%- for value in option.values -%}
 
           {% assign image_url = blank %}
           {% assign discount_text = blank %}
 
-          {% if value contains 'Pack of 1' %}
+          {% if value contains 'Pack of 1' or  value contains 'Sigma male' %}
             {% assign image_url = product.metafields.custom.pack_of_one_image | img_url: '400x' %}
             {% assign discount_text = "SAVE 10%" %}
-          {% elsif value contains 'B1G1 at 45% Off' %}
+            {% if value contains 'Sigma male' %}
+              {% assign discount_text = "100 ml" %}
+            {% endif %}
+          {% elsif value contains 'B1G1 at 45% Off' or  value contains '20 ml' or  value contains 'Sigma Mini' %}
             {% assign image_url = product.metafields.custom.pack_of_two_image | img_url: '400x' %}
             {% assign discount_value = product.metafields.custom.pack_product_discount | default: 45 %}
             {% assign discount_text = 'SAVE ' | append: discount_value | append: '%' %}
+            {% if value contains 'Sigma Mini' %}
+              {% assign discount_text = "20 ml" %}
+            {% endif %}
           {% endif %}
 
           <label class="pack-card">
@@ -35,10 +41,11 @@
               {% if image_url != blank %}
                 <img src="{{ image_url }}" alt="{{ value }}" class="pack-image w-full h-48 object-contain" style="max-width: 130px !important;">
               {% endif %}
-
-              <div class="pack-label transition peer-checked:bg-black peer-checked:text-white">
-                {{ value }}
-              </div>
+              {% unless value contains 'Sigma male' or value contains 'Sigma Mini' %}
+                <div class="pack-label transition peer-checked:bg-black peer-checked:text-white">
+                  {{ value }}
+                </div>
+              {% endunless %}
             </div>
           </label>
 

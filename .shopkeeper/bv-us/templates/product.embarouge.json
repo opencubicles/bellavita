@@ -400,7 +400,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Product Details",
-            "content": "{{ product.description }}",
+            "content": "<p>{{ product.metafields.custom.short_description | metafield_tag }}</p>",
             "page": ""
           }
         },

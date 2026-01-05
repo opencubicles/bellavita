@@ -5,14 +5,26 @@
 {% if collection and collection.metafields.custom.show_progress_bar == true %}
   <style>
     /* Sticky styling */
-    #progress-offer-bar.sticky-offerbar {
-      position: fixed;
-      top: 165px;
-      left: 259px;
-      width: 100%;
-      z-index: 9999;
-      background: white;
+    @media screen and (min-width: 768px) {
+      #progress-offer-bar.sticky-offerbar {
+        position: fixed;
+        top: 165px;
+        left: 259px;
+        width: 100%;
+        z-index: 9999;
+        background: white;
+      }
     }
+    @media screen and (max-width: 768px) {
+      #progress-offer-bar.sticky-offerbar {
+        position: fixed;
+        top: 95px;
+        left: 0px;
+        width: 100%;
+        z-index: 9999;
+        background: white;
+      }
+    } 
 
     /* Spacer will appear only when sticky is active */
     #offerBarSpacer {

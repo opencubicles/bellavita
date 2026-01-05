@@ -18,6 +18,14 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="alternate" href="{{ canonical_url }}" hreflang="en-us" />
+    {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+      {% if product.metafields.custom.product_india_mapping != '' %}
+        <link rel="alternate" href="{{ product.metafields.custom.product_india_mapping }}" hreflang="en-in" />
+      {%- endif -%} 
+      {% if product.metafields.custom.product_uae_mapping != '' %}
+        <link rel="alternate" href="{{ product.metafields.custom.product_uae_mapping }}" hreflang="en-AE" />
+      {%- endif -%} 
+    {%- endif -%}
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <meta name="google-site-verification" content="XVP2KbWCPGQvAIiidjf_0z4e186VmL9EvlnJr1RIUMU">
     {%- if settings.favicon != blank -%}
@@ -588,4 +596,30 @@
     }
     </style>
   {% endunless %}
+  {% if product.handle == 'perfume-gift-set-for-men-tryon' %}
+    <style>
+      button.product-form__submit {
+          display: none !important;
+      }
+      @media (min-width: 768px) {
+        #shopify-section-template--20110883586306__176604687433159f51 .tryon-button {
+          display:none !important;
+        }
+        #shopify-section-template--20110883586306__176604687433159f51 .tryon-desc-span {
+           display:none;
+        }
+      }
+      @media (max-width: 768px) {
+        #shopify-section-template--20110883586306__176604687433159f51 .tryon-button  {
+          bottom: 0px;
+          position: fixed;
+          padding: 18px;
+          left: 0;
+        }
+        #shopify-section-template--20110883586306__176604687433159f51 .tryon-desc-span {
+           display:none;
+        }
+      }
+    </style>
+  {% endif %}
 {% endif %}

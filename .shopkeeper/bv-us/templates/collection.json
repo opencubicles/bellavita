@@ -186,6 +186,14 @@
         "padding_top": 0,
         "padding_bottom": 4
       }
+    },
+    "main_breadcrumbs_GqGTt9": {
+      "type": "main-breadcrumbs",
+      "custom_css": [
+        ".main-breadcrumbs {display: none !important;}"
+      ],
+      "name": "Main Breadcrumbs",
+      "settings": {}
     }
   },
   "order": [
@@ -193,6 +201,7 @@
     "banner",
     "subs",
     "product-grid",
-    "rich_text_tbAteR"
+    "rich_text_tbAteR",
+    "main_breadcrumbs_GqGTt9"
   ]
 }
