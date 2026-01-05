@@ -91,12 +91,13 @@
           "type": "contact",
           "settings": {
             "heading": "Email:",
-            "text": "<p>care@bellavitaluxe.com</p>",
-            "link": "mailto:care@bellavitaluxe.com"
+            "text": "<p>care@bellavitaluxury.au</p>",
+            "link": "mailto:care@bellavitaluxury.au"
           }
         },
         "contact-3": {
           "type": "contact",
+          "disabled": true,
           "settings": {
             "heading": "Contact Number",
             "text": "<p><a href=\"tel:+91 9311732440\" title=\"tel:+91 9311732440\">+1 302 600-5480</a><br/></p>",
