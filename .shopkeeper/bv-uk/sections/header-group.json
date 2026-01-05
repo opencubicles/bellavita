@@ -17,7 +17,7 @@
         "announcement_AkiHJQ": {
           "type": "announcement",
           "settings": {
-            "text": "🎄Bell~A~Christmas sale is Live🎁",
+            "text": "Big Holiday Sale is Live",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
@@ -114,13 +114,12 @@
     },
     "annoucment_countdown_Qp8nbd": {
       "type": "annoucment-countdown",
-      "disabled": true,
       "name": "Announcement — Countdown",
       "settings": {
         "show_bar": true,
         "announcement_text": "",
         "enable_countdown": true,
-        "sale_end_date": "2025-12-16 04:59:59",
+        "sale_end_date": "2026-01-06 11:59:59",
         "countdown_format": "hours",
         "right_text": "",
         "bg_color": "#111827",

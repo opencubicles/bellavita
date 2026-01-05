@@ -118,6 +118,14 @@
         "padding_bottom": 0
       }
     },
+    "progress_offer_bar_Vmgcmt": {
+      "type": "progress-offer-bar",
+      "name": "Progress Offer Bar",
+      "settings": {
+        "collection_message": "Buy X Get Y Free — Add products to unlock the offer.",
+        "progress_color": "#23c552"
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -152,6 +160,7 @@
     "ce18826f-3598-454c-bafe-8744cdb7a0c7",
     "banner",
     "subs",
+    "progress_offer_bar_Vmgcmt",
     "product-grid"
   ]
 }
