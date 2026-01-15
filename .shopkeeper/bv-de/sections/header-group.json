@@ -14,8 +14,19 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_frHnfX": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy More Save More",
+            "text_on_mobile": "",
+            "text_size": 13,
+            "end_date": "",
+            "link": "shopify://collections/sale"
+          }
+        },
         "announcement_wJqJbc": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "🎄Delivery Before Christmas is Live🎁",
             "text_on_mobile": "",
@@ -26,6 +37,7 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "GET UP TO 40% OFF🚨",
             "text_on_mobile": "",
@@ -47,7 +59,7 @@
         "announcement_eXEtFh": {
           "type": "announcement",
           "settings": {
-            "text": "🎉Extra 10% Off – Buy More, Save More!",
+            "text": "🎉Extra 10% Off on purchase of 2 or more products",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
@@ -56,6 +68,7 @@
         }
       },
       "block_order": [
+        "announcement_frHnfX",
         "announcement_wJqJbc",
         "announcement-bar-0",
         "b4274c71-3b8c-453a-ac62-b2f39868bcf0",

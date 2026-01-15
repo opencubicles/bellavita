@@ -14,6 +14,7 @@
       "blocks": {
         "image_tiQb3A": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/1_BESTSELLER_b4bc2ef1-164b-42db-837f-21dcf254e386.png",
             "image_mobile": "shopify://shop_images/1_BESTSELLER_1_7cca59a4-ea3f-4456-9920-ea138c8e064e.png",
@@ -37,8 +38,8 @@
         "image_D9A8zA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_HIM_70ae89fe-706c-4852-9d09-eb36d6934017.png",
-            "image_mobile": "shopify://shop_images/2_HIM_8af12694-d259-4d34-a12c-d07616f42de3.png",
+            "image": "shopify://shop_images/Homepage_Banner_For_Him_7970d089-ab83-4070-bf63-affbcf75f9f1.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Him_434da006-d0ee-40a7-b66b-a7430b78f990.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -59,8 +60,8 @@
         "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/3_HER_6e00aa09-5050-4811-bd7c-9652298f1397.png",
-            "image_mobile": "shopify://shop_images/3_HER_1.png",
+            "image": "shopify://shop_images/Homepage_Banner_For_Her_1eb04be2-9777-4aca-bcde-1f8b3928afe3.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Her_23257a23-3e23-4086-8365-05b9adb947e3.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -81,8 +82,8 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/4_UNISEX_211c8b8c-48b6-42b8-9134-ecf068538e40.png",
-            "image_mobile": "shopify://shop_images/4_UNISEX_1.png",
+            "image": "shopify://shop_images/Homepage_Banner_For_Unisex_dac08667-c4ec-4729-8251-b8cec69fe48f.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Unisex_da6c2393-97ad-4c70-8548-113691bdefbd.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
