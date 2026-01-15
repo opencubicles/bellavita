@@ -17,15 +17,16 @@
         "announcement_AkiHJQ": {
           "type": "announcement",
           "settings": {
-            "text": "Big Holiday Sale is Live",
+            "text": "Buy More Save More",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
-            "link": ""
+            "link": "shopify://collections/shop-all"
           }
         },
         "announcement_QLwgzc": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "GET UP TO 40% OFF🚨",
             "text_on_mobile": "",
@@ -37,7 +38,7 @@
         "announcement_eXEtFh": {
           "type": "announcement",
           "settings": {
-            "text": "🎉Extra 10% Off – Buy More, Save More!",
+            "text": "Extra 10% Off on purchase of 2 or more products",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
@@ -114,6 +115,7 @@
     },
     "annoucment_countdown_Qp8nbd": {
       "type": "annoucment-countdown",
+      "disabled": true,
       "name": "Announcement — Countdown",
       "settings": {
         "show_bar": true,

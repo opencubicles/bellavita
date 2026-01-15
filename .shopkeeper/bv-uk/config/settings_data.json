@@ -61,7 +61,7 @@
     "disable_view_cart": true,
     "show_free_shipping_message": true,
     "show_tier_progress_bar": false,
-    "free_shipping_minimum_amount": "30",
+    "free_shipping_minimum_amount": "29.99",
     "show_bogo_progress_bar": false,
     "bogo_tag": "",
     "min_bogo_quantity": "",
@@ -427,6 +427,18 @@
           "utm_campaign": true,
           "utm_term": true,
           "ref": true
+        }
+      },
+      "4824701725375534060": {
+        "type": "shopify://apps/blockify-checkout/blocks/block-checkout/a02f68fe-3bdb-4615-b9c5-7d181a329397",
+        "disabled": false,
+        "settings": {}
+      },
+      "5149645339031002760": {
+        "type": "shopify://apps/minmaxify-order-limits/blocks/app-embed-block/3acfba32-89f3-4377-ae20-cbb9abc48475",
+        "disabled": false,
+        "settings": {
+          "async": false
         }
       }
     }
