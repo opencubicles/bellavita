@@ -51,7 +51,7 @@
         <span class="badge price__badge-sold-out" aria-hidden="true">
           {{ 'products.product.sold_out' | t }}
         </span>
-      {%- elsif product.compare_at_price > product.price -%}
+      {%- elsif target.compare_at_price > target.price -%}
         {%- assign on_sale_text = 'products.product.on_sale' | t -%}
         {%- if on_sale_text != blank -%}
           <span class="badge price__badge-sale" aria-hidden="true">
@@ -136,8 +136,8 @@
       {%- endif -%}
     </dl>
   </div>
-  {%- unless product.price_varies == false and product.compare_at_price_varies -%}
-    {%- if product.compare_at_price > product.price -%}
+  {%- unless target.price_varies == false and target.compare_at_price_varies -%}
+    {%- if target.compare_at_price > target.price -%}
       <div class="price__compare-wrapper">
         <dt class="price__compare">
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>

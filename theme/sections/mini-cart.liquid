@@ -41,6 +41,17 @@
 }
 </style>
 {% endif -%}
+{% assign embrougecollectionProductexist = false %}
+
+{% for item in cart.items %}
+  
+  {% assign product_collectionss = item.product.collections | map: "handle" %}
+  
+  {% if product_collectionss contains "embarouge" %}
+    {% assign embrougecollectionProductexist = true %}
+  {% endif %}
+
+{% endfor %}
 <form class="mini-cart{% if cart == empty %} is-empty{% endif %}" action="{{ routes.cart_url }}" method="post" id="cart">
   <div class="mini-cart__inner">
     <div class="mini-cart__header" data-animate data-animate-delay-{{ animate_count }}>
@@ -549,8 +560,16 @@
             assign cart_recommendations_limit = 7
           endif
         -%}
+        
+        
+        {% if embrougecollectionProductexist %}
+          {% assign upsell_collection = collections['embarouge'] %}
+        {% else %}
+          {% assign upsell_collection = settings.upsell_collection %}
+        {% endif %}
+
         {% assign upsell = '' %}
-        {%- for recommendation in settings.upsell_collection.products limit: cart_recommendations_limit -%}
+        {%- for recommendation in upsell_collection.products limit: cart_recommendations_limit -%}
           {% capture upsell %}  
             {{upsell}}
           {% assign upsellVariant = recommendation.selected_or_first_available_variant %}
@@ -642,25 +661,15 @@
         {%- endfor -%}
       {%- endif -%}
 
-      {% assign embrougecollectionProductexist = false %}
-
-      {% for item in cart.items %}
-        
-        {% assign product_collectionss = item.product.collections | map: "handle" %}
-        
-        {% if product_collectionss contains "embarouge" %}
-          {% assign embrougecollectionProductexist = true %}
-        {% endif %}
-
-      {% endfor %}
+     
 
       {% unless upsell == blank %}
         
-      {% if embrougecollectionProductexist == false %}
+      
         <cart-recommendations  class="cart-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ cart.items.first.product_id }}&limit={{ cart_recommendations_limit }}" data-animate data-animate-delay-{{ animate_count }}>
           <!-- <div class="title h4">{{ settings.upsell_heading | escape }}</div> -->
 
-        {% if shop.metafields.custom.minicart_top_offer_banner and shop.metafields.custom.minicart_top_offer_banner != blank %}
+        {% if shop.metafields.custom.minicart_top_offer_banner and shop.metafields.custom.minicart_top_offer_banner != blank and embrougecollectionProductexist == false %}
             <div class="title-image"><img class="title-img" src="{{ shop.metafields.custom.minicart_top_offer_banner | img_url: '800x' }}"  width="100%"></div>
         {% endif %}
 
@@ -668,7 +677,7 @@
             {{upsell}}
           </ul>
         </cart-recommendations> 
-      {% endif %}
+
       {% endunless %} 
     </div>
 

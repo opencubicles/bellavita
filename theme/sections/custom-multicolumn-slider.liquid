@@ -48,7 +48,7 @@
  {% endif %}
 
 <div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}" id="{%  if section.settings.show_ingredient %}show-ingreadiant{% endif %}">
-  <div class="multicolumn multicolumn-slider page-width">
+  <div class="multicolumn multicolumn-slider page-width {% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}">
     <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %} {{ section.settings.text_alignment }} mobile-{{ section.settings.mobile_text_alignment }} {{ section.settings.heading_alignment }}">
       <{{ section.settings.heading_tag }} class="title {{ section.settings.heading_size }}">
         {%- render 'highlight-text',
@@ -96,7 +96,7 @@
         {%- for block in section.blocks -%}
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile or section.settings.horizontal_scroll %} slider__slide{% endif %} {{ section.settings.text_alignment }}"
+            class="{% if block.settings.custom_class2 != blank %}{{ block.settings.custom_class2 }}{% endif %} multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile or section.settings.horizontal_scroll %} slider__slide{% endif %} {{ section.settings.text_alignment }}"
             {{ block.shopify_attributes }}
           >
             <div
@@ -472,6 +472,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS class",
+      "info": "Add a custom CSS class for this section"
+    },
     {
       "type": "select",
       "id": "image_ratio",
@@ -1038,6 +1044,12 @@
           "default": "Button label",
           "label": "t:sections.all.button_label.label",
           "info": "t:sections.all.button_label.info"
+        },
+        {
+          "type": "text",
+          "id": "custom_class2",
+          "label": "Custom CSS class",
+          "info": "Add a custom CSS class for this section"
         },
         {
           "type": "url",

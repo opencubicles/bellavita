@@ -1,0 +1,247 @@
+{% liquid
+  assign hide_mobile = section.settings.hide_on_mobile
+  assign custom_class = section.settings.custom_class
+%}
+
+<section
+  class="image-product-split {{ custom_class }} {% if hide_mobile %}hide-mobile{% endif %}"
+>
+  <div class="ips-container">
+    <!-- LEFT IMAGE -->
+    <div class="ips-left">
+      {% if section.settings.left_image %}
+        <img
+          src="{{ section.settings.left_image | image_url: width: 900 }}"
+          alt="Left Image"
+          loading="lazy"
+          width="auto"
+          height="auto"
+        >
+      {% endif %}
+    </div>
+
+    <!-- RIGHT PRODUCT -->
+    <div class="ips-right">
+      {% if section.settings.product %}
+        {% assign product = all_products[section.settings.product] %}
+
+        <div class="ips-product">
+         
+          {% if section.settings.desktop_image or section.settings.mobile_image %}
+            <picture>
+              {% if section.settings.mobile_image %}
+                <source
+                  media="(max-width: 768px)"
+                  srcset="{{ section.settings.mobile_image | image_url: width: 800 }}"
+                >
+              {% endif %}
+
+              {% if section.settings.desktop_image %}
+                <img
+                  src="{{ section.settings.desktop_image | image_url: width: 600 }}"
+                  alt="{{ product.title }}"
+                  loading="lazy"
+                  width="auto"
+                  height="auto"
+                >
+              {% endif %}
+            </picture>
+          {% endif %}
+
+          <h1 class="product-title"><strong>{{ section.settings.title }}</strong></h1>
+          <p class="ips-price"><h3 style="margin-top:0px !important;"><strong>{{ product.price | money }}</strong></h3></p>
+
+        <a href="{{ product.url }}" class="ips-btn">
+            View More
+        </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+
+<style>
+.image-product-split {
+  padding: 40px 0;
+}
+
+/* =====================
+   DESKTOP LAYOUT
+===================== */
+.ips-container {
+  display: flex;
+  align-items: stretch;
+  gap: 0; /* NO GAP BETWEEN SECTIONS */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LEFT & RIGHT SECTIONS */
+.ips-left,
+.ips-right {
+  flex: 1;
+  display: flex;
+}
+
+/* LEFT IMAGE */
+.ips-left {
+  align-items: flex-start;
+}
+
+.ips-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* RIGHT PRODUCT */
+.ips-right {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* PRODUCT WRAPPER */
+.ips-product {
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* PRODUCT IMAGE */
+.ips-product img {
+  max-height: 420px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* TITLE */
+.ips-product h3 {
+  margin-top: 28px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* PRICE */
+.ips-price {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* VIEW MORE BUTTON (ALIGNED BOTTOM) */
+.ips-btn {
+  margin-top: auto; /* PUSHES BUTTON TO BOTTOM */
+  padding: 14px 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* =====================
+   MOBILE CARD LAYOUT
+===================== */
+@media (max-width: 768px) {
+  .product-title {
+    display:none;
+  }
+  .image-product-split {
+    padding: 10px 7px;
+  }
+
+  .ips-container {
+    flex-direction: column;
+  }
+
+  /* HIDE LEFT IMAGE */
+  .ips-left {
+    display: none;
+  }
+
+  .ips-right {
+    justify-content: center;
+  }
+
+  .ips-product {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .ips-product img {
+    max-height: none;
+    width: 100%;
+  }
+
+  {% comment %} .ips-product h3 {
+    display: none; /* matches mobile design */
+  } {% endcomment %}
+
+  .ips-price {
+    margin: 16px 0;
+    font-size: 18px;
+  }
+
+  .ips-btn {
+    margin-top: 0;
+  }
+}
+
+</style>
+
+{% schema %}
+{
+  "name": "Image + Product Split",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Product Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Product Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Product Image (Mobile)"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Right Product"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_mobile",
+      "label": "Hide on mobile",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS class",
+      "info": "Add your own class for styling"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Left / Product Right"
+    }
+  ]
+}
+{% endschema %}

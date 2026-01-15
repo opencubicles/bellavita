@@ -8,7 +8,7 @@
 {{ 'section-video.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
-<div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
+<div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %} {% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}">
   <div class="video-section{% unless section.settings.full_width %} page-width{% endunless %}">
     <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %}{% if section.settings.full_width %} page-width{% endif %} {{ section.settings.heading_alignment }}">
       <{{ section.settings.heading_tag }} class="title {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</{{ section.settings.heading_tag }}>
@@ -76,6 +76,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS class",
+      "info": "Add a custom CSS class for this section"
+    },
     {
       "type": "image_picker",
       "id": "cover_image",

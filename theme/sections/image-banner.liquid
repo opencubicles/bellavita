@@ -37,7 +37,7 @@
   endif
 -%}
 
-<div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
+<div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %} {% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}">
   <div class="page-width{% if section.settings.full_width %} page-width--full-width{% endif %}">
     <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.show_text_box %} banner--container{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}">
       {%- if section.settings.image != blank -%}
@@ -139,6 +139,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS class",
+      "info": "Add a custom CSS class for this section"
+    },
     {
       "type": "image_picker",
       "id": "image",

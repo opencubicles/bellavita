@@ -15,8 +15,8 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/for_HIMfor_HIM.jpg",
-            "image_mobile": "shopify://shop_images/for_HIMmobile_-_HIM.jpg",
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1_a85f2645-2276-45ec-b02b-6bbdbfcbc15f.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1_d7613e56-f72f-4bf1-bb48-3e574d2666ba.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -37,8 +37,8 @@
         "image_tiQb3A": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/for_HERfor_HER.jpg",
-            "image_mobile": "shopify://shop_images/for_HERmobile_-_HER.jpg",
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1_2aaa102d-df25-4507-92cc-e7c1bc9364a2.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1_298d0b15-91c8-4289-bd54-e9d023535b6d.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -58,10 +58,9 @@
         },
         "image_maVL8h": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1_9d525544-104d-49d0-8b60-4b96906a34bb.jpg",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1_99f63527-3528-435d-bfaf-6a4c41c25ad6.jpg",
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1_fc985071-373c-4684-8135-f6261ed28273.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1_f85c1b1f-5ded-471e-827c-8cc31e2c9724.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -82,8 +81,8 @@
         "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/for_Gift_Setsfor_HIM.jpg",
-            "image_mobile": "shopify://shop_images/for_Gift_Setsmobile_-_HIM.jpg",
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1_ac28d648-4024-4ccd-a18c-0dad90c7600d.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1_f1b9db70-5901-4923-8c86-9fa4fa9e64fe.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",

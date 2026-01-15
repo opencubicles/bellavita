@@ -622,4 +622,17 @@
       }
     </style>
   {% endif %}
+  {% if product.handle == 'ceo-man-luxury-perfume-20ml' or product.handle == 'honey-oud-unisex-perfume-20ml' %}
+    <style>
+      .product-form__quantity {
+        display:none!important;
+      }
+      .product__tax.caption.rte {
+        display: none !important;
+      }
+      .custom__liquid .shipping {
+        display:none!important;
+      }
+    </style>
+  {% endif %}
 {% endif %}
