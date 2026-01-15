@@ -14,8 +14,19 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_UGNaqY": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy More Save More",
+            "text_on_mobile": "",
+            "text_size": 13,
+            "end_date": "",
+            "link": "shopify://collections/buy-more-save-more"
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "🎄Bell-A-Christmas Sale is Live 🎁",
             "text_on_mobile": "",
@@ -26,6 +37,7 @@
         },
         "announcement_eXEtFh": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "GET UP TO 40% OFF🚨",
             "text_on_mobile": "",
@@ -37,7 +49,7 @@
         "announcement_wJqJbc": {
           "type": "announcement",
           "settings": {
-            "text": "🎉Extra 10% Off – Buy More, Save More!",
+            "text": "🎉Extra 10% Off on purchase of 2 or more products",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
@@ -56,6 +68,7 @@
         }
       },
       "block_order": [
+        "announcement_UGNaqY",
         "announcement-bar-0",
         "announcement_eXEtFh",
         "announcement_wJqJbc",
