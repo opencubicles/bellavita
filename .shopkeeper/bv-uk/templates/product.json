@@ -322,6 +322,12 @@
             "tryon-atc-selector": ""
           }
         },
+        "custom_liquid_3RTPP8": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.tryon_custom_text %}\n<div class=\"try-now-pay-later\">\n  <h3 class=\"tnpl-title\">\n    Try Now, Pay Later ✨\n  </h3>\n\n  <ul class=\"tnpl-steps\">\n    <li class=\"tnpl-step\">\n      <strong>Pay $0 Today:</strong>\n      Pick your favorite item to try. We’ll place a temporary hold on your card, but you won’t be charged a dime yet.\n    </li>\n\n    <li class=\"tnpl-step\">\n      <strong>3-Day Test Drive:</strong>\n      Your 3-day trial starts the moment the package hits your doorstep. Try it on and see how it fits with your vibe.\n    </li>\n\n    <li class=\"tnpl-step\">\n      <strong>Keep What You Love:</strong>\n      Only pay for the item if you decide to keep it. Send it back after the trial window, and that temporary hold disappears.\n    </li>\n  </ul>\n</div>\n{% endif %}"
+          }
+        },
         "meta_coms_MzxdKJ": {
           "type": "meta_coms",
           "settings": {}
@@ -369,6 +375,7 @@
         "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf",
         "buy_buttons",
         "tryon_try_on_app_block_8iLcQE",
+        "custom_liquid_3RTPP8",
         "meta_coms_MzxdKJ",
         "sticky_cart_t4QLHa",
         "offer_badges_hFhQyD",
