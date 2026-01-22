@@ -85,7 +85,7 @@
     "banner": {
       "type": "main-collection-banner",
       "custom_css": [
-        "@media only screen and (max-width: 600px) {.collection-hero__inner {padding-top: 5rem; }}"
+        "@media only screen and (max-width: 600px) {.collection-hero__inner {padding-top: 1rem; }}"
       ],
       "settings": {
         "heading_size": "h2",

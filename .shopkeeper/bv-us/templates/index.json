@@ -12,6 +12,28 @@
     "slideshow_kwPcBi": {
       "type": "slideshow",
       "blocks": {
+        "image_TkfyFw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mani_banner_desktop_332af7a0-4861-4c7e-ab83-db47ab6fd5a0.webp",
+            "image_mobile": "shopify://shop_images/main_banner_mobile_40dca97b-d028-4b47-bbf0-70d24267fd4a.webp",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "https://bellavitaluxe.com/collections/mist",
+            "button_secondary_label": "",
+            "button_secondary_link": "https://bellavitaluxe.com/collections/mist",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
         "image_UTGxj7": {
           "type": "image",
           "settings": {
@@ -124,6 +146,7 @@
         }
       },
       "block_order": [
+        "image_TkfyFw",
         "image_UTGxj7",
         "image_tiQb3A",
         "image_maVL8h",

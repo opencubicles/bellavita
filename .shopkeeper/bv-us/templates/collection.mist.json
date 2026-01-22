@@ -87,7 +87,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "custom_class": "",
-        "image": "shopify://shop_images/poweredby.jpg",
+        "image": "shopify://shop_images/2_2_bc38c863-6c14-47b2-91e0-de46659aff7b.jpg",
         "image_position": "center center",
         "text_box_position": "middle-center",
         "text_alignment": "center",
@@ -140,9 +140,9 @@
       "type": "video",
       "name": "t:sections.video.presets.name",
       "settings": {
-        "custom_class": "",
+        "custom_class": "main-video",
         "cover_image": "shopify://shop_images/body_mist_gropu_shot.jpg",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https://youtu.be/tOxHZZK1-HE",
         "description": "",
         "full_width": true,
         "show_divider": false,
@@ -178,6 +178,7 @@
         "heading_hxTF7n",
         "text_4RbmBb"
       ],
+      "custom_css": [],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/1.png",
@@ -200,7 +201,7 @@
         "colors_text": "#916511",
         "colors_background": "#ffffff",
         "gradient_background": "",
-        "padding_top": 4,
+        "padding_top": 20,
         "padding_bottom": 0
       }
     },
@@ -415,7 +416,7 @@
       "settings": {
         "custom_class": "bloom-bg bloom-gradient mobile-video-hidden",
         "cover_image": "shopify://shop_images/bloom-bae.jpg",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https://youtu.be/AynDnhUZtME",
         "description": "",
         "full_width": false,
         "show_divider": false,
@@ -458,7 +459,7 @@
       "settings": {
         "custom_class": "vanilla-bg vanilla-to-bloom-gradient mobile-video-hidden",
         "cover_image": "shopify://shop_images/vanilla_be712a2f-3051-4370-91da-4e255399dea9.jpg",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https://youtu.be/c8s9OmEn6CY",
         "description": "",
         "full_width": false,
         "show_divider": false,
@@ -501,7 +502,7 @@
       "settings": {
         "custom_class": "litchi-bg litchi-to-vanilla-gradient mobile-video-hidden",
         "cover_image": "shopify://shop_images/litchi-lust.jpg",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https://youtu.be/bPWvzbGk1ms",
         "description": "",
         "full_width": false,
         "show_divider": false,

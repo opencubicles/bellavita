@@ -189,7 +189,27 @@
           endif
         -%}
       </button>
+      {% if product.metafields.custom.show_consent %}
+        <div class="cart-marketing-consent" style="margin-top: 16px;">
+          
+          <!-- Default value when unchecked -->
+          <input type="hidden" name="attributes[Marketing Consent]" value="No">
+
+          <label class="marketing-consent-label">
+            <input
+              type="checkbox"
+              name="attributes[Marketing Consent]"
+              value="Yes"
+              {% if cart.attributes["Marketing Consent"] == "Yes" %}checked{% endif %}
+            >
+            I consent to receive updates and exclusive offers via Email, WhatsApp,
+            and other channels. I trust your commitment to a strict no-spam policy and
+            understand that you will only send meaningful, relevant content.
+          </label>
+        </div>
+      {% endif %}
     {%- endif -%}    
+
       <!-- custom code for app exclusive button -->
       {%- endif -%}  
       <!-- custom code for app exclusive button ends here -->

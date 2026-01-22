@@ -374,10 +374,18 @@
       {%- if custom_design == false -%}
       <div class="card-information__top">
         <div class="card-article-info caption-with-letter-spacing">
-          {% if card_product.metafields.my_fields.product_meta_secondary_text != blank %}
-            {{ card_product.metafields.my_fields.product_meta_secondary_text }}
+          {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+            {% if card_product.metafields.custom.perfume_notes_secondary_title != blank %}
+                {{ card_product.metafields.custom.perfume_notes_secondary_title }}
+            {% else %}
+              {{ card_product.type }}
+            {% endif %}
           {% else %}
-            {{ card_product.type }}
+            {% if card_product.metafields.my_fields.product_meta_secondary_text != blank %}
+              {{ card_product.metafields.my_fields.product_meta_secondary_text }}
+            {% else %}
+              {{ card_product.type }}
+            {% endif %}
           {% endif %}
         </div>
       </div>

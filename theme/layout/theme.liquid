@@ -490,15 +490,31 @@
   {% endif %}
 {% endif -%}
 
+{% if request.path contains '/collections/embarouge' %}
+  <style>
+    .collection-hero__text-wrapper {
+      display:none !important;
+    }
+    </style>
+{% endif %}
+
+{% if request.path contains '/collections/mist' %}
+  <style>
+    .restock-rocket-button-collection {
+      display:none !important;
+    }
+    </style>
+{% endif %}
 
 
 {% if template.suffix == "embarouge" %}
   <style>
+    
     .mobile-dock {
       display:none !important;
     }
   </style>
-  {% endif %}
+{% endif %}
 
 </body>
 </html>
