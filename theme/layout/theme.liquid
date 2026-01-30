@@ -175,6 +175,39 @@
   (function(w,d,t,r,u) { var f,n,i; w[u]=w[u]||[],f=function() { var o={ti:"97168584", enableAutoSpaTracking: true}; o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad") }, n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function() { var s=this.readyState; s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null) }, i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i) }) (window,document,"script","//bat.bing.com/bat.js","uetq");
     </script>
         <!-- MIcrosoft Bing Script ends from here  -->
+  {% comment %} {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+    {% if product.handle == 'unisex-perfume-gift-set-4-x-0-7-fl-oz' %}
+      <style>
+        .mobile-main-title-box {
+          display:none !important;
+        }
+        
+        @media (max-width: 767px) {
+          .mobile-main-title-box-duplicate .product-rating-share-container {
+            margin-top:5px !important;
+          }
+          .product__info-container>*+* {
+            margin: 5px 0 0 !important;
+          }
+          .section--padding.mobile-main-title-box-duplicate {
+            padding-bottom: 5px !important;
+          }
+          .product__media {
+            border-radius: 16px;
+          }
+        }
+
+      </style>
+    {% else %}
+      <style>
+      @media (max-width: 767px) {
+        .mobile-main-title-box-duplicate {
+          display:none !important;
+        }
+      }
+    </style>
+    {% endif %}
+  {% endif %} {% endcomment %}
   </head>
   <!-- OC Test Comment3 -->
   <body

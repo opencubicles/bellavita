@@ -61,7 +61,7 @@
 
 {%- if section.settings.show_divider %}<div class="section--divider">{% endif -%}
 <div class="page-width{% if section.settings.narrow %} page-width--inner{% endif %}">
-  <div class="rich-text section--padding{{ custom_class }}">
+  <div class="rich-text section--padding{{ custom_class }} {{section.settings.custom_class_admin}}">
     <div class="rich-text__blocks {{ section.settings.text_alignment }} mobile-{{ section.settings.mobile_text_alignment }}">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -225,6 +225,11 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class_admin",
+      "label": "Custom CSS class"
+    },
     {
       "type": "select",
       "id": "text_alignment",

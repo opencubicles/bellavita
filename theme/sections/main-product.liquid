@@ -1492,7 +1492,7 @@
                   -%}
                   <!-- custom code for price in sticky ATC button -->
                   {% if sticky_cart.settings.show_price_on_mobile %}
-                    <span class="price large-hide" id="sticky-product-subtotal">
+                    <span class="price large-hide" id="sticky-product-subtotal" data-base-price="{{ product.selected_or_first_available_variant.price }}">
                       {{ product.selected_or_first_available_variant.price | money }}
                     </span>
                   {% endif %}

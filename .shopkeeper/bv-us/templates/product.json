@@ -204,6 +204,7 @@
         "@media (max-width: 800px) {.rich-text {padding-top: 4px; }}"
       ],
       "settings": {
+        "custom_class_admin": "mobile-main-title-box",
         "text_alignment": "center",
         "mobile_text_alignment": "left",
         "horizontal_content": false,
@@ -342,6 +343,7 @@
         },
         "offers_section_whdpGY": {
           "type": "offers_section",
+          "disabled": true,
           "settings": {}
         }
       },
