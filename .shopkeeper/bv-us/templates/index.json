@@ -12,11 +12,11 @@
     "slideshow_kwPcBi": {
       "type": "slideshow",
       "blocks": {
-        "image_TkfyFw": {
+        "image_bR6dwk": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Mani_banner_desktop_332af7a0-4861-4c7e-ab83-db47ab6fd5a0.webp",
-            "image_mobile": "shopify://shop_images/main_banner_mobile_40dca97b-d028-4b47-bbf0-70d24267fd4a.webp",
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_7a1743e4-1dd4-42bd-9d84-033a00c9fea6.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_copy_3.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -27,20 +27,20 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "shopify://collections/hair-body-mist",
+            "button_link": "https://bellavitaluxe.com/apps/gbb/easybundle/3?page=addProductsPage1&currentFlow=byob",
             "button_secondary_label": "",
-            "button_secondary_link": "shopify://collections/hair-body-mist",
+            "button_secondary_link": "",
             "button_size": "medium",
             "button_style_secondary": false
           }
         },
-        "image_UTGxj7": {
+        "image_maVL8h": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1_a85f2645-2276-45ec-b02b-6bbdbfcbc15f.jpg",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1_d7613e56-f72f-4bf1-bb48-3e574d2666ba.jpg",
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_HIM.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_HIM.jpg",
             "image_position": "center center",
-            "text_box_position": "bottom-left",
+            "text_box_position": "middle-center",
             "subheading": "",
             "subheading_size": "h5",
             "heading": "",
@@ -59,8 +59,8 @@
         "image_tiQb3A": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1_2aaa102d-df25-4507-92cc-e7c1bc9364a2.jpg",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1_298d0b15-91c8-4289-bd54-e9d023535b6d.jpg",
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_HER.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_HER.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -78,11 +78,11 @@
             "button_style_secondary": false
           }
         },
-        "image_maVL8h": {
+        "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1_fc985071-373c-4684-8135-f6261ed28273.jpg",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1_f85c1b1f-5ded-471e-827c-8cc31e2c9724.jpg",
+            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_GIFTSET.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_HIM_copy_2.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -93,18 +93,18 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "shopify://collections/unisex-perfumes",
+            "button_link": "https://bellavitaluxe.com/apps/gbb/easybundle/3?page=addProductsPage1&currentFlow=byob",
             "button_secondary_label": "",
             "button_secondary_link": "",
             "button_size": "medium",
             "button_style_secondary": false
           }
         },
-        "image_4kaVAz": {
+        "image_TkfyFw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_1_ac28d648-4024-4ccd-a18c-0dad90c7600d.jpg",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_1_f1b9db70-5901-4923-8c86-9fa4fa9e64fe.jpg",
+            "image": "shopify://shop_images/Mani_banner_desktop_332af7a0-4861-4c7e-ab83-db47ab6fd5a0.webp",
+            "image_mobile": "shopify://shop_images/main_banner_mobile_40dca97b-d028-4b47-bbf0-70d24267fd4a.webp",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -115,9 +115,9 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "shopify://collections/gift-sets",
+            "button_link": "shopify://collections/hair-body-mist",
             "button_secondary_label": "",
-            "button_secondary_link": "",
+            "button_secondary_link": "shopify://collections/hair-body-mist",
             "button_size": "medium",
             "button_style_secondary": false
           }
@@ -146,11 +146,11 @@
         }
       },
       "block_order": [
-        "image_TkfyFw",
-        "image_UTGxj7",
-        "image_tiQb3A",
+        "image_bR6dwk",
         "image_maVL8h",
+        "image_tiQb3A",
         "image_4kaVAz",
+        "image_TkfyFw",
         "image_Cy7EAB"
       ],
       "custom_css": [

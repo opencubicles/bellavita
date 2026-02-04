@@ -338,12 +338,11 @@
         "custom_liquid_kjYyfP": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"pdp-banner\">\n\n{% if shop.metafields.custom.pdp_atc_desk_offer_banner and shop.metafields.custom.pdp_atc_desk_offer_banner != blank %}\n<a href=\"https://bellavitaluxe.com/collections/shop-all\">\n\t<img  src=\"{{ shop.metafields.custom.pdp_atc_desk_offer_banner | img_url: '800x' }}\">\n</a>\n\n{% endif %}\n\n\n\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>"
+            "custom_liquid": "<div class=\"pdp-banner\">\n\n{% if shop.metafields.custom.pdp_atc_desk_offer_banner and shop.metafields.custom.pdp_atc_desk_offer_banner != blank %}\n<a href=\"https://bellavitaluxe.com/apps/gbb/easybundle/3?page=addProductsPage1&currentFlow=byob\">\n\t<img  src=\"{{ shop.metafields.custom.pdp_atc_desk_offer_banner | img_url: '800x' }}\">\n</a>\n\n{% endif %}\n\n\n\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>"
           }
         },
         "offers_section_whdpGY": {
           "type": "offers_section",
-          "disabled": true,
           "settings": {}
         }
       },

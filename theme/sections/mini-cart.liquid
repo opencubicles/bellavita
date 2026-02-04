@@ -42,7 +42,7 @@
 </style>
 {% endif -%}
 {% assign embrougecollectionProductexist = false %}
-
+{% assign mistcollectionProductexist = false %}
 {% for item in cart.items %}
   
   {% assign product_collectionss = item.product.collections | map: "handle" %}
@@ -50,7 +50,9 @@
   {% if product_collectionss contains "embarouge" %}
     {% assign embrougecollectionProductexist = true %}
   {% endif %}
-
+   {% if product_collectionss contains "hair-body-mist" %}
+    {% assign mistcollectionProductexist = true %}
+  {% endif %}
 {% endfor %}
 <form class="mini-cart{% if cart == empty %} is-empty{% endif %}" action="{{ routes.cart_url }}" method="post" id="cart">
   <div class="mini-cart__inner">
@@ -581,6 +583,8 @@
         
         {% if embrougecollectionProductexist %}
           {% assign upsell_collection = collections['embarouge'] %}
+        {% elsif mistcollectionProductexist %}  
+           {% assign upsell_collection = collections['hair-body-mist'] %}
         {% else %}
           {% assign upsell_collection = settings.upsell_collection %}
         {% endif %}

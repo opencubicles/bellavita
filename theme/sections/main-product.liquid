@@ -1471,7 +1471,10 @@
                 <button
                   type="submit"
                   name="add"
-                  class="product-form__submit button button--small"
+                  class="product-form__submit button button--small
+                  {%- if product.selected_or_first_available_variant.available == false -%}
+                    button--soldout
+                  {%- endif -%}"
                   {%- if product.selected_or_first_available_variant.available == false %}
                     disabled="disabled"
                   {% endif -%}

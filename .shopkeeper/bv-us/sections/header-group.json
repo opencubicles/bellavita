@@ -49,11 +49,11 @@
         "announcement_eXEtFh": {
           "type": "announcement",
           "settings": {
-            "text": "🎉BUY MORE SAVE MORE - EXTRA 20% OFF",
+            "text": "Valentine's Exclusive: Any 2 Giftsets @42.99",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
-            "link": "shopify://collections/shop-all"
+            "link": "https://bellavitaluxe.com/apps/gbb/easybundle/3?page=addProductsPage1&currentFlow=byob"
           }
         },
         "announcement_zAeFRF": {
@@ -95,8 +95,8 @@
       "type": "header",
       "custom_css": [],
       "settings": {
-        "logo": "shopify://shop_images/BV-GLOBAL-Black-1_3930f9ff-b411-4001-829f-9c557e2b588a.png",
-        "mobile_logo": "shopify://shop_images/BV-GLOBAL-Black-1_3930f9ff-b411-4001-829f-9c557e2b588a.png",
+        "logo": "shopify://shop_images/Valentine_logo_2.png",
+        "mobile_logo": "shopify://shop_images/Valentine_logo_2.png",
         "embarouge_logo": "shopify://shop_images/em_logo.png",
         "logo_height": 62,
         "mobile_logo_height": 56,
@@ -111,8 +111,8 @@
         "enable_sticky_header": true,
         "show_sticky_header_scroll_up": false,
         "sticky_mobile_menu": "",
-        "transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1_932a2156-83ef-49a2-a3d7-c6909bc99ee0.png",
-        "mobile_transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1_932a2156-83ef-49a2-a3d7-c6909bc99ee0.png",
+        "transparent_logo": "shopify://shop_images/Valentine_logo_3_trans.png",
+        "mobile_transparent_logo": "shopify://shop_images/Valentine_logo_3_trans.png",
         "enable_transparent_header": true,
         "enable_transparent_header_collection": false,
         "enable_transparent_header_custom": "",

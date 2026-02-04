@@ -141,7 +141,9 @@
       <button
         type="submit"
         name="add"
-        class="product-form__submit button{% if block.settings.show_dynamic_checkout %} button--secondary{% endif %} button--full-width{% if block.settings.hide_atc_on_mobile %} small-hide{% endif %}"
+        class="product-form__submit button{% if block.settings.show_dynamic_checkout %} button--secondary{% endif %} button--full-width{% if block.settings.hide_atc_on_mobile %} small-hide{% endif %} {%- if product.selected_or_first_available_variant.available == false -%}
+                    button--soldout
+                  {%- endif -%}"
         {%- if product.selected_or_first_available_variant.available == false %}
           disabled="disabled"
         {% endif -%}
@@ -168,7 +170,9 @@
        <button
         type="submit"
         name="add"
-        class="product-form__submit button{% if block.settings.show_dynamic_checkout %} button--secondary{% endif %} button--full-width{% if block.settings.hide_atc_on_mobile %} small-hide{% endif %}"
+        class="product-form__submit button{% if block.settings.show_dynamic_checkout %} button--secondary{% endif %} button--full-width{% if block.settings.hide_atc_on_mobile %} small-hide{% endif %} {%- if product.selected_or_first_available_variant.available == false -%}
+                    button--soldout
+                  {%- endif -%}"
         {%- if product.selected_or_first_available_variant.available == false %}
           disabled="disabled"
         {% endif -%}
