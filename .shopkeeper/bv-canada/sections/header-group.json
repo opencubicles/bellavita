@@ -1,0 +1,147 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header-group.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_QLwgzc": {
+          "type": "announcement",
+          "settings": {
+            "text": "💕Valentine Sale is Live 💝",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        },
+        "announcement_Tz3GQk": {
+          "type": "announcement",
+          "settings": {
+            "text": "UP TO 30% OFF❤️‍🔥",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        },
+        "announcement_AkiHJQ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy More Save More",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_eXEtFh": {
+          "type": "announcement",
+          "settings": {
+            "text": "Extra 10% Off on purchase of 2 or more products",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_PpnE34": {
+          "type": "announcement",
+          "settings": {
+            "text": "🚚FREE Shipping Above £30",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_QLwgzc",
+        "announcement_Tz3GQk",
+        "announcement_AkiHJQ",
+        "announcement_eXEtFh",
+        "announcement_PpnE34"
+      ],
+      "settings": {
+        "only_homepage": false,
+        "layout": "marquee",
+        "mobile_layout": "marquee",
+        "autorotate": true,
+        "autorotate_speed": 5,
+        "show_navigation": true,
+        "direction": "left",
+        "speed": 1.6,
+        "colors_text": "#ffffff",
+        "colors_background": "#171615",
+        "gradient_background": "",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [],
+      "settings": {
+        "logo": "shopify://shop_images/BV-UK_LOGO.png",
+        "mobile_logo": "shopify://shop_images/BV-UK_LOGO.png",
+        "logo_height": 62,
+        "mobile_logo_height": 56,
+        "logo_position": "top-center",
+        "menu": "main-menu",
+        "enable_dropdown_menu": true,
+        "show_line_separator": true,
+        "cart_icon": "bag",
+        "icon_weight": "1.5",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_sticky_header": true,
+        "show_sticky_header_scroll_up": false,
+        "sticky_mobile_menu": "",
+        "transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1_1.png",
+        "mobile_transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1_1.png",
+        "enable_transparent_header": true,
+        "enable_transparent_header_collection": false,
+        "enable_transparent_header_custom": "",
+        "show_transparent_header_border": false,
+        "transparent_text_color": "#ffffff",
+        "mobile_logo_position": "center",
+        "colors_text": "#282828",
+        "colors_border": "#ffffff",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "annoucment_countdown_Qp8nbd": {
+      "type": "annoucment-countdown",
+      "disabled": true,
+      "name": "Announcement — Countdown",
+      "settings": {
+        "show_bar": true,
+        "announcement_text": "",
+        "enable_countdown": true,
+        "sale_end_date": "2026-01-06 11:59:59",
+        "countdown_format": "hours",
+        "right_text": "",
+        "bg_color": "#111827",
+        "text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "annoucment_countdown_Qp8nbd"
+  ]
+}
