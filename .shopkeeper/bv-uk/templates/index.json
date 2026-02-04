@@ -23,10 +23,9 @@
       "blocks": {
         "image_tiQb3A": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/1_BESTSELLERS-DESKTOP.png",
-            "image_mobile": "shopify://shop_images/1_BESTSELLERS-MOBILE.png",
+            "image": "shopify://shop_images/1_BESTSELLERS.png",
+            "image_mobile": "shopify://shop_images/1_BESTSELLERS_-mobile.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -47,8 +46,8 @@
         "image_MdXHCy": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Him_7738e52c-3542-414b-b8fc-6b62085d7f58.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Him_1d34d7f3-d684-4024-a38e-fe6edcdf0f8a.jpg",
+            "image": "shopify://shop_images/3_FOR_HER.png",
+            "image_mobile": "shopify://shop_images/3_FOR_HIM_-mobile.png",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -69,8 +68,8 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Her_dcf08775-9234-4833-85ef-64b2957d75dd.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Her_0d027771-7c7b-425c-82f4-e4fc2f8e30bd.jpg",
+            "image": "shopify://shop_images/2_FOR_HER.png",
+            "image_mobile": "shopify://shop_images/2_FOR_HER_1_-mobile.png",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -91,8 +90,8 @@
         "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Homepage_Banner_For_Unisex_8886ee92-7b57-4c0e-8ae3-6fcb6e6a3a25.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Unisex_44d6bdd7-22ce-4c48-914a-2a6158f3a6cb.jpg",
+            "image": "shopify://shop_images/4_FOR_ALL.png",
+            "image_mobile": "shopify://shop_images/4_FOR_ALL_1_-mobile.png",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -109,13 +108,36 @@
             "button_size": "medium",
             "button_style_secondary": false
           }
+        },
+        "image_JL9Eef": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_SUPERDRUG_c6234909-32af-42c4-9abc-62e6fd6a4fd6.jpg",
+            "image_mobile": "shopify://shop_images/5_SUPERDRUG_1.jpg",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "https://www.superdrug.com/marketplace/c/marketplace?query=:ranking:category:Essential%20Oils%20%26%20Essences:category:Candles:category:Women%E2%80%99s%20Perfume:category:Men%27s%20Aftershave:category:Reed%20Diffusers:category:Unisex%20Perfume:masterBrandName:Bellavita",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "image_tiQb3A",
         "image_MdXHCy",
         "image_UTGxj7",
-        "image_4kaVAz"
+        "image_4kaVAz",
+        "image_JL9Eef"
       ],
       "custom_css": [
         "a.button {font-size: 19px;}",

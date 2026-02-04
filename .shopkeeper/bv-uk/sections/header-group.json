@@ -14,6 +14,26 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_QLwgzc": {
+          "type": "announcement",
+          "settings": {
+            "text": "💕Valentine Sale is Live 💝",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        },
+        "announcement_Tz3GQk": {
+          "type": "announcement",
+          "settings": {
+            "text": "UP TO 30% OFF❤️‍🔥",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": ""
+          }
+        },
         "announcement_AkiHJQ": {
           "type": "announcement",
           "settings": {
@@ -22,17 +42,6 @@
             "text_size": 14,
             "end_date": "",
             "link": "shopify://collections/shop-all"
-          }
-        },
-        "announcement_QLwgzc": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "GET UP TO 40% OFF🚨",
-            "text_on_mobile": "",
-            "text_size": 14,
-            "end_date": "",
-            "link": ""
           }
         },
         "announcement_eXEtFh": {
@@ -57,8 +66,9 @@
         }
       },
       "block_order": [
-        "announcement_AkiHJQ",
         "announcement_QLwgzc",
+        "announcement_Tz3GQk",
+        "announcement_AkiHJQ",
         "announcement_eXEtFh",
         "announcement_PpnE34"
       ],
