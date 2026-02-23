@@ -9,33 +9,6 @@
  */
 {
   "sections": {
-    "image_banner_HAHq6k": {
-      "type": "image-banner",
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "custom_class": "",
-        "image": "shopify://shop_images/PDP_Banner_1d8cb397-e1fd-4d58-989d-a3c650944833.jpg",
-        "image_position": "center center",
-        "text_box_position": "middle-center",
-        "text_alignment": "center",
-        "image_ratio": "adapt",
-        "show_text_box": false,
-        "full_width": true,
-        "show_divider": false,
-        "image_behavior": "none",
-        "mobile_text_alignment": "center",
-        "mobile_image_ratio": "adapt",
-        "stack_images_on_mobile": true,
-        "show_text_below": true,
-        "colors_button_label": "#1a1b18",
-        "colors_button_background": "#ffffff",
-        "colors_text": "#ffffff",
-        "colors_overlay": "#000000",
-        "colors_overlay_opacity": 0,
-        "padding_top": 8,
-        "padding_bottom": 8
-      }
-    },
     "empty-space": {
       "type": "empty-space",
       "disabled": true,
@@ -307,10 +280,6 @@
             "custom_liquid": "<span class=\"flash-sale-tag\">\n  <img\n    src=\"https://cdn.shopify.com/s/files/1/0756/5813/3762/files/halloween.gif?v=1761298806\"\n    alt=\"Flash Icon\"\n    class=\"flash-icon\"\n  />\n  <strong>HALLOWEEN SALE</strong>\n</span>"
           }
         },
-        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf": {
-          "type": "shopify://apps/eb-easy-bundle-builder/blocks/app-block-mixAndMatchBundle/05b1325c-6303-4da5-8e2f-b13ab2a50e1a",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -318,36 +287,6 @@
             "show_price_container": true,
             "hide_atc_on_mobile": false,
             "show_dynamic_checkout": false
-          }
-        },
-        "tryon_try_on_app_block_8iLcQE": {
-          "type": "shopify://apps/tryon/blocks/tryOnAppBlock/95799297-dc1d-40fb-9234-066b30a3012a",
-          "settings": {
-            "open-tryon-modal-on-button-click": false,
-            "show-tryon-description": true,
-            "tryon-description-color": "#000000",
-            "description-align-text": "center",
-            "tryon-button-description": "Try at home, pay for what you keep",
-            "tryon-with-price-in-button": true,
-            "tryon-hide-add-to-cart": false,
-            "tryon-copy-add-to-cart-styles": true,
-            "tryon-text-color": "#ffffff",
-            "tryon-background-color": "#000000",
-            "tryon-modal-background-color": "#435a8d",
-            "tryon-modal-primary-color": "#ffde7a",
-            "tryon-modal-text-primary-color": "#ffffff",
-            "tryon-modal-text-secondary-color": "#000000",
-            "tryon-modal-header": "Try at home before you pay",
-            "tryon-modal-stage1-header": "Pay $0 today",
-            "tryon-modal-stage1-description": "At checkout, we'll temporarily place an authorization hold on your card but won't charge you anything.",
-            "tryon-modal-stage2-header": "Trial",
-            "tryon-modal-stage2-description": "Your trial starts upon the items' arrival. Comfortably try them at home and send us back the items you don't want.",
-            "tryon-modal-stage3-header": "Pay",
-            "tryon-modal-stage3-description": "Upon the return of your unwanted items, we will only charge you for the items you choose to keep.",
-            "tryon-redirect-on-click": "checkout",
-            "tryon-handling-variant-id": "",
-            "tryon-product-form-selector": "",
-            "tryon-atc-selector": ""
           }
         },
         "custom_liquid_3RTPP8": {
@@ -400,9 +339,7 @@
         "variant_picker",
         "description",
         "custom_liquid_6BXmL7",
-        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf",
         "buy_buttons",
-        "tryon_try_on_app_block_8iLcQE",
         "custom_liquid_3RTPP8",
         "meta_coms_MzxdKJ",
         "sticky_cart_t4QLHa",
@@ -613,21 +550,21 @@
         "padding_bottom": 36
       }
     },
-    "17066961646756c0fa": {
+    "1771818651744e373b": {
       "type": "apps",
       "blocks": {
-        "judge_me_reviews_review_widget_3NrUkr": {
+        "judge_me_reviews_review_widget_NB4zJR": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "review_data": "sample_data",
+            "review_data": "real_data",
             "max_width": 1200,
-            "show_shop_reviews": false,
+            "show_shop_reviews": true,
             "empty_state": "empty_widget"
           }
         }
       },
       "block_order": [
-        "judge_me_reviews_review_widget_3NrUkr"
+        "judge_me_reviews_review_widget_NB4zJR"
       ],
       "settings": {
         "include_margins": true,
@@ -635,54 +572,9 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "176604687433159f51": {
-      "type": "apps",
-      "blocks": {
-        "tryon_try_on_app_block_RczHEU": {
-          "type": "shopify://apps/tryon/blocks/tryOnAppBlock/95799297-dc1d-40fb-9234-066b30a3012a",
-          "settings": {
-            "open-tryon-modal-on-button-click": false,
-            "show-tryon-description": true,
-            "tryon-description-color": "#000000",
-            "description-align-text": "center",
-            "tryon-button-description": "Try at home, pay for what you keep",
-            "tryon-with-price-in-button": true,
-            "tryon-hide-add-to-cart": false,
-            "tryon-copy-add-to-cart-styles": true,
-            "tryon-text-color": "#ffffff",
-            "tryon-background-color": "#000000",
-            "tryon-modal-background-color": "#435a8d",
-            "tryon-modal-primary-color": "#ffde7a",
-            "tryon-modal-text-primary-color": "#ffffff",
-            "tryon-modal-text-secondary-color": "#000000",
-            "tryon-modal-header": "Try at home before you pay",
-            "tryon-modal-stage1-header": "Pay $0 today",
-            "tryon-modal-stage1-description": "At checkout, we'll temporarily place an authorization hold on your card but won't charge you anything.",
-            "tryon-modal-stage2-header": "Trial",
-            "tryon-modal-stage2-description": "Your trial starts upon the items' arrival. Comfortably try them at home and send us back the items you don't want.",
-            "tryon-modal-stage3-header": "Pay",
-            "tryon-modal-stage3-description": "Upon the return of your unwanted items, we will only charge you for the items you choose to keep.",
-            "tryon-redirect-on-click": "cart",
-            "tryon-handling-variant-id": "",
-            "tryon-product-form-selector": "",
-            "tryon-atc-selector": ""
-          }
-        }
-      },
-      "block_order": [
-        "tryon_try_on_app_block_RczHEU"
-      ],
-      "settings": {
-        "include_margins": false,
-        "show_divider": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
-    "image_banner_HAHq6k",
     "empty-space",
     "empty_space_Gna7Rn",
     "scrolling-promotion",
@@ -694,7 +586,6 @@
     "product-recommendations",
     "video_with_text_H8QRXX",
     "testimonials",
-    "17066961646756c0fa",
-    "176604687433159f51"
+    "1771818651744e373b"
   ]
 }

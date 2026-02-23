@@ -225,17 +225,6 @@
     },
     "1710513085af0e5eb1": {
       "type": "apps",
-      "blocks": {
-        "videowise_video_commerce_videowise_page_widgets_zfRBMk": {
-          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-          "settings": {
-            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_685ba61d1e06a50058897e5c\"></div>"
-          }
-        }
-      },
-      "block_order": [
-        "videowise_video_commerce_videowise_page_widgets_zfRBMk"
-      ],
       "settings": {
         "include_margins": true,
         "show_divider": false,
@@ -420,7 +409,7 @@
         "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-3": {
           "type": "product",
           "settings": {
-            "product": "honey-oud-unisex-perfume-3-4-fl-oz",
+            "product": "honey-oud-unisex-perfume-3-38-fl-oz",
             "color": "#e7e7e7",
             "horizontal": 77,
             "vertical": 68
@@ -429,7 +418,7 @@
         "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-1": {
           "type": "product",
           "settings": {
-            "product": "ceo-man-luxury-perfume-3-4-fl-oz",
+            "product": "ceo-man-luxury-perfume",
             "color": "#e7e7e7",
             "horizontal": 50,
             "vertical": 55
@@ -438,7 +427,7 @@
         "template--14545717592110__73bdc832-ef1c-4dcf-833b-e9876f45593b-product-2": {
           "type": "product",
           "settings": {
-            "product": "white-oud-unisex-perfume-3-4-fl-oz",
+            "product": "white-oud-unisex-perfume-3-38-fl-oz",
             "color": "#e7e7e7",
             "horizontal": 22,
             "vertical": 78
@@ -454,7 +443,7 @@
         ".price bdi {font-size: 2.2rem; font-weight: 600;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Banner_1.jpg",
+        "image": "shopify://shop_images/Banner_1_07250f8e-60be-4f6a-8108-e5725a43c674.jpg",
         "layout": "image_first",
         "text_box_position": "middle",
         "text_alignment": "left",
@@ -729,7 +718,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "shopify://products/ceo-man-luxury-perfume-3-4-fl-oz",
+            "button_link": "shopify://products/ceo-man-luxury-perfume",
             "button_secondary_label": "Button Secondary label",
             "button_secondary_link": "",
             "button_size": "medium",
@@ -863,7 +852,7 @@
           "type": "button",
           "settings": {
             "button_label": "View Now",
-            "button_link": "shopify://products/ceo-man-luxury-perfume-3-4-fl-oz",
+            "button_link": "shopify://products/ceo-man-luxury-perfume",
             "button_size": "small",
             "button_style_secondary": false
           }
@@ -922,7 +911,7 @@
           "type": "button",
           "settings": {
             "button_label": "View Now",
-            "button_link": "shopify://products/honey-oud-unisex-perfume-3-4-fl-oz",
+            "button_link": "shopify://products/honey-oud-unisex-perfume-3-38-fl-oz",
             "button_size": "small",
             "button_style_secondary": false
           }
@@ -964,13 +953,13 @@
         "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/honey_oud_1.jpg",
+            "image": "shopify://shop_images/5_e158b600-2e3b-4a4d-952e-c4bf43dbc30f.jpg",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/honey-oud-unisex-perfume-3-4-fl-oz",
+            "link": "shopify://products/honey-oud-unisex-perfume-3-38-fl-oz",
             "text_box_position": "bottom-left"
           }
         },
@@ -983,7 +972,7 @@
             "subheading_size": "h4",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/ceo-man-luxury-perfume-3-4-fl-oz",
+            "link": "shopify://products/ceo-man-luxury-perfume",
             "text_box_position": "middle-center"
           }
         },
@@ -996,7 +985,7 @@
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/white-oud-unisex-perfume-3-4-fl-oz",
+            "link": "shopify://products/white-oud-unisex-perfume-3-38-fl-oz",
             "text_box_position": "middle-center"
           }
         },
@@ -1009,14 +998,14 @@
             "subheading_size": "h5",
             "heading": "",
             "heading_size": "h3",
-            "link": "shopify://products/skai-aquatic-unisex-perfume-3-4-fl-oz",
+            "link": "shopify://products/skai-aquatic-unisex-perfume-3-38-fl-oz",
             "text_box_position": "bottom-left"
           }
         },
         "template--14537741565998__373d64ae-f6fa-49c0-a7ba-6dd354002798-1688561007d7c5afe4-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/4_1.jpg",
+            "image": "shopify://shop_images/4_1_836e2e22-3ab0-4bf8-871d-3c03ddb426aa.jpg",
             "image_position": "center center",
             "subheading": "",
             "subheading_size": "h5",
