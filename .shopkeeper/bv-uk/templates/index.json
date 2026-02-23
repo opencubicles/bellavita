@@ -23,6 +23,7 @@
       "blocks": {
         "image_tiQb3A": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/1_BESTSELLERS.png",
             "image_mobile": "shopify://shop_images/1_BESTSELLERS_-mobile.png",
@@ -46,8 +47,8 @@
         "image_MdXHCy": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/3_FOR_HER.png",
-            "image_mobile": "shopify://shop_images/3_FOR_HIM_-mobile.png",
+            "image": "shopify://shop_images/Homepage_Banner_For_Him_bb90d1c7-8f02-4790-b7ab-6f55891594c1.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Him_47e9602b-597f-4e88-8b26-a81ff4db0e25.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -68,8 +69,8 @@
         "image_UTGxj7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_FOR_HER.png",
-            "image_mobile": "shopify://shop_images/2_FOR_HER_1_-mobile.png",
+            "image": "shopify://shop_images/Homepage_Banner_For_Her_cd8d1c02-c35d-43eb-89a6-82a333c00280.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Her_39367d90-8430-472b-be8d-e44511e2b009.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -90,8 +91,8 @@
         "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/4_FOR_ALL.png",
-            "image_mobile": "shopify://shop_images/4_FOR_ALL_1_-mobile.png",
+            "image": "shopify://shop_images/Homepage_Banner_For_Unisex_27943430-2731-4994-a8db-a9710d18c2d1.jpg",
+            "image_mobile": "shopify://shop_images/Homepage_Mobile_Banner_For_Unisex_06d7365d-b93e-4e68-83aa-1288ef98c584.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -111,6 +112,7 @@
         },
         "image_JL9Eef": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/5_SUPERDRUG_c6234909-32af-42c4-9abc-62e6fd6a4fd6.jpg",
             "image_mobile": "shopify://shop_images/5_SUPERDRUG_1.jpg",

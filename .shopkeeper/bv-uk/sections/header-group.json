@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_QLwgzc": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "💕Valentine Sale is Live 💝",
             "text_on_mobile": "",
@@ -26,6 +27,7 @@
         },
         "announcement_Tz3GQk": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "UP TO 30% OFF❤️‍🔥",
             "text_on_mobile": "",
@@ -92,8 +94,8 @@
       "type": "header",
       "custom_css": [],
       "settings": {
-        "logo": "shopify://shop_images/BV-UK_LOGO.png",
-        "mobile_logo": "shopify://shop_images/BV-UK_LOGO.png",
+        "logo": "shopify://shop_images/1_e7ac4fb2-aab8-4250-9996-9d8e1aaf148b.png",
+        "mobile_logo": "shopify://shop_images/1_e7ac4fb2-aab8-4250-9996-9d8e1aaf148b.png",
         "logo_height": 62,
         "mobile_logo_height": 56,
         "logo_position": "top-center",
@@ -107,8 +109,8 @@
         "enable_sticky_header": true,
         "show_sticky_header_scroll_up": false,
         "sticky_mobile_menu": "",
-        "transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1_1.png",
-        "mobile_transparent_logo": "shopify://shop_images/BV-GLOBAL-White-1_1.png",
+        "transparent_logo": "shopify://shop_images/2_3c321eaf-2758-435d-bd13-b39f35b4c917.png",
+        "mobile_transparent_logo": "shopify://shop_images/2_3c321eaf-2758-435d-bd13-b39f35b4c917.png",
         "enable_transparent_header": true,
         "enable_transparent_header_collection": false,
         "enable_transparent_header_custom": "",
@@ -131,7 +133,7 @@
         "show_bar": true,
         "announcement_text": "",
         "enable_countdown": true,
-        "sale_end_date": "2026-01-06 11:59:59",
+        "sale_end_date": "2026-02-17 11:59:59",
         "countdown_format": "hours",
         "right_text": "",
         "bg_color": "#111827",

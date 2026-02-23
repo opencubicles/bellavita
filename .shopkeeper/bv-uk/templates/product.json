@@ -11,6 +11,7 @@
   "sections": {
     "image_banner_HAHq6k": {
       "type": "image-banner",
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "custom_class": "",
@@ -304,6 +305,7 @@
           "type": "custom_liquid",
           "disabled": true,
           "settings": {
+            "block_custom_class": "",
             "custom_liquid": "<span class=\"flash-sale-tag\">\n  <img\n    src=\"https://cdn.shopify.com/s/files/1/0756/5813/3762/files/halloween.gif?v=1761298806\"\n    alt=\"Flash Icon\"\n    class=\"flash-icon\"\n  />\n  <strong>HALLOWEEN SALE</strong>\n</span>"
           }
         },
@@ -353,6 +355,7 @@
         "custom_liquid_3RTPP8": {
           "type": "custom_liquid",
           "settings": {
+            "block_custom_class": "",
             "custom_liquid": "{% if product.metafields.custom.tryon_custom_text %}\n<div class=\"try-now-pay-later\">\n  <h3 class=\"tnpl-title\">\n    Try Now, Pay Later ✨\n  </h3>\n\n  <ul class=\"tnpl-steps\">\n    <li class=\"tnpl-step\">\n      <strong>Pay $0 Today:</strong>\n      Pick your favorite item to try. We’ll place a temporary hold on your card, but you won’t be charged a dime yet.\n    </li>\n\n    <li class=\"tnpl-step\">\n      <strong>3-Day Test Drive:</strong>\n      Your 3-day trial starts the moment the package hits your doorstep. Try it on and see how it fits with your vibe.\n    </li>\n\n    <li class=\"tnpl-step\">\n      <strong>Keep What You Love:</strong>\n      Only pay for the item if you decide to keep it. Send it back after the trial window, and that temporary hold disappears.\n    </li>\n  </ul>\n</div>\n{% endif %}"
           }
         },
@@ -376,6 +379,7 @@
           "type": "custom_liquid",
           "disabled": true,
           "settings": {
+            "block_custom_class": "",
             "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n<div class=\"shipping-text\"><span>Free Shipping</span> &nbsp</div></div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
           }
         },
@@ -383,7 +387,8 @@
           "type": "custom_liquid",
           "name": "Free Shipping",
           "settings": {
-            "custom_liquid": "{% if product.metafields.custom.custom_liner %}\n                <div>\n                  <span style=\"font-size:12px; font-style: italic;\">{{ product.metafields.custom.custom_liner }}</span>\n                </div>\n              {% endif %}\n<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n{% if product.metafields.custom.free_shipping_product_text == true %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span>\n  </div>\n{% else %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span> &nbsp;over $30\n  </div>\n{% endif %}\n</div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
+            "block_custom_class": "",
+            "custom_liquid": "{% if product.metafields.custom.custom_liner %}\n                <div>\n                  <span style=\"font-size:12px; font-style: italic; margin-top:10px !important;\">{{ product.metafields.custom.custom_liner }}</span>\n                </div>\n              {% endif %}\n<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n{% if product.metafields.custom.free_shipping_product_text == true or product.price > 2998 %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span>\n  </div>\n{% else %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span> &nbsp;over £30\n  </div>\n{% endif %}\n</div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n@media(max-width:800px){\n.shipping{\n\n}\n}\n</style>"
           }
         },
         "offers_section_whdpGY": {
