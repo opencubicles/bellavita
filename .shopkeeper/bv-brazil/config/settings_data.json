@@ -83,7 +83,10 @@
     "empty_cart_collections": [
       "gift-sets",
       "men-fragrance",
-      "women-fragrance"
+      "women-fragrance",
+      "bestseller",
+      "unisex-fragrance",
+      "shop-all"
     ],
     "search_results": "product",
     "predictive_search_enabled": false,
@@ -370,78 +373,7 @@
         }
       }
     },
-    "content_for_index": [],
-    "blocks": {
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      },
-      "7885500093077574326": {
-        "type": "shopify://apps/videowise-video-commerce/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-        "disabled": false,
-        "settings": {}
-      },
-      "11348531219507317188": {
-        "type": "shopify://apps/eb-easy-bundle-builder/blocks/app-embed/05b1325c-6303-4da5-8e2f-b13ab2a50e1a",
-        "disabled": false,
-        "settings": {}
-      },
-      "2567389343055140935": {
-        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
-        "disabled": false,
-        "settings": {}
-      },
-      "11349500561483629931": {
-        "type": "shopify://apps/notify-me/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054",
-        "disabled": false,
-        "settings": {}
-      },
-      "back-in-stock-restock-alerts-4bb73be2-b7c2-4870-949f-c528145452a3": {
-        "type": "shopify://apps/back-in-stock-restock-alerts/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
-        "disabled": false,
-        "settings": {}
-      },
-      "855628211100114053": {
-        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {}
-      },
-      "12973772748516043749": {
-        "type": "shopify://apps/bitespeed-whatsapp-marketing/blocks/app-embed/9efdb9ca-2d01-4a12-b1ac-02679fe0f6fc",
-        "disabled": false,
-        "settings": {}
-      },
-      "17676059084223943535": {
-        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": false,
-        "settings": {}
-      },
-      "7079518687644006178": {
-        "type": "shopify://apps/checkout-blocks/blocks/app-embed/b0024ca5-9de8-4bf0-a92f-cd0783877ae2",
-        "disabled": false,
-        "settings": {
-          "utm_id": true,
-          "utm_source": true,
-          "utm_medium": true,
-          "utm_campaign": true,
-          "utm_term": true,
-          "ref": true
-        }
-      },
-      "5149645339031002760": {
-        "type": "shopify://apps/minmaxify-order-limits/blocks/app-embed-block/3acfba32-89f3-4377-ae20-cbb9abc48475",
-        "disabled": false,
-        "settings": {
-          "async": false
-        }
-      },
-      "8218531531362863771": {
-        "type": "shopify://apps/kite-discount-free-gift/blocks/app-embed/2c7302c4-455d-4078-a829-48563ba26089",
-        "disabled": true,
-        "settings": {}
-      }
-    }
+    "content_for_index": []
   },
   "presets": {
     "Beauty": {

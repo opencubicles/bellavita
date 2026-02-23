@@ -40,7 +40,7 @@
           "type": "text",
           "settings": {
             "heading": "CONTACT US",
-            "subtext": "<p>BELLA VITA PERFUMES LIMITED, 205 Preston Hill, London, Harrow, HA3 9UL, United Kingdom</p><p>care@bellavitaluxury.uk</p>"
+            "subtext": "<p>BELLA VITA PERFUMES LIMITED, 205 Preston Hill, London, Harrow, HA3 9UL, United Kingdom</p><p></p>"
           }
         }
       },
@@ -51,6 +51,7 @@
         "12403f5e-c1b9-410f-b4c1-b2ca87785be8"
       ],
       "settings": {
+        "enable_custom_footer": false,
         "show_divider": true,
         "newsletter_enable": true,
         "newsletter_heading": "EXCLUSIVE",

@@ -395,19 +395,6 @@
     },
     "17567981523fecf9bc": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_homepage_r63hXG": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget_homepage/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "product": "honey-oud-unisex-perfume-3-4-fl-oz",
-            "review_data": "real_data",
-            "max_width": 1200
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_homepage_r63hXG"
-      ],
       "settings": {
         "include_margins": true,
         "show_divider": false,
