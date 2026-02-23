@@ -310,11 +310,14 @@
     {% endif %} 
 
     {% if shop.metafields.custom.buy2get10percent_progress_bar %} 
-      {% if buy2collectionProductexist == false %}
+      {% if buy2collectionProductexist == false and embrougecollectionProductexist == false %}
       {% if cart.item_count == 1 %}
         <div class="free-shipping typeset0">
-        <span class="free-shipping__text">Add one more product to get Extra 20% off</span>
-
+          {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com' %}
+            <span class="free-shipping__text">Add one more product to get Extra 15% off</span>
+          {% else %}
+            <span class="free-shipping__text">Add one more product to get Extra 20% off</span>
+          {% endif %}
         <span class="free-shipping__progress" style="--progress: 50%;"></span>
         </div>
         {% comment %} <div class="mini-cart-extra" style="padding: 0px 20px;">
@@ -322,7 +325,11 @@
         </div> {% endcomment %}
       {% elsif cart.item_count > 1  %}  
         <div class="free-shipping typeset0" style="padding-bottom:10px;">
-          <span class="free-shipping__text">Hurray! 20% discount applied</span>
+          {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com' %}
+            <span class="free-shipping__text">Hurray! Extra 15% off applied</span>
+          {% else %}
+            <span class="free-shipping__text">Hurray! 20% discount applied</span>
+          {% endif %}
           <span class="free-shipping__progress free-shipping__progress--success" style="--progress: 100%; "></span>
         </div>
       {% endif %}

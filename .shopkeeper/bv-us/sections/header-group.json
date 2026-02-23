@@ -37,23 +37,34 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Buy 3 products for $ 59.99 + Free Gift",
+            "text": "Extra 15% Off on 2 or More Perfumes",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
-            "link": "https://bellavita-bangladesh.myshopify.com/apps/gbb/easybundle/5"
+            "link": "https://bellavitaluxe.com/collections/shop-all"
           }
         },
         "announcement_eXEtFh": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Valentine's Exclusive: Any 2 Giftsets @42.99",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
             "link": "https://bellavitaluxe.com/apps/gbb/easybundle/3?page=addProductsPage1&currentFlow=byob"
+          }
+        },
+        "announcement_Vke9D7": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Welcome to our store",
+            "text_on_mobile": "",
+            "text_size": 13,
+            "end_date": "",
+            "link": ""
           }
         },
         "announcement_zAeFRF": {
@@ -73,6 +84,7 @@
         "announcement_wJqJbc",
         "announcement-bar-0",
         "announcement_eXEtFh",
+        "announcement_Vke9D7",
         "announcement_zAeFRF"
       ],
       "settings": {
@@ -95,8 +107,8 @@
       "type": "header",
       "custom_css": [],
       "settings": {
-        "logo": "shopify://shop_images/Valentine_logo_2.png",
-        "mobile_logo": "shopify://shop_images/Valentine_logo_2.png",
+        "logo": "shopify://shop_images/1_4e166587-5226-4a34-9758-1a58a0e862a7.png",
+        "mobile_logo": "shopify://shop_images/1_4e166587-5226-4a34-9758-1a58a0e862a7.png",
         "embarouge_logo": "shopify://shop_images/em_logo.png",
         "logo_height": 62,
         "mobile_logo_height": 56,
@@ -111,8 +123,8 @@
         "enable_sticky_header": true,
         "show_sticky_header_scroll_up": false,
         "sticky_mobile_menu": "",
-        "transparent_logo": "shopify://shop_images/Valentine_logo_3_trans.png",
-        "mobile_transparent_logo": "shopify://shop_images/Valentine_logo_3_trans.png",
+        "transparent_logo": "shopify://shop_images/2.png",
+        "mobile_transparent_logo": "shopify://shop_images/2.png",
         "enable_transparent_header": true,
         "enable_transparent_header_collection": false,
         "enable_transparent_header_custom": "",

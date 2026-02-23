@@ -71,6 +71,7 @@
         "@media (max-width: 800px) {.rich-text {padding-top: 4px; }}"
       ],
       "settings": {
+        "custom_class_admin": "",
         "text_alignment": "center",
         "mobile_text_alignment": "left",
         "horizontal_content": false,
@@ -164,7 +165,7 @@
           "type": "collapsible_tab",
           "settings": {
             "icon": "none",
-            "heading": "Product Details",
+            "heading": "About the Product",
             "content": "<p>{{ product.metafields.custom.short_description | metafield_tag }}</p>",
             "page": "",
             "custom_liquid": "",
@@ -184,6 +185,20 @@
             "custom_liquid": "",
             "keep_open": false,
             "remove_top_border": false,
+            "remove_margin": true,
+            "hide_on_mobile": true
+          }
+        },
+        "collapsible_tab_bfbepA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Product Details",
+            "content": "<p>{{ product.metafields.custom.product_details | metafield_tag }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false,
+            "remove_top_border": true,
             "remove_margin": true,
             "hide_on_mobile": true
           }
@@ -232,6 +247,20 @@
             "hide_on_mobile": true
           }
         },
+        "collapsible_tab_iDVETF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "FAQ",
+            "content": "",
+            "page": "",
+            "custom_liquid": "<div class=\"page-width\">{{ product.metafields.custom.product_faq_content }}</div>",
+            "keep_open": false,
+            "remove_top_border": false,
+            "remove_margin": false,
+            "hide_on_mobile": true
+          }
+        },
         "sticky_cart_t4QLHa": {
           "type": "sticky_cart",
           "settings": {
@@ -251,9 +280,11 @@
         "custom_liquid_tCHcmY",
         "collapsible_tab_TxxFY8",
         "collapsible_tab_MFE73G",
+        "collapsible_tab_bfbepA",
         "collapsible_tab_pRyEAx",
         "collapsible_tab_3cnKiU",
         "collapsible_tab_bwRjyU",
+        "collapsible_tab_iDVETF",
         "sticky_cart_t4QLHa"
       ],
       "custom_css": [
@@ -279,6 +310,7 @@
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
       "settings": {
+        "custom_class": "",
         "image": "{{ product.metafields.custom.thubmnail.value }}",
         "image_position": "center center",
         "text_box_position": "middle-center",
@@ -399,8 +431,9 @@
         "collapsible_tab_pnjVim": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Product Details",
+            "heading": "About the Product",
             "content": "<p>{{ product.metafields.custom.short_description | metafield_tag }}</p>",
+            "row_content_liquid": "",
             "page": ""
           }
         },
@@ -409,6 +442,16 @@
           "settings": {
             "heading": "Notes",
             "content": "<p>{{ product.metafields.custom.perfume_notes_secondary_title.value }}</p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_FWT7ga": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Details",
+            "content": "<p>{{ product.metafields.custom.product_details | metafield_tag }}</p>",
+            "row_content_liquid": "",
             "page": ""
           }
         },
@@ -417,6 +460,7 @@
           "settings": {
             "heading": "How to use?",
             "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
+            "row_content_liquid": "",
             "page": ""
           }
         },
@@ -426,6 +470,7 @@
           "settings": {
             "heading": "Ingredients",
             "content": "<p>{{ product.metafields.custom.all_ingredients.value }}</p>",
+            "row_content_liquid": "",
             "page": ""
           }
         },
@@ -435,6 +480,16 @@
           "settings": {
             "heading": "Shipping & Returns",
             "content": "<p><strong>Shipping: </strong><br/>\"Free shipping across India.<br/>Orders are delivered within 3-7 business days.<br/>A signature is required upon delivery; Embarouge is not responsible for goods signed by others or any damage post-delivery.\"<br/><br/><strong>Returns: </strong><br/>In rare cases of damage during transit (leakage, breakage, or missing items), refunds or exchanges may be initiated following verification.<br/>Please contact our Customer Care team within 48 hours of delivery to report any such issues.</p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_P3cAzM": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "FAQ",
+            "content": "",
+            "row_content_liquid": "<div class=\"page-width\">{{ product.metafields.custom.product_faq_content }}</div>",
             "page": ""
           }
         }
@@ -442,9 +497,11 @@
       "block_order": [
         "collapsible_tab_pnjVim",
         "collapsible_tab_DzV9cc",
+        "collapsible_tab_FWT7ga",
         "collapsible_tab_VVBiTc",
         "collapsible_tab_L7QdNx",
-        "collapsible_tab_UUjaWc"
+        "collapsible_tab_UUjaWc",
+        "collapsible_tab_P3cAzM"
       ],
       "name": "t:sections.product-details.presets.name",
       "settings": {
@@ -648,6 +705,7 @@
           "settings": {
             "heading": "About Embarouge",
             "content": "<p>Crafted in Dubai. Formulated in France.<br/>Embarouge blends the elegance of French perfumery with the warmth & depth of the Middle East.<br/>With 20% perfume oil concentration, our scents are bold, sensual, and built to last.<br/>More than a fragrance- it’s a luxury signature that leaves a mark.</p>",
+            "row_content_liquid": "",
             "page": ""
           }
         }

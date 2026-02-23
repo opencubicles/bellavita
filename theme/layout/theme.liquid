@@ -126,16 +126,16 @@
     <!-- Custom jQuery CDN Link ends here -->
     <!-- Google Tag Manager -->
    
-    {% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
+    {% comment %} {% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
       {% assign gtm_id = "GTM-KVPNR9M9" %}
       {% assign clarity_id = "sfnswy7p2w" %}
     {% else %}
       {% assign gtm_id = "GTM-KRQGWRFH" %}
       {% assign clarity_id = "lqd1eom3o6" %}
       
-    {% endif -%} 
+    {% endif -%}  {% endcomment %}
 
-  <script>
+  {% comment %} <script>
   (function(w,d,s,l,i){
     w[l]=w[l]||[];
     w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
@@ -147,7 +147,18 @@
     f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','{{ gtm_id }}');
 </script>
-      <!-- End Google Tag Manager -->
+      <!-- End Google Tag Manager --> {% endcomment %}
+      <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSVNRP75');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
     
      <!-- Google tag Starts here(gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16831611254"></script>
@@ -166,7 +177,7 @@
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", '{{ clarity_id }}');
+    })(window, document, "clarity", "script", 'lqd1eom3o6');
 </script>
       <!-- Clarity code ends here -->
     
@@ -231,10 +242,16 @@
       data-button-round
     {% endif -%}
   >
-    <!-- Google Tag Manager (noscript) -->
+    {% comment %} <!-- Google Tag Manager (noscript) -->
       <iframe src="https://www.googletagmanager.com/ns.html?id={{ gtm_id }}"
           height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    <!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript) --> {% endcomment %}
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSVNRP75"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <a class="skip-to-content-link button button--small visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -681,6 +698,46 @@
       }
       .custom__liquid .shipping {
         display:none!important;
+      }
+    </style>
+  {% endif %}
+{% endif %}
+{% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+{% unless product.tags contains 'Tryon Product' %}
+    <style>
+    @media (max-width: 768px) {
+      #product-form-template--22699133600021__main button.product-form__submit[name="add"] {
+          display: none !important;
+      }
+    }
+    </style>
+  {% endunless %}
+  {% if product.handle == 'men-perfume-gift-set-tryon' %}
+    <style>
+      button.product-form__submit {
+          display: none !important;
+      }
+      @media (min-width: 768px) {
+        #shopify-section-template--22699133600021__177140902877ef0bad .tryon-button {
+          display:none !important;
+        }
+        #shopify-section-template--22699133600021__177140902877ef0bad .tryon-desc-span {
+           display:none;
+        }
+      }
+      @media (max-width: 768px) {
+        #shopify-section-template--22699133600021__177140902877ef0bad .tryon-button  {
+          bottom: 0px;
+          position: fixed;
+          padding: 18px;
+          left: 0;
+        }
+        #shopify-section-template--22699133600021__177140902877ef0bad .tryon-desc-span {
+           display:none;
+        }
+        #shopify-block-AZFdnUnFVcnpVbkhEd__5178053274977549534 {
+          display:none;
+        }
       }
     </style>
   {% endif %}

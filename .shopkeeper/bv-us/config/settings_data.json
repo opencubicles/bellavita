@@ -420,6 +420,71 @@
         "type": "shopify://apps/back-in-stock-restock-alerts/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
         "disabled": false,
         "settings": {}
+      },
+      "3576686563519644491": {
+        "type": "shopify://apps/vwo/blocks/vwo-smartcode/2ce905b2-3842-4d20-b6b0-8c51fc208426",
+        "disabled": false,
+        "settings": {
+          "vwoAccountId": "964814",
+          "codeType": "ASYNC",
+          "settingsTolerance": 2000,
+          "enableThemeTesting": false,
+          "reverseProxyUrl": ""
+        }
+      },
+      "5178053274977549534": {
+        "type": "shopify://apps/tryon/blocks/tryOnAppEmbed/95799297-dc1d-40fb-9234-066b30a3012a",
+        "disabled": false,
+        "settings": {
+          "tryon-redirect-on-click": "checkout",
+          "tryon-button-location": "after",
+          "open-tryon-modal-on-button-click": false,
+          "show-tryon-description": true,
+          "tryon-description-color": "#000000",
+          "description-align-text": "center",
+          "tryon-button-description": "Try at home, pay for what you keep",
+          "tryon-with-price-in-button": false,
+          "tryon-hide-add-to-cart": false,
+          "tryon-copy-add-to-cart-styles": true,
+          "tryon-text-color": "#FFFFFF",
+          "tryon-background-color": "#000000",
+          "tryon-modal-background-color": "#435a8d",
+          "tryon-modal-primary-color": "#ffde7a",
+          "tryon-modal-text-primary-color": "#FFFFFF",
+          "tryon-modal-text-secondary-color": "#000",
+          "tryon-modal-header": "Try at home before you pay",
+          "tryon-modal-stage1-header": "Pay $0 today",
+          "tryon-modal-stage1-description": "At checkout, we'll temporarily place an authorization hold on your card but won't charge you anything.",
+          "tryon-modal-stage2-header": "Trial",
+          "tryon-modal-stage2-description": "Your trial starts upon the items' arrival. Comfortably try them at home and send us back the items you don't want.",
+          "tryon-modal-stage3-header": "Pay",
+          "tryon-modal-stage3-description": "Upon the return of your unwanted items, we will only charge you for the items you choose to keep.",
+          "appendable-atc-button": "",
+          "tryon-product-form-selector": ""
+        }
+      },
+      "17147156137367572215": {
+        "type": "shopify://apps/tryon/blocks/preCheckoutUpsell/95799297-dc1d-40fb-9234-066b30a3012a",
+        "disabled": true,
+        "settings": {
+          "preview_in_editor": true,
+          "banner_text": "TRY BEFORE YOU BUY",
+          "header_text": "TRY THESE FREE AT HOME!",
+          "subheader_text": "Try it free at home, you will only be charged for what you keep",
+          "checkout_button_text": "Go to Checkout",
+          "skip_button_text": "No thanks, continue to checkout",
+          "trial_text_template": "Try our {product_title} for {trial_days} days. Love it? keep it!",
+          "modal_background_color": "#ffffff",
+          "header_text_color": "#1a1a1a",
+          "subheader_text_color": "#666666",
+          "card_background_color": "#f8f8f8",
+          "card_text_color": "#1a1a1a",
+          "checkout_button_color": "#000000",
+          "checkout_button_text_color": "#ffffff",
+          "content_gradient_start_color": "#C6D7E7",
+          "content_gradient_end_color": "#F7E7C9",
+          "custom_checkout_selectors": ""
+        }
       }
     }
   },

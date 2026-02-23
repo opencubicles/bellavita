@@ -32,7 +32,7 @@
               {% render 'mega-menu', link: link, block: mega_menu_block %}
             {%- else -%}
               <dropdown-menu>
-                <a href="{{ link.url }}" class="header__menu-item{% if link.active or link.child_active %} header__active-menu-item{% endif %} header__menu-item--top list-menu__item focus-inset">
+                <a href="{{ link.url }}" class="header__menu-item{% if link.active or link.child_active %} header__active-menu-item{% endif %} header__menu-item--top nav_menu list-menu__item focus-inset">
                   <span class="label">{{ link.title | escape }}</span>
                   {% render 'icon', icon: 'caret' %}
                 </a>
@@ -42,7 +42,7 @@
                       <li>
                         {%- if childlink.links == blank -%}
                           <dropdown-menu>
-                            <a href="{{ childlink.url }}" class="header__menu-item list-menu__item focus-inset{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                            <a href="{{ childlink.url }}" class=" header__menu-item list-menu__item focus-inset {% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                               <span class="label">{{ childlink.title | escape }}</span>
                             </a>
                           </dropdown-menu>
@@ -137,7 +137,7 @@
           {%- else -%}
             <dropdown-menu>
               <a href="{{ link.url }}" 
-                class="first header__menu-item{% if link.current %} header__active-menu-item{% endif %} header__menu-item--top list-menu__item focus-inset" 
+                class="first header__menu-item nav_menu{% if link.current %} header__active-menu-item{% endif %} header__menu-item--top list-menu__item focus-inset" 
                 {% if link.current %} aria-current="page"{% endif %} 
                 style="margin-top:4px">
                 {%- if link.title == 'Buy 3 @ $59.99 + Free Gift' -%}

@@ -285,6 +285,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "show_variant_labels": true,
             "picker_type": "button",
@@ -297,8 +298,13 @@
           "type": "description",
           "settings": {}
         },
+        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_QjkMMe": {
+          "type": "shopify://apps/eb-easy-bundle-builder/blocks/app-block-mixAndMatchBundle/05b1325c-6303-4da5-8e2f-b13ab2a50e1a",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_quantity_selector": true,
             "show_price_container": true,
@@ -339,7 +345,6 @@
         "custom_liquid_KdFJyi": {
           "type": "custom_liquid",
           "name": "fragnace-notes",
-          "disabled": true,
           "settings": {
             "custom_liquid": "{% if product.metafields.custom.product_ingredients.value != blank %}\n  <link rel=\"stylesheet\" href=\"{{ 'component-slider.css' | asset_url }}\" media=\"print\" onload=\"this.media='all'\">\n\n  <div class=\"Notes-Heading center\">\n    <h2>Fragrance Notes</h2>\n  </div>\n\n  <div class=\"product-ingredients-notes page-width\">\n    <slider-component class=\"slider-mobile-gutter\">\n      <ul\n        id=\"Slider-{{ section.id }}\"\n        class=\"grid grid--2-col grid--4-col-desktop slider slider--tablet\"\n        role=\"list\"\n      >\n        {% for metaobject in product.metafields.custom.product_ingredients.value limit: 4 %}\n          <li class=\"product-ingredients-item-notes grid__item slider__slide center-notes\">\n            \n            {% if metaobject.perfume_notes.value != blank %}\n              <p class=\"perfume-notes\">\n                <strong>{{ metaobject.perfume_notes.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_image != blank %}\n              <div class=\"ingredient-img-wrapper-notes\">  \n                <div class=\"media media--adapt pdp-ingredient-img\" style=\"--image-ratio-percent: {{ 1 | divided_by: metaobject.ingredient_image.value.aspect_ratio | times: 100 }}%;\">\n                  {{ metaobject.ingredient_image | image_url: width: 300 | image_tag: \n                    loading: 'lazy',\n                    fetchpriority: 'low',\n                    widths: '50, 100, 200, 300',\n                    is: 'lazy-image'\n                  }}\n                </div>\n              </div>  \n            {% endif %}\n\n            {% if metaobject.ingredient_title.value != blank %}\n              <p>\n                <strong>{{ metaobject.ingredient_title.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_description.value != blank %}\n              <span>{{ metaobject.ingredient_description.value }}</span>\n            {% endif %}\n          </li>\n        {% endfor %}\n      </ul>\n    </slider-component>\n  </div>\n{% endif %}"
           }
@@ -350,6 +355,7 @@
         },
         "sticky_cart_t4QLHa": {
           "type": "sticky_cart",
+          "disabled": true,
           "settings": {
             "show_quantity_selector": true,
             "show_price_on_mobile": true
@@ -387,6 +393,7 @@
         "price",
         "variant_picker",
         "description",
+        "eb_easy_bundle_builder_app_block_mix_and_match_bundle_QjkMMe",
         "buy_buttons",
         "tryon_try_on_app_block_wzLGfE",
         "custom_liquid_KdFJyi",
@@ -632,6 +639,15 @@
       "type": "Video-with-text",
       "settings": {}
     },
+    "1710752969db39fb42": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -854,6 +870,7 @@
     "collapsible-content",
     "main_breadcrumbs_HixkyY",
     "video_with_text_emJiUe",
+    "1710752969db39fb42",
     "product-recommendations",
     "recently-viewed-products",
     "testimonials",

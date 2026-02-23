@@ -1267,6 +1267,25 @@
                           {% render 'icon', icon: 'caret' %}
                         </select-wrapper>
                       {%- endif -%}
+                      {%- when 'custom_countdown' -%}
+                        {% assign has_enabled_custom_countdown = false %}
+                        {% if block.settings.enable_countdown %}
+                          {% assign has_enabled_custom_countdown = true %}
+                          <div
+                            class="product-countdown"
+                            data-end-date="{{ block.settings.sale_end_date }}"
+                            data-format="{{ block.settings.countdown_format }}"
+                            {{ block.shopify_attributes }}
+                          >
+                            {% if block.settings.countdown_label != blank %}
+                              <span class="countdown-label">
+                                {{ block.settings.countdown_label }}
+                              </span>
+                            {% endif %}
+
+                            <span class="countdown-timer">00d 00h 00m 00s</span>
+                          </div>
+                        {% endif %}  
                   {%- endcase -%}
                 {%- endif -%}
               </div>
@@ -1605,7 +1624,97 @@
 <!-- custom js file for main product script -->
 <script src="{{ 'custom-main-product.js' | asset_url }}" defer="defer"></script>                            
 <!-- custom js file for main product script ends here -->
-        
+
+{% if has_enabled_custom_countdown %}
+<style>
+.product-countdown-wrapper {
+  margin: 20px 0;
+}
+
+.product-countdown {
+  background: #fff;
+  color: #000;
+  padding: 12px 16px;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.product-countdown .countdown-label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  opacity: 1;
+}
+
+.product-countdown .countdown-timer {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .product-countdown {
+    justify-content: center;
+    padding: 10px 12px;
+  }
+}
+</style>
+
+<script>
+(function () {
+  document.querySelectorAll('.product-countdown').forEach(container => {
+    const endDate = new Date(container.dataset.endDate);
+    const format = container.dataset.format || 'days';
+    const timerEl = container.querySelector('.countdown-timer');
+    const labelEl = container.querySelector('.countdown-label');
+
+    if (!timerEl || isNaN(endDate)) return;
+
+    const pad = n => (n < 10 ? '0' + n : n);
+
+    function update() {
+      const diff = endDate - new Date();
+
+      if (diff <= 0) {
+        timerEl.textContent = 'Sale Ended';
+        if (labelEl) labelEl.style.display = 'none';
+        clearInterval(interval);
+        return;
+      }
+
+      const t = Math.floor(diff / 1000);
+
+      if (format === 'hours') {
+        const h = Math.floor(t / 3600);
+        const m = Math.floor((t % 3600) / 60);
+        const s = t % 60;
+        timerEl.textContent = `${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+      } else {
+        const d = Math.floor(t / 86400);
+        const h = Math.floor((t % 86400) / 3600);
+        const m = Math.floor((t % 3600) / 60);
+        const s = t % 60;
+        timerEl.textContent = `${pad(d)}d ${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+      }
+    }
+
+    update();
+    const interval = setInterval(update, 1000);
+  });
+})();
+</script>
+
+{% endif %}
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
@@ -3483,6 +3592,40 @@
           "label": "Hide on mobile"
         }
       ]
+    },
+    {
+        "type": "custom_countdown",
+        "name": "Custom Countdown",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "enable_countdown",
+            "label": "Enable countdown",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "countdown_label",
+            "label": "Countdown label text",
+            "default": "Sale ends in:"
+          },
+          {
+            "type": "text",
+            "id": "sale_end_date",
+            "label": "Sale end date (YYYY-MM-DD HH:MM:SS)",
+            "default": "2025-12-31 23:59:59"
+          },
+          {
+            "type": "select",
+            "id": "countdown_format",
+            "label": "Countdown format",
+            "options": [
+              { "value": "days", "label": "Days + Hours + Minutes + Seconds" },
+              { "value": "hours", "label": "Total Hours + Minutes + Seconds" }
+            ],
+            "default": "days"
+          }
+        ]
     },
     {
       "type": "countdown",

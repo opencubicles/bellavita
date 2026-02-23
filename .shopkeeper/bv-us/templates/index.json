@@ -12,11 +12,34 @@
     "slideshow_kwPcBi": {
       "type": "slideshow",
       "blocks": {
-        "image_bR6dwk": {
+        "image_tiQb3A": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Home_PageMani_banner_desktop_copy.jpg",
+            "image_mobile": "shopify://shop_images/Home_Pagemain_banner_mobile_copy.jpg",
+            "image_position": "center center",
+            "text_box_position": "bottom-left",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "shopify://collections/shop-all",
+            "button_secondary_label": "",
+            "button_secondary_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "image_maVL8h": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_7a1743e4-1dd4-42bd-9d84-033a00c9fea6.jpg",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_copy_3.jpg",
+            "image": "shopify://shop_images/Home_Page_-_AdsMani_banner_desktop.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_-_Adsmain_banner_mobile.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -27,18 +50,18 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "https://bellavitaluxe.com/apps/gbb/easybundle/3?page=addProductsPage1&currentFlow=byob",
+            "button_link": "shopify://collections/shop-all",
             "button_secondary_label": "",
             "button_secondary_link": "",
             "button_size": "medium",
             "button_style_secondary": false
           }
         },
-        "image_maVL8h": {
+        "image_bR6dwk": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_HIM.jpg",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_HIM.jpg",
+            "image": "shopify://shop_images/Home_Page_-_AdsMani_banner_desktop_copy.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_-_Adsmain_banner_mobile_copy.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -56,33 +79,11 @@
             "button_style_secondary": false
           }
         },
-        "image_tiQb3A": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_HER.jpg",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_HER.jpg",
-            "image_position": "center center",
-            "text_box_position": "bottom-left",
-            "subheading": "",
-            "subheading_size": "h5",
-            "heading": "",
-            "heading_size": "h1",
-            "heading_tag": "h2",
-            "text": "",
-            "text_size": "typeset",
-            "button_label": "",
-            "button_link": "shopify://collections/women-fragrance",
-            "button_secondary_label": "",
-            "button_secondary_link": "",
-            "button_size": "medium",
-            "button_style_secondary": false
-          }
-        },
         "image_4kaVAz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_BannerMani_banner_desktop_GIFTSET.jpg",
-            "image_mobile": "shopify://shop_images/Home_Page_Bannermain_banner_mobile_HIM_copy_2.jpg",
+            "image": "shopify://shop_images/Home_Page_-_AdsMani_banner_desktop_copy_2.jpg",
+            "image_mobile": "shopify://shop_images/Home_Page_-_Adsmain_banner_mobile_copy_2.jpg",
             "image_position": "center center",
             "text_box_position": "middle-center",
             "subheading": "",
@@ -93,7 +94,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "https://bellavitaluxe.com/apps/gbb/easybundle/3?page=addProductsPage1&currentFlow=byob",
+            "button_link": "shopify://collections/women-fragrance",
             "button_secondary_label": "",
             "button_secondary_link": "",
             "button_size": "medium",
@@ -146,9 +147,9 @@
         }
       },
       "block_order": [
-        "image_bR6dwk",
-        "image_maVL8h",
         "image_tiQb3A",
+        "image_maVL8h",
+        "image_bR6dwk",
         "image_4kaVAz",
         "image_TkfyFw",
         "image_Cy7EAB"
@@ -1036,6 +1037,50 @@
         "padding_top": 12,
         "padding_bottom": 12
       }
+    },
+    "featured_blog_cQe4GJ": {
+      "type": "featured-blog",
+      "blocks": {
+        "title_EdrYBj": {
+          "type": "title",
+          "settings": {
+            "show_date": true,
+            "show_author": false,
+            "show_comment_count": false
+          }
+        },
+        "summary_GFRBVK": {
+          "type": "summary",
+          "settings": {}
+        },
+        "read_more_rDCcg4": {
+          "type": "read_more",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_EdrYBj",
+        "summary_GFRBVK",
+        "read_more_rDCcg4"
+      ],
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "blog",
+        "post_limit": 3,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_image": true,
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -1052,6 +1097,7 @@
     "reveal_banner_cge4U7",
     "image_with_text_FKwCrN",
     "image_with_text_q4kHhN",
-    "373d64ae-f6fa-49c0-a7ba-6dd354002798"
+    "373d64ae-f6fa-49c0-a7ba-6dd354002798",
+    "featured_blog_cQe4GJ"
   ]
 }

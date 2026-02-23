@@ -56,6 +56,7 @@
                 </summary>
                 <div class="accordion__content rte typeset">
                   {{ block.settings.content }}
+                  {{ block.settings.row_content_liquid }}
                   {{ block.settings.page.content }}
                 </div>
               </details>
@@ -103,6 +104,11 @@
           "id": "content",
           "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
           "label": "t:sections.product-details.blocks.collapsible_tab.settings.content.label"
+        },
+        {
+          "type": "liquid",
+          "id": "row_content_liquid",
+          "label": "Row content in Liquid code"
         },
         {
           "type": "page",

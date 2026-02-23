@@ -1,0 +1,211 @@
+{% if template contains 'collection' and collection.metafields.custom.custom_countdown == true %}
+<div
+  class="collection-announcement-countdown"
+  data-end-date="{{ section.settings.sale_end_date }}"
+  data-enable-countdown="{{ section.settings.enable_countdown }}"
+  data-show-bar="{{ section.settings.show_bar }}"
+  data-format="{{ section.settings.countdown_format }}"
+  role="region"
+  aria-label="Collection announcement"
+>
+  {% if section.settings.show_bar %}
+    <div class="announcement-inner page-width">
+      <div class="announcement-left">
+        {{ section.settings.announcement_text }}
+      </div>
+
+      {% if section.settings.enable_countdown %}
+        <div class="announcement-center">
+          <span class="countdown-label">{{ section.settings.countdown_label }}</span>
+          <span class="countdown-timer">00d 00h 00m 00s</span>
+        </div>
+      {% endif %}
+
+      <div class="announcement-right">
+        {{ section.settings.right_text }}
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+.collection-announcement-countdown {
+  width: 100%;
+  background: {{ section.settings.bg_color }};
+  color: {{ section.settings.text_color }};
+  margin-bottom: 20px;
+}
+
+.collection-announcement-countdown .announcement-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.collection-announcement-countdown .announcement-left,
+.collection-announcement-countdown .announcement-right {
+  flex: 1 1 25%;
+   font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collection-announcement-countdown .announcement-center {
+  flex: 0 1 auto;
+  font-weight: 600;
+   font-size: 18px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.countdown-label {
+   font-size: 18px;
+  opacity: 0.9;
+}
+
+.countdown-timer {
+  font-family: monospace;
+   font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .collection-announcement-countdown .announcement-left,
+  .collection-announcement-countdown .announcement-right {
+    display: none;
+  }
+
+  .collection-announcement-countdown .announcement-center {
+    flex: 1;
+    justify-content: center;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const container = document.querySelector('.collection-announcement-countdown');
+  if (!container) return;
+
+  if (container.dataset.showBar !== 'true') {
+    container.style.display = 'none';
+    return;
+  }
+
+  const enableCountdown = container.dataset.enableCountdown === 'true';
+  const endDate = new Date(container.dataset.endDate);
+  const format = container.dataset.format || 'days';
+  const timerEl = container.querySelector('.countdown-timer');
+  const labelEl = container.querySelector('.countdown-label');
+
+  if (!enableCountdown || !timerEl || isNaN(endDate)) return;
+
+  const pad = n => (n < 10 ? '0' + n : n);
+
+  function update() {
+    const diff = endDate - new Date();
+
+    if (diff <= 0) {
+      timerEl.textContent = 'Sale Ended';
+      labelEl.style.display = 'none';
+      clearInterval(interval);
+      return;
+    }
+
+    const t = Math.floor(diff / 1000);
+
+    if (format === 'hours') {
+      const h = Math.floor(t / 3600);
+      const m = Math.floor((t % 3600) / 60);
+      const s = t % 60;
+      timerEl.textContent = `${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+    } else {
+      const d = Math.floor(t / 86400);
+      const h = Math.floor((t % 86400) / 3600);
+      const m = Math.floor((t % 3600) / 60);
+      const s = t % 60;
+      timerEl.textContent = `${pad(d)}d ${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+    }
+  }
+
+  update();
+  const interval = setInterval(update, 1000);
+})();
+</script>
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Collection Countdown",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_bar",
+      "label": "Show announcement bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Left text",
+      "default": "Free shipping on orders above ₹999"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_countdown",
+      "label": "Enable countdown",
+      "default": true
+    },
+    {
+    "type": "text",
+    "id": "countdown_label",
+    "label": "Countdown label text",
+    "default": "Sale ends in:"
+    },
+    {
+      "type": "text",
+      "id": "sale_end_date",
+      "label": "Sale end date (YYYY-MM-DD HH:MM:SS)",
+      "default": "2025-12-31 23:59:59"
+    },
+    {
+      "type": "select",
+      "id": "countdown_format",
+      "label": "Countdown format",
+      "options": [
+        { "value": "days", "label": "Days + Hours + Minutes + Seconds" },
+        { "value": "hours", "label": "Total Hours + Minutes + Seconds" }
+      ],
+      "default": "days"
+    },
+    {
+      "type": "text",
+      "id": "right_text",
+      "label": "Right text",
+      "default": "Limited time offer"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#111827"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection – Announcement Countdown",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

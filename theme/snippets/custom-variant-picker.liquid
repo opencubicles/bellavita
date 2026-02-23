@@ -2,13 +2,13 @@
   <div class="pack-options">
 
     {% for option in product.options_with_values %}
-      {% if option.name == "Pack Size" or option.name == "Size" %}
+      {% if option.name == "Pack Size" or option.name == "Size" or option.name == "Pick your Bundle" %}
         {%- for value in option.values -%}
 
           {% assign image_url = blank %}
           {% assign discount_text = blank %}
 
-          {% if value contains 'Pack of 1' or  value contains 'Sigma male' %}
+          {% if value contains 'Pack of 1' or  value contains 'Sigma male' or value contains 'Sigma Combo'  %}
             {% assign image_url = product.metafields.custom.pack_of_one_image | img_url: '400x' %}
             {% assign discount_text = "SAVE 10%" %}
             {% if value contains 'Sigma male' %}
@@ -21,6 +21,10 @@
             {% if value contains 'Sigma Mini' %}
               {% assign discount_text = "20 ml" %}
             {% endif %}
+          {% else %}
+            {% assign image_url = product.metafields.custom.pack_of_two_image | img_url: '400x' %}
+            {% assign discount_value = product.metafields.custom.pack_product_discount | default: 45 %}
+            {% assign discount_text = 'SAVE ' | append: discount_value | append: '%' %}
           {% endif %}
 
           <label class="pack-card">
@@ -55,47 +59,3 @@
 
   </div>
 </div>
-
-<style>
-.custom-pack-picker {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.pack-options {
-  display: flex;
-  gap: 1rem;
-}
-.pack-card {
-  flex: 1;
-  width:130px;
-}
-.pack-box {
-  position: relative;
-  text-align: center;
-}
-.discount-badge {
-
-  top: 6px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-.pack-label {
-  background: #f8f8f8;
-  padding: 10px;
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-.pack-card input:checked + .pack-box {
-  border-color: #000;
-}
-.pack-card input:checked + .pack-box .pack-label {
-  background: #000;
-  color: #fff;
-}
-</style>
