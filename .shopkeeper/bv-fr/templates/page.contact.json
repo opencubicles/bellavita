@@ -51,6 +51,7 @@
         "template--14545717755950__72c700b4-b426-402b-9d1c-6e084983b5fd-button-1"
       ],
       "settings": {
+        "custom_class_admin": "",
         "text_alignment": "center",
         "mobile_text_alignment": "center",
         "horizontal_content": false,
@@ -97,6 +98,7 @@
         },
         "contact-3": {
           "type": "contact",
+          "disabled": true,
           "settings": {
             "heading": "Contact Number",
             "text": "<p><a href=\"tel:+91 9311732440\" title=\"tel:+91 9311732440\">+1 302 600-5480</a><br/></p>",
@@ -155,6 +157,7 @@
       ],
       "disabled": true,
       "settings": {
+        "custom_class": "",
         "image_position": "top center",
         "text_box_position": "bottom-right",
         "text_alignment": "left",
