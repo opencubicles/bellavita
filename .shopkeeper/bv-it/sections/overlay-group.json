@@ -209,14 +209,6 @@
             "title": "Menu"
           }
         },
-        "mobile-dock-3": {
-          "type": "link",
-          "settings": {
-            "custom_icon": "",
-            "title": "Shop",
-            "link": "shopify://collections/bestseller"
-          }
-        },
         "link_TnV7db": {
           "type": "link",
           "settings": {
@@ -243,7 +235,6 @@
       "block_order": [
         "mobile-dock-0",
         "mobile-dock-1",
-        "mobile-dock-3",
         "link_TnV7db",
         "mobile-dock-4",
         "mobile-dock-5"
