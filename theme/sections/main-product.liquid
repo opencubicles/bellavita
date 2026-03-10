@@ -786,9 +786,9 @@
                         <summary>
                           <span class="summary__title">
                             {% render 'icon-accordion', icon: block.settings.icon %}
-                            <span class="accordion__title">
+                            <h2 class="accordion__title">
                               {{ block.settings.heading | default: block.settings.page.title | escape }}
-                            </span>
+                            </h2>
                           </span>
                           <span class="icon icon-plus-alt"></span>
                         </summary>
@@ -1624,6 +1624,44 @@
 <!-- custom js file for main product script -->
 <script src="{{ 'custom-main-product.js' | asset_url }}" defer="defer"></script>                            
 <!-- custom js file for main product script ends here -->
+{% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+  {% if template.name == 'product' and product.tags contains 'Tryon Product' %}
+    <script>
+      document.addEventListener("click", function(e) {
+
+      const button = e.target.closest("tryon-button");
+      if (!button) return;
+
+      e.preventDefault();
+      e.stopImmediatePropagation();
+
+      // Get currently selected variant id
+      const variantInput = document.querySelector('form[action*="/cart/add"] [name="id"]');
+      const tryonVariantId = variantInput ? variantInput.value : null;
+
+      // Handling item variant
+      const handlingVariantId = "49800000307477";
+
+      const sellingPlanId = button.getAttribute("data-selling_plan_id");
+
+      if(!tryonVariantId){
+        console.error("Variant ID not found");
+        return;
+      }
+
+      var url = "/cart/add?items[][id]=" + tryonVariantId +
+        "&items[][quantity]=1" +
+        "&items[][selling_plan]=" + sellingPlanId +
+        "&items[][id]=" + handlingVariantId +
+        "&items[][quantity]=1" +
+        "&return_to=checkout";
+
+      window.location.href = url;
+
+    }, true);
+    </script>
+  {% endif %}
+{% endif %}
 
 {% if has_enabled_custom_countdown %}
 <style>

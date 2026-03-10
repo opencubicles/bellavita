@@ -93,6 +93,7 @@
   {%- endif -%}
 
   <use-animate data-animate="{% if position == 'featured' %}zoom-fade-small{% else %}fade-up{% endif %}" class="media-wrapper">
+    {%- if media.media_type != 'video' -%}
     <div class="product__media image-animate media media--{{ image_ratio }}{% if mobile_image_ratio %} media-mobile--{{ mobile_image_ratio }}{% endif %}"
       {%- if image_ratio == 'adapt' or mobile_image_ratio == 'adapt' %} style="--image-ratio-percent: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;"{% endif -%}
     >
@@ -104,7 +105,7 @@
       endif 
     -%}   
     </div>
-
+    {%- endif -%}
     <!-- custom code for product metafield badge -->
     <div class="card__badge">
       {%- if product.metafields.theme.label.value != blank -%}
@@ -177,54 +178,73 @@
 </modal-opener>
 
 {%- if media.media_type != 'image' -%}
+
+  {% assign is_first_media = false %}
+  {% if product.media.first.id == media.id %}
+    {% assign is_first_media = true %}
+  {% endif %}
+
   <div class="media-wrapper">
+
     {%- if media.media_type == 'model' -%}
       <product-model class="deferred-media media media--{{ image_ratio }}{% if mobile_image_ratio %} media-mobile--{{ mobile_image_ratio }}{% endif %} no-js-hidden"
         data-media-id="{{ media.id }}"
         {%- if image_ratio == 'adapt' or mobile_image_ratio == 'adapt' %} style="--image-ratio-percent: 100%;"{% endif -%}
       >
+
+    {%- elsif media.media_type == 'video' and is_first_media -%}
+
+      <div class="media media--{{ image_ratio }}{% if mobile_image_ratio %} media-mobile--{{ mobile_image_ratio }}{% endif %}"
+        {%- if image_ratio == 'adapt' or mobile_image_ratio == 'adapt' %}
+          style="--image-ratio-percent: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;"
+        {% endif %}
+      >
+
     {%- else -%}
+
       <deferred-media class="deferred-media media media--{{ image_ratio }}{% if mobile_image_ratio %} media-mobile--{{ mobile_image_ratio }}{% endif %} no-js-hidden"
         data-media-id="{{ media.id }}"
-        {%- if image_ratio == 'adapt' or mobile_image_ratio == 'adapt' %} style="--image-ratio-percent: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;"{% endif -%}
+        {%- if image_ratio == 'adapt' or mobile_image_ratio == 'adapt' %}
+          style="--image-ratio-percent: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;"
+        {% endif %}
       >
+
     {%- endif -%}
-    {{ media.preview_image | image_url: width: 1000 | image_tag:
-      loading: image_loading,
-      fetchpriority: fetch_priority,
-      class: 'deferred-media__poster',
-      sizes: sizes,
-      widths: widths,
-      alt: alt
-    }}
-    <button id="Deferred-Poster-{{ media.id }}" class="deferred-media__poster" type="button">
-      <span class="deferred-media__poster-button motion-reduce">
-        {%- if media.media_type == 'model' -%}
-          <span class="visually-hidden">{{ 'products.product.media.play_model' | t }}</span>
-          {%- render 'icon', icon: '3d-model' -%}
-        {%- else -%}
-          <span class="visually-hidden">{{ 'products.product.media.play_video' | t }}</span>
-          {%- render 'icon', icon: 'play' -%}
-        {%- endif -%}
-      </span>
-    </button>
-    <template>
-      {%- liquid
-        case media.media_type
-        when 'external_video'
-          assign video_class = 'js-' | append: media.host
-          if media.host == 'youtube'
-            echo media | external_video_url: autoplay: true, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy"
-          else
-            echo media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy"
-          endif
-        when 'video'
-          echo media | media_tag: image_size: "2048x", autoplay: true, loop: loop, controls: true, controlsList: "nodownload", preload: "none"
-        when 'model'
-          echo media | media_tag: image_size: "2048x", toggleable: true
-        endcase
-      -%}
-    </template>
+
+    {% unless media.media_type == 'video' and is_first_media %}
+      {{ media.preview_image | image_url: width: 1000 | image_tag:
+        loading: image_loading,
+        fetchpriority: fetch_priority,
+        class: 'deferred-media__poster',
+        sizes: sizes,
+        widths: widths,
+        alt: alt
+      }}
+    {% endunless %}
+
+    {%- liquid
+      case media.media_type
+
+      when 'external_video'
+        assign video_class = 'js-' | append: media.host
+        if media.host == 'youtube'
+          echo media | external_video_url: autoplay: true, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy"
+        else
+          echo media | external_video_url: autoplay: true, loop: loop | external_video_tag: class: video_class, loading: "lazy"
+        endif
+
+      when 'video'
+        if is_first_media
+          echo media | media_tag:image_size: "2048x",autoplay: true,loop: true,muted: true,playsinline: true,preload: "metadata"
+        else
+          echo media | media_tag:image_size: "2048x",controls: true,controlsList: "nodownload",preload: "none",playsinline: true
+        endif
+
+      when 'model'
+        echo media | media_tag: image_size: "2048x", toggleable: true
+
+      endcase
+    -%}
 
     {%- if media.media_type == 'model' -%}
       </product-model>
@@ -242,8 +262,13 @@
           {{ 'products.product.xr_button' | t }}
         </button>
       {%- endif -%}
+
+    {%- elsif media.media_type == 'video' and is_first_media -%}
+      </div>
+
     {%- else -%}
       </deferred-media>
     {%- endif -%}
+
   </div>
 {%- endif -%}

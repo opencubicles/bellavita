@@ -38,18 +38,17 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Extra 15% Off on 2 or More Perfumes",
+            "text": "Try Before You Buy",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
-            "link": "https://bellavitaluxe.com/collections/shop-all"
+            "link": ""
           }
         },
         "announcement_eXEtFh": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Valentine's Exclusive: Any 2 Giftsets @42.99",
+            "text": "Shipping charge $7 applicable",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
@@ -66,17 +65,6 @@
             "end_date": "",
             "link": ""
           }
-        },
-        "announcement_zAeFRF": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "3 Perfumes @ $51.99",
-            "text_on_mobile": "",
-            "text_size": 14,
-            "end_date": "",
-            "link": "https://www.bellavitaluxe.com/apps/gbb/easybundle/1?page=addProductsPage1&currentFlow=byob"
-          }
         }
       },
       "block_order": [
@@ -84,8 +72,7 @@
         "announcement_wJqJbc",
         "announcement-bar-0",
         "announcement_eXEtFh",
-        "announcement_Vke9D7",
-        "announcement_zAeFRF"
+        "announcement_Vke9D7"
       ],
       "settings": {
         "only_homepage": false,

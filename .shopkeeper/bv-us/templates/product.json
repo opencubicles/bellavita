@@ -310,7 +310,7 @@
           "type": "shopify://apps/tryon/blocks/tryOnAppBlock/95799297-dc1d-40fb-9234-066b30a3012a",
           "settings": {
             "open-tryon-modal-on-button-click": false,
-            "show-tryon-description": false,
+            "show-tryon-description": true,
             "tryon-description-color": "#000000",
             "description-align-text": "center",
             "tryon-button-description": "Try at home, pay for what you keep",
@@ -334,6 +334,12 @@
             "tryon-handling-variant-id": "",
             "tryon-product-form-selector": "",
             "tryon-atc-selector": ""
+          }
+        },
+        "custom_liquid_9kQ68T": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.tryon_custom_text %}\n<div class=\"try-now-pay-later\">\n  <h2 class=\"tnpl-title\">\n   Try Before You Buy ✨ \n  </h2>\n  <h3 class=\"tnpl-title\">\n    Try at $0 & Pay Only if you like the Fragrances \n  </h3>\n\n  <ul class=\"tnpl-steps\">\n    <li class=\"tnpl-step\">\n      <strong>Try Before You Buy :</strong>\n     Once you opt for trial and place your order, we place a temporary hold on your card, but you won’t be charged during your 3-day trial.\n    </li>\n\n    <li class=\"tnpl-step\">\n      <strong>3-Day Trial:</strong>\n       Starts on the day your order is marked as delivered.<br>\nKeep It ? full amount will automatically get deducted from original payment method.\n    </li>\n\n    <li class=\"tnpl-step\">\n      <strong>Return Window:</strong>\n      Returns must be requested within the 3-day trial period via filing the form received by the users over email. No Return requests acceptable post trial period.\n    </li>\n    <li class=\"tnpl-step\">\n      <strong>Shipping Fee:</strong>\n      A non-refundable $7 Shipping fee applies to all Try Now, Pay Later orders.\n    </li>\n  </ul>\n</div>\n{% endif %}"
           }
         },
         "custom_liquid_KdFJyi": {
@@ -363,7 +369,7 @@
         "custom_liquid_X8RHwe": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n\n{% if product.metafields.custom.free_shipping_products == true or product.price > 2998  %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span>\n  </div>\n{% else %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span> &nbsp;over $30\n  </div>\n{% endif %}\n \n</div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n\n</style>"
+            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n\n{% if product.metafields.custom.free_shipping_products == true or product.price > 2998 %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span>\n  </div>\n\n{% elsif product.tags contains 'Tryon Product' %}\n  <div class=\"shipping-text\">\n    <span>Shipping charge $7 applicable</span>\n  </div>\n\n{% else %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span> &nbsp;over $30\n  </div>\n{% endif %}\n \n</div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n\n</style>"
           }
         },
         "custom_liquid_kjYyfP": {
@@ -389,6 +395,7 @@
         "description",
         "buy_buttons",
         "tryon_try_on_app_block_wzLGfE",
+        "custom_liquid_9kQ68T",
         "custom_liquid_KdFJyi",
         "meta_coms_MzxdKJ",
         "sticky_cart_t4QLHa",
@@ -770,6 +777,56 @@
         "areviews_write_reviews_botton_color": "#373737"
       }
     },
+    "1772436852e647348f": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_store_summary_kCqqHf": {
+          "type": "shopify://apps/judge-me-reviews/blocks/store_summary/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "data_source": "real",
+            "theme": "expanded",
+            "button_theme_color": "#FFFFFF",
+            "button_theme_text_color": "#000000",
+            "show_keywords": true,
+            "keywords_visibility": "shown",
+            "show_button": true,
+            "button_visibility": "shown",
+            "alignment": "left",
+            "title_size": "default",
+            "text_size": "default",
+            "corner_styling": "soft",
+            "widget_color": "#F9F9F9",
+            "text_color": "#000000",
+            "lighter_text_color": "#787878",
+            "button_color": "#108474",
+            "button_text_color": "#FFFFFF",
+            "show_sentiment_colors": false,
+            "max_width": 1100,
+            "heading_text": "Customers rate this store",
+            "button_text": "See AI reviews summary"
+          }
+        },
+        "judge_me_reviews_review_widget_RT6mhT": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_store_summary_kCqqHf",
+        "judge_me_reviews_review_widget_RT6mhT"
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "17066961646756c0fa": {
       "type": "apps",
       "blocks": {
@@ -786,6 +843,7 @@
       "block_order": [
         "judge_me_reviews_review_widget_XV7AYb"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true,
         "show_divider": false,
@@ -800,7 +858,7 @@
           "type": "shopify://apps/tryon/blocks/tryOnAppBlock/95799297-dc1d-40fb-9234-066b30a3012a",
           "settings": {
             "open-tryon-modal-on-button-click": false,
-            "show-tryon-description": false,
+            "show-tryon-description": true,
             "tryon-description-color": "#000000",
             "description-align-text": "center",
             "tryon-button-description": "Try at home, pay for what you keep",
@@ -858,6 +916,7 @@
     "recently-viewed-products",
     "testimonials",
     "1629746450643786911",
+    "1772436852e647348f",
     "17066961646756c0fa",
     "177140902877ef0bad"
   ]

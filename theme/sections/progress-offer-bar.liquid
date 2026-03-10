@@ -3,6 +3,7 @@
 {% endcomment %}
 
 {% if collection and collection.metafields.custom.show_progress_bar == true %}
+ 
   <style>
     /* Sticky styling */
     @media screen and (min-width: 768px) {
@@ -34,7 +35,16 @@
       display: block;
     }
   </style>
-
+  {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+  <style>
+    /* Sticky styling */
+    @media screen and (min-width: 768px) {
+      #progress-offer-bar.sticky-offerbar {
+        left: 150px !important;
+      }
+    }
+  </style>
+  {% endif %}
   <!-- SPACER to prevent layout jump -->
   <div id="offerBarSpacer"></div>
 
