@@ -217,14 +217,6 @@
             "link": "shopify://collections/bestseller"
           }
         },
-        "link_TnV7db": {
-          "type": "link",
-          "settings": {
-            "custom_icon": "",
-            "title": "Shop",
-            "link": "shopify://collections/bestseller"
-          }
-        },
         "mobile-dock-4": {
           "type": "cart",
           "settings": {
@@ -244,7 +236,6 @@
         "mobile-dock-0",
         "mobile-dock-1",
         "mobile-dock-3",
-        "link_TnV7db",
         "mobile-dock-4",
         "mobile-dock-5"
       ],
