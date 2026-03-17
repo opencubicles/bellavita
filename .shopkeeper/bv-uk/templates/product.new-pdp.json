@@ -211,6 +211,7 @@
         "rating_kKidtU",
         "image_NAt34J"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 800px) {.rich-text {padding-top: 4px; }}"
       ],
@@ -240,13 +241,21 @@
           "type": "title",
           "settings": {
             "title_size": "h2",
-            "show_price": false,
+            "show_price": true,
             "title_hide_on_desktop": false,
-            "title_hide_on_mobile": true,
-            "title_bold": false,
+            "title_hide_on_mobile": false,
+            "title_bold": true,
             "title_semi_bold": false,
             "title_uppercase": false,
             "price_size": "medium"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_share_botton": false,
+            "rating_hide_on_desktop": false,
+            "rating_hide_on_mobile": false
           }
         },
         "text_pb8jUB": {
@@ -256,27 +265,9 @@
             "text": "{{ product.metafields.custom.product_meta_secondary_text.value }}",
             "text_style": "body",
             "text_hide_on_desktop": false,
-            "text_hide_on_mobile": true,
+            "text_hide_on_mobile": false,
             "text_bold": false,
             "text_uppercase": false
-          }
-        },
-        "rating": {
-          "type": "rating",
-          "settings": {
-            "show_share_botton": true,
-            "rating_hide_on_desktop": false,
-            "rating_hide_on_mobile": true
-          }
-        },
-        "image_Ad9UNn": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Amazon_strip.jpg",
-            "link": "",
-            "img_full_width_on_mobile": false,
-            "image-hide-desktop": false,
-            "image-hide-mobile": true
           }
         },
         "price": {
@@ -299,6 +290,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "custom_liquid_6BXmL7": {
@@ -315,23 +307,10 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_quantity_selector": true,
-            "show_price_container": true,
+            "show_quantity_selector": false,
+            "show_price_container": false,
             "hide_atc_on_mobile": false,
             "show_dynamic_checkout": false
-          }
-        },
-        "complementary_custom_AH3QmH": {
-          "type": "complementary_custom",
-          "settings": {
-            "icon": "none",
-            "heading": "The Super Saver Pack",
-            "make_collapsible_row": false,
-            "product_list_limit": 10,
-            "image_ratio": "adapt",
-            "image_position": "center center",
-            "show_vendor": false,
-            "enable_image_fill": true
           }
         },
         "tryon_try_on_app_block_8iLcQE": {
@@ -402,21 +381,20 @@
         },
         "offers_section_whdpGY": {
           "type": "offers_section",
+          "disabled": true,
           "settings": {}
         }
       },
       "block_order": [
         "title",
-        "text_pb8jUB",
         "rating",
-        "image_Ad9UNn",
+        "text_pb8jUB",
         "price",
         "variant_picker",
         "description",
         "custom_liquid_6BXmL7",
         "eb_easy_bundle_builder_app_block_mix_and_match_bundle_PzYFVf",
         "buy_buttons",
-        "complementary_custom_AH3QmH",
         "tryon_try_on_app_block_8iLcQE",
         "custom_liquid_3RTPP8",
         "meta_coms_MzxdKJ",
@@ -441,13 +419,14 @@
         "enable_image_zoom": true,
         "enable_video_looping": false,
         "mobile_image_ratio": "adapt_first",
-        "show_mobile_thumbnails": true,
+        "show_mobile_thumbnails": false,
         "padding_top": 0,
         "padding_bottom": 20
       }
     },
     "ingredients_d3QziV": {
       "type": "Ingredients",
+      "disabled": true,
       "custom_css": [
         "@media only screen and (max-width: 600px) {.Notes-Heading {margin-top: 18px; } .ingredient-img-wrapper-notes {width: 55%; margin: auto; } .product-ingredients-item-notes p {margin: 0.3rem 0; } .center-notes {text-align: left; line-height: 17px; } .ingredient-img-wrapper-notes {margin: 0px !important; } .product-ingredients-notes {padding: 0px 2rem !important; }}"
       ],
@@ -499,6 +478,7 @@
         "collapsible_row_NXAhEg",
         "collapsible_row_VX7tAw"
       ],
+      "disabled": true,
       "settings": {
         "open_first_collapsible_row": false,
         "narrow": true,
@@ -511,13 +491,27 @@
         "padding_bottom": 36
       }
     },
-    "1710752969db39fb42": {
+    "17066961646756c0fa": {
       "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_3NrUkr": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_3NrUkr"
+      ],
       "settings": {
         "include_margins": true,
         "show_divider": false,
-        "padding_top": 8,
-        "padding_bottom": 0
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "product-recommendations": {
@@ -546,6 +540,7 @@
     },
     "video_with_text_H8QRXX": {
       "type": "Video-with-text",
+      "disabled": true,
       "name": "Video With Text",
       "settings": {}
     },
@@ -615,6 +610,7 @@
         "testimonial-2",
         "testimonial-3"
       ],
+      "disabled": true,
       "settings": {
         "autorotate": false,
         "autorotate_speed": 5,
@@ -624,29 +620,6 @@
         "heading_size": "h2",
         "heading_alignment": "center",
         "heading_tag": "h2",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "17066961646756c0fa": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_3NrUkr": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_3NrUkr"
-      ],
-      "settings": {
-        "include_margins": true,
-        "show_divider": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -705,11 +678,10 @@
     "main",
     "ingredients_d3QziV",
     "collapsible-content",
-    "1710752969db39fb42",
+    "17066961646756c0fa",
     "product-recommendations",
     "video_with_text_H8QRXX",
     "testimonials",
-    "17066961646756c0fa",
     "176604687433159f51"
   ]
 }
