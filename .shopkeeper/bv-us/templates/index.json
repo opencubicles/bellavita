@@ -14,6 +14,7 @@
       "blocks": {
         "image_tiQb3A": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Home_PageMani_banner_desktop.jpg",
             "image_mobile": "shopify://shop_images/Home_Pagemain_banner_mobile.jpg",

@@ -1,0 +1,170 @@
+<style>
+    .pdp-combo-heading{
+      padding-block:10px;
+      margin:0;
+      font-size:14px;
+      color:#000;
+    }
+    .save-text{
+      font-size:12px;
+      color:#1E1E1EBF;
+    }
+    .pdp-upsell-combo {
+      margin-top: 1rem;
+      position:relative;
+    }
+
+    .upsell-combo__wrapper {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .upsell-combo__image {
+      position: relative;
+      min-width: 30%;
+    }
+    .upsell-combo__info{
+      min-width: 65%;
+      width: 65%;
+      display:flex;
+      flex-direction:column;
+      justify-content: space-between;
+
+    }
+    .upsell-combo__title-link{
+      text-decoration: none;
+    }
+
+    .upsell-combo__image img {
+      width: 100%;
+      border-radius: 6px;
+      background: #fff;
+      display:block;
+    }
+
+    .upsell-combo__badge {
+      margin-left: 4px;
+      color: green;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .upsell-combo__title {
+      margin: 0 0 .25rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing:0;
+    }
+    .upsell-price{
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      line-height:117%;
+    }
+    .upsell-price .price-item--sale .money{
+      font-size:14px;
+    }
+    .upsell-price .price-item--regular{
+      font-size:12px;
+    }
+
+    .price-item--sale {
+      font-weight: 600;
+    }
+
+    .price-item--regular {
+      color: #777;
+      margin-left: .5rem;
+      font-size: .85rem;
+    }
+
+    .upsell-combo__submit {
+      margin-top: 1rem;
+      font-size: 11px;
+      padding: .6rem 1rem;
+      border-radius: 4px;
+      max-width: 100%;
+       min-width: 100%;
+       min-height:36px;
+       letter-spacing: 0;
+    }
+    @media screen and (max-width:375px){
+      .upsell-combo__submit{
+        font-size:11px;
+      }
+      .upsell-combo__submit{
+        margin-top:.3rem;
+      }
+      .upsell-combo__title{
+        font-size:12px;
+      }
+    }
+  </style>
+<div class="pdp-upsell-combo">
+    <h2 class="pdp-combo-heading"><strong>{{ heading }}</strong></h2>
+     <div class="upsell-combo__wrapper">
+
+    <!-- Image -->
+    <a href="{{ product.url }}" class="upsell-combo__image">
+      <img 
+        src="{{ product.featured_image | image_url: width: 300 }}" 
+        alt="{{ product.title }}" 
+        loading="lazy">
+    </a>
+
+    <!-- Info -->
+    <div class="upsell-combo__info">
+
+      <a href="{{ product.url }}" class="upsell-combo__title-link">
+        <h5 class="upsell-combo__title">
+          {{ product.title }}
+        </h5>
+      </a>
+
+      <!-- Price -->
+      <div>
+        {% if product.compare_at_price > product.price %}
+          {% assign discount = product.compare_at_price | minus: product.price %}
+          {% assign discount_percent = discount | times: 100 | divided_by: product.compare_at_price %}
+
+          <span class="upsell-combo__badge">
+            {{ discount_percent | round }}% Off
+          </span>
+
+          <span class="save-text">
+            (Save <span class="money">{{ discount | money }}</span>)
+          </span>
+        {% endif %}
+
+        <div class="upsell-combo__price">
+          <span class="upsell-price">
+            <span class="price-item price-item--sale">
+              {{ product.price | money }}
+            </span>
+
+            {% if product.compare_at_price > product.price %}
+              <span class="price-item price-item--regular">
+                <s>{{ product.compare_at_price | money }}</s>
+              </span>
+            {% endif %}
+          </span>
+        </div>
+
+        <!-- Form -->
+        <product-form class="upsell-combo__form">
+          <form method="post" action="/cart/add" class="shopify-product-form">
+            
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+            <button type="submit" class="upsell-combo__submit button button--secondary">
+              Add Combo To Cart
+            </button>
+
+          </form>
+        </product-form>
+
+      </div>
+    </div>
+
+  </div>
+  </div>

@@ -323,7 +323,7 @@
         {% comment %} <div class="mini-cart-extra" style="padding: 0px 20px;">
           <p><strong>Add one more product to get 10% off</strong></p>
         </div> {% endcomment %}
-      {% elsif cart.item_count > 1  %}  
+      {% elsif cart.item_count > 1 and cart.total_price < 4799  %}  
         <div class="free-shipping typeset0" style="padding-bottom:10px;">
           {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com' %}
             <span class="free-shipping__text">Hurray! Extra 15% off applied</span>
@@ -335,13 +335,13 @@
       {% endif %}
       {% endif %}  
     {% endif %} 
-    {% if 1 == 3 %}
+    {% if embrougecollectionProductexist  == false and mistcollectionProductexist == false %}
 
           {% assign target_amount = 5999 %}
           {% assign current_amount = cart.total_price %}
           {% assign remaining_amount = target_amount | minus: current_amount %}
 
-          {% if current_amount > 3900 %}
+          {% if current_amount > 4799 %}
 
             {% if current_amount >= target_amount %}
               {% assign progress = 100 %}

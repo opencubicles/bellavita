@@ -621,20 +621,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   document.addEventListener("DOMContentLoaded", startCountdown);
 </script>
 {% endif %}
-{% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
+{% if shop.permanent_domain == 'bv-uk.myshopify.com' or  shop.permanent_domain == 'bellavita-luxury-germany.myshopify.com'%}
 <script>
   window.buy2collection = [
     {% for product in collections['buy2get1'].products %}
       {{ product.id }}{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
+</script>
+{% endif %}
+<script>
    window.buy1collection = [
     {% for product in collections['buy1get1'].products %}
       {{ product.id }}{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
 </script>
-{% endif %}
 {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
 <script>
   window.buy3collection = [
@@ -723,6 +725,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     .announcement-slider .announcement-slider__slide[data-index="0"] {
       display: none !important;
     }
+    .announcement-slider .announcement-slider__slide[data-index="1"] {
+      display: none !important;
+    }
+     .announcement-slider .announcement-slider__slide[data-index="2"] {
+      display: none !important;
+    }
+     .announcement-slider .announcement-slider__slide[data-index="3"] {
+      display: flex !important;
+    }
+    .announcement-slider .announcement-slider__slide[data-index="4"] {
+      display: flex !important;
+    }
     {% comment %} .announcement-slider .announcement-slider__slide[data-index="2"] {
       display: none !important;
     } {% endcomment %}
@@ -734,25 +748,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       display : none !important;
     }
     </style>
- {% endif %}
-  {% unless product.tags contains 'Tryon Product' %}
-    <style>
+  {% else %}
+     <style>
     @media (max-width: 768px) {
       #product-form-template--22699133600021__main button.product-form__submit[name="add"] {
           display: none !important;
       }
     }
-    .announcement-slider .announcement-slider__slide[data-index="1"] {
+    .announcement-slider .announcement-slider__slide[data-index="3"] {
       display: none !important;
     }
-    .announcement-slider .announcement-slider__slide[data-index="2"] {
-      display: none !important;
-    }
-    .announcement-slider .announcement-slider__slide[data-index="2"] {
+    .announcement-slider .announcement-slider__slide[data-index="4"] {
       display: none !important;
     }
     </style>
-  {% endunless %}
+ {% endif %}
+
  {% if product.tags contains 'Tryon Product' %}
     <style>
       button.product-form__submit {

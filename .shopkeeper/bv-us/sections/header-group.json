@@ -14,21 +14,30 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_wJqJbc": {
+          "type": "announcement",
+          "settings": {
+            "text": "⁠Free Gift worth $9.99 on orders above $59.99",
+            "text_on_mobile": "",
+            "text_size": 14,
+            "end_date": "",
+            "link": "shopify://collections/shop-all"
+          }
+        },
+        "announcement_Vke9D7": {
+          "type": "announcement",
+          "settings": {
+            "text": "⁠Buy More Save More: Extra 15% Off",
+            "text_on_mobile": "",
+            "text_size": 13,
+            "end_date": "",
+            "link": "shopify://collections/shop-all"
+          }
+        },
         "b4274c71-3b8c-453a-ac62-b2f39868bcf0": {
           "type": "announcement",
           "settings": {
             "text": "🚚FREE Shipping on orders above $30*",
-            "text_on_mobile": "",
-            "text_size": 14,
-            "end_date": "",
-            "link": ""
-          }
-        },
-        "announcement_wJqJbc": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "New Year Sale is Live - Buy any 3@59.99 + Free Gift",
             "text_on_mobile": "",
             "text_size": 14,
             "end_date": "",
@@ -54,25 +63,14 @@
             "end_date": "",
             "link": "https://bellavitaluxe.com/apps/gbb/easybundle/3?page=addProductsPage1&currentFlow=byob"
           }
-        },
-        "announcement_Vke9D7": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "Welcome to our store",
-            "text_on_mobile": "",
-            "text_size": 13,
-            "end_date": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "b4274c71-3b8c-453a-ac62-b2f39868bcf0",
         "announcement_wJqJbc",
+        "announcement_Vke9D7",
+        "b4274c71-3b8c-453a-ac62-b2f39868bcf0",
         "announcement-bar-0",
-        "announcement_eXEtFh",
-        "announcement_Vke9D7"
+        "announcement_eXEtFh"
       ],
       "settings": {
         "only_homepage": false,
