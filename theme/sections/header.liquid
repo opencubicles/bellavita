@@ -895,6 +895,7 @@
 
 {% comment %} ===== PRODUCT BREADCRUMB ===== {% endcomment %}
 {% if template contains 'product' %}
+
 {% assign breadcrumb_collection = product.collections.first %}
 <script type="application/ld+json">
 {
@@ -931,6 +932,11 @@
   ]
 }
 </script>
+{% if product.metafields.custom.faq_schema != blank %}
+  <script type="application/ld+json">
+    {{ product.metafields.custom.faq_schema.value | replace: '=>', ':' }}
+  </script>
+{% endif %}
 {% endif %}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>

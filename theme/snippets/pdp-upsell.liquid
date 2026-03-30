@@ -88,6 +88,10 @@
        min-height:36px;
        letter-spacing: 0;
     }
+    .upsell-combo-button {
+      background-color:black !important;
+      color:white !important;
+    }
     @media screen and (max-width:375px){
       .upsell-combo__submit{
         font-size:11px;
@@ -153,11 +157,15 @@
         <!-- Form -->
         <product-form class="upsell-combo__form">
           <form method="post" action="/cart/add" class="shopify-product-form">
-            
+             <input type="hidden" name="properties[upsell_bundle]" value="Yes">
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
-            <button type="submit" class="upsell-combo__submit button button--secondary">
+            <button type="submit" class="upsell-combo__submit button button--secondary upsell-combo-button">
+             {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com' %}
+               Add To Cart
+              {% else %}
               Add Combo To Cart
+              {% endif %}
             </button>
 
           </form>

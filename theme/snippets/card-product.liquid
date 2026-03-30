@@ -498,6 +498,34 @@
               </a>
             {%- else -%}
               <!-- custom code for app exclusive button ends here -->
+              {% assign hide_price = false %}
+
+              {% for col in card_product.collections %}
+                {% if col.handle == 'embarouge' or col.handle == 'hair-body-mist' %}
+                  {% assign hide_price = true %}
+                {% endif %}
+              {% endfor %}
+              {% assign allowed_collections = "custom-byob-collection" | split: "," %}
+
+              {% if allowed_collections contains collection.handle %}
+                  <button class="button button--small add-to-cart-custom" data-variant-id="{{ card_product.selected_or_first_available_variant.id }}">
+                    Add to cart
+
+                    <svg class="icon icon-cart" aria-hidden="true" focusable="false">
+                      <use href="#icon-cart"></use>
+                    </svg>
+
+                    {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+                      {% unless hide_price %}
+                        <span class="product-price">
+                          - {{ card_product.selected_or_first_available_variant.price | money }}
+                        </span>
+                      {% endunless %}
+                    {%- endif -%}
+                  </button>
+                
+              {%- else -%}
+              
               <add-to-cart
                 class="button button--small"
                 data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
@@ -512,7 +540,15 @@
                 <svg class="icon icon-cart" aria-hidden="true" focusable="false">
                   <use href="#icon-cart"></use>
                 </svg>
+                {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+                  {% unless hide_price %}
+                    <span class="product-price">
+                      - {{ card_product.selected_or_first_available_variant.price | money }}
+                    </span>
+                  {% endunless %}
+                {%- endif -%}
               </add-to-cart>
+              {% endif %}
             <!-- custom code for app exclusive button -->
             {%- endif -%}
             <!-- custom code for app exclusive button ends here -->

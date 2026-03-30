@@ -1,0 +1,145 @@
+{% assign product_item = collection.metafields.custom.bundle_product.value %}
+{% assign product_limit = collection.metafields.custom.product_limit | default: 2 %}
+
+{% if product_item != blank %}
+
+{% assign bundle_count = 0 %}
+{% assign is_bundle_in_cart = false %}
+
+{% for item in cart.items %}
+  {% if item.product.id == product_item.id %}
+    {% assign bundle_count = item.quantity %}
+    {% assign is_bundle_in_cart = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<div class="bundle-top-wrapper">
+  <div class="bundle-top-bar">
+
+    <p class="bundle-title">
+      {{ product_item.title }}
+    </p>
+
+    <div class="bundle-progress">
+      <div class="line"></div>
+
+      <div class="circle {% if is_bundle_in_cart %}active{% endif %}">
+        {% if is_bundle_in_cart %}
+          ✓
+        {% else %}
+          {{ bundle_count }}
+        {% endif %}
+      </div>
+    </div>
+
+    <p class="bundle-subtitle">
+      Select any {{ product_limit }} Perfumes
+    </p>
+
+  </div>
+</div>
+
+{% endif %}
+<style>
+ .bundle-top-wrapper {
+  position: relative;
+}
+
+.bundle-top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 12px 0;
+}
+
+/* TITLE */
+.bundle-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* SUBTITLE */
+.bundle-subtitle {
+  font-size: 14px;
+  color: #444;
+  margin-top: 6px;
+}
+
+/* PROGRESS */
+.bundle-progress {
+  position: relative;
+  width: 220px;
+  margin: 0 auto;
+}
+
+.bundle-progress .line {
+  height: 2px;
+  background: #000;
+  width: 100%;
+}
+
+/* CIRCLE */
+.bundle-progress .circle {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ACTIVE STATE */
+.bundle-progress .circle.active {
+  background: #2ecc71;
+  border-color: #2ecc71;
+  color: #fff;
+}
+</style>
+<script>
+document.addEventListener("scroll", function () {
+  const bar = document.querySelector(".bundle-top-bar");
+  const footer = document.querySelector("footer");
+
+  if (!bar || !footer) return;
+
+  const footerTop = footer.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (footerTop <= windowHeight) {
+    bar.style.position = "absolute";
+    bar.style.top = "auto";
+    bar.style.bottom = (document.body.scrollHeight - window.scrollY - windowHeight) + "px";
+  } else {
+    bar.style.position = "fixed";
+    bar.style.top = "0";
+    bar.style.bottom = "auto";
+  }
+});
+
+</script>
+
+{% schema %} 
+{
+  "name": "Top Bundle Sticky Strip",
+  "presets": [
+    {
+      "name": "Collection – Top Strip",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

@@ -99,7 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const buyX = {{ collection.metafields.custom.buy_x | default: 2 }};
   const getY = {{ collection.metafields.custom.get_y | default: 1 }};
   const required = buyX + getY;
-
+//Congrats! You have 1 Product FREE.
+{% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
   function updateBar() {
     fetch("/cart.js")
       .then(r => r.json())
@@ -111,15 +112,37 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("offerBarProgress").style.width = progress + "%";
 
         const msgEl = document.getElementById("offerBarMessage");
-
-        if (remaining > 0) {
-          msgEl.textContent = `Add ${remaining} more product${remaining > 1 ? 's' : ''} to unlock your free item`;
+        if(qty == 0){
+          msgEl.textContent = `Add ${remaining} Products to avail the Offer`;
+        }
+        else if (remaining > 0) {
+          msgEl.textContent = `Add ${remaining} more product`;
         } else {
-          msgEl.textContent = `Congrats! You're eligible for your offer 🎉`;
+          msgEl.textContent = `Congrats! You have 1 Product FREE.`;
         }
       });
-  }
+    }
+  {% else %}
+    function updateBar() {
+      fetch("/cart.js")
+        .then(r => r.json())
+        .then(cart => {
+          const qty = cart.item_count;
+          const remaining = Math.max(required - qty, 0);
+          const progress = Math.min((qty / required) * 100, 100);
 
+          document.getElementById("offerBarProgress").style.width = progress + "%";
+
+          const msgEl = document.getElementById("offerBarMessage");
+
+          if (remaining > 0) {
+            msgEl.textContent = `Add ${remaining} more product ${remaining > 1 ? 's' : ''} to get Discount`;
+          } else {
+            msgEl.textContent = `Congrats! You're eligible for your offer 🎉`;
+          }
+        });
+    }
+{% endif %}
   updateBar();
 
   // Watch for add-to-cart changes

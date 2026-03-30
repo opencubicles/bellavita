@@ -14,10 +14,9 @@
       "blocks": {
         "image_tiQb3A": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Home_PageMani_banner_desktop.jpg",
-            "image_mobile": "shopify://shop_images/Home_Pagemain_banner_mobile.jpg",
+            "image": "shopify://shop_images/Mani_banner_desktop.jpg",
+            "image_mobile": "shopify://shop_images/main_banner_mobile_copy.jpg",
             "image_position": "center center",
             "text_box_position": "bottom-left",
             "subheading": "",
@@ -28,7 +27,7 @@
             "text": "",
             "text_size": "typeset",
             "button_label": "",
-            "button_link": "https://bellavita-bangladesh.myshopify.com/apps/gbb/easybundle/5",
+            "button_link": "shopify://collections/buy1get1",
             "button_secondary_label": "",
             "button_secondary_link": "",
             "button_size": "medium",

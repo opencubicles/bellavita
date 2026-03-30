@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_wJqJbc": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "⁠Free Gift worth $9.99 on orders above $59.99",
             "text_on_mobile": "",

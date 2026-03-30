@@ -354,6 +354,19 @@
           "type": "meta_coms",
           "settings": {}
         },
+        "complementary_custom_YaRhEn": {
+          "type": "complementary_custom",
+          "settings": {
+            "icon": "none",
+            "heading": "Extra Saver Pack",
+            "make_collapsible_row": false,
+            "product_list_limit": 1,
+            "image_ratio": "adapt",
+            "image_position": "center center",
+            "show_vendor": false,
+            "enable_image_fill": true
+          }
+        },
         "sticky_cart_t4QLHa": {
           "type": "sticky_cart",
           "settings": {
@@ -398,6 +411,7 @@
         "custom_liquid_9kQ68T",
         "custom_liquid_KdFJyi",
         "meta_coms_MzxdKJ",
+        "complementary_custom_YaRhEn",
         "sticky_cart_t4QLHa",
         "offer_badges_hFhQyD",
         "custom_liquid_X8RHwe",
@@ -405,7 +419,7 @@
         "offers_section_whdpGY"
       ],
       "custom_css": [
-        ".pdp-offer-img-wrapper {width: 55%; margin-top: 5px;}"
+        ".pdp-offer-img-wrapper {width: 55%;}"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -785,7 +799,7 @@
           "settings": {
             "data_source": "real",
             "theme": "expanded",
-            "button_theme_color": "#FFFFFF",
+            "button_theme_color": "#ffffff",
             "button_theme_text_color": "#000000",
             "show_keywords": true,
             "keywords_visibility": "shown",
@@ -795,11 +809,11 @@
             "title_size": "default",
             "text_size": "default",
             "corner_styling": "soft",
-            "widget_color": "#F9F9F9",
+            "widget_color": "#f9f9f9",
             "text_color": "#000000",
             "lighter_text_color": "#787878",
             "button_color": "#108474",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "show_sentiment_colors": false,
             "max_width": 1100,
             "heading_text": "Customers rate this store",

@@ -43,6 +43,8 @@
 {% endif -%}
 {% assign embrougecollectionProductexist = false %}
 {% assign mistcollectionProductexist = false %}
+{% assign buy1get1CollectionProductExist = false %}
+{% assign buy1get1CollectionProductcount = 0 %}
 {% for item in cart.items %}
   
   {% assign product_collectionss = item.product.collections | map: "handle" %}
@@ -52,6 +54,10 @@
   {% endif %}
    {% if product_collectionss contains "hair-body-mist" %}
     {% assign mistcollectionProductexist = true %}
+  {% endif %}
+  {% if product_collectionss contains "buy1get1" %}
+    {% assign buy1get1CollectionProductExist = true %}
+    {% assign buy1get1CollectionProductcount = buy1get1CollectionProductcount | plus: 1 %}
   {% endif %}
 {% endfor %}
 <form class="mini-cart{% if cart == empty %} is-empty{% endif %}" action="{{ routes.cart_url }}" method="post" id="cart">
@@ -73,7 +79,7 @@
       Define the target collections **as an array**
       Example: buy2get1, winter-sale, free-items
       {%- endcomment -%}
-      {% assign target_collections = "buy2get1,buy1get1,buy-1-get-1-offer" | split: "," %}
+      {% assign target_collections = "buy2get1,buy1get1,buy-1-get-1-offer,buy-2-get-2,buy1get1-special" | split: "," %}
 
       {% for item in cart.items %}
 
@@ -311,7 +317,7 @@
 
     {% if shop.metafields.custom.buy2get10percent_progress_bar %} 
       {% if buy2collectionProductexist == false and embrougecollectionProductexist == false %}
-      {% if cart.item_count == 1 %}
+      {% if cart.item_count == 1  %}
         <div class="free-shipping typeset0">
           {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com' %}
             <span class="free-shipping__text">Add one more product to get Extra 15% off</span>
@@ -323,7 +329,12 @@
         {% comment %} <div class="mini-cart-extra" style="padding: 0px 20px;">
           <p><strong>Add one more product to get 10% off</strong></p>
         </div> {% endcomment %}
-      {% elsif cart.item_count > 1 and cart.total_price < 4799  %}  
+      {% elsif cart.item_count > 1 and embrougecollectionProductexist and 1==2  %}  
+        <div class="free-shipping typeset0" style="padding-bottom:10px;">
+          <span class="free-shipping__text">Hurray! Extra 15% off applied</span>
+          <span class="free-shipping__progress free-shipping__progress--success" style="--progress: 100%; "></span>
+        </div>
+      {% elsif cart.item_count > 1   %}  
         <div class="free-shipping typeset0" style="padding-bottom:10px;">
           {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com' %}
             <span class="free-shipping__text">Hurray! Extra 15% off applied</span>
@@ -335,7 +346,8 @@
       {% endif %}
       {% endif %}  
     {% endif %} 
-    {% if embrougecollectionProductexist  == false and mistcollectionProductexist == false %}
+    {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com' %}
+    {% if embrougecollectionProductexist  == false and mistcollectionProductexist == false and 1 == 2 %}
 
           {% assign target_amount = 5999 %}
           {% assign current_amount = cart.total_price %}
@@ -368,6 +380,15 @@
 
           {% endif %}
     {% endif %}
+    {% endif %}
+    {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com' %}
+      {% if buy1get1CollectionProductcount >= 2 %}
+        <div class="free-shipping typeset0" style="padding-bottom:10px;">
+            <span class="free-shipping__text">Hurray! Buy 1 GET 1 discount applied</span>
+            <span class="free-shipping__progress free-shipping__progress--success" style="--progress: 100%; "></span>
+        </div>
+      {% endif %}  
+    {% endif %}  
     <div class="mini-cart__main" id="main-cart-items">
       <cart-items>
       
@@ -597,7 +618,12 @@
         {% endif %}
 
         {% assign upsell = '' %}
-        {%- for recommendation in upsell_collection.products limit: cart_recommendations_limit -%}
+        {%- for recommendation in upsell_collection.products  -%}
+          {% assign upsellVariant = recommendation.selected_or_first_available_variant %}
+          {%- unless upsellVariant.available -%}
+            {%- continue -%}
+          {%- endunless -%}
+
           {% capture upsell %}  
             {{upsell}}
           {% assign upsellVariant = recommendation.selected_or_first_available_variant %}
@@ -688,24 +714,26 @@
           {% endcapture %}
         {%- endfor -%}
       {%- endif -%}
-
-     
+      
+      {%- assign show_recomd = true -%}
+      {% if shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' and buy1get1CollectionProductExist %}
+        {%- assign show_recomd = false -%}
+      {% endif %}
 
       {% unless upsell == blank %}
-        
-      
-        <cart-recommendations  class="cart-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ cart.items.first.product_id }}&limit={{ cart_recommendations_limit }}" data-animate data-animate-delay-{{ animate_count }}>
-          <!-- <div class="title h4">{{ settings.upsell_heading | escape }}</div> -->
+        {% if show_recomd %}
+          <cart-recommendations  class="cart-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ cart.items.first.product_id }}&limit={{ cart_recommendations_limit }}" data-animate data-animate-delay-{{ animate_count }}>
+            <!-- <div class="title h4">{{ settings.upsell_heading | escape }}</div> -->
 
-        {% if shop.metafields.custom.minicart_top_offer_banner and shop.metafields.custom.minicart_top_offer_banner != blank and embrougecollectionProductexist == false %}
-            <div class="title-image"><img class="title-img" src="{{ shop.metafields.custom.minicart_top_offer_banner | img_url: '800x' }}"  width="100%"></div>
+          {% if shop.metafields.custom.minicart_top_offer_banner and shop.metafields.custom.minicart_top_offer_banner != blank and embrougecollectionProductexist == false %}
+              <div class="title-image"><img class="title-img" src="{{ shop.metafields.custom.minicart_top_offer_banner | img_url: '800x' }}"  width="100%"></div>
+          {% endif %}
+
+          <ul class="mini-cart__navigation">        
+              {{upsell}}
+            </ul>
+          </cart-recommendations> 
         {% endif %}
-
-        <ul class="mini-cart__navigation">        
-            {{upsell}}
-          </ul>
-        </cart-recommendations> 
-
       {% endunless %} 
     </div>
 
