@@ -1,0 +1,155 @@
+{% comment %}
+  Progress Bar using LOCAL STORAGE (bundle_variants)
+{% endcomment %}
+
+
+<style>
+  @media screen and (min-width: 768px) {
+    #progress-offer-bar.sticky-offerbar {
+      position: fixed;
+      top: 165px;
+      left: 150px;
+      width: 100%;
+      z-index: 9999;
+      background: white;
+    }
+    
+  }
+  @media screen and (max-width: 768px) {
+    #progress-offer-bar.sticky-offerbar {
+      position: fixed;
+      top: 95px;
+      left: 0;
+      width: 100%;
+      z-index: 9;
+      background: white;
+    }
+  }
+   @media screen and (min-width: 768px) {
+      #progress-offer-bar.sticky-offerbar {
+        left: 150px !important;
+      }
+    }
+
+  #offerBarSpacer { display: none; }
+  #offerBarSpacer.active { display: block; }
+</style>
+
+<div id="offerBarSpacer"></div>
+
+<section class="page-width" id="progress-offer-bar" style="padding: 15px;">
+  <div style="font-size: 16px; font-weight: 600;">
+    <span id="offerBarMessage">
+      {{ section.settings.collection_message }}
+    </span>
+  </div>
+
+  <div style="margin-top: 10px;">
+    <div style="background:#eee; height: 8px; width:100%; border-radius: 5px;">
+      <div
+        id="offerBarProgress"
+        style="background: {{ section.settings.progress_color }};
+               height: 8px; width:0%; border-radius: 5px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ================= LOCAL STORAGE ================= */
+  function getStoredVariants() {
+    return JSON.parse(localStorage.getItem("bundle_variants") || "[]");
+  }
+
+  /* ================= STICKY ================= */
+  const bar = document.getElementById("progress-offer-bar");
+  const spacer = document.getElementById("offerBarSpacer");
+  const barHeight = bar.offsetHeight;
+  const stickyTop = bar.offsetTop;
+
+  function handleSticky() {
+    if (window.scrollY > stickyTop) {
+      bar.classList.add("sticky-offerbar");
+      spacer.classList.add("active");
+      spacer.style.height = barHeight + "px";
+    } else {
+      bar.classList.remove("sticky-offerbar");
+      spacer.classList.remove("active");
+      spacer.style.height = "0px";
+    }
+  }
+
+  window.addEventListener("scroll", handleSticky);
+
+  /* ================= PROGRESS LOGIC ================= */
+
+  const buyX = {{ collection.metafields.custom.buy_x | default: 2 }};
+  const getY = {{ collection.metafields.custom.get_y | default: 1 }};
+  const required = {{ collection.metafields.custom.product_limit | default: 2 }};
+
+  function updateBar() {
+    const variants = getStoredVariants();
+    const qty = variants.length;
+
+    const remaining = Math.max(required - qty, 0);
+    const progress = Math.min((qty / required) * 100, 100);
+
+    document.getElementById("offerBarProgress").style.width = progress + "%";
+
+    const msgEl = document.getElementById("offerBarMessage");
+
+    if (qty === 0) {
+      msgEl.textContent = `Add ${remaining} products to unlock offer`;
+    } else if (remaining > 0) {
+      msgEl.textContent = `Add ${remaining} more product${remaining > 1 ? 's' : ''}`;
+    } else {
+      msgEl.textContent = `Congrats! You unlocked the offer 🎉`;
+    }
+  }
+
+  /* ================= LIVE UPDATE ================= */
+
+  // Run initially
+  updateBar();
+
+  // Update when localStorage changes (important)
+  window.addEventListener("storage", updateBar);
+
+  // Also update on custom clicks (same buttons you use)
+  document.addEventListener("click", function(e) {
+    if (e.target.closest(".add-to-cart-custom")) {
+      setTimeout(updateBar, 100);
+    }
+  });
+
+});
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Bundle Progress Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "collection_message",
+      "label": "Collection Message",
+      "default": "Buy X Get Y Free — Add products to unlock the offer."
+    },
+    {
+      "type": "color",
+      "id": "progress_color",
+      "label": "Progress Bar Color",
+      "default": "#23c552"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Progress Bar (Bundle)"
+    }
+  ]
+}
+{% endschema %}

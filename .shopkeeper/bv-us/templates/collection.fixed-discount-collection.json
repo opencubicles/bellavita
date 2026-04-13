@@ -118,6 +118,14 @@
         "padding_bottom": 0
       }
     },
+    "bundle_progress_bar_wRxddc": {
+      "type": "bundle-progress-bar",
+      "name": "Progress Bar (Bundle)",
+      "settings": {
+        "collection_message": "Buy {{ collection.metafields.custom.product_limit.value }} products to unlock the offer.",
+        "progress_color": "#23c552"
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -192,7 +200,7 @@
       "type": "bundle-sticky-combined",
       "name": "Bundle Sticky Combined",
       "settings": {
-        "show_top_strip": true,
+        "show_top_strip": false,
         "show_bottom_strip": true,
         "buy_now_text": "BUY NOW"
       }
@@ -210,6 +218,7 @@
     "ce18826f-3598-454c-bafe-8744cdb7a0c7",
     "banner",
     "subs",
+    "bundle_progress_bar_wRxddc",
     "product-grid",
     "rich_text_tbAteR",
     "bundle_sticky_combined_rTtNyW",

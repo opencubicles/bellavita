@@ -35,7 +35,7 @@
     "type_button_size": 13,
     "type_price_font": "heading",
     "price_superscript": true,
-    "page_width": 1200,
+    "page_width": 1600,
     "spacing_sections": 0,
     "page_transition_enabled": true,
     "image_zoom_effect_enabled": false,
@@ -401,11 +401,6 @@
           "greeting_message": ""
         }
       },
-      "8218531531362863771": {
-        "type": "shopify://apps/kite-discount-free-gift/blocks/app-embed/2c7302c4-455d-4078-a829-48563ba26089",
-        "disabled": false,
-        "settings": {}
-      },
       "18281310450600262962": {
         "type": "shopify://apps/clevertap/blocks/app-embed/2566991a-cd89-49d8-997d-74717582b9ed",
         "disabled": false,
@@ -420,17 +415,6 @@
         "type": "shopify://apps/back-in-stock-restock-alerts/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
         "disabled": false,
         "settings": {}
-      },
-      "3576686563519644491": {
-        "type": "shopify://apps/vwo/blocks/vwo-smartcode/2ce905b2-3842-4d20-b6b0-8c51fc208426",
-        "disabled": false,
-        "settings": {
-          "vwoAccountId": "964814",
-          "codeType": "ASYNC",
-          "settingsTolerance": 2000,
-          "enableThemeTesting": false,
-          "reverseProxyUrl": ""
-        }
       },
       "17147156137367572215": {
         "type": "shopify://apps/tryon/blocks/preCheckoutUpsell/95799297-dc1d-40fb-9234-066b30a3012a",
@@ -500,6 +484,27 @@
       },
       "10436698916776057164": {
         "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-helper/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+        "disabled": false,
+        "settings": {}
+      },
+      "17676059084223943535": {
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "disabled": false,
+        "settings": {}
+      },
+      "3576686563519644491": {
+        "type": "shopify://apps/vwo/blocks/vwo-smartcode/2ce905b2-3842-4d20-b6b0-8c51fc208426",
+        "disabled": true,
+        "settings": {
+          "vwoAccountId": "964814",
+          "codeType": "ASYNC",
+          "settingsTolerance": 2000,
+          "enableThemeTesting": false,
+          "reverseProxyUrl": ""
+        }
+      },
+      "8218531531362863771": {
+        "type": "shopify://apps/kite-discount-free-gift/blocks/app-embed/2c7302c4-455d-4078-a829-48563ba26089",
         "disabled": false,
         "settings": {}
       }

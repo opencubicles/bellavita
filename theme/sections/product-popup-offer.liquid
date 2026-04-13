@@ -1,0 +1,287 @@
+{% if product.metafields.custom.enable_add_to_cart_popup %}
+  <!-- Your code here -->
+{% assign product_list = 
+  section.settings.product_1 | append: ',' | 
+  append: section.settings.product_2 | append: ',' | 
+  append: section.settings.product_3 | split: ',' %}
+
+<!-- POPUP (HIDDEN BY DEFAULT) -->
+<div id="custom-popup" class="popup-overlay" data-time="{{ section.settings.countdown_time }}" style="display:none;">
+  
+  <div class="popup-content">
+
+    <!-- CLOSE -->
+    <span class="popup-close">&times;</span>
+
+    <!-- TIMER -->
+    <span class="offer-headline">Half Price Deal</span><br>
+    <div class="popup-timer">
+      Ends in: <span class="countdown">10:00</span>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="popup-products">
+      {% for handle in product_list %}
+        {% assign product = all_products[handle] %}
+        {% if product %}
+          <div class="popup-product-card">
+            
+            <img src="{{ product.featured_image | img_url: 'medium' }}" />
+            
+            <h4>{{ product.title }}</h4>
+            <p>
+              <span style="text-decoration: line-through; color: #999;">
+                {{ product.price | money }}
+              </span>
+              <br>
+              <span style="color:black; font-weight: bold;">
+                {{ product.price | times: 0.5 | money }}
+              </span>
+            </p>
+
+            <button 
+            class="ajax-add-to-cart" 
+            data-variant-id="{{ product.variants.first.id }}">
+            ADD TO CART
+            </button>
+            <button class="decline-offer-btn">
+              I don’t want this offer
+            </button>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .popup-timer {
+    color:red;
+  }
+  .offer-headline {
+    color:black;
+    font-size: 18px;
+    font-weight: 600;
+  }
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  max-width: 650px;
+  width: 90%;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.popup-products {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.popup-product-card {
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.popup-product-card img {
+  width: 80%;
+}
+
+.popup-product-card button {
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+.decline-offer-btn {
+  margin-top: 8px;
+  background: transparent;
+  color: #555;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+</style>
+
+<script>
+document.querySelectorAll('.decline-offer-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    if (typeof window.closePopupManually === "function") {
+      window.closePopupManually();
+    }
+  });
+});
+window.popupInterval = null; // 👉 global reference
+
+window.openCustomPopup = function (callback) {
+  const popup = document.getElementById("custom-popup");
+  if (!popup) return;
+
+  popup.style.display = "flex";
+
+  const closeBtn = popup.querySelector(".popup-close");
+  const timerEl = popup.querySelector(".countdown");
+
+  // 👉 CLEAR OLD INTERVAL BEFORE STARTING NEW ONE
+  if (window.popupInterval) {
+    clearInterval(window.popupInterval);
+    window.popupInterval = null;
+  }
+
+  function closePopup() {
+    popup.style.display = "none";
+
+    // 👉 clear timer when closing
+    if (window.popupInterval) {
+      clearInterval(window.popupInterval);
+      window.popupInterval = null;
+    }
+
+    // 👉 Reset buttons
+    popup.querySelectorAll('.ajax-add-to-cart').forEach(btn => {
+      btn.disabled = false;
+      btn.innerText = btn.dataset.originalText || "Add to cart";
+    });
+
+    if (typeof callback === "function") {
+      callback();
+    }
+  }
+
+  // 👉 global access
+  window.closePopupManually = closePopup;
+
+  // CLOSE BUTTON
+  if (closeBtn) {
+    closeBtn.onclick = closePopup;
+  }
+
+  /* ================= TIMER ================= */
+  let minutes = parseInt(popup.dataset.time) || 5;
+  let totalSeconds = minutes * 60;
+
+  window.popupInterval = setInterval(() => {
+    let m = Math.floor(totalSeconds / 60);
+    let s = totalSeconds % 60;
+
+    if (timerEl) {
+      timerEl.innerHTML =
+        String(m).padStart(2, '0') + ":" +
+        String(s).padStart(2, '0');
+    }
+
+    if (totalSeconds <= 0) {
+      clearInterval(window.popupInterval);
+      window.popupInterval = null;
+      closePopup();
+    }
+
+    totalSeconds--;
+  }, 1000);
+};
+
+
+/* ================= AJAX ADD TO CART ================= */
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll('.ajax-add-to-cart').forEach(button => {
+
+    button.addEventListener('click', async function () {
+
+      const variantId = this.dataset.variantId;
+
+      // UX
+      this.disabled = true;
+      const originalText = this.innerText;
+      this.innerText = "Adding...";
+
+      try {
+        await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id: variantId,
+            quantity: 1
+          })
+        });
+        if (typeof window.closePopupManually === "function") {
+          window.closePopupManually();
+        }
+
+      } catch (err) {
+        console.error('Add to cart error:', err);
+
+        this.disabled = false;
+        this.innerText = originalText;
+      }finally {
+        // 👉 Always reset button (IMPORTANT)
+        this.disabled = false;
+        this.innerText = originalText;
+      }
+
+    });
+
+  });
+
+});
+</script>
+{% endif %}
+{% schema %}
+{
+  "name": "Product Popup",
+  "settings": [
+    {
+      "type": "number",
+      "id": "countdown_time",
+      "label": "Countdown Time (in minutes)",
+      "default": 10
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Product 1"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Product 2"
+    },
+    {
+      "type": "product",
+      "id": "product_3",
+      "label": "Product 3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Popup"
+    }
+  ]
+}
+{% endschema %}

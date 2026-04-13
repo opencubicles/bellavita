@@ -72,7 +72,7 @@
       font-weight: 600;
     }
 
-    .price-item--regular {
+    .upsell-price .price-item--regular {
       color: #777;
       margin-left: .5rem;
       font-size: .85rem;
@@ -109,22 +109,24 @@
      <div class="upsell-combo__wrapper">
 
     <!-- Image -->
-    <a href="{{ product.url }}" class="upsell-combo__image">
+    <span class="upsell-combo__image">
       <img 
         src="{{ product.featured_image | image_url: width: 300 }}" 
         alt="{{ product.title }}" 
         loading="lazy">
-    </a>
+      </span>
 
     <!-- Info -->
     <div class="upsell-combo__info">
 
-      <a href="{{ product.url }}" class="upsell-combo__title-link">
+      <span class="upsell-combo__title-link">
         <h5 class="upsell-combo__title">
           {{ product.title }}
         </h5>
-      </a>
-
+      </span>
+      <div class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}'>
+        {{ product.metafields.judgeme.badge }}
+      </div>
       <!-- Price -->
       <div>
         {% if product.compare_at_price > product.price %}

@@ -31,7 +31,7 @@
 
     <div class="bundle-right">
       <span class="bundle-price">
-        Total: ₹{{ product_item.price | money_without_currency }}/-
+        Total: {{ product_item.price | money }}
       </span>
 
       <a href="javascript:void(0)" class="bundle-buy-btn" style="display:none;">
@@ -141,6 +141,33 @@
   padding: 10px 24px;
   border-radius: 10px;
   text-decoration: none;
+}
+@media screen and (min-width: 749px) {
+  .bundle-left {
+    padding-left: 154px;
+    margin-left: 20px;
+  }
+  .bundle-sticky-bar {
+    padding-right: 196px;
+  }
+  
+}
+.bundle-buy-btn {
+  white-space: nowrap;       /* 🔥 prevents line break */
+  display: inline-block;     /* ensures proper width handling */
+  text-align: center;
+}
+
+/* Optional: improve mobile spacing */
+@media screen and (max-width: 480px) {
+  .bundle-right {
+    gap: 10px;
+  }
+
+  .bundle-buy-btn {
+    padding: 8px 16px;  /* slightly smaller padding */
+    font-size: 14px;    /* reduce text size if needed */
+  }
 }
 </style>
 <script>

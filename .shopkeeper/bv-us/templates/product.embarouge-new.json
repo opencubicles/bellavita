@@ -1,0 +1,633 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.title }}",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "heading_bold": true,
+            "heading_semi_bold": false,
+            "heading_uppercase": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>{{ product.metafields.my_fields.product_meta_secondary_text.value }}</p>",
+            "text_size": "typeset2",
+            "text_style": "body",
+            "secondary_color": true,
+            "text_bold": false,
+            "text_uppercase": false
+          }
+        },
+        "subtitle_BgtEBx": {
+          "type": "subtitle",
+          "settings": {
+            "text_one": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_two": "{{ product.metafields.custom.perfume_notes_secondary_title.value }}",
+            "hide_on_mobile": false,
+            "text_transform": "uppercase"
+          }
+        },
+        "rating_kKidtU": {
+          "type": "rating",
+          "settings": {
+            "show_share_botton": false
+          }
+        },
+        "image_NAt34J": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_572.jpg",
+            "image-hide-desktop": true,
+            "image-hide-mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "subtitle_BgtEBx",
+        "rating_kKidtU",
+        "image_NAt34J"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media (max-width: 800px) {.rich-text {padding-top: 4px; }}"
+      ],
+      "settings": {
+        "custom_class_admin": "",
+        "text_alignment": "center",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "richtext_hide_on_desktop": true,
+        "richtext_hide_on_mobile": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "breadcrumb_JmP3Jz": {
+          "type": "breadcrumb",
+          "settings": {
+            "text_style": "body",
+            "show_divider": false
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "show_price": false,
+            "title_hide_on_desktop": false,
+            "title_hide_on_mobile": false,
+            "title_bold": true,
+            "title_semi_bold": false,
+            "title_uppercase": false,
+            "price_size": "medium"
+          }
+        },
+        "subtitle_6HjqTH": {
+          "type": "subtitle",
+          "settings": {
+            "text_one": "{{ product.metafields.my_fields.product_meta_secondary_text.value }}",
+            "text_two": "Text 2",
+            "hide_on_mobile": false,
+            "text_transform": "none"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_share_botton": true,
+            "rating_hide_on_desktop": false,
+            "rating_hide_on_mobile": false
+          }
+        },
+        "custom_liquid_tCHcmY": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n\n<div class=\"shipping-text\">\n<span>Free Shipping</span> &nbsp;</div>\n \n</div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n\n</style>"
+          }
+        },
+        "image_cGRezT": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Group_572.jpg",
+            "link": "",
+            "img_full_width_on_mobile": false,
+            "image-hide-desktop": false,
+            "image-hide-mobile": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+            "price_size": "medium",
+            "show_badges": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "swatch_type": "round",
+            "size_chart": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_price_container": false,
+            "hide_atc_on_mobile": true,
+            "show_dynamic_checkout": false
+          }
+        },
+        "collapsible_tab_TxxFY8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "About the Product",
+            "content": "<p>{{ product.metafields.custom.short_description | metafield_tag }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false,
+            "remove_top_border": true,
+            "remove_margin": true,
+            "hide_on_mobile": true
+          }
+        },
+        "collapsible_tab_MFE73G": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Notes",
+            "content": "<p>{{ product.metafields.custom.perfume_notes_secondary_title.value }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false,
+            "remove_top_border": false,
+            "remove_margin": true,
+            "hide_on_mobile": true
+          }
+        },
+        "collapsible_tab_bfbepA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Product Details",
+            "content": "<p>{{ product.metafields.custom.product_details | metafield_tag }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false,
+            "remove_top_border": true,
+            "remove_margin": true,
+            "hide_on_mobile": true
+          }
+        },
+        "collapsible_tab_pRyEAx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "How to use?",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false,
+            "remove_top_border": false,
+            "remove_margin": true,
+            "hide_on_mobile": true
+          }
+        },
+        "collapsible_tab_3cnKiU": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "heading": "Ingredients",
+            "content": "<p>{{ product.metafields.custom.all_ingredients.value }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false,
+            "remove_top_border": false,
+            "remove_margin": true,
+            "hide_on_mobile": true
+          }
+        },
+        "collapsible_tab_bwRjyU": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "heading": "Shipping & Returns",
+            "content": "<p><strong>Shipping: </strong><br/>\"Free shipping across India.<br/>Orders are delivered within 3-7 business days.<br/>A signature is required upon delivery; Embarouge is not responsible for goods signed by others or any damage post-delivery.\"<br/><br/><strong>Returns: </strong><br/>In rare cases of damage during transit (leakage, breakage, or missing items), refunds or exchanges may be initiated following verification.<br/>Please contact our Customer Care team within 48 hours of delivery to report any such issues.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false,
+            "remove_top_border": false,
+            "remove_margin": true,
+            "hide_on_mobile": true
+          }
+        },
+        "collapsible_tab_iDVETF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "FAQ",
+            "content": "",
+            "page": "",
+            "custom_liquid": "<div class=\"page-width\">{{ product.metafields.custom.product_faq_content }}</div>",
+            "keep_open": false,
+            "remove_top_border": false,
+            "remove_margin": false,
+            "hide_on_mobile": true
+          }
+        },
+        "sticky_cart_t4QLHa": {
+          "type": "sticky_cart",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_price_on_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumb_JmP3Jz",
+        "title",
+        "subtitle_6HjqTH",
+        "rating",
+        "custom_liquid_tCHcmY",
+        "image_cGRezT",
+        "description",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "collapsible_tab_TxxFY8",
+        "collapsible_tab_MFE73G",
+        "collapsible_tab_bfbepA",
+        "collapsible_tab_pRyEAx",
+        "collapsible_tab_3cnKiU",
+        "collapsible_tab_bwRjyU",
+        "collapsible_tab_iDVETF",
+        "sticky_cart_t4QLHa"
+      ],
+      "custom_css": [
+        ".pdp-offer-img-wrapper {width: 40%;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_position": "left",
+        "media_size": "small",
+        "gallery_layout": "thumbnail_slider",
+        "image_ratio": "adapt",
+        "show_thumbnails": true,
+        "hide_variants": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": false,
+        "mobile_image_ratio": "adapt_first",
+        "show_mobile_thumbnails": false,
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_M4YrDp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GtGkQc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_bqknYY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_77FtWk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GtGkQc",
+        "text_bqknYY",
+        "button_77FtWk"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image_link": "",
+        "image_position": "center center",
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "enlarge_content": false,
+        "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "text_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "adapt",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_divider": false,
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": false,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "featured_collection_3VEBqP": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "embarouge",
+        "custom_featured_collection_changes": false,
+        "products_to_show": 4,
+        "show_view_all": false,
+        "show_divider": false,
+        "heading": "You May Also like",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_desktop": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": false,
+        "enable_color_swatches": false,
+        "enable_countdown": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17617317040a5e3d85": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_7rqtTz": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_7rqtTz"
+      ],
+      "name": "Reviews APP",
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product_details_rmw6Uc": {
+      "type": "product-details",
+      "blocks": {
+        "collapsible_tab_pnjVim": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "About the Product",
+            "content": "<p>{{ product.metafields.custom.short_description | metafield_tag }}</p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_DzV9cc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Notes",
+            "content": "<p>{{ product.metafields.custom.perfume_notes_secondary_title.value }}</p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_FWT7ga": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Details",
+            "content": "<p>{{ product.metafields.custom.product_details | metafield_tag }}</p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_VVBiTc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to use?",
+            "content": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_L7QdNx": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Ingredients",
+            "content": "<p>{{ product.metafields.custom.all_ingredients.value }}</p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_UUjaWc": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Shipping & Returns",
+            "content": "<p><strong>Shipping: </strong><br/>\"Free shipping across India.<br/>Orders are delivered within 3-7 business days.<br/>A signature is required upon delivery; Embarouge is not responsible for goods signed by others or any damage post-delivery.\"<br/><br/><strong>Returns: </strong><br/>In rare cases of damage during transit (leakage, breakage, or missing items), refunds or exchanges may be initiated following verification.<br/>Please contact our Customer Care team within 48 hours of delivery to report any such issues.</p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_P3cAzM": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "FAQ",
+            "content": "",
+            "row_content_liquid": "<div class=\"page-width\">{{ product.metafields.custom.product_faq_content }}</div>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_pnjVim",
+        "collapsible_tab_DzV9cc",
+        "collapsible_tab_FWT7ga",
+        "collapsible_tab_VVBiTc",
+        "collapsible_tab_L7QdNx",
+        "collapsible_tab_UUjaWc",
+        "collapsible_tab_P3cAzM"
+      ],
+      "disabled": true,
+      "name": "t:sections.product-details.presets.name",
+      "settings": {
+        "open_first_collapsible_row": false,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_custom_68r3eb": {
+      "type": "newsletter-custom",
+      "blocks": {
+        "heading_dQAaAM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Subscribe to our newsletter</strong>",
+            "heading_tag": "p",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "email_form_9H8crW": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_dQAaAM",
+        "email_form_9H8crW"
+      ],
+      "disabled": true,
+      "name": "Custom NewsLetter",
+      "settings": {
+        "return_url": "",
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "full_width": false,
+        "show_divider": false,
+        "colors_text": "#1a1b18",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product_details_heQJVk": {
+      "type": "product-details",
+      "blocks": {
+        "collapsible_tab_HW3dTb": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "About Embarouge",
+            "content": "<p>Crafted in Dubai. Formulated in France.<br/>Embarouge blends the elegance of French perfumery with the warmth & depth of the Middle East.<br/>With 20% perfume oil concentration, our scents are bold, sensual, and built to last.<br/>More than a fragrance- it’s a luxury signature that leaves a mark.</p>",
+            "row_content_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_HW3dTb"
+      ],
+      "disabled": true,
+      "name": "t:sections.product-details.presets.name",
+      "settings": {
+        "open_first_collapsible_row": false,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "rich-text",
+    "main",
+    "image_with_text_M4YrDp",
+    "product-recommendations",
+    "featured_collection_3VEBqP",
+    "17617317040a5e3d85",
+    "product_details_rmw6Uc",
+    "newsletter_custom_68r3eb",
+    "product_details_heQJVk"
+  ]
+}

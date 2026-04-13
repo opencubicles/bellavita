@@ -141,8 +141,10 @@
 {%- endif -%}
 
 <!-- custom code for sibling product color shades -->
-{% if card_product.metafields.custom.sibling_collection_handle.value != blank and settings.color_swatches_enabled == true %}
-{% capture sibling_color_shades %}
+{% if card_product.metafields.custom.sibling_collection_handle.value != blank
+  and settings.color_swatches_enabled == true
+%}
+  {% capture sibling_color_shades %}
  {%- liquid
    assign sibling_collection_handle = card_product.metafields.custom.sibling_collection_handle.value | escape
    assign sibling_collection = collections[sibling_collection_handle]
@@ -342,13 +344,13 @@
     </div>
     {%- if custom_design -%}
       <div class="custom-add-to-cart">
-      <add-to-cart
-            class="button"
-            data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
-          >
-            <span class="plus-icon">+</span>
-          </add-to-cart>
-        </div>
+        <add-to-cart
+          class="button"
+          data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
+        >
+          <span class="plus-icon">+</span>
+        </add-to-cart>
+      </div>
     {% endif -%}
   </use-animate>
 
@@ -366,30 +368,32 @@
               echo color_swatches
             endif
           -%}
-          
         </div>
       {%- endif -%}
 
       <!-- custom code for secondary title metafield -->
       {%- if custom_design == false -%}
-      <div class="card-information__top">
-        <div class="card-article-info caption-with-letter-spacing">
-          {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
-            {% if card_product.metafields.custom.perfume_notes_secondary_title != blank %}
+        <div class="card-information__top">
+          <div class="card-article-info caption-with-letter-spacing">
+            {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com'
+              or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com'
+              or shop.permanent_domain == 'bv-us.myshopify.com'
+            %}
+              {% if card_product.metafields.custom.perfume_notes_secondary_title != blank %}
                 {{ card_product.metafields.custom.perfume_notes_secondary_title }}
+              {% else %}
+                {{ card_product.type }}
+              {% endif %}
             {% else %}
-              {{ card_product.type }}
+              {% if card_product.metafields.my_fields.product_meta_secondary_text != blank %}
+                {{ card_product.metafields.my_fields.product_meta_secondary_text }}
+              {% else %}
+                {{ card_product.type }}
+              {% endif %}
             {% endif %}
-          {% else %}
-            {% if card_product.metafields.my_fields.product_meta_secondary_text != blank %}
-              {{ card_product.metafields.my_fields.product_meta_secondary_text }}
-            {% else %}
-              {{ card_product.type }}
-            {% endif %}
-          {% endif %}
+          </div>
         </div>
-      </div>
-       {%- endif -%}
+      {%- endif -%}
       <!-- custom code for secondary title metafield ends here -->
 
       {%- if card_product.featured_media -%}
@@ -403,8 +407,8 @@
       {%- endif -%}
 
       {% comment %} TODO: metafield {% endcomment %}
-      {% if block.settings.text != blank %}  
-      <span class="caption-large light">{{ block.settings.text | escape }}</span>
+      {% if block.settings.text != blank %}
+        <span class="caption-large light">{{ block.settings.text | escape }}</span>
       {% endif %}
 
       {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
@@ -423,22 +427,35 @@
           aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_product.metafields.reviews.rating.value, rating_max: card_product.metafields.reviews.rating.value.scale_max }}"
         >
           {% render 'icon', icon: 'star' %}
-          {%- assign review_value = card_product.metafields.judgeme.badge | split: "data-average-rating='" | last | split: "'" |first | plus: 0 | round: 1 -%}
+          {%- assign review_value = card_product.metafields.judgeme.badge
+            | split: "data-average-rating='"
+            | last
+            | split: "'"
+            | first
+            | plus: 0
+            | round: 1
+          -%}
           <span aria-hidden="true">
             {{ review_value }}
             {% comment %}
-            {{ card_product.metafields.reviews.rating.value.rating | round: 1 }}
+              {{ card_product.metafields.reviews.rating.value.rating | round: 1 }}
             {% endcomment %}
           </span>
           <span aria-hidden="true"> | </span>
           {% render 'icon', icon: 'whatsapp-verified' %}
-          {%- assign review_count = card_product.metafields.judgeme.badge | split: "data-number-of-reviews='" | last | split: "'" |first | plus: 0 -%}
+          {%- assign review_count = card_product.metafields.judgeme.badge
+            | split: "data-number-of-reviews='"
+            | last
+            | split: "'"
+            | first
+            | plus: 0
+          -%}
           <span aria-hidden="true">
-
-            ({{ review_count }} {{ review_count | pluralize: 'Review', 'Reviews' }})
+            ({{ review_count }}
+            {{ review_count | pluralize: 'Review', 'Reviews' }})
             {% comment %}
-            ({{ card_product.metafields.reviews.rating_count }}
-            {{ card_product.metafields.reviews.rating_count | pluralize: 'Review', 'Reviews' }})
+              ({{ card_product.metafields.reviews.rating_count }}
+              {{ card_product.metafields.reviews.rating_count | pluralize: 'Review', 'Reviews' }})
             {% endcomment %}
           </span>
         </div>
@@ -470,11 +487,11 @@
       -%}
       <!-- custom code for sibling product color shades -->
       {%- liquid
-        if sibling_option_name != blank 
+        if sibling_option_name != blank
           if sibling_option_name == 'color' or sibling_option_name == 'colour'
             echo sibling_color_shades
           endif
-        endif 
+        endif
       -%}
       <!-- custom code for sibling product color shades ends here -->
     </div>
@@ -492,8 +509,15 @@
         {%- if show_quick_buy -%}
           {%- if card_product.variants.size == 1 -%}
             <!-- custom code for app exclusive button -->
-            {%- if card_product.tags contains 'app-exclusive' and card_product.metafields.custom.app_exclusive_dynamic_link != blank -%}
-              <a href="{{ card_product.metafields.custom.app_exclusive_dynamic_link }}" class="button button--small" tabindex="-1" target="_blank">
+            {%- if card_product.tags contains 'app-exclusive'
+              and card_product.metafields.custom.app_exclusive_dynamic_link != blank
+            -%}
+              <a
+                href="{{ card_product.metafields.custom.app_exclusive_dynamic_link }}"
+                class="button button--small"
+                tabindex="-1"
+                target="_blank"
+              >
                 {{ 'App Exclusive' | upcase }}
               </a>
             {%- else -%}
@@ -505,52 +529,154 @@
                   {% assign hide_price = true %}
                 {% endif %}
               {% endfor %}
-              {% assign allowed_collections = "custom-byob-collection" | split: "," %}
+              {% assign allowed_collections = 'custom-byob-collection,custom-byob-collection-pack-2' | split: ',' %}
 
               {% if allowed_collections contains collection.handle %}
-                  <button class="button button--small add-to-cart-custom" data-variant-id="{{ card_product.selected_or_first_available_variant.id }}">
-                    Add to cart
+                <button
+                  class="button button--small add-to-cart-custom"
+                  data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
+                >
+                  Add to cart
 
-                    <svg class="icon icon-cart" aria-hidden="true" focusable="false">
-                      <use href="#icon-cart"></use>
-                    </svg>
+                  <svg class="icon icon-cart" aria-hidden="true" focusable="false">
+                    <use href="#icon-cart"></use>
+                  </svg>
 
-                    {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
-                      {% unless hide_price %}
-                        <span class="product-price">
-                          - {{ card_product.selected_or_first_available_variant.price | money }}
-                        </span>
-                      {% endunless %}
-                    {%- endif -%}
-                  </button>
-                
+                  {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com'
+                    or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com'
+                    or shop.permanent_domain == 'bv-us.myshopify.com'
+                  %}
+                    {% unless hide_price %}
+                      <span class="product-price">
+                        - {{ card_product.selected_or_first_available_variant.price | money }}
+                      </span>
+                    {% endunless %}
+                  {%- endif -%}
+                </button>
+
               {%- else -%}
-              
-              <add-to-cart
-                class="button button--small"
-                data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
-              >
-                {%- liquid
-                  if card_product.template_suffix != 'pre-order'
-                    echo 'products.product.add_to_cart' | t
-                  else
-                    echo 'products.product.pre_order' | t
-                  endif
-                -%}
-                <svg class="icon icon-cart" aria-hidden="true" focusable="false">
-                  <use href="#icon-cart"></use>
-                </svg>
-                {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
-                  {% unless hide_price %}
-                    <span class="product-price">
-                      - {{ card_product.selected_or_first_available_variant.price | money }}
-                    </span>
-                  {% endunless %}
-                {%- endif -%}
-              </add-to-cart>
-              {% endif %}
-            <!-- custom code for app exclusive button -->
+                {% assign variant_id = card_product.selected_or_first_available_variant.id %}
+                {% assign current_qty = 0 %}
+
+                {% for item in cart.items %}
+                  {% if item.variant_id == variant_id %}
+                    {% assign current_qty = item.quantity %}
+                  {% endif %}
+                {% endfor %}
+
+                {% if shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' and template.name == 'collection' %}
+                <add-to-cart
+                      class="button button--small main-add-to-cart"
+                      data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
+                      {% if current_qty > 0 %} style="display:none;" {% endif %}
+                    >
+                  {%- liquid
+                    if card_product.template_suffix != 'pre-order'
+                      echo 'products.product.add_to_cart' | t
+                    else
+                      echo 'products.product.pre_order' | t
+                    endif
+                  -%}
+                  <svg class="icon icon-cart" aria-hidden="true" focusable="false">
+                    <use href="#icon-cart"></use>
+                  </svg>
+                  {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com'
+                    or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com'
+                    or shop.permanent_domain == 'bv-us.myshopify.com'
+                  %}
+                    {% unless hide_price %}
+                      <span class="product-price">
+                        - {{ card_product.selected_or_first_available_variant.price | money }}
+                      </span>
+                    {% endunless %}
+                  {%- endif -%}
+                </add-to-cart>
+                <div  
+                  class="custom-quantity-main"  
+                  data-variant-id="{{ variant_id }}"
+                  style="z-index:10 !important; pointer-events:auto; width: 100%; {% if current_qty == 0 %}display:none;{% endif %}"
+                >
+                <form method="post" action="/cart/change" class="cart-qty-form">
+                  <input type="hidden" name="id" value="{{ variant_id }}">
+
+                  <div class="product-quantity" >
+                    <dt>
+                      <label for="Quantity-{{ variant_id }}" class="visually-hidden">Quantity</label>
+
+                      <quantity-input class="quantity" style="width: 100%;">
+                        
+                        <!-- MINUS -->
+                        <button 
+                          class="quantity__button no-js-hidden qty-btn custom-quantity" 
+                          data-change="-1" 
+                          data-id="{{ variant_id }}"
+                          type="button">
+                          <span class="visually-hidden">Decrease quantity</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-minus" viewBox="0 0 10 2">
+                            <path d="M1 .5h8a.5.5 0 110 1H1a.5.5 0 010-1z" fill="currentColor"></path>
+                          </svg>
+                        </button>
+
+                        <!-- INPUT -->
+                        <input 
+                          class="quantity__input" 
+                          type="number" 
+                          name="quantity" 
+                          value="{{ current_qty }}" 
+                          min="0"
+                          id="Quantity-{{ variant_id }}" 
+                          step="1"
+                        >
+
+                        <!-- PLUS -->
+                        <button 
+                          class="quantity__button no-js-hidden qty-btn custom-quantity" 
+                          data-change="1" 
+                          data-id="{{ variant_id }}"
+                          type="button">
+                          <span class="visually-hidden">Increase quantity</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-plus" viewBox="0 0 10 10">
+                            <path d="M1 4.5h8M5 1v8" stroke="currentColor" stroke-width="1"></path>
+                          </svg>
+                        </button>
+
+                      </quantity-input>
+                    </dt>
+                  </div>
+                </form>
+              </div>
+              {%- else -%}
+               
+                 <add-to-cart
+                      class="button button--small"
+                      data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
+                    >
+                  {%- liquid
+                    if card_product.template_suffix != 'pre-order'
+                      echo 'products.product.add_to_cart' | t
+                    else
+                      echo 'products.product.pre_order' | t
+                    endif
+                  -%}
+                  <svg class="icon icon-cart" aria-hidden="true" focusable="false">
+                    <use href="#icon-cart"></use>
+                  </svg>
+                  {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com'
+                    or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com'
+                    or shop.permanent_domain == 'bv-us.myshopify.com'
+                  %}
+                    {% unless hide_price %}
+                      <span class="product-price">
+                        - {{ card_product.selected_or_first_available_variant.price | money }}
+                      </span>
+                    {% endunless %}
+                  {%- endif -%}
+                </add-to-cart>
+               {% endif %}
+              <!-- custom code for app exclusive button -->
             {%- endif -%}
+              {% endif %}
+              
             <!-- custom code for app exclusive button ends here -->
           {%- else -%}
             {%- if settings.quick_view_enabled and enable_quick_view -%}
@@ -578,7 +704,9 @@
           {{ 'products.product.sold_out' | t }}
         </button>
       {%- endif -%}
+      
     </div>
+
   </div>
 
   {%- if settings.quick_view_enabled and enable_quick_view -%}
@@ -601,3 +729,14 @@
     </quick-view-drawer>
   {%- endif -%}
 </div>
+{% assign variant_id = card_product.selected_or_first_available_variant.id %}
+{% assign current_qty = 0 %}
+
+{% for item in cart.items %}
+  {% if item.variant_id == variant_id %}
+    {% assign current_qty = item.quantity %}
+  {% endif %}
+{% endfor %}
+
+
+

@@ -559,7 +559,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 {% if template.suffix == "embarouge" %}
   <style>
-    
     .mobile-dock {
       display:none !important;
     }
@@ -670,6 +669,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </style>
 {% endif %}
 {% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
+  
+  {% if product.handle != 'perfume-gift-set-for-men-4-x-0-7-fl-oz'%}
+    <style>
+      .pdp-banner-custom {
+        display:none!important;
+      }
+    </style>
+  {% endif %}
+
   {% unless product.tags contains 'Tryon Product' %}
     <style>
     @media (max-width: 768px) {
@@ -679,6 +687,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     </style>
   {% endunless %}
+
   {% if product.handle == 'perfume-gift-set-for-men-tryon' %}
     <style>
       button.product-form__submit {
@@ -705,6 +714,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     </style>
   {% endif %}
+
   {% if product.handle == 'ceo-man-luxury-perfume-20ml' or product.handle == 'honey-oud-unisex-perfume-20ml' %}
     <style>
       .product-form__quantity {
@@ -718,8 +728,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     </style>
   {% endif %}
+  
 {% endif %}
 {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+  
+   {% if product.handle == 'honey-oud-gourmet-collection-bogo' %}
+      <style>
+        .atc-strip-container, .pdp-banner {
+          display:none !important;
+        }
+      </style>
+    {% endif %}
   {% if product.tags contains 'Tryon Product' %}
     <style>
       .atc-strip-container {
@@ -799,7 +818,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       </style>
     {% endif %}
-    {% if collection.handle == 'buy1get1' %}
+    {% if collection.handle == 'buy1get1' or collection.handle == 'custom-byob-collection-pack-2' %}
       <style>
         .collection-hero__text-wrapper {
           display:none;
@@ -813,11 +832,207 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       </style>
     {% endif %}
+  {% if template.name == 'collection' and collection.handle != 'embarouge' and collection.handle != 'hair-body-mist' %}
+  <style>
+      .card-information__wrapper .price {
+        display:none !important;
+      }
+      @media (max-width: 768px) {
+        .card-information__button add-to-cart {
+              font-size: 11px;
+        }
+        .card-information__button .button {
+          width:98% !important;
+        }
+      }
+    </style>
+  {% endif %}
+  {% if request.page_type == 'index' %}
+  <style>
+      .card-information__wrapper .price {
+        display:none !important;
+      }
+       @media (max-width: 768px) {
+        .card-information__button add-to-cart {
+              font-size: 11px;
+        }
+        .card-information__button .button {
+          width:98% !important;
+        }
+      }
+    </style>
+  {% endif %}
 {% endif %}
 {% if template.name == 'collection' and collection.metafields.custom.fixed_discount == true %}
   <style>
-    .price {
+    .card-information__wrapper .price {
       display:none !important;
     }
   </style>
 {% endif %}
+
+{% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
+  <script>
+document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.custom-quantity');
+
+    if (btn) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+
+        let change = parseInt(btn.getAttribute('data-change')); // +1 or -1
+        let variantId = btn.getAttribute('data-id');
+
+        let wrapper = btn.closest('.product-quantity');
+        let input = wrapper.querySelector('.quantity__input');
+
+        let currentQty = parseInt(input.value) || 0;
+
+        // 👉 Calculate new quantity
+        let newQty = currentQty + change;
+
+        if (newQty < 0) newQty = 0;
+
+        // 👉 Update input UI FIRST
+        input.value = newQty;
+
+        // 👉 AJAX call
+        fetch('/cart/change.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                id: variantId,
+                quantity: newQty
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log('Cart updated:', data);
+            console.log("newQty", newQty);
+          
+            if (newQty == 0){
+              const addBtn = document.querySelector(
+              `.main-add-to-cart[data-variant-id="${variantId}"]`
+              );
+              const qtyBox = document.querySelector(
+                `.custom-quantity-main[data-variant-id="${variantId}"]`
+              );
+              console.log("addBtn", addBtn);
+              console.log("qtyBox", qtyBox);
+              if (addBtn && qtyBox) {
+                addBtn.style.display = "flex";
+                qtyBox.style.display = "none";
+
+                // set quantity = 1
+                const input = qtyBox.querySelector(".quantity__input");
+                if (input) input.value = 0;
+              } 
+            }
+               refreshCartUI();
+           
+        })
+        .catch(err => {
+            console.error(err);
+        });
+
+        return false;
+    }
+}, true);
+
+document.addEventListener("ajaxProduct:added", function (event) {
+  const variantId = event.detail.product.variant_id;
+  refreshCartUI();
+  // find elements using same variant id
+  const addBtn = document.querySelector(
+    `.main-add-to-cart[data-variant-id="${variantId}"]`
+  );
+
+  const qtyBox = document.querySelector(
+    `.custom-quantity-main[data-variant-id="${variantId}"]`
+  );
+  console.log("addBtn", addBtn);
+  console.log("qtyBox", qtyBox);
+  if (addBtn && qtyBox) {
+    addBtn.style.display = "none";
+    qtyBox.style.display = "block";
+
+    // set quantity = 1
+    const input = qtyBox.querySelector(".quantity__input");
+    if (input) input.value = 1;
+  }
+  
+});
+function refreshCartUI() {
+  console.log("refreshCartUI called");
+
+  fetch('/?sections=mini-cart,cart-icon-bubble')
+    .then(res => res.json())
+    .then(data => {
+
+      /* ================= ICON UPDATE ================= */
+      const tempIcon = document.createElement('div');
+      tempIcon.innerHTML = data['cart-icon-bubble'];
+
+      const newCount = tempIcon.querySelector('.cart-count-bubble span');
+      document.querySelectorAll('.cart-count, .cart-count-bubble span')
+        .forEach(el => {
+          if (newCount) el.textContent = newCount.textContent;
+        });
+
+      /* ================= DRAWER ================= */
+      const drawer = document.querySelector('mini-cart');
+      if (!drawer) return;
+
+      const temp = document.createElement('div');
+      temp.innerHTML = data['mini-cart'];
+
+      const newInner = temp.querySelector('.mini-cart__inner');
+      const currentInner = drawer.querySelector('.mini-cart__inner');
+
+      if (!newInner || !currentInner) return;
+
+      console.log("Updating cart safely");
+
+      /* ================= UPDATE CART ITEMS (CRITICAL) ================= */
+      const newCartItems = newInner.querySelector('cart-items');
+      const currentCartItems = currentInner.querySelector('cart-items');
+
+      if (newCartItems && currentCartItems) {
+        currentCartItems.replaceWith(newCartItems);
+      }
+
+      /* ================= UPDATE OTHER SECTIONS ================= */
+      const sections = [
+        '.mini-cart__header',
+        '.mini-cart__footer'
+      ];
+
+      sections.forEach(selector => {
+        const newEl = newInner.querySelector(selector);
+        const currentEl = currentInner.querySelector(selector);
+
+        if (newEl && currentEl) {
+          currentEl.innerHTML = newEl.innerHTML;
+        }
+      });
+
+      /* ================= EMPTY STATE FIX ================= */
+      const newEmpty = newInner.querySelector('.mini-cart__empty');
+      const currentEmpty = currentInner.querySelector('.mini-cart__empty');
+
+      if (newEmpty && currentEmpty) {
+        currentEmpty.innerHTML = newEmpty.innerHTML;
+      }
+
+      /* ================= EVENTS ================= */
+      document.dispatchEvent(new CustomEvent('cart:updated'));
+
+    })
+    .catch(err => console.error('Cart refresh error:', err));
+}
+</script>
+{% endif %}
+
