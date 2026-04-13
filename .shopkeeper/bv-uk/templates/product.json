@@ -11,11 +11,10 @@
   "sections": {
     "image_banner_HAHq6k": {
       "type": "image-banner",
-      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "custom_class": "",
-        "image": "shopify://shop_images/PDP_Banner_1d8cb397-e1fd-4d58-989d-a3c650944833.jpg",
+        "custom_class": "pdp-banner-custom",
+        "image": "shopify://shop_images/Artboard_1_f1a3aa86-d090-48c7-9f6b-727a10008c41.jpg",
         "image_position": "center center",
         "text_box_position": "middle-center",
         "text_alignment": "center",
@@ -325,7 +324,7 @@
           "type": "complementary_custom",
           "settings": {
             "icon": "none",
-            "heading": "The Super Saver Pack",
+            "heading": "The Super Saver Pack (Save 25% Now)",
             "make_collapsible_row": false,
             "product_list_limit": 10,
             "image_ratio": "adapt",
@@ -694,6 +693,16 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "product_popup_offer_RDFdE8": {
+      "type": "product-popup-offer",
+      "name": "Product Popup",
+      "settings": {
+        "countdown_time": 10,
+        "product_1": "womens-luxury-perfume-gift-set",
+        "product_2": "",
+        "product_3": ""
+      }
     }
   },
   "order": [
@@ -710,6 +719,7 @@
     "video_with_text_H8QRXX",
     "testimonials",
     "17066961646756c0fa",
-    "176604687433159f51"
+    "176604687433159f51",
+    "product_popup_offer_RDFdE8"
   ]
 }
