@@ -16,7 +16,7 @@
     </div>
 
     <div class="bundle-right">
-      <span class="bundle-price"> Total: ₹{{ product_item.price | money_without_currency }}/- </span>
+      <span class="bundle-price"> Total: ${{ product_item.price | money_without_currency }}/- </span>
 
       {% if is_bundle_in_cart %}
         <a href="/checkout" class="bundle-buy-btn">

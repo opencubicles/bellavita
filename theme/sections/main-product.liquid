@@ -752,7 +752,44 @@
               {% render 'custom-scrolling-promotion', block: block %}
               <!-- custom code for scrolling promotion ends here -->
             {%- when 'custom_liquid' -%}
-              <div class="custom__liquid" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
+              <div class="custom__liquid {{ block.settings.class_name }}" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
+            {%- when 'multi_collapsible' -%}
+              <div class="product__accordion-group">
+
+                {% for i in (1..7) %}
+                  {% assign heading = 'heading_' | append: i %}
+                  {% assign content = 'content_' | append: i %}
+                  {% assign open_setting = 'open_' | append: i %}
+                  {% assign content = 'content_' | append: i %}
+                  {% assign custom_liquid = 'custom_liquid_' | append: i %}
+                  {% if block.settings[heading] != blank %}
+                    <accordion-tab class="product__accordion accordion">
+
+                      <details {% if block.settings[open_setting] %}open{% endif %}>
+
+                        <summary>
+                          <span class="summary__title">
+                            <span class="accordion__title">
+                              {{ block.settings[heading] }}
+                            </span>
+                          </span>
+                          {% render 'icon', icon: 'caret' %}
+                        </summary>
+
+                        <div class="accordion__content rte">
+                         {% assign final_content = block.settings[custom_liquid] | default: block.settings[content] %}
+                          <div class="accordion__content rte">
+                            {{ final_content }}
+                          </div>
+                        </div>
+                      </details>
+
+                    </accordion-tab>
+                  {% endif %}
+                {% endfor %}
+
+              </div>
+              
             {%- when 'collapsible_description' -%}
               <accordion-tab class="product__accordion accordion" {{ block.shopify_attributes }}>
                 <details>
@@ -2528,6 +2565,11 @@
           "id": "custom_liquid",
           "label": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.label",
           "info": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.info"
+        },
+        {
+          "type": "text",
+          "id": "class_name",
+          "label": "Custom Class Name"
         }
       ]
     },
@@ -2619,6 +2661,175 @@
           "label": "t:sections.main-product.blocks.line_item_property.settings.options.label",
           "info": "t:sections.main-product.blocks.line_item_property.settings.options.info"
         }
+      ]
+    },
+    {
+      "type": "multi_collapsible",
+      "name": "Multi Accordion",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Accordion 1"
+        },
+        {
+          "type": "text",
+          "id": "heading_1",
+          "label": "Heading 1",
+          "default": "Description"
+        },
+        {
+          "type": "richtext",
+          "id": "content_1",
+          "label": "Content 1"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_1",
+          "label": "Open by default",
+          "default": true
+        },
+
+        {
+          "type": "header",
+          "content": "Accordion 2"
+        },
+        {
+          "type": "text",
+          "id": "heading_2",
+          "label": "Heading 2"
+        },
+        {
+          "type": "richtext",
+          "id": "content_2",
+          "label": "Content 2"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid_2",
+          "label": "Custom Liquid"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_2",
+          "label": "Open by default",
+          "default": true
+        },
+
+        {
+          "type": "header",
+          "content": "Accordion 3"
+        },
+        {
+          "type": "text",
+          "id": "heading_3",
+          "label": "Heading 3"
+        },
+        {
+          "type": "richtext",
+          "id": "content_3",
+          "label": "Content 3"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid_3",
+          "label": "Custom Liquid"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_3",
+          "label": "Open by default",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Accordion 4"
+        },
+        {
+          "type": "text",
+          "id": "heading_4",
+          "label": "Heading 4"
+        },
+        {
+          "type": "richtext",
+          "id": "content_4",
+          "label": "Content 4"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid_4",
+          "label": "Custom Liquid"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_4",
+          "label": "Open by default",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Accordion 5"
+        },
+        {
+          "type": "text",
+          "id": "heading_5",
+          "label": "Heading 5"
+        },
+        {
+          "type": "richtext",
+          "id": "content_5",
+          "label": "Content 5"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid_5",
+          "label": "Custom Liquid"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_5",
+          "label": "Open by default",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Accordion 6"
+        },
+        {
+          "type": "text",
+          "id": "heading_6",
+          "label": "Heading 6"
+        },
+        {
+          "type": "richtext",
+          "id": "content_6",
+          "label": "Content 6"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_6",
+          "label": "Open by default",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Accordion 7"
+        },
+        {
+          "type": "text",
+          "id": "heading_7",
+          "label": "Heading 7"
+        },
+        {
+          "type": "richtext",
+          "id": "content_7",
+          "label": "Content 7"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_7",
+          "label": "Open by default",
+          "default": true
+        },
       ]
     },
     {

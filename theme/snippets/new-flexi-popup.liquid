@@ -1,0 +1,760 @@
+{% comment %}
+  Flexi Product Popup Modal
+  Include this snippet in your theme.liquid or specific template files
+{% endcomment %}
+
+<!-- Loader Overlay -->
+<div class="flexi-loader-overlay hidden" id="flexi-loader-overlay">
+  <div class="flexi-loader-container">
+    <svg class="flexi-loader-svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="31.4 31.4" stroke-linecap="round" opacity="0.3"></circle>
+      <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="31.4 31.4" stroke-linecap="round" stroke-dashoffset="-31.4"></circle>
+    </svg>
+    <p class="flexi-loader-text">Loading...</p>
+  </div>
+</div>
+
+<!-- Modal Overlay -->
+<div class="flexi-product-modal-overlay hidden" id="flexi-product-modal-overlay"></div>
+
+<!-- Product Modal -->
+<div class="flexi-product-modal hidden" id="flexi-product-modal">
+  <!-- Modal Header -->
+  <div class="flexi-product-modal-header"></div>
+
+  <!-- Close Button -->
+  <button class="flexi-product-modal-close hidden" id="flexi-product-modal-close-btn" type="button" aria-label="Close">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <!-- Modal Body -->
+  <div class="flexi-product-modal-body">
+    <div class="flexi-product-modal-carousel">
+      <div class="flexi-product-modal-images" id="flexi-product-modal-images"></div>
+      <div class="flexi-product-modal-dots" id="flexi-product-modal-dots"></div>
+    </div>
+
+    <div style="overflow-y: auto;height: calc(54vh - 15vh);">
+      <!-- Product Info -->
+      <div class="flexi-product-modal-info">
+        <div class="popup-title-wrapper">
+        <h2 class="flexi-product-modal-title-display" id="flexi-product-modal-title-display"></h2>
+        <div id="flexi-product-modal-rating" class="flexi-product-modal-rating"></div>
+        </div>
+        <div class="flexi-description-wrapper" id="flexi-description-wrapper">
+          <div id="flexi-product-modal-description" class="flexi-product-modal-description"></div>
+        </div>
+      </div>
+
+      <!-- Ingredients Section -->
+      <div id="flexi-product-modal-ingredients" class="flexi-product-modal-ingredients"></div>
+    </div>
+  </div>
+
+  <!-- Fixed Bottom Add to Box Container -->
+   <div class="flexi-modal-bottom-container">
+  <div class="flexi-modal-add-to-box-container">
+    <!-- Price and Add to Box Button - Side by Side -->
+    <div class="flexi-modal-price-row">
+      <div class="flexi-modal-price-label">MRP:</div>
+      <div id="flexi-product-modal-price" class="flexi-product-modal-price"></div>
+    </div>
+
+    <div class="flexi-modal-add-to-box" id="flexi-modal-add-to-box">Add To Box</div>
+
+    <!-- Quantity Selector (shown when item is added) -->
+    <div class="flexi-modal-quantity-selector hidden" id="flexi-modal-quantity-selector">
+      <div class="flexi-modal-qty-minus" id="flexi-modal-qty-minus">−</div>
+      <input type="number" class="flexi-modal-qty-input" id="flexi-modal-qty-input" value="1" min="1" readonly>
+      <div class="flexi-modal-qty-plus" id="flexi-modal-qty-plus">+</div>
+    </div>
+  </div>
+  </div>
+</div>
+
+{% comment %}
+  Usage: Add the following attributes to your product trigger elements:
+
+  <div class="flexi-popup-trigger"
+       data-title="{{ product.title }}"
+       data-product-url="{{ product.url }}"
+       data-description="{{ product.description }}"
+       data-price="{{ product.price | money }}"
+       data-compare-at-price="{{ product.compare_at_price | money }}"
+       data-rating="{{ product.metafields.custom.rating }}"
+       data-ingredients="{{ product.metafields.custom.ingredients | json }}">
+    <!-- Your product card content -->
+  </div>
+{% endcomment %}
+
+
+<script>
+    /**
+ * Flexi Product Popup JavaScript
+ * Handles modal interactions, quantity management, and product data loading
+ */
+
+(function() {
+  'use strict';
+
+  // Prevent multiple initializations
+  if (window.flexi_popup_initialized) return;
+  window.flexi_popup_initialized = true;
+
+  // DOM Elements
+  const overlay = document.getElementById('flexi-product-modal-overlay');
+  const modal = document.getElementById('flexi-product-modal');
+  const closeBtn = document.getElementById('flexi-product-modal-close-btn');
+  const loaderOverlay = document.getElementById('flexi-loader-overlay');
+  const addToBoxDiv = document.getElementById('flexi-modal-add-to-box');
+  const quantitySelector = document.getElementById('flexi-modal-quantity-selector');
+  const qtyInput = document.getElementById('flexi-modal-qty-input');
+  const qtyMinus = document.getElementById('flexi-modal-qty-minus');
+  const qtyPlus = document.getElementById('flexi-modal-qty-plus');
+
+  let currentTriggerElement = null;
+  let mainItemQuantityInput = null;
+  let isPopupOperating = false; // Flag to prevent listener conflicts
+
+  /**
+   * Get mandatory products limit from bundle
+   * @returns {number} The maximum number of products allowed
+   */
+  function getMandatoryProducts() {
+    const bundleContent = document.querySelector('.bundle-content');
+    if (bundleContent) {
+      const limit = bundleContent.getAttribute('data-product-limit');
+      if (limit) return parseInt(limit);
+    }
+    if (typeof window.mandatoryProducts !== 'undefined') {
+      return window.mandatoryProducts;
+    }
+    return 5; // Default fallback
+  }
+
+  /**
+   * Get the current count of selected items
+   */
+  function getSelectedItemsCount() {
+    let count = 0;
+    const allQuantityInputs = document.querySelectorAll('.quantity-input');
+    allQuantityInputs.forEach(input => {
+      const collItem = input.closest('.collection-item');
+      if (collItem) {
+        const checkbox = collItem.querySelector("input[type='checkbox']:checked");
+        if (checkbox) {
+          count += parseInt(input.value) || 0;
+        }
+      }
+    });
+    return count;
+  }
+
+  /**
+   * Update popup title to show Your Box (X/Y)
+   */
+  function updatePopupTitle() {
+    const mandatoryProducts = getMandatoryProducts();
+    const currentCount = getSelectedItemsCount();
+    const titleElement = document.getElementById('flexi-product-modal-title-display');
+    if (titleElement) {
+      titleElement.textContent = `Your Box (${currentCount}/${mandatoryProducts})`;
+    }
+  }
+
+  /**
+   * Close the modal and reset state
+   */
+  function closeModal() {
+    overlay.classList.add('hidden');
+    modal.classList.add('hidden');
+    closeBtn.classList.add('hidden');
+    quantitySelector.classList.add('hidden');
+    addToBoxDiv.classList.remove('hidden', 'disabled');
+    qtyInput.value = 1;
+    mainItemQuantityInput = null;
+    qtyMinus.classList.remove('disabled');
+    qtyPlus.classList.remove('disabled');
+    currentTriggerElement = null;
+    document.body.style.overflow = '';
+
+    // Refresh all button states after closing popup
+    setTimeout(() => {
+      updateAddToBoxState();
+    }, 50);
+  }
+
+  /**
+   * Open popup with product data from trigger element
+   * @param {HTMLElement} trigger - The element that triggered the popup
+   */
+  function openPopupWithTrigger(trigger) {
+    currentTriggerElement = trigger;
+    loaderOverlay.classList.remove('hidden');
+
+    // Extract data from trigger attributes
+    const data = {
+      title: trigger.getAttribute('data-title'),
+      url: trigger.getAttribute('data-product-url'),
+      description: trigger.getAttribute('data-description'),
+      price: trigger.getAttribute('data-price'),
+      compareAtPrice: trigger.getAttribute('data-compare-at-price'),
+      rating: trigger.getAttribute('data-rating'),
+      ingredients: trigger.getAttribute('data-ingredients'),
+      available: !trigger.classList.contains('flexi-sold-out')
+    };
+
+    console.log('DEBUG: Has flexi-sold-out class:', trigger.classList.contains('flexi-sold-out'));
+    console.log('DEBUG: data.available:', data.available);
+
+    // Fetch product images and render modal
+    Promise.all([
+      fetch(data.url + '.json')
+        .then(res => res.json())
+        .then(product => product.product.images.slice(0, 5))
+        .catch(() => [])
+    ]).then(([images]) => {
+      renderModalContent(data, images);
+      checkItemSelection();
+      loaderOverlay.classList.add('hidden');
+      overlay.classList.remove('hidden');
+      modal.classList.remove('hidden');
+      closeBtn.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  /**
+   * Render modal content with product data
+   * @param {Object} data - Product data object
+   * @param {Array} images - Array of product images
+   */
+  function renderModalContent(data, images) {
+    // Set basic product info
+    document.getElementById('flexi-product-modal-title-display').textContent = data.title;
+
+    // Set description - shows 3 lines with ellipsis
+    const descElement = document.getElementById('flexi-product-modal-description');
+    descElement.innerHTML = data.description;
+
+    // Set price - use compare_at_price if available, otherwise use regular price
+    const priceDiv = document.createElement('div');
+    const displayPrice = (data.compareAtPrice && data.compareAtPrice.trim() !== '' && data.compareAtPrice !== '$0.00') ? data.compareAtPrice : data.price;
+    priceDiv.innerHTML = displayPrice;
+    document.getElementById('flexi-product-modal-price').textContent = priceDiv.textContent;
+
+    // Set rating if available
+    const ratingElement = document.getElementById('flexi-product-modal-rating');
+    if (data.rating && data.rating.trim()) {
+      ratingElement.innerHTML = `
+        <div class="flexi-modal-rating-display">
+          <div class="flexi-modal-star-rating">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span>${data.rating}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    // Render ingredients if available
+    renderIngredients(data.ingredients);
+
+    // Render image carousel
+    renderImageCarousel(images, data.title);
+
+    // Update button based on availability
+    if (!data.available) {
+      console.log('DEBUG: Item is SOLD OUT, setting SOLD OUT text');
+      addToBoxDiv.textContent = 'SOLD OUT';
+      addToBoxDiv.classList.add('disabled', 'sold-out');
+      addToBoxDiv.style.pointerEvents = 'none';
+      addToBoxDiv.style.opacity = '0.5';
+    } else {
+      console.log('DEBUG: Item is available, setting Add To Box text');
+      addToBoxDiv.textContent = 'Add To Box';
+      addToBoxDiv.classList.remove('disabled', 'sold-out');
+      addToBoxDiv.style.pointerEvents = 'auto';
+      addToBoxDiv.style.opacity = '1';
+    }
+  }
+
+  /**
+   * Render ingredients section
+   * @param {string} ingredientsData - JSON string of ingredients
+   */
+  function renderIngredients(ingredientsData) {
+    const ingredientsContainer = document.getElementById('flexi-product-modal-ingredients');
+
+    // Debug: Log what we're receiving
+    console.log('Raw Ingredients Data:', ingredientsData);
+    console.log('Data type:', typeof ingredientsData);
+
+    if (!ingredientsData || ingredientsData.trim() === '[]' || ingredientsData.trim() === '') {
+      ingredientsContainer.innerHTML = '';
+      console.log('No ingredients data found');
+      return;
+    }
+
+    try {
+      // Clean the data before parsing
+      const cleanedData = ingredientsData.trim();
+      console.log('Cleaned data:', cleanedData);
+
+      const ingredients = JSON.parse(cleanedData);
+      console.log('Parsed ingredients:', ingredients);
+
+      if (!Array.isArray(ingredients) || ingredients.length === 0) {
+        ingredientsContainer.innerHTML = '';
+        console.log('Ingredients array is empty');
+        return;
+      }
+
+      let html = '<div class="flexi-ingredients-section"><h3 class="flexi-ingredients-title">Ingredients</h3><div class="flexi-ingredients-list">';
+
+      ingredients.forEach((ing, idx) => {
+        console.log(`Ingredient ${idx}:`, ing);
+        html += '<div class="flexi-ingredient-item">';
+
+        // Display perfume notes
+        if (ing.perfume_notes && ing.perfume_notes.toString().trim()) {
+          html += `<p class="flexi-ingredient-notes"><strong>${ing.perfume_notes.toString().toUpperCase()}</strong></p>`;
+        }
+
+        // Display ingredient image
+        if (ing.ingredient_image && ing.ingredient_image.toString().trim()) {
+          html += `<div class="flexi-ingredient-img-wrapper"><img src="${ing.ingredient_image}" alt="${ing.ingredient_title || 'Ingredient'}" loading="lazy" onerror="this.style.display='none'"></div>`;
+        }
+
+        // Display ingredient title
+        if (ing.ingredient_title && ing.ingredient_title.toString().trim()) {
+          html += `<p class="flexi-ingredient-title">${ing.ingredient_title.toString().toUpperCase()}</p>`;
+        }
+
+        html += '</div>';
+      });
+
+      html += '</div></div>';
+      console.log('Final HTML:', html);
+      ingredientsContainer.innerHTML = html;
+    } catch (e) {
+      console.error('Error parsing ingredients:', e, 'Data:', ingredientsData);
+      ingredientsContainer.innerHTML = '';
+    }
+  }
+
+  /**
+   * Render image carousel with navigation
+   * @param {Array} images - Array of image objects
+   * @param {string} title - Product title for alt text
+   */
+  function renderImageCarousel(images, title) {
+    const container = document.getElementById('flexi-product-modal-images');
+    const dotsContainer = document.getElementById('flexi-product-modal-dots');
+    container.innerHTML = '';
+    dotsContainer.innerHTML = '';
+
+    // Reset scroll position
+    container.scrollLeft = 0;
+
+    let imageCount = 0;
+    let currentIndex = 0;
+
+    // Render actual images directly to container
+    images.forEach((img, idx) => {
+      const div = document.createElement('div');
+      div.className = 'flexi-product-modal-img-wrapper';
+      div.setAttribute('data-image-index', idx);
+      div.innerHTML = `<img src="${img.src}" alt="${title}" loading="lazy">`;
+      container.appendChild(div);
+
+      const dot = document.createElement('div');
+      dot.className = 'flexi-product-modal-dot';
+      if (idx === 0) dot.classList.add('active');
+      dot.setAttribute('data-dot-index', idx);
+      dot.addEventListener('click', () => {
+        const targetEl = container.querySelector(`[data-image-index="${idx}"]`);
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        currentIndex = idx;
+        updateActiveDot(idx);
+      });
+      dotsContainer.appendChild(dot);
+      imageCount++;
+    });
+
+    // Fill remaining slots with placeholders
+    for (let i = images.length; i < 5; i++) {
+      const div = document.createElement('div');
+      div.className = 'flexi-product-modal-img-wrapper empty';
+      div.setAttribute('data-image-index', i);
+      div.innerHTML = '<div class="flexi-product-modal-img-placeholder">+</div>';
+      container.appendChild(div);
+
+      const dot = document.createElement('div');
+      dot.className = 'flexi-product-modal-dot empty';
+      dot.setAttribute('data-dot-index', i);
+      dotsContainer.appendChild(dot);
+    }
+
+    // Reset scroll after DOM is fully rendered
+    setTimeout(() => {
+      container.scrollLeft = 0;
+    }, 0);
+
+    // Hide dots if only one image
+    if (imageCount <= 1) {
+      dotsContainer.style.display = 'none';
+    }
+
+    // Update dots on scroll
+    function updateActiveDot(idx) {
+      dotsContainer.querySelectorAll('.flexi-product-modal-dot').forEach(d => d.classList.remove('active'));
+      dotsContainer.querySelector(`[data-dot-index="${idx}"]`)?.classList.add('active');
+    }
+
+    // Scroll event to update dots when scrolling through images
+    container.addEventListener('scroll', () => {
+      const imageWrappers = container.querySelectorAll('.flexi-product-modal-img-wrapper');
+      const containerRect = container.getBoundingClientRect();
+      const containerCenter = containerRect.left + containerRect.width / 2;
+
+      let mostVisibleIndex = 0;
+      let maxVisibility = 0;
+
+      imageWrappers.forEach((wrapper, idx) => {
+        if (idx >= imageCount) return; // Skip placeholder/empty slots
+
+        const rect = wrapper.getBoundingClientRect();
+        const wrapperCenter = rect.left + rect.width / 2;
+        const distance = Math.abs(wrapperCenter - containerCenter);
+        const visibility = Math.max(0, rect.width - distance);
+
+        if (visibility > maxVisibility) {
+          maxVisibility = visibility;
+          mostVisibleIndex = idx;
+        }
+      });
+
+      currentIndex = mostVisibleIndex;
+      updateActiveDot(mostVisibleIndex);
+    }, false);
+
+    // Touch swipe handler
+    let touchStart = 0;
+    container.addEventListener('touchstart', e => touchStart = e.touches[0].clientX, false);
+    container.addEventListener('touchend', e => {
+      const diff = touchStart - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        // Move to next or previous image by 1
+        const targetIdx = diff > 0 ? Math.min(currentIndex + 1, imageCount - 1) : Math.max(currentIndex - 1, 0);
+        const targetEl = container.querySelector(`[data-image-index="${targetIdx}"]`);
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        currentIndex = targetIdx;
+        updateActiveDot(targetIdx);
+      }
+    }, false);
+  }
+
+  /**
+   * Check if current item is already selected and update UI
+   */
+  function checkItemSelection() {
+    const collectionItem = currentTriggerElement.closest('.collection-item');
+    if (!collectionItem) return;
+
+    const checkbox = collectionItem.querySelector("input[type='checkbox'][data-id]");
+    const mainQtyInput = collectionItem.querySelector('.quantity-input');
+
+    if (checkbox && checkbox.checked && mainQtyInput) {
+      mainItemQuantityInput = mainQtyInput;
+      addToBoxDiv.classList.add('hidden');
+      quantitySelector.classList.remove('hidden');
+      qtyInput.value = parseInt(mainQtyInput.value) || 1;
+      updateQuantitySelectorState();
+    } else {
+      addToBoxDiv.classList.remove('hidden');
+      quantitySelector.classList.add('hidden');
+      updateAddToBoxState();
+    }
+  }
+
+  /**
+   * Update quantity selector button states based on limits
+   */
+  function updateQuantitySelectorState() {
+    if (!mainItemQuantityInput) return;
+
+    const currentValue = parseInt(qtyInput.value) || 0;
+    const allQuantityInputs = document.querySelectorAll('.quantity-input');
+    let total = 0;
+    allQuantityInputs.forEach(input => total += parseInt(input.value) || 0);
+
+    const mandatoryProducts = getMandatoryProducts();
+    const maxAllowed = mandatoryProducts - total + currentValue;
+
+    if (currentValue >= maxAllowed) {
+      qtyPlus.classList.add('disabled');
+    } else {
+      qtyPlus.classList.remove('disabled');
+    }
+
+    qtyMinus.classList.remove('disabled');
+  }
+
+  /**
+   * Update Add to Box button state based on selection limits
+   */
+  function updateAddToBoxState() {
+    // Calculate total quantity across all products
+    const allQuantityInputs = document.querySelectorAll('.quantity-input');
+    let total = 0;
+    allQuantityInputs.forEach(input => total += parseInt(input.value) || 0);
+
+    const mandatoryProducts = getMandatoryProducts();
+    const isLimitReached = total >= mandatoryProducts;
+
+    // Update EACH button based on its corresponding checkbox
+    document.querySelectorAll('.flexibox-price-atc .add-to-box').forEach(btn => {
+      const collItem = btn.closest('.collection-item');
+      if (!collItem) return;
+
+      const checkbox = collItem.querySelector("input[type='checkbox'][data-id]");
+      if (!checkbox) return;
+
+      // Logic: Enable if checked OR if limit not reached
+      const shouldEnable = checkbox.checked || !isLimitReached;
+
+      if (shouldEnable) {
+        btn.classList.remove('disabled');
+      } else {
+        btn.classList.add('disabled');
+      }
+    });
+
+    // Also update the popup's Add to Box button if visible
+    if (currentTriggerElement && !overlay.classList.contains('hidden')) {
+      const collectionItem = currentTriggerElement.closest('.collection-item');
+      if (collectionItem) {
+        // Check if item is sold out - if so, don't change button state
+        const isSoldOut = currentTriggerElement.classList.contains('flexi-sold-out');
+        if (isSoldOut) {
+          console.log('DEBUG: Skipping state update for sold out item');
+          return; // Don't modify the button state for sold out items
+        }
+
+        const checkbox = collectionItem.querySelector("input[type='checkbox'][data-id]");
+        if (checkbox) {
+          const shouldEnable = checkbox.checked || !isLimitReached;
+          if (shouldEnable) {
+            addToBoxDiv.classList.remove('disabled');
+          } else {
+            addToBoxDiv.classList.add('disabled');
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Handle Add to Box button click
+   */
+  function handleAddToBox() {
+    if (!currentTriggerElement || addToBoxDiv.classList.contains('disabled')) return;
+
+    const collectionItem = currentTriggerElement.closest('.collection-item');
+    if (!collectionItem) return;
+
+    const checkbox = collectionItem.querySelector("input[type='checkbox'][data-id]");
+    if (!checkbox) return;
+
+    const mainQuantityInput = collectionItem.querySelector('.quantity-input');
+    if (!mainQuantityInput) return;
+
+    mainItemQuantityInput = mainQuantityInput;
+
+    if (!checkbox.checked) {
+      checkbox.click();
+    }
+
+    addToBoxDiv.classList.add('hidden');
+    quantitySelector.classList.remove('hidden');
+
+    const currentMainQty = parseInt(mainItemQuantityInput.value) || 1;
+    qtyInput.value = currentMainQty;
+
+    updateQuantitySelectorState();
+
+    // Check if mandatory product limit is hit - close popup if so
+    const allQuantityInputs = document.querySelectorAll('.quantity-input');
+    let total = 0;
+    allQuantityInputs.forEach(input => total += parseInt(input.value) || 0);
+    const mandatoryProducts = getMandatoryProducts();
+    if (total >= mandatoryProducts) {
+      setTimeout(() => {
+        closeModal();
+      }, 100);
+    }
+  }
+
+  /**
+   * Handle quantity decrease
+   */
+  function handleQuantityDecrease(e) {
+    if (!mainItemQuantityInput) {
+      e.preventDefault();
+      return;
+    }
+
+    const collectionItem = currentTriggerElement.closest('.collection-item');
+    if (collectionItem) {
+      const cardQtyMinus = collectionItem.querySelector('.quantity-minus');
+      if (cardQtyMinus) {
+        isPopupOperating = true; // Prevent listener conflicts
+        cardQtyMinus.click();
+        setTimeout(() => {
+          const newQty = parseInt(mainItemQuantityInput.value) || 0;
+          qtyInput.value = newQty || 1;
+
+          if (newQty === 0) {
+            // Close popup when quantity reaches 0
+            closeModal();
+          } else {
+            updateQuantitySelectorState();
+          }
+
+          // CRITICAL: Update Add to Box button state globally
+          updateAddToBoxState();
+          isPopupOperating = false; // Allow listeners to fire again
+        }, 50);
+      }
+    }
+  }
+
+  /**
+   * Handle quantity increase
+   */
+  function handleQuantityIncrease(e) {
+    if (!mainItemQuantityInput || qtyPlus.classList.contains('disabled')) {
+      e.preventDefault();
+      return;
+    }
+
+    const collectionItem = currentTriggerElement.closest('.collection-item');
+    if (collectionItem) {
+      const cardQtyPlus = collectionItem.querySelector('.quantity-plus');
+      if (cardQtyPlus && !cardQtyPlus.disabled) {
+        isPopupOperating = true; // Prevent listener conflicts
+        cardQtyPlus.click();
+        setTimeout(() => {
+          qtyInput.value = parseInt(mainItemQuantityInput.value) || 1;
+          updateQuantitySelectorState();
+
+          // CRITICAL: Update Add to Box button state globally
+          updateAddToBoxState();
+
+          // Check if mandatory product limit is hit - close popup if so
+          const allQuantityInputs = document.querySelectorAll('.quantity-input');
+          let total = 0;
+          allQuantityInputs.forEach(input => total += parseInt(input.value) || 0);
+          const mandatoryProducts = getMandatoryProducts();
+          if (total >= mandatoryProducts) {
+            closeModal();
+          }
+
+          isPopupOperating = false; // Allow listeners to fire again
+        }, 50);
+      }
+    }
+  }
+
+  // Event Listeners
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => e.key === 'Escape' && closeModal());
+
+  // Attach popup trigger listeners
+  document.querySelectorAll('.flexi-popup-trigger').forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      openPopupWithTrigger(this);
+    });
+  });
+
+  // Event delegation for dynamically added triggers
+  document.addEventListener('click', function(e) {
+    const trigger = e.target.closest('.flexi-popup-trigger');
+    if (trigger && !trigger._popupListenerAttached) {
+      openPopupWithTrigger(trigger);
+    }
+  });
+
+  // Product grid items click handler
+  document.addEventListener('click', function(e) {
+    const productGridItem = e.target.closest('.product_grid_items');
+    if (productGridItem) {
+      // Find the flexi-popup-trigger within the product grid item
+      const trigger = productGridItem.closest('.collection-item')?.querySelector('.flexi-popup-trigger');
+      if (trigger) {
+        e.preventDefault();
+        openPopupWithTrigger(trigger);
+      }
+    }
+  });
+
+  // Add to Box button
+  addToBoxDiv.addEventListener('click', handleAddToBox);
+
+  // Quantity selectors
+  qtyMinus.addEventListener('click', handleQuantityDecrease);
+  qtyPlus.addEventListener('click', handleQuantityIncrease);
+
+  // Watch for quantity changes on main page
+  document.addEventListener('change', function(e) {
+    if (isPopupOperating) return; // Skip if popup is operating the card
+
+    if (e.target.classList.contains('quantity-input')) {
+      if (!overlay.classList.contains('hidden')) {
+        updateQuantitySelectorState();
+      }
+      updateAddToBoxState();
+    }
+
+    if (e.target.type === 'checkbox' && !overlay.classList.contains('hidden')) {
+      updateAddToBoxState();
+    }
+  });
+
+  document.addEventListener('input', function(e) {
+    if (isPopupOperating) return; // Skip if popup is operating the card
+
+    if (e.target.classList.contains('quantity-input') && !overlay.classList.contains('hidden')) {
+      updateQuantitySelectorState();
+    }
+  });
+
+  // Watch for quantity button clicks - UPDATE ALL BUTTON STATES
+  document.addEventListener('click', function(e) {
+    if (isPopupOperating) return; // Skip if popup is operating the card
+
+    const isQtyBtn = e.target.classList.contains('quantity-plus') || e.target.classList.contains('quantity-minus');
+    if (isQtyBtn) {
+      setTimeout(() => {
+        // Always update Add to Box button states when any quantity changes
+        updateAddToBoxState();
+
+        // If popup is open, also update quantity selector state
+        if (!overlay.classList.contains('hidden')) {
+          updateQuantitySelectorState();
+        }
+      }, 50);
+    }
+  }, true);
+
+})();
+
+</script>
+
+

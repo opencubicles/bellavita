@@ -1,0 +1,152 @@
+<div class="sticky_cart">
+  <div class="flexi-sticky-bar page-width-desktop" id="flexi-sticky-bar">
+    <div class="flexi-sticky-content">
+      <div class="flexi-sticky-content-inner">
+        <!-- EXPAND ARROW - TOP RIGHT CORNER -->
+        <div class="flexi-expand-icon" id="flexi-expand-icon" style="display: none; position: absolute; top: 13px; right: 15px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+
+        <!-- LEFT SECTION: Product Images & Message -->
+        <div class="flexi-cart-left">
+          <!-- Lock Icon -->
+          <div class="flexi-lock-icon" id="flexi-lock-icon">
+
+          </div>
+
+          <!-- Product Images -->
+          <div class="flexi-product-images" id="flexi-product-images" style="display: none;"></div>
+
+          <!-- Message Section -->
+          <div class="flexi-info-section">
+            <div class="flexi-title" id="flexi-title">Unlock <span id="flexi-price-amount">{{ bundle_price | money_without_trailing_zeros}}</span> <span id="flexi-deal-price">Deal Price</span></div>
+            <div class="flexi-count" id="flexi-count" style="display: none;"></div>
+            <div class="flexi-message" id="flexi-message">Add Any <span id="flexi-mandate">{{ mandatory_products }}</span> Perfumes</div>
+            <div class="flexi-mandatory-counter" id="flexi-mandatory-counter"><strong>0/{{ mandatory_products }} </strong> Added</div>
+          </div>
+        </div>
+
+        <!-- RIGHT SECTION: Item Value & Button -->
+        <div class="flexi-cart-right" id="flexi-cart-right" style="display: none;">
+          <!-- Savings Display (shown when all items checked) -->
+          <div class="flexi-values" id="flexi-savings-section" style="display: none;">
+            <div class="flexi-savings-amount">
+              <div style="font-size: 14px; font-weight: 600; color: #089a21;">
+                You Save: $<span id="flexi-savings-value">0</span>
+              </div>
+            </div>
+            <div class="flexi-price-breakdown">
+              <div style="font-size: 14px; font-weight: 600; color: #000;">
+                $<span id="flexi-deal-price-value">0.00</span>
+              </div>
+              <div style="font-size: 12px; color: #888; text-decoration: line-through; line-height:208%;">
+                $<span id="flexi-combined-price-value">0.00</span>
+              </div>
+            </div>
+          </div>
+          <!-- Item Value Display (shown when not all items checked) -->
+          <div class="flexi-values" id="flexi-item-value-section">
+            <div class="flexi-label">Item Value:</div>
+            <div class="flexi-price" id="flexi-item-value">$<span id="flexi-price-value">0.00</span></div>
+          </div>
+          <div class="flexi-pay-btn" id="flexi-pay-now" role="button" tabindex="0">
+            <span>PAY NOW</span>
+            <svg id="flexi-pay-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none" style="display: none; margin-left: 8px;">
+              <path d="M0 3.93003C0 4.07921 0.0592633 4.22228 0.164753 4.32777C0.270242 4.43326 0.413316 4.49253 0.5625 4.49253H11.5796L9.16538 6.90678C9.06291 7.01286 9.00622 7.15495 9.0075 7.30244C9.00878 7.44992 9.06793 7.59101 9.17223 7.6953C9.27652 7.79959 9.4176 7.85875 9.56509 7.86003C9.71257 7.86131 9.85466 7.80461 9.96075 7.70215L13.3358 4.32715C13.3878 4.2754 13.4291 4.21388 13.4573 4.14611C13.4855 4.07834 13.5 4.00567 13.5 3.93228V3.93003C13.5 3.8569 13.4854 3.78378 13.4561 3.71515C13.4281 3.64696 13.3868 3.58501 13.3346 3.5329L9.95962 0.1579C9.85354 0.0554365 9.71145 -0.00126035 9.56396 2.1264e-05C9.41648 0.00130287 9.27539 0.0604603 9.1711 0.164752C9.06681 0.269044 9.00765 0.410127 9.00637 0.557612C9.00509 0.705098 9.06179 0.847187 9.16425 0.953276L11.5796 3.36753H0.5625C0.413316 3.36753 0.270242 3.42679 0.164753 3.53228C0.0592633 3.63777 0 3.78084 0 3.93003Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP OVERLAY & POPUP -->
+  <div class="flexi-popup-overlay" id="flexi-popup-overlay" style="display: none;"></div>
+  <div class="flexi-popup" id="flexi-popup" style="display: none;">
+    <div class="flexi-popup-header">
+      <h3 id="flexi-popup-title"></h3>
+      <div class="flexi-popup-close" id="flexi-popup-close" title="Close" role="button" tabindex="0">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6L18 18"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="flexi-popup-content">
+      <div class="popup-image-summery">
+      <div class="flexi-popup-images" id="flexi-popup-images"></div>
+
+      <!-- Bill Summary Section -->
+      <div class="flexi-bill-summary" id="flexi-bill-summary">
+        <h3>Bill Summary</h3>
+        <div class="flexi-summary-row">
+          <span class="flexi-summary-label">Subtotal (<span id="flexi-summary-item-count">0</span> items)</span>
+          <span class="flexi-summary-value" id="flexi-summary-subtotal">$0.00</span>
+        </div>
+
+        <div class="flexi-summary-row flexi-summary-save" id="flexi-summary-save" style="display: none;">
+          <span class="flexi-summary-label">Save</span>
+          <span class="flexi-summary-value flexi-save-amount" id="flexi-summary-save-amount">$0</span>
+        </div>
+
+        <div class="flexi-summary-row flexi-summary-total">
+          <span class="flexi-summary-label">Total</span>
+          <span class="flexi-summary-value flexi-total-price" id="flexi-summary-total">$0.00</span>
+        </div>
+      </div>
+      </div>
+
+      <!-- Bottom section with values on left and pay button on right -->
+      <div class="flexi-popup-bottom">
+        <!-- Left: Item Value & Savings Display -->
+        <div class="flexi-popup-left">
+          <!-- Savings Display (shown when all items checked) -->
+          <div class="flexi-values" id="flexi-popup-savings-section" style="display: none;">
+            <div class="flexi-savings-amount">
+              <div style="font-size: 14px; font-weight: 600; color: #089a21;">
+                You Save: $<span id="flexi-popup-savings-value">0</span>
+              </div>
+            </div>
+            <div class="flexi-price-breakdown">
+              <div style="font-size: 14px; font-weight: 600; color: #000;">
+                 $<span id="flexi-popup-deal-price-value">0.00</span>
+              </div>
+              <div style="font-size: 12px; color: #888; text-decoration: line-through;">
+                $<span id="flexi-popup-combined-price-value">0.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item Value Display (shown when not all items checked) -->
+          <div class="flexi-values" id="flexi-popup-item-value-section">
+            <div class="flexi-label">Item Value:</div>
+            <div class="flexi-price" id="flexi-popup-item-value">$<span id="flexi-popup-price-value">0.00</span></div>
+          </div>
+        </div>
+
+        <!-- Right: Pay Button -->
+        <div class="flexi-popup-right">
+          <div class="flexi-pay-btn" id="flexi-popup-pay-now" role="button" tabindex="0">
+            <span>PAY NOW</span>
+            <svg id="flexi-popup-pay-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none" style="display: none; margin-left: 8px;">
+              <path d="M0 3.93003C0 4.07921 0.0592633 4.22228 0.164753 4.32777C0.270242 4.43326 0.413316 4.49253 0.5625 4.49253H11.5796L9.16538 6.90678C9.06291 7.01286 9.00622 7.15495 9.0075 7.30244C9.00878 7.44992 9.06793 7.59101 9.17223 7.6953C9.27652 7.79959 9.4176 7.85875 9.56509 7.86003C9.71257 7.86131 9.85466 7.80461 9.96075 7.70215L13.3358 4.32715C13.3878 4.2754 13.4291 4.21388 13.4573 4.14611C13.4855 4.07834 13.5 4.00567 13.5 3.93228V3.93003C13.5 3.8569 13.4854 3.78378 13.4561 3.71515C13.4281 3.64696 13.3868 3.58501 13.3346 3.5329L9.95962 0.1579C9.85354 0.0554365 9.71145 -0.00126035 9.56396 2.1264e-05C9.41648 0.00130287 9.27539 0.0604603 9.1711 0.164752C9.06681 0.269044 9.00765 0.410127 9.00637 0.557612C9.00509 0.705098 9.06179 0.847187 9.16425 0.953276L11.5796 3.36753H0.5625C0.413316 3.36753 0.270242 3.42679 0.164753 3.53228C0.0592633 3.63777 0 3.78084 0 3.93003Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Pass config from Liquid to JS
+  window.STICKY_CART_CONFIG = {
+    bundlePrice: {{ bundle_price }},
+    mandatoryLimit: {{ mandatory_products }}
+  };
+</script>
+
+
+

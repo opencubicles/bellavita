@@ -1,0 +1,177 @@
+<li
+  id="{{ variant.id }}"
+  class="collection-item{% unless variant.available %} disabled-item{% endunless %} hello-collection"
+  data-url="{{ product_flexi.url }}"
+  data-product-id="{{ product_flexi.id }}"
+  data-variant-id="{{ variant.id }}"
+  data-collection="{{collection_value}}"
+>
+  <div class="one-fourth-column">
+    <div class="product-info">
+      {% if section.settings.item_counter %}
+        <span class="product_counter _hidden">1</span>
+      {% endif %}
+      <svg
+        class="added_to_cart _hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        width="11"
+        height="9"
+        viewBox="0 0 11 9"
+        fill="none"
+      >
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66802 1.37429L4.48642 7.85309L0.416016 4.46069L1.18402 3.53909L4.31362 6.14669L8.73201 0.625488L9.66802 1.37429Z" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+      </svg>
+
+      {%- capture images_json -%}
+        [{% for image in product_flexi.images %}{{ image | image_url: width: 300 | json }}{% unless forloop.last %},{% endunless %}{% endfor %}]
+      {%- endcapture -%}
+      {%- capture rating_data -%}
+        {%- if product_flexi.metafields.reviews.rating.value != blank -%}
+          {{ product_flexi.metafields.reviews.rating.value.rating | round: 1 }}
+        {%- endif -%}
+      {%- endcapture -%}
+      {%- capture ingredients_json -%}
+[
+{%- if product_flexi.metafields.custom.product_ingredients != blank and product_flexi.metafields.custom.product_ingredients.value != blank -%}
+{%- for ingredient in product_flexi.metafields.custom.product_ingredients.value limit: 4 -%}
+{"perfume_notes":{{ ingredient.perfume_notes.value | default: "" | json }},"ingredient_image":{{ ingredient.ingredient_image | image_url: width: 300 | json }},"ingredient_title":{{ ingredient.ingredient_title.value | default: "" | json }}}{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+{%- endif -%}
+]
+      {%- endcapture -%}
+      <div
+        class="flexi-popup-trigger{% unless variant.available %} flexi-sold-out{% endunless %}"
+        data-title="{{ product_flexi.title | escape }}{% unless product_flexi.has_only_default_variant %} - {{ variant.title | escape }}{% endunless %}"
+        data-product-url="{{ product_flexi.url }}"
+        data-description="{{ product_flexi.description | escape }}"
+        data-price="{{ variant.price | money }}"
+        data-compare-at-price="{{ variant.compare_at_price | money }}"
+        data-rating="{{ rating_data | strip }}"
+        data-ingredients='{{ ingredients_json | strip }}'
+      >
+        {%- render 'new-flexi-box-bundle-image-wrapper',
+          product_flexi: product_flexi,
+          variant: variant,
+          item_index: item_index,
+          section: section
+        -%}
+      </div>
+      <div class="full-content-flexibox">
+        <div class="product_grid_items product-grid-card">
+          <h3 class="card-information__text h5">
+            <div class="product_flexi_type">
+              <div>
+                {%- if product_flexi.metafields.reviews.rating.value != blank -%}
+                  {%- liquid
+                    assign rating_decimal = 0
+                    assign decimal = product_flexi.metafields.reviews.rating.value.rating | modulo: 1
+                    if decimal >= 0.3 and decimal <= 0.7
+                      assign rating_decimal = 0.5
+                    elsif decimal > 0.7
+                      assign rating_decimal = 1
+                    endif
+                  -%}
+                  <div
+                    class="rating"
+                    role="img"
+                    aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product_flexi.metafields.reviews.rating.value, rating_max: product_flexi.metafields.reviews.rating.value.scale_max }}"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <path d="M5.83598 7.15256C5.77519 7.15253 5.71532 7.13776 5.66149 7.10953L3.75005 6.10465L1.83861 7.10953C1.77667 7.14208 1.70685 7.15666 1.63706 7.15162C1.56727 7.14657 1.50028 7.1221 1.44366 7.08097C1.38705 7.03985 1.34307 6.9837 1.3167 6.91889C1.29032 6.85407 1.28261 6.78317 1.29442 6.7142L1.65953 4.58578L0.113207 3.07866C0.0631133 3.0298 0.0276837 2.96791 0.0109217 2.89997C-0.00584023 2.83204 -0.00326616 2.76077 0.018353 2.69422C0.0399721 2.62766 0.0797744 2.56849 0.133262 2.52337C0.186749 2.47826 0.251789 2.449 0.321032 2.43891L2.45806 2.12836L3.41367 0.191989C3.44821 0.133508 3.4974 0.0850434 3.55639 0.0513755C3.61537 0.0177076 3.68212 0 3.75004 0C3.81795 0 3.8847 0.0177076 3.94369 0.0513755C4.00267 0.0850434 4.05186 0.133508 4.0864 0.191989L5.04203 2.12833L7.17905 2.43888C7.24829 2.44897 7.31333 2.47822 7.36682 2.52334C7.42031 2.56845 7.46011 2.62763 7.48173 2.69418C7.50335 2.76073 7.50592 2.832 7.48916 2.89994C7.4724 2.96788 7.43697 3.02977 7.38688 3.07863L5.84055 4.58575L6.20566 6.71417C6.21489 6.768 6.21225 6.8232 6.19793 6.8759C6.1836 6.92861 6.15794 6.97755 6.12273 7.0193C6.08751 7.06105 6.04361 7.09461 5.99408 7.11763C5.94455 7.14064 5.8906 7.15257 5.83598 7.15256Z" fill="#FDB924"/>
+                    </svg>
+                    <span aria-hidden="true">
+                      {{- product_flexi.metafields.reviews.rating.value.rating | round: 1 -}}
+                    </span>
+                  </div>
+                {%- else -%}
+                  <p class="rating"><span aria-hidden="true">No Reviews</span></p>
+                {%- endif -%}
+              </div>
+              {%- if product_flexi.metafields.custom.crazy_deal_single_note_musky != blank -%}
+                <span class="musky-text">{{ product_flexi.metafields.custom.crazy_deal_single_note_musky }}</span>
+              {%- else -%}
+                <span class="musky-text">Musky</span>
+              {%- endif -%}
+            </div>
+            <span class="product_flexi_title">
+              {%- unless product_flexi.has_only_default_variant -%}{{- variant.title }} - {% endunless -%}
+              {{ product_flexi.title -}}
+            </span>
+
+            <div class="ml-txt">{{ product_flexi.metafields.custom.product_quantity_100ml.value }}</div>
+          </h3>
+        </div>
+
+        {% capture property %}{{ product_flexi.title }}{% unless product_flexi.has_only_default_variant %} - {{ variant.title }}{% endunless %}/{{ variant.sku }}/{{ variant.id }}{% endcapture %}
+        <div class="flexibox-price-atc">
+          <div class="flexibox-price">
+            {% if variant.compare_at_price and variant.compare_at_price > 0 %}
+              {{ variant.compare_at_price | money_without_trailing_zeros }}
+            {% else %}
+              {{ variant.price | money_without_trailing_zeros }}
+            {% endif %}
+          </div>
+          <div id="checkboxes">
+            {% if variant.available %}
+              {%- comment -%} Checkbox - shown by default {%- endcomment -%}
+              <div class="line-item-property__field add-to-box">
+                <label>
+                  <input
+                    id="{{ product_flexi.handle }}-{{ variant.id }}"
+                    class="button"
+                    type="checkbox"
+                    data-id-products="product_{{ product_index }}"
+                    data-id="product_{{ product_index }}"
+                    data-sku="{{ product_flexi.selected_or_first_available_variant.sku }}"
+                    data-price="{% if variant.compare_at_price and variant.compare_at_price > 0 %}{{ variant.compare_at_price }}{% else %}{{ variant.price }}{% endif %}"
+                    autocomplete="off"
+                    value="{{ property }}"
+                    data-variant-id="{{ variant.id }}" 
+                    disabled
+
+                  ><span class="icon-only" style="font-size: 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M1.20451 7.54509H6.13607V12.4767C6.13607 12.6635 6.21029 12.8427 6.34242 12.9748C6.47454 13.1069 6.65373 13.1812 6.84058 13.1812C7.02743 13.1812 7.20662 13.1069 7.33874 12.9748C7.47086 12.8427 7.54509 12.6635 7.54509 12.4767V7.54509H12.4767C12.6635 7.54509 12.8427 7.47086 12.9748 7.33874C13.1069 7.20662 13.1812 7.02743 13.1812 6.84058C13.1812 6.65373 13.1069 6.47454 12.9748 6.34242C12.8427 6.21029 12.6635 6.13607 12.4767 6.13607H7.54509V1.20451C7.54509 1.01766 7.47086 0.838467 7.33874 0.706346C7.20662 0.574225 7.02743 0.5 6.84058 0.5C6.65373 0.5 6.47454 0.574225 6.34242 0.706346C6.21029 0.838467 6.13607 1.01766 6.13607 1.20451V6.13607H1.20451C1.01766 6.13607 0.838467 6.21029 0.706346 6.34242C0.574225 6.47454 0.5 6.65373 0.5 6.84058C0.5 7.02743 0.574225 7.20662 0.706346 7.33874C0.838467 7.47086 1.01766 7.54509 1.20451 7.54509Z" fill="#F1F1F1" stroke="#F1F1F1"/>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+
+              {%- comment -%} Quantity Selector - hidden by default {%- endcomment -%}
+              <div class="quantity-selector hidden">
+                <button type="button" class="quantity-btn quantity-minus">&minus;</button>
+                <input
+                  type="number"
+                  class="quantity-input"
+                  value="0"
+                  min="0"
+                  max="{{ mandatory_products }}"
+                  data-id-products="product_{{ product_index }}"
+                  data-id="product_{{ product_index }}"
+                  data-sku="{{ product_flexi.selected_or_first_available_variant.sku }}"
+                  data-price="{% if variant.compare_at_price and variant.compare_at_price > 0 %}{{ variant.compare_at_price }}{% else %}{{ variant.price }}{% endif %}"
+                  data-property="{{ property }}"
+                  data-variant-id="{{ variant.id }}" 
+                  readonly
+                >
+                <button type="button" class="quantity-btn quantity-plus">&plus;</button>
+              </div>
+            {% else %}
+              <div class="add-to-box sold-out" style="width: 100%;">
+                <span class="sold-out-text">Sold Out</span>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        {% comment %} best seller tag - from product tag {% endcomment %}
+        {% if product_flexi.tags contains 'Bestseller' %}
+          <div class="new-flexi-best-seller-tag">
+            Best Seller
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</li>

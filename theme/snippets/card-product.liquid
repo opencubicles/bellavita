@@ -529,7 +529,7 @@
                   {% assign hide_price = true %}
                 {% endif %}
               {% endfor %}
-              {% assign allowed_collections = 'custom-byob-collection,custom-byob-collection-pack-2' | split: ',' %}
+              {% assign allowed_collections = 'custom-byob-collection,custom-byob-collection-pack-2,crazy-deal-byob' | split: ',' %}
 
               {% if allowed_collections contains collection.handle %}
                 <button

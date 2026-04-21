@@ -339,7 +339,8 @@
         "custom_liquid_9kQ68T": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% if product.metafields.custom.tryon_custom_text %}\n<div class=\"try-now-pay-later\">\n  <h2 class=\"tnpl-title\">\n   Try Before You Buy ✨ \n  </h2>\n  <h3 class=\"tnpl-title\">\n    Try at $0 & Pay Only if you like the Fragrances \n  </h3>\n\n  <ul class=\"tnpl-steps\">\n    <li class=\"tnpl-step\">\n      <strong>Try Before You Buy :</strong>\n     Once you opt for trial and place your order, we place a temporary hold on your card, but you won’t be charged during your 3-day trial.\n    </li>\n\n    <li class=\"tnpl-step\">\n      <strong>3-Day Trial:</strong>\n       Starts on the day your order is marked as delivered.<br>\nKeep It ? full amount will automatically get deducted from original payment method.\n    </li>\n\n    <li class=\"tnpl-step\">\n      <strong>Return Window:</strong>\n      Returns must be requested within the 3-day trial period via filing the form received by the users over email. No Return requests acceptable post trial period.\n    </li>\n    <li class=\"tnpl-step\">\n      <strong>Shipping Fee:</strong>\n      A non-refundable $7 Shipping fee applies to all Try Now, Pay Later orders.\n    </li>\n  </ul>\n</div>\n{% endif %}"
+            "custom_liquid": "{% if product.metafields.custom.tryon_custom_text %}\n<div class=\"try-now-pay-later\">\n  <h2 class=\"tnpl-title\">\n   Try Before You Buy ✨ \n  </h2>\n  <h3 class=\"tnpl-title\">\n    Try at $0 & Pay Only if you like the Fragrances \n  </h3>\n\n  <ul class=\"tnpl-steps\">\n    <li class=\"tnpl-step\">\n      <strong>Try Before You Buy :</strong>\n     Once you opt for trial and place your order, we place a temporary hold on your card, but you won’t be charged during your 3-day trial.\n    </li>\n\n    <li class=\"tnpl-step\">\n      <strong>3-Day Trial:</strong>\n       Starts on the day your order is marked as delivered.<br>\nKeep It ? full amount will automatically get deducted from original payment method.\n    </li>\n\n    <li class=\"tnpl-step\">\n      <strong>Return Window:</strong>\n      Returns must be requested within the 3-day trial period via filing the form received by the users over email. No Return requests acceptable post trial period.\n    </li>\n    <li class=\"tnpl-step\">\n      <strong>Shipping Fee:</strong>\n      A non-refundable $7 Shipping fee applies to all Try Now, Pay Later orders.\n    </li>\n  </ul>\n</div>\n{% endif %}",
+            "class_name": ""
           }
         },
         "custom_liquid_KdFJyi": {
@@ -347,12 +348,9 @@
           "name": "fragnace-notes",
           "disabled": true,
           "settings": {
-            "custom_liquid": "{% if product.metafields.custom.product_ingredients.value != blank %}\n  <link rel=\"stylesheet\" href=\"{{ 'component-slider.css' | asset_url }}\" media=\"print\" onload=\"this.media='all'\">\n\n  <div class=\"Notes-Heading center\">\n    <h2>Fragrance Notes</h2>\n  </div>\n\n  <div class=\"product-ingredients-notes page-width\">\n    <slider-component class=\"slider-mobile-gutter\">\n      <ul\n        id=\"Slider-{{ section.id }}\"\n        class=\"grid grid--2-col grid--4-col-desktop slider slider--tablet\"\n        role=\"list\"\n      >\n        {% for metaobject in product.metafields.custom.product_ingredients.value limit: 4 %}\n          <li class=\"product-ingredients-item-notes grid__item slider__slide center-notes\">\n            \n            {% if metaobject.perfume_notes.value != blank %}\n              <p class=\"perfume-notes\">\n                <strong>{{ metaobject.perfume_notes.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_image != blank %}\n              <div class=\"ingredient-img-wrapper-notes\">  \n                <div class=\"media media--adapt pdp-ingredient-img\" style=\"--image-ratio-percent: {{ 1 | divided_by: metaobject.ingredient_image.value.aspect_ratio | times: 100 }}%;\">\n                  {{ metaobject.ingredient_image | image_url: width: 300 | image_tag: \n                    loading: 'lazy',\n                    fetchpriority: 'low',\n                    widths: '50, 100, 200, 300',\n                    is: 'lazy-image'\n                  }}\n                </div>\n              </div>  \n            {% endif %}\n\n            {% if metaobject.ingredient_title.value != blank %}\n              <p>\n                <strong>{{ metaobject.ingredient_title.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_description.value != blank %}\n              <span>{{ metaobject.ingredient_description.value }}</span>\n            {% endif %}\n          </li>\n        {% endfor %}\n      </ul>\n    </slider-component>\n  </div>\n{% endif %}"
+            "custom_liquid": "{% if product.metafields.custom.product_ingredients.value != blank %}\n  <link rel=\"stylesheet\" href=\"{{ 'component-slider.css' | asset_url }}\" media=\"print\" onload=\"this.media='all'\">\n\n  <div class=\"Notes-Heading center\">\n    <h2>Fragrance Notes</h2>\n  </div>\n\n  <div class=\"product-ingredients-notes page-width\">\n    <slider-component class=\"slider-mobile-gutter\">\n      <ul\n        id=\"Slider-{{ section.id }}\"\n        class=\"grid grid--2-col grid--4-col-desktop slider slider--tablet\"\n        role=\"list\"\n      >\n        {% for metaobject in product.metafields.custom.product_ingredients.value limit: 4 %}\n          <li class=\"product-ingredients-item-notes grid__item slider__slide center-notes\">\n            \n            {% if metaobject.perfume_notes.value != blank %}\n              <p class=\"perfume-notes\">\n                <strong>{{ metaobject.perfume_notes.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_image != blank %}\n              <div class=\"ingredient-img-wrapper-notes\">  \n                <div class=\"media media--adapt pdp-ingredient-img\" style=\"--image-ratio-percent: {{ 1 | divided_by: metaobject.ingredient_image.value.aspect_ratio | times: 100 }}%;\">\n                  {{ metaobject.ingredient_image | image_url: width: 300 | image_tag: \n                    loading: 'lazy',\n                    fetchpriority: 'low',\n                    widths: '50, 100, 200, 300',\n                    is: 'lazy-image'\n                  }}\n                </div>\n              </div>  \n            {% endif %}\n\n            {% if metaobject.ingredient_title.value != blank %}\n              <p>\n                <strong>{{ metaobject.ingredient_title.value | upcase }}</strong>\n              </p>\n            {% endif %}\n\n            {% if metaobject.ingredient_description.value != blank %}\n              <span>{{ metaobject.ingredient_description.value }}</span>\n            {% endif %}\n          </li>\n        {% endfor %}\n      </ul>\n    </slider-component>\n  </div>\n{% endif %}",
+            "class_name": ""
           }
-        },
-        "meta_coms_MzxdKJ": {
-          "type": "meta_coms",
-          "settings": {}
         },
         "complementary_custom_YaRhEn": {
           "type": "complementary_custom",
@@ -366,6 +364,10 @@
             "show_vendor": false,
             "enable_image_fill": true
           }
+        },
+        "meta_coms_MzxdKJ": {
+          "type": "meta_coms",
+          "settings": {}
         },
         "sticky_cart_t4QLHa": {
           "type": "sticky_cart",
@@ -382,13 +384,15 @@
         "custom_liquid_X8RHwe": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n\n{% if product.metafields.custom.free_shipping_products == true or product.price > 2998 %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span>\n  </div>\n\n{% elsif product.tags contains 'Tryon Product' %}\n  <div class=\"shipping-text\">\n    <span>Shipping charge $7 applicable</span>\n  </div>\n\n{% else %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span> &nbsp;over $30\n  </div>\n{% endif %}\n \n</div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n\n</style>"
+            "custom_liquid": "<div class=\"shipping\"><div class=\"shipping-image\">\n<img src=\"https://cdn.shopify.com/s/files/1/0650/5539/1970/files/shipped_61a5c398-6fb1-4362-8f7d-987d11f417ef.png?v=1738563085\">\n</div>\n\n{% if product.metafields.custom.free_shipping_products == true or product.price > 2998 %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span>\n  </div>\n\n{% elsif product.tags contains 'Tryon Product' %}\n  <div class=\"shipping-text\">\n    <span>Shipping charge $7 applicable</span>\n  </div>\n\n{% else %}\n  <div class=\"shipping-text\">\n    <span>Free Shipping</span> &nbsp;over $30\n  </div>\n{% endif %}\n \n</div>\n<style>\n.shipping{\n  background-image: linear-gradient(to right,#FFEDC6, #ffffff);\ndisplay:flex;\nheight:28px;\n}\n.shipping-text {\n    width: 90%;\n    font-size: 14px;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n}\n.shipping-text span{\nfont-weight:700;\n}\n.shipping-image {\n    width: 10%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.shipping-image img{\nwidth:17px;\n}\n\n</style>",
+            "class_name": ""
           }
         },
         "custom_liquid_kjYyfP": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"pdp-banner\">\n\n{% if shop.metafields.custom.pdp_atc_desk_offer_banner and shop.metafields.custom.pdp_atc_desk_offer_banner != blank %}\n<a href=\"https://bellavitaluxe.com/collections/shop-all\">\n\t<img  src=\"{{ shop.metafields.custom.pdp_atc_desk_offer_banner | img_url: '800x' }}\">\n</a>\n\n{% endif %}\n\n\n\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>"
+            "custom_liquid": "<div class=\"pdp-banner\">\n\n{% if shop.metafields.custom.pdp_atc_desk_offer_banner and shop.metafields.custom.pdp_atc_desk_offer_banner != blank %}\n<a href=\"https://bellavitaluxe.com/collections/shop-all\">\n\t<img  src=\"{{ shop.metafields.custom.pdp_atc_desk_offer_banner | img_url: '800x' }}\">\n</a>\n\n{% endif %}\n\n\n\n<style>\n@media(max-width:750px){\n.pdp-banner{\nwidth:100%;\n}\n.pdp-banner img{\nwidth:100%;\n}\n}\n@media(min-width:750px){\n.pdp-banner img {\n    width: 100%;\n    height: auto;\n}\n}\n</style>\n</div>",
+            "class_name": ""
           }
         },
         "offers_section_whdpGY": {
@@ -410,8 +414,8 @@
         "tryon_try_on_app_block_wzLGfE",
         "custom_liquid_9kQ68T",
         "custom_liquid_KdFJyi",
-        "meta_coms_MzxdKJ",
         "complementary_custom_YaRhEn",
+        "meta_coms_MzxdKJ",
         "sticky_cart_t4QLHa",
         "offer_badges_hFhQyD",
         "custom_liquid_X8RHwe",

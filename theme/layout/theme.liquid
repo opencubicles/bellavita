@@ -35,7 +35,9 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-
+    {% comment %} {% if  template.suffix != "embarouge-new" %} {% endcomment %}
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    {% comment %} {%- endif -%} {% endcomment %}
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -76,7 +78,7 @@
     {%- unless settings.type_header_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
-
+   
     {%- if settings.predictive_search_enabled -%}
       <link
         rel="stylesheet"
@@ -219,6 +221,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
     {% endif %}
   {% endif %} {% endcomment %}
+  
+  {% if template.suffix == "embarouge" or template.suffix == "embarouge-new" %}
+   <link
+        rel="stylesheet"
+        href="{{ 'embarouge-new.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
+      
+  {% endif %}
   </head>
   <!-- OC Test Comment3 -->
   <body
@@ -531,7 +543,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {% endif -%} {% endcomment %}
 
 {% if shop.permanent_domain != 'bellavitaglobal.myshopify.com' and shop.permanent_domain != 'bellavita-bangladesh.myshopify.com' and shop.permanent_domain != 'bv-us.myshopify.com'%}
-{% if template contains "product" %}
+{% if template contains "product"  %}
   <style>
     .mobile-dock {
       display:none !important;
@@ -555,11 +567,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     </style>
 {% endif %}
+{% if  template.suffix != "embarouge-new" %}
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+   @media screen and (max-width: 768px) {
+    .atc-strip-container {
+        margin: 0 16px;
+        border-radius: 6px 6px 0 0;
+    }
+    .sticky-cart__form .button--small {
+        margin: 0 16px 10px;
+        border-radius: 0 0 6px 6px;
+    }
+   
+  }
+  </style>
+{% endif %}
 
 
-{% if template.suffix == "embarouge" %}
+{% if template.suffix == "embarouge" or template.suffix == "embarouge-new" %}
   <style>
     .mobile-dock {
+      display:none !important;
+    }
+    .atc-strip-container {
       display:none !important;
     }
   </style>
@@ -632,16 +663,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       {{ product.id }}{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
-</script>
-{% endif %}
-<script>
-   window.buy1collection = [
+  window.buy1collectionGet1 = [
+    {% for product in collections['gourmet-collection'].products %}
+      {{ product.id }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+  window.buy1collection = [
     {% for product in collections['buy1get1'].products %}
       {{ product.id }}{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
-  
 </script>
+{% endif %}
+
 {% if shop.permanent_domain == 'bellavitaglobal.myshopify.com' or shop.permanent_domain == 'bellavita-bangladesh.myshopify.com' or shop.permanent_domain == 'bv-us.myshopify.com'%}
 <script>
   window.buy3collection = [
@@ -670,14 +704,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {% endif %}
 {% if shop.permanent_domain == 'bv-uk.myshopify.com' %}
   
-  {% if product.handle != 'perfume-gift-set-for-men-4-x-0-7-fl-oz'%}
-    <style>
-      .pdp-banner-custom {
-        display:none!important;
-      }
-    </style>
-  {% endif %}
-
   {% unless product.tags contains 'Tryon Product' %}
     <style>
     @media (max-width: 768px) {
@@ -818,7 +844,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       </style>
     {% endif %}
-    {% if collection.handle == 'buy1get1' or collection.handle == 'custom-byob-collection-pack-2' %}
+    {% if collection.handle == 'buy1get1' or collection.handle == 'custom-byob-collection-pack-2' or collection.handle == 'crazy-deal-byob' %}
       <style>
         .collection-hero__text-wrapper {
           display:none;
@@ -846,6 +872,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       }
     </style>
+  {% endif %}
+  {% if product.handle == 'mens-perfume-gift-set-offer' %}
+      <style>
+        @media (max-width: 768px) {
+          .atc-strip-container {
+            
+              background: #ab6ce7 !important;
+              margin: 0 16px;
+              border-radius: 6px 6px 0 0;
+          }
+          .atc-strip-content-text {
+            color:white;
+          }
+          button.product-form__submit.button.button--small {
+            margin: 0 16px 10px;
+            border-radius: 0 0 6px 6px;
+          }
+        }
+      </style>
+  {% else %}
+      <style>
+      .atc-strip-container {
+          display: none !important;
+      }
+      </style>
   {% endif %}
   {% if request.page_type == 'index' %}
   <style>

@@ -25,7 +25,7 @@
   {% if section.settings.show_bottom_strip %}
   <div class="bundle-sticky-bar">
     <div class="bundle-left">
-      <img src="{{ product_item.featured_image | image_url: width: 100 }}">
+      {% comment %} <img src="{{ product_item.featured_image | image_url: width: 100 }}"> {% endcomment %}
       <span class="bundle-title">{{ product_item.title }}</span>
     </div>
 

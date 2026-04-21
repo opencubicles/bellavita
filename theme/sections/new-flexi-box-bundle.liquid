@@ -1,0 +1,247 @@
+{% comment %}
+  New Flexi Box Bundle – Optimized Dynamic Version
+{% endcomment %}
+
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'flexi-box-bundle-style.css' | asset_url | stylesheet_tag }}
+{{ 'new-flexi.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'new-flexi-box-bundle-script.js' | asset_url }}" defer></script>
+<script src="{{ 'new-flexi-box-sticky.js' | asset_url }}" defer></script>
+
+{% assign bundle = product.metafields.custom.new_flexi_box_step_upb.value %}
+
+{% if bundle == blank %}
+  <p>No bundle data found</p>
+{% else %}
+
+  {% assign display_products = bundle.display_products %}
+  {% assign mandatory_products = bundle.mandatory_products %}
+  {% assign collections_array = 'collection_1,collection_2,collection_3' | split: ',' %}
+
+  <div class="flexi-box-bundle">
+
+    <product-form class="sticky-cart__form">
+
+      {% form 'product', product,
+        id: 'flexi-box-form',
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form',
+        data-variant-id: product.selected_or_first_available_variant.id,
+        data-sku: product.selected_or_first_available_variant.sku,
+        data-price: product.selected_or_first_available_variant.price
+      %}
+
+        <script>
+          let totalproductSelection = 0;
+          let mandatoryProducts = {{ mandatory_products }};
+        </script>
+
+        {% comment %} <h3 class="page-width heading-new-bogo">{{ bundle.collection_label }}</h3> {% endcomment %}
+        <h3 class="page-width heading-new-bogo">Choose <strong>Any 3</strong> Perfume</h3>
+
+        <div class="bundle-content" data-product-limit="{{ mandatory_products }}">
+          <ul id="collection-list">
+            <div class="row collection Crazy-collection page-width">
+
+              {% assign item_index = 0 %}
+
+              {% comment %} Loop through all 3 collections dynamically {% endcomment %}
+              {% for collection_key in collections_array %}
+                {% assign current_collection_value = collection_key %}
+                {% assign current_collection = bundle[collection_key].value %}
+
+                {% if current_collection != blank %}
+                  <div class="collection-section">
+                    <div class="collection-header">
+                      <h3 class="collection-title color-{{ forloop.index }}">{{ current_collection.title }}</h3>
+                      <div class="line-span"><span></span></div>
+                    </div>
+
+                    {% assign variant_ids = '' %}
+                    {% assign sorted_variants = current_collection.metafields.custom.flexi_box_variant_sort_order.value %}
+                    {% assign product_index = 0 %}
+                    <div class="crazy-collection-products">
+                      
+                    {% comment %} PASS 1: Render available sorted products {% endcomment %}
+                    {% if sorted_variants != blank %}
+                      {% for product_variant in sorted_variants %}
+                        {% for product_flexi in current_collection.products %}
+                          {% for variant in product_flexi.variants %}
+                            {% if variant.id == product_variant.id and product_index < display_products and variant.available %}
+                              {% assign product_index = product_index | plus: 1 %}
+                              {% assign item_index = item_index | plus: 1 %}
+                              
+                              {% render 'new-flexi-box-bundle-item',
+                                product_flexi: product_flexi,
+                                variant: variant,
+                                product: product,
+                                product_index: product_index,
+                                item_index: item_index,
+                                mandatory_products: mandatory_products,
+                                collection_value:current_collection_value
+                              %}
+                              {% assign variant_ids = variant_ids | append: variant.id | append: ',' %}
+                            {% endif %}
+                          {% endfor %}
+                        {% endfor %}
+                      {% endfor %}
+                    {% endif %}
+
+                    {% comment %} PASS 2: Render available unsorted products {% endcomment %}
+                    {% for product_flexi in current_collection.products %}
+                      {% for variant in product_flexi.variants %}
+                        {% unless variant_ids contains variant.id %}
+                          {% if product_index < display_products and variant.available %}
+                            {% assign product_index = product_index | plus: 1 %}
+                            {% assign item_index = item_index | plus: 1 %}
+                            {% render 'new-flexi-box-bundle-item',
+                              product_flexi: product_flexi,
+                              variant: variant,
+                              product: product,
+                              product_index: product_index,
+                              item_index: item_index,
+                              mandatory_products: mandatory_products,
+                              collection_value:current_collection_value
+                            %}
+                          {% endif %}
+                        {% endunless %}
+                      {% endfor %}
+                    {% endfor %}
+
+                    {% comment %} PASS 3: Render sold-out sorted products {% endcomment %}
+                    {% if sorted_variants != blank %}
+                      {% for product_variant in sorted_variants %}
+                        {% for product_flexi in current_collection.products %}
+                          {% for variant in product_flexi.variants %}
+                            {% if variant.id == product_variant.id and product_index < display_products and variant.available == false %}
+                              {% assign product_index = product_index | plus: 1 %}
+                              {% assign item_index = item_index | plus: 1 %}
+                              {% render 'new-flexi-box-bundle-item',
+                                product_flexi: product_flexi,
+                                variant: variant,
+                                product: product,
+                                product_index: product_index,
+                                item_index: item_index,
+                                mandatory_products: mandatory_products,
+                                collection_value:current_collection_value
+                              %}
+                            {% endif %}
+                          {% endfor %}
+                        {% endfor %}
+                      {% endfor %}
+                    {% endif %}
+
+                    {% comment %} PASS 4: Render sold-out unsorted products {% endcomment %}
+                    {% for product_flexi in current_collection.products %}
+                      {% for variant in product_flexi.variants %}
+                        {% unless variant_ids contains variant.id %}
+                          {% if product_index < display_products and variant.available == false %}
+                            {% assign product_index = product_index | plus: 1 %}
+                            {% assign item_index = item_index | plus: 1 %}
+                            {% render 'new-flexi-box-bundle-item',
+                              product_flexi: product_flexi,
+                              variant: variant,
+                              product: product,
+                              product_index: product_index,
+                              item_index: item_index,
+                              mandatory_products: mandatory_products,
+                              collection_value:current_collection_value
+                            %}
+                          {% endif %}
+                        {% endunless %}
+                      {% endfor %}
+                    {% endfor %}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+
+            </div>
+          </ul>
+        </div>
+
+        {% render 'new-flexi-popup' %}
+
+        <div class="sticky_cart">
+          {% render 'new-flexi-sticky-bar',
+            bundle_price: product.selected_or_first_available_variant.price,
+            mandatory_products: mandatory_products
+          %}
+        </div>
+
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+        <button
+          type="submit"
+          id="submit-btn"
+          name="add"
+          class="product-form__submit button button--small flexi-btn"
+          style="display:none;"
+          {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}
+        >
+          {% if product.selected_or_first_available_variant.available %}
+            {{ 'products.product.buy_now' | t }}
+          {% else %}
+            {{ 'products.product.sold_out' | t }}
+          {% endif %}
+        </button>
+
+      {% endform %}
+    </product-form>
+  </div>
+
+{% endif %}
+
+<div class="message-bar is-hidden">
+  <div class="message message--green">
+    <div class="message-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M9.66802 1.37429L4.48642 7.85309L0.416016 4.46069L1.18402 3.53909L4.31362 6.14669L8.73201 0.625488L9.66802 1.37429Z"
+          fill="#000" stroke="#000" stroke-width="0.5"/>
+      </svg>
+    </div>
+    {% comment %} <div class="message-body">
+      <p><span></span> added to box</p>
+    </div> {% endcomment %}
+  </div>
+</div>
+
+<style>
+  .collection-section { width: 100%; background-color: #F8F4EE; padding: 10px 0 10px 10px; border-radius: 4px; }
+  .collection-header { width: 100%; }
+  .collection-title { font-size: 14px; font-weight: 600; margin: 0; }
+  .heading-new-bogo { margin-top:3px; letter-spacing: .2px;}
+</style>
+
+{% schema %}
+{
+  "name": "New Flexi box bundle",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show-multiple-image",
+      "label": "Show multiple image slider",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "item_counter",
+      "label": "Show Item Counter",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_popup",
+      "label": "Show Popup",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Flexi box bundle"
+    }
+  ]
+}
+{% endschema %}

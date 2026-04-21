@@ -192,6 +192,18 @@
             echo 'products.product.sold_out' | t
           endif
         -%}
+        {%- liquid
+          if product.selected_or_first_available_variant.available
+            if template.suffix == 'embarouge-new'
+              echo ' - &nbsp;'
+            endif
+          endif
+        -%}
+        {%- if product.selected_or_first_available_variant.available and template.suffix == 'embarouge-new' -%}
+          <span class="custom-price-color">
+            {{ product.price | money }}
+          </span>
+        {%- endif -%}
       </button>
       {% if product.metafields.custom.show_consent %}
         <div class="cart-marketing-consent" style="margin-top: 16px;">

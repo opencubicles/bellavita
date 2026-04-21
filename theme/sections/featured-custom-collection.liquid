@@ -1,0 +1,400 @@
+<div class="recommended-section">
+  <div class="recommended-title">Recommended For You</div>
+
+  <div class="recommended-grid">
+    {% assign collection = collections[section.settings.collection] %}
+
+    {% for product in collection.products limit: 6 %}
+      <div class="product-card">
+
+        <div class="product-image">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
+          </a>
+        </div>
+
+        <div class="product-bottom">
+          <div class="product-type" style="display:flex;">
+            {{ product.type | default: 'Musky' }}
+            <span class="star-rating"></span>
+          </div>
+          <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false' >
+            {{ product.metafields.judgeme.badge }}
+          </div>
+          
+          <div class="product-meta">
+            <div class="product-title">
+              {{ product.title }}
+            </div>
+
+            
+          </div>
+
+          <div class="volume">100ml</div>
+
+          <div class="price-row">
+            <div class="price">
+              {{ product.price | money }}
+            </div>
+
+            <form method="post" action="/cart/add">
+              <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+              <button type="submit" class="add-btn">ADD</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+<style>
+/* ================= DESKTOP ================= */
+.star-rating {
+  position: absolute;
+  right: 18px;
+  color: #000;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 14px */
+}
+@media (min-width: 768px) {
+    .recommended-section {
+        padding: 0 10rem !important;
+    }
+}
+
+
+.recommended-grid {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.product-card {
+  min-width: 200px;
+  position: relative;
+}
+
+.product-image {
+  height: 180px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.product-image img {
+  max-height: 170px;
+  object-fit: contain;
+}
+
+.product-bottom {
+  background: #efe6db;
+  border-radius: 6px;
+  padding: 14px;
+  margin-top: -59px;
+  padding-top: 59px;
+}
+
+.add-btn {
+  display: flex;
+  padding: 10px 22px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  border: 0.858px solid #1E1E1E;
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 11px;
+  text-transform: uppercase;
+}
+
+
+
+.recommended-title {
+    color: #1F100A;
+    font-family: Lora;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23.8px;
+    letter-spacing: 0.102px;
+  }
+  .price-row {
+    display: flex;
+    {% comment %} padding: 0 8px 8px 8px; {% endcomment %}
+    justify-content: center;
+    align-items: flex-end;
+    gap: 12px;
+    align-self: stretch;
+  }
+.price-row .price {
+    width: 60%;
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 16.8px */
+    letter-spacing: 0.3px;
+}
+
+.product-title {
+    overflow: hidden;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14.4px;
+    letter-spacing: 0.06px;
+    min-height: 31px;
+    padding-top: 5px;
+  }
+.volume {
+    color: #777;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+  }
+  .product-type {
+    color: #5C5C5C;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.2px;
+  }
+   .product-embarouge-new .recommended-title {
+    color: #1F100A;
+    font-family: Lora;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23.8px;
+    letter-spacing: 0.102px;
+  }
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .recommended-section {
+    padding: 15px;
+    margin: 0;
+  }
+
+  
+
+  .recommended-grid {
+    gap: 12px;
+    padding-bottom: 5px;
+  }
+
+  .product-card {
+    min-width: 150px; /* KEY: shows ~2.3 cards */
+  }
+
+  .product-image {
+    height: 130px;
+  }
+
+  .product-image img {
+    max-height: 120px;
+  }
+  .rating {
+    font-size: 11px;
+  }
+
+  
+
+  .price {
+    font-size: 13px;
+  }
+
+}
+
+
+/* ================= EXTRA POLISH ================= */
+
+/* smooth scroll + no scrollbar */
+.recommended-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* optional snap (feels like native app) */
+.recommended-grid {
+  scroll-snap-type: x mandatory;
+}
+
+.product-card {
+  scroll-snap-align: start;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll('.product-card').forEach(function(card){
+
+    // Get hidden Judge.me badge
+    const badge = card.querySelector('.jdgm-prev-badge');
+
+    if (badge) {
+      const score = badge.querySelector('.jdgm-prev-badge__stars')?.getAttribute('data-score');
+
+      if (score) {
+        // Round to 1 decimal (optional)
+        const rating = parseFloat(score).toFixed(1);
+
+        // Inject into custom div
+        const starContainer = card.querySelector('.star-rating');
+
+        if (starContainer) {
+          starContainer.innerHTML = `
+            <div class="custom-rating">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+  <path d="M8.7774 10.7789C8.69635 10.7789 8.61652 10.7592 8.54474 10.7216L5.99616 9.38172L3.44757 10.7216C3.36498 10.765 3.2719 10.7844 3.17884 10.7777C3.08579 10.7709 2.99647 10.7383 2.92098 10.6835C2.8455 10.6286 2.78686 10.5538 2.75169 10.4674C2.71652 10.381 2.70624 10.2864 2.72199 10.1945L3.2088 7.35657L1.14704 5.34707C1.08024 5.28192 1.03301 5.1994 1.01066 5.10882C0.988307 5.01824 0.991739 4.92321 1.02056 4.83447C1.04939 4.74574 1.10246 4.66684 1.17378 4.60668C1.24509 4.54653 1.33181 4.50752 1.42414 4.49407L4.2735 4.08L5.54766 1.49817C5.59371 1.4202 5.6593 1.35558 5.73794 1.31069C5.81659 1.2658 5.90558 1.24219 5.99614 1.24219C6.0867 1.24219 6.17569 1.2658 6.25434 1.31069C6.33299 1.35558 6.39858 1.4202 6.44463 1.49817L7.7188 4.07996L10.5682 4.49402C10.6605 4.50748 10.7472 4.54648 10.8185 4.60664C10.8898 4.66679 10.9429 4.7457 10.9717 4.83443C11.0006 4.92316 11.004 5.01819 10.9816 5.10877C10.9593 5.19935 10.9121 5.28188 10.8453 5.34702L8.7835 7.35652L9.27031 10.1944C9.28262 10.2662 9.2791 10.3398 9.26 10.4101C9.2409 10.4803 9.20668 10.5456 9.15973 10.6013C9.11278 10.6569 9.05424 10.7017 8.9882 10.7324C8.92215 10.763 8.85022 10.7789 8.7774 10.7789Z" fill="#AC875A"/>
+</svg> ${rating}
+            </div>
+          `;
+        }
+      }
+
+      // Hide original badge completely
+        badge.style.display = 'none';
+       
+    }
+     
+  });
+  document.querySelectorAll('.jdgm-widget.jdgm-preview-badge').forEach(el => el.remove());
+});
+</script>
+<script>
+function replaceStarSVG() {
+
+  const newStarSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="icon icon-star">
+    <path d="M7.89062 12.058L12.7668 15L11.4769 9.45055L15.7812 5.7191L10.1068 5.2318L7.89062 0L5.6741 5.2318L0 5.7191L4.30438 9.45055L3.0141 15L7.89062 12.058Z" fill="#AC875A"/>
+  </svg>
+  `;
+
+  document.querySelectorAll('.product-rating-container .icon-star').forEach(el => {
+    // Replace only once
+    if (!el.classList.contains('svg-replaced')) {
+      const wrapper = document.createElement('span');
+      wrapper.innerHTML = newStarSVG.trim();
+      const newEl = wrapper.firstChild;
+
+      newEl.classList.add('svg-replaced');
+      el.replaceWith(newEl);
+    }
+  });
+}
+
+// Initial run
+document.addEventListener("DOMContentLoaded", replaceStarSVG);
+
+// Handle dynamic Shopify/app reloads
+new MutationObserver(replaceStarSVG).observe(document.body, {
+  childList: true,
+  subtree: true
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll('.product-card form').forEach(function(form) {
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // 🚫 stop redirect
+
+      const button = form.querySelector('.add-btn');
+      const variantId = form.querySelector('input[name="id"]').value;
+
+      button.innerText = "ADDING...";
+      button.disabled = true;
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          id: variantId,
+          quantity: 1
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        refreshCartUI();
+        const miniCart = document.querySelector('mini-cart');
+        if (miniCart) {
+          setTimeout(() => {
+            miniCart.open();
+            document.activeElement.blur();
+          }, 1000);
+        }
+        setTimeout(() => {
+          button.innerText = "ADD";
+          button.disabled = false;
+        }, 1500);
+      })
+      .catch(err => {
+        console.error(err);
+        button.innerText = "ERROR";
+        button.disabled = false;
+      });
+
+    });
+
+  });
+
+});
+
+/* OPTIONAL: update cart count bubble */
+function updateCartCount() {
+  fetch('/cart.js')
+    .then(res => res.json())
+    .then(cart => {
+      const countEl = document.querySelector('.cart-count'); // adjust selector
+      if (countEl) {
+        countEl.innerText = cart.item_count;
+      }
+    });
+}
+</script>
+{% schema %}
+{
+  "name": "Custom Recommended",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Recommended"
+    }
+  ]
+}
+{% endschema %}

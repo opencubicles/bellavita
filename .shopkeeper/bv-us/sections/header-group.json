@@ -47,6 +47,7 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Try Before You Buy",
             "text_on_mobile": "",

@@ -35,7 +35,7 @@
     "type_button_size": 13,
     "type_price_font": "heading",
     "price_superscript": true,
-    "page_width": 1600,
+    "page_width": 1400,
     "spacing_sections": 0,
     "page_transition_enabled": true,
     "image_zoom_effect_enabled": false,
@@ -492,9 +492,14 @@
         "disabled": false,
         "settings": {}
       },
+      "8218531531362863771": {
+        "type": "shopify://apps/kite-discount-free-gift/blocks/app-embed/2c7302c4-455d-4078-a829-48563ba26089",
+        "disabled": false,
+        "settings": {}
+      },
       "3576686563519644491": {
         "type": "shopify://apps/vwo/blocks/vwo-smartcode/2ce905b2-3842-4d20-b6b0-8c51fc208426",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "vwoAccountId": "964814",
           "codeType": "ASYNC",
@@ -502,11 +507,6 @@
           "enableThemeTesting": false,
           "reverseProxyUrl": ""
         }
-      },
-      "8218531531362863771": {
-        "type": "shopify://apps/kite-discount-free-gift/blocks/app-embed/2c7302c4-455d-4078-a829-48563ba26089",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
