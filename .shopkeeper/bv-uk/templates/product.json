@@ -14,7 +14,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "custom_class": "pdp-banner-custom",
-        "image": "shopify://shop_images/Artboard_1_f1a3aa86-d090-48c7-9f6b-727a10008c41.jpg",
+        "image": "{{ product.metafields.custom.pdp_custom_banner.value }}",
         "image_position": "center center",
         "text_box_position": "middle-center",
         "text_alignment": "center",
